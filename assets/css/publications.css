@@ -1,0 +1,40 @@
+/* publications.css */
+
+/* General body styling is inherited from main page, so minimal here */
+#publications {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Headings for categories */
+#publications h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+/* Each publication entry */
+.publication {
+  margin: 2px 0;
+  padding: 0;
+  border: none; /* ensure no lines */
+}
+
+/* Authors, title, venue are inline, so we can style individually if needed */
+.publication strong {
+  font-weight: bold; /* bold "Nasr, Ali" */
+}
+
+.publication a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.publication a:hover {
+  text-decoration: underline;
+}
+
+.publication em {
+  font-style: italic;
+}
