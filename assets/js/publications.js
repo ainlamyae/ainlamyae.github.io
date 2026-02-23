@@ -37,9 +37,33 @@ document.addEventListener("DOMContentLoaded", function () {
           const p = document.createElement("p");
           p.classList.add("publication");
 
-          // Authors (bold your name)
-          let authors = Array.isArray(pub.authors) ? pub.authors.join(", ") : "";
-          authors = authors.replace(/Nasr, Ali/g, "<strong>Nasr, Ali</strong>");
+          // Format authors: "Last, First" -> "F Last"
+          let authors = "";
+          
+          if (Array.isArray(pub.authors)) {
+            authors = pub.authors.map(author => {
+          
+              // Expecting format: "Last, First"
+              const parts = author.split(",");
+          
+              if (parts.length === 2) {
+                const last = parts[0].trim();
+                const first = parts[1].trim();
+          
+                const initial = first.charAt(0).toUpperCase();
+          
+                // Bold your own name
+                if (last === "Nasr" && first === "Ali") {
+                  return `<strong>${initial} ${last}</strong>`;
+                }
+          
+                return `${initial} ${last}`;
+              }
+          
+              // fallback if format is different
+              return author;
+            }).join(", ");
+          }
 
           // ===== VENUE & DEGREE =====
           const venueParts = [];
