@@ -18,8 +18,8 @@
 /* Each publication entry with hanging indent */
 .publication {
   margin: 0 0 8px 0;       /* spacing between publications */
-  padding-left: 2em;        /* all lines shift right */
-  text-indent: -2em;        /* first line pulled back */
+  padding-left: 3em;        /* all lines shift right */
+  text-indent: -3em;        /* first line pulled back */
   font-family: Arial, sans-serif;
   line-height: 1.4;         /* compact */
   display: block;            /* ensures indent works properly */
