@@ -1,31 +1,31 @@
 /* publications.css */
 
-/* General body styling is inherited from main page, so minimal here */
+/* Container */
 #publications {
   font-family: Arial, sans-serif;
-  line-height: 1.5;
+  font-size: 14px;      /* slightly smaller for compact style */
+  line-height: 1.4;     /* compact line spacing */
 }
 
 /* Headings for categories */
 #publications h2 {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: #333;
 }
 
-/* Each publication entry */
+/* Each publication entry with hanging indent */
 .publication {
-  margin: 2px 0;
-  padding: 0;
-  border: none; /* ensure no lines */
+  margin: 0 0 8px 0;       /* spacing between publications */
+  padding-left: 5em;        /* all lines shift right */
+  text-indent: -5em;        /* first line pulled back */
+  font-family: Arial, sans-serif;
+  line-height: 1.4;         /* compact */
+  display: block;            /* ensures indent works properly */
 }
 
-/* Authors, title, venue are inline, so we can style individually if needed */
-.publication strong {
-  font-weight: bold; /* bold "Nasr, Ali" */
-}
-
+/* Links */
 .publication a {
   color: #0066cc;
   text-decoration: none;
@@ -35,6 +35,12 @@
   text-decoration: underline;
 }
 
+/* Authors bold */
+.publication strong {
+  font-weight: bold;
+}
+
+/* Italics for journals/conference names */
 .publication em {
   font-style: italic;
 }
