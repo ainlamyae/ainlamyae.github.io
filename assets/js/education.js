@@ -127,9 +127,16 @@ fetch('assets/data/education.json')
       if (edu.courses && edu.courses.enrolled.length > 0) {
         const pCourses = document.createElement('p');
         pCourses.style.margin = '2px 0';
-        pCourses.textContent = "Selected Courses: " + edu.courses.enrolled.join(", ");
+        pCourses.textContent = "Selected/Enrolled Courses: " + edu.courses.enrolled.join(", ");
         detailsDiv.appendChild(pCourses);
       }
+      // Audited courses (comma separated)
+        if (edu.courses && edu.courses.audited && edu.courses.audited.length > 0) {
+        const pAudited = document.createElement('p');
+        pAudited.style.margin = '2px 0';
+        pAudited.textContent = "Audited Courses: " + edu.courses.audited.join(", ");
+        detailsDiv.appendChild(pAudited);
+        }
 
       container.appendChild(detailsDiv);
 
