@@ -1,5 +1,14 @@
 [
     {
+        "id": "pipd2026",
+        "date": "2026-02-25",
+        "type": "Software Engineering & Programming",
+        "title": "Practice It: Python Data Structures",
+        "organization": "LinkedIn Learning",
+        "url": "https://www.linkedin.com/learning/certificates/92133962570315f92ab969d596fdd17d978edddcee591795ddd41f581d1a7885",
+        "file": null
+    },
+    {
         "id": "itlv2026",
         "date": "2026-02-12",
         "type": "AI Governance, Safety & Responsible AI",
