@@ -1,0 +1,146 @@
+[
+{
+  "institution": {
+    "name": "University of Waterloo",
+    "logo": "assets/images/uwaterloo.png",
+    "address": "Waterloo, Canada"
+  },
+  "degree": {
+    "level": "Doctor of Philosophy",
+    "abbreviation": "Ph.D.",
+    "field": "Systems Design Engineering"
+  },
+  "date": {
+    "start": "2018-09-01",
+    "end": "2022-12-30"
+  },
+  "major": "Intelligent & Automated Systems; Biomechatronics Systems",
+  "gpa": {
+    "value": null,
+    "scale": 100
+    },
+  "thesis": {
+    "date": "2022-12-21",
+    "title": "Design, Dynamics, and Control of Active-passive Upper-limb Exoskeleton Robots",
+    "url": "http://hdl.handle.net/10012/18985",
+    "abstract": "Modern power assistive technologies, neuromuscular rehabilitation engineering, and haptic research have all entered into a new age thanks to wearable exoskeleton robotics..."
+  },
+  "research_group": {
+    "supervisor": "Prof. John Joseph McPhee",
+    "name": "Motion Research Group (MoRG)",
+    "url": "https://uwaterloo.ca/motion-research-group/"
+  },
+  "courses": {
+    "enrolled": [
+      "Dynamics of Multibody Systems",
+      "Optimal Control",
+      "Special Topics in Mechatronics (Human Movement Neuromechanics)"
+    ],
+    "audited": [
+      "Fundamentals in Neural and Rehabilitation Engineering",
+      "Advanced Biomechanical Models",
+      "Biomechanics of Human Motion",
+      "Autonomous Mobile Robots"
+    ]
+  }
+},
+{
+  "institution": {
+    "name": "K. N. Toosi University of Technology",
+    "logo": "assets/images/kntu.png",
+    "address": "Tehran, Iran"
+  },
+  "degree": {
+    "level": "Master of Applied Science",
+    "abbreviation": "M.Sc.",
+    "field": "Mechatronics, Robotics, and Automation Engineering"
+  },
+  "date": {
+    "start": "2013-09-01",
+    "end": "2015-12-30"
+  },
+  "major": "Design Robotic and Mechatronic Systems",
+  "gpa": {
+    "value": 19.20,
+    "scale": 20
+    },
+  "thesis": {
+    "date": "2015-12-31",
+    "title": "Multiple Impedance Control of Hybrid Parallel-Serial Manipulator for Object Manipulation",
+    "url": "https://www.researchgate.net/publication/379480054_Multiple_Impedance_Control_of_Hybrid_Parallel-Serial_Manipulator_for_Object_Manipulation",
+    "abstract": "One of the widely used of industrial robots is object manipulation (OM). Cable driven parallel robot (CDPR) has a very large workspace suitable for this application. However, there are possible cable collisions with the environment. Therefore, use of a Serial Manipulator (SM) is recommended penetrating the blind spots. Thus, the combination of CDPR-SM is recommended for OM. The tasks of OM, welding, surface finishing, cleaning, etc. need algorithms capable of determining the interaction force and position. In addition, constrained and suspended structure of CDPR is evaluated and the best structure for the control and construction is selected. Kinematics modeling of robots include CDPR and SM are provided. Topics such as inverse kinematics, Jacobian, velocity, acceleration analysis, singularity and sensitivity of CDPR are investigated. Also forward, inverse kinematics, velocity, acceleration, Jacobian, singularities and workspace analysis of SM are checked. Dynamics model for using in control subjects; simulation and system analysis take place. The SM dynamics is obtained by iterative Newton-Euler and CDPR dynamics is modeled by Newton-Euler method. An algorithm to optimize traction cable is also provided. In addition, a redundancy resolution algorithm is provided. However, a new method is proposed to reduce the redundancy of actuators. A virtual model verifies the equation. Structure of CDPR equipped with SM is optimized by criteria such as controllable, free singularity workspace, sensitivity and stiffness. Multiple impedance control (MIC) is used to OM in the presence of external disturbances. Also parallel and serial MIC with different coefficient is implemented. However, work and joint space unit impedance is also checked. Coefficients are optimised by error and wrench criteria. The CDPR, which discussed in this thesis for implementing control algorithms and studying performance is manufactured. According to the analysis, mechanical components of the robot are designed. In addition, electronic platform is prepared to send control commands. The pose of platform is obtained by a new method that combines machine vision and winch angles. The artificial neural network is trained for forward kinematics."
+  },
+  "research_group": {
+    "supervisor": "Prof. S. Ali A. Moosavian",
+    "name": "Advanced Robotics & Automated Systems (ARAS) Laboratory",
+    "url": "https://aras.kntu.ac.ir/"
+  },
+  "courses": {
+    "enrolled": [
+      "Parallel Robotics",
+      "Control in Robotic",
+      "Advanced Control (Nonlinear, Adaptive and Sliding)",
+      "Fuzzy Logic and Neuro-Fuzzy Control",
+      "Modern Control",
+      "Advanced Dynamics",
+      "Mechatronics"
+    ],
+    "audited": []
+  }
+},
+{
+  "institution": {
+    "name": "Isfahan University of Technology",
+    "logo": "assets/images/iut.png",
+    "address": "Isfahan, Iran"
+  },
+  "degree": {
+    "level": "Bachelor of Applied Science",
+    "abbreviation": "B.Sc.",
+    "field": "Mechanical Engineering"
+  },
+  "date": {
+    "start": "2009-09-01",
+    "end": "2013-08-30"
+  },
+  "major": "Mechatronics and Dynamic Systems",
+  "gpa": {
+    "value": 16.67,
+    "scale": 20
+    },
+  "thesis": {
+    "date": "2013-08-10",
+    "title": "Optimizing Joint Space Energy of Redundant Tethered Space Robots",
+    "url": "https://www.researchgate.net/publication/379478592_Optimizing_Joint_Space_Energy_of_Redundant_Tethered_Space_Robots",
+    "abstract": "This research delves into the satellite systems tethered by cables, a study undertaken several decades subsequent to the conceptualization of tethering space systems. Notably, this tethering mechanism finds application in the domain of space elevators as well. The employment of such tethers brings forth considerable advantages for robotic systems governed by extended tethers, prompting their substitution for human counterparts in space missions encompassing repair, equipment installation, and debris elimination from space stations, satellites, and space telescopes. This study focuses on the analysis of a four degrees of freedom tethered space robotic arm, specifically examining how the robot's end effector moves along predefined paths. Algorithms and models are created to describe the robot's setup, including an extended tether acting as an arm that allows the entire robot to move in a circular orbit around Earth. The tether is treated as a rigid, linear arm in mathematical models, and its tension is assessed to determine if the paths are feasible. The robot's movement starts from a platform attached to a spacecraft. Different trajectories, such as direct, oblique, and circular paths, are analyzed, considering historical angle changes in joint variables and the torque needed for these changes. The study calculates the robot's potential energy through gravitational force integration and employs Lagrange equations, kinetic energy, potential energy concepts, equilibrium equations, the Hamiltonian system, and tether tension equations to derive multibody dynamic model. Consideration is also given to torque constraints at the tether's initiation and culmination points, with viable trajectories delineated. Additionally, novel control methodologies for mitigating tether oscillations through length extension and positional adjustments at the tether's starting point are elucidated. The validation of the proposed algorithms and trajectory planning strategies is conducted through dynamic simulations and verification processes utilizing MATLAB and Simulink software. Finally, recommendations for enhancing this space system and avenues for future research are proposed based on the findings and analyses presented."
+  },
+  "research_group": {
+    "supervisor": "Prof. Mehdi Keshmiri",
+    "name": "Advanced Robotics and Mechatronics Laboratory",
+    "url": "https://armlab.iut.ac.ir/"
+  },
+  "courses": {
+    "enrolled": [
+      "Robotics",
+      "Control Systems Design",
+      "Automatic Control",
+      "Dynamics",
+      "Dynamics of Machinery",
+      "Dynamics of Machinery and Vibration Lab",
+      "Mechanisms Design",
+      "Applied Vibrations",
+      "Mechanical Vibrations",
+      "Signal Processing of Mechatronic Systems",
+      "Fundamentals of Mechatronic Systems",
+      "Mechatronics Lab 1 and 2 (PLC and Microcontrollers)",
+      "Applied Electrics and Electronics",
+      "Computer Programming",
+      "CNC Machines",
+      "Production Methods and Workshop",
+      "Hydraulics and Pneumatics",
+      "Engineering Drawing",
+      "Numerical Methods"
+    ]
+  }
+}
+]

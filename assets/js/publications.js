@@ -17,9 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const typePrefix = { article: "J", inproceedings: "C", patent: "P", thesis: "T" };
-
-      // Safely extract year
       const getYear = pub => pub.date ? (new Date(pub.date).getFullYear() || "") : "";
+
+      function formatAuthors(authors) {
+        if (!Array.isArray(authors) || authors.length === 0) return "";
+        const formatted = authors.map(author => {
+          const parts = author.split(",");
+          if (parts.length === 2) {
+            const last = parts[0].trim();
+            const first = parts[1].trim();
+            const initial = first.charAt(0).toUpperCase() + ".";
+            return last === "Nasr" && first === "Ali" ? `<strong>${initial} ${last}</strong>` : `${initial} ${last}`;
+          }
+          return author;
+        });
+
+        if (formatted.length === 1) return formatted[0];
+        if (formatted.length === 2) return formatted.join(" and ");
+        // more than 2 authors: separate last with ', and'
+        return formatted.slice(0, -1).join(", ") + ", and " + formatted[formatted.length - 1];
+      }
 
       function renderGroup(title, items, typeKey) {
         if (!items || !items.length) return;
@@ -34,82 +51,78 @@ document.addEventListener("DOMContentLoaded", function () {
         const total = items.length;
 
         items.forEach((pub, idx) => {
-          const p = document.createElement("p");
-          p.classList.add("publication");
 
-          // Format authors: "Last, First" -> "F Last"
-          let authors = "";
-          
-          if (Array.isArray(pub.authors)) {
-            authors = pub.authors.map(author => {
-          
-              // Expecting format: "Last, First"
-              const parts = author.split(",");
-          
-              if (parts.length === 2) {
-                const last = parts[0].trim();
-                const first = parts[1].trim();
-          
-                const initial = first.charAt(0).toUpperCase();
-          
-                // Bold your own name
-                if (last === "Nasr" && first === "Ali") {
-                  return `<strong>${initial} ${last}</strong>`;
-                }
-          
-                return `${initial} ${last}`;
-              }
-          
-              // fallback if format is different
-              return author;
-            }).join(", ");
-          }
+          const entryDiv = document.createElement("div");
+          entryDiv.classList.add("entry");
 
-          // ===== VENUE & DEGREE =====
-          const venueParts = [];
+          // ===== AUTHORS =====
+          const authors = formatAuthors(pub.authors);
 
+          // ===== PUBLISHER + JOURNAL/BOOKTITLE =====
+          let venue = "";
           if (pub.type === "article") {
-            if (pub.publisher) venueParts.push(pub.publisher);
-            if (pub.journal) venueParts.push(`<em>${pub.journal}</em>`);
+            const parts = [];
+            if (pub.publisher) parts.push(pub.publisher);
+            if (pub.journal) parts.push(pub.journal);
+            if (parts.length > 0) venue = `<span class="org"><em>${parts.join(" ")}</em></span>`;
           } else if (pub.type === "inproceedings") {
-            if (pub.publisher) venueParts.push(pub.publisher);
-            if (pub.booktitle) venueParts.push(`<em>${pub.booktitle}</em>`);
-            if (pub.address) venueParts.push(pub.address);
+            const parts = [];
+            if (pub.publisher) parts.push(pub.publisher);
+            if (pub.booktitle) parts.push(pub.booktitle);
+            if (parts.length > 0) venue = `<span class="org"><em>${parts.join(" ")}</em></span>`;
+            if (pub.address) venue += `, ${pub.address}`;
           } else if (pub.type === "patent") {
-            if (pub.publisher) venueParts.push(pub.publisher);
+            if (pub.publisher) venue = `<span class="org"><em>${pub.publisher}</em></span>`;
           } else if (pub.type === "thesis") {
-            // For thesis, degree comes first
-            if (pub.degree) venueParts.push(pub.degree);
-            if (pub.publisher) venueParts.push(pub.publisher);
+            let parts = [];
+            let degreePart = "";
+            let publisherPart = "";
+
+            if (pub.degree) degreePart = pub.degree;               // keep degree plain
+            if (pub.publisher) publisherPart = `<em>${pub.publisher}</em>`;  // italic university
+
+            if (degreePart && publisherPart) {
+              parts = `${degreePart}, ${publisherPart}`;
+            } else if (degreePart) {
+              parts = degreePart;
+            } else if (publisherPart) {
+              parts = publisherPart;
+            }
+
+            venue = parts;
           }
 
-          const venue = venueParts.join(", ");
-
-          // Volume / number / pages
+          // ===== VOLUME / NUMBER / PAGES =====
           const extraParts = [];
-          if (pub.volume) extraParts.push(`Vol. ${pub.volume}`);
-          if (pub.number) extraParts.push(`(${pub.number})`);
-          if (pub.pages) extraParts.push(`pp. ${pub.pages}`);
+          if (pub.volume) extraParts.push(`vol. ${pub.volume}`);
+          if (pub.number) extraParts.push(`no. ${pub.number}`);
+          if (pub.pages) {
+            const pages = pub.pages.replace(/\s+/g, ""); // remove spaces
+            if (pages.includes("-")) {
+              extraParts.push(`pp. ${pages}`);
+            } else {
+              extraParts.push(`p. ${pages}`);
+            }
+          }
           const extra = extraParts.length ? ", " + extraParts.join(", ") : "";
 
-          // DOI or URL
+          // ===== TITLE =====
           const link = pub.doi ? `https://doi.org/${pub.doi}` : (pub.url || "");
-          const titleHTML = link ? `<a href="${link}" target="_blank">${pub.title || ""}</a>` : (pub.title || "");
+          const titleHTML = link
+            ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${pub.title || ""}</a>`
+            : (pub.title || "");
 
-          // Numbering descending
           const number = total - idx;
 
-          // Final formatted line
-          p.innerHTML = `[${typePrefix[typeKey]}${number}] ${authors}. "${titleHTML}". ${venue}${extra}, ${getYear(pub)}.`;
-
-          container.appendChild(p);
+          // ===== FINAL ENTRY =====
+          entryDiv.innerHTML =  `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>.`;
+          container.appendChild(entryDiv);
         });
       }
 
-      // Render sections
+      renderGroup("Patent", groups.patent, "patent");
       renderGroup("Journal", groups.article, "article");
       renderGroup("Conference", groups.inproceedings, "inproceedings");
-      renderGroup("Patent", groups.patent, "patent");
       renderGroup("Thesis", groups.thesis, "thesis");
 
     })
