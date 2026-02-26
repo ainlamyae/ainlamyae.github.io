@@ -55,7 +55,7 @@ fetch('assets/data/experience.json')
         const logoImg = document.createElement('img');
         logoImg.src = jobs[0].logo;
         logoImg.alt = jobs[0].organization + " logo";
-        logoImg.style.width = '100px';
+        logoImg.style.width = '80px';
         logoImg.style.height = 'auto';
         logoImg.style.objectFit = 'contain';
         logoImg.style.marginRight = '15px';
