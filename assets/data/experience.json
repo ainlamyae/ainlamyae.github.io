@@ -1,0 +1,123 @@
+[
+  {
+    "type": "research",
+    "organization": "University of Waterloo",
+    "logo": "assets/image/logo/uwaterloo.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Postdoctoral Research Associate (Autonomous Control)",
+    "employmentType": "Contract Full-time",
+    "date": {
+        "start": "2023-01-01",
+        "end": "2024-03-31"
+    },
+    "responsibilities": [
+      "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM), coordinating presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
+    ],
+    "projects": [
+      {
+        "title": "Real-time Embedded Controller within Different Sensors and Intelligent Control",
+        "description": [
+            "Successfully designed and implemented platform real-time communication and control software on Raspberry Pi 4B (Linux environment) to support advanced application features, resulting in a 20% increase in user engagement and a 30% reduction in software crashes",
+            "Developed machine learning-based real-time control unit with Python (multi threaded and object-oriented), resulting in improved system performance and accuracy",
+            "Proficient in developing mid-level programs with Bluetooth, CAN-bus, and SPI connections to achieve seamless communication between hardware and software",
+            "Conducted rigorous feature validation using hardware-in-the-loop (HIL) testing, ensuring the robustness and reliability of the system"
+        ]
+      },
+      {
+        "title": "Generating Database for Marker-less Motion Capture Methods",
+        "description": [
+            "Developed a human musculoskeletal model using biomechanical experimental data and anthropometric data",
+            "Refined manual annotations through kinematic, dynamic, and muscle modeling"
+        ]
+      }
+    ],
+    "supervision": [
+      {
+        "student": "Tegan Asprey",
+        "year": "2023",
+        "project": "Muscle activation detector MyoBuzz watch prototype"
+      },
+      {
+        "student": "Vasylysa Korovkina",
+        "year": "2023",
+        "project": "Myoelectric controlled 1-DOF forearm-hand active prosthesis prototype"
+      },
+      {
+        "student": "Lavan Sumanan",
+        "year": "2023",
+        "project": "Human motion animation using 3Ds Max for 3D pose estimation database"
+      }
+    ]
+  },
+  {
+    "type": "teaching",
+    "organization": "University of Waterloo",
+    "logo": "assets/image/logo/uwaterloo.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Graduate Teaching Assistant",
+    "employmentType": "Contract Part-time",
+    "date": {
+        "start": "2019-01-01",
+        "end": "2023-04-30"
+    },
+    "responsibilities": [
+      "Delivered tutorials and undergraduate instructional support.",
+      "Explained complex engineering concepts during laboratory sessions, office hours, and via email communication.",
+      "Evaluated assignments, projects, and examinations to assess student learning outcomes."
+    ],
+    "courses": [
+      { "code": "SYDE 544", "title": "Biomedical Measurement and Signal Processing", "term": "Winter 2023", "instructor": "Steven Pretty" },
+      { "code": "SYDE 252M", "title": "Linear Systems and Signals", "term": "Fall 2022", "instructor": "Charbel Azzi" },
+      { "code": "SYDE 252", "title": "Linear Systems and Signals", "term": "Spring 2022", "instructor": "Gordon Savage" },
+      { "code": "SYDE 352", "title": "Introduction to Control Systems", "term": "Winter 2022", "instructor": "Gordon Savage" },
+      { "code": "SYDE 121", "title": "Digital Computation", "term": "Fall 2021", "instructor": "Jason Foster" },
+      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Spring 2021", "instructor": "Gordon Savage" },
+      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Winter 2021", "instructor": "Gordon Savage" },
+      { "code": "SYDE 101", "title": "Communications in Systems Design Engineering", "term": "Fall 2020", "instructor": "Igor Ivkovic" },
+      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Spring 2020", "instructor": "Stephen Birkett" },
+      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Winter 2020", "instructor": "Gordon Savage" },
+      { "code": "SYDE 252", "title": "Linear Systems and Signals", "term": "Fall 2019", "instructor": "Ning Jiang" },
+      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Spring 2019", "instructor": "Gordon Savage" },
+      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Winter 2019", "instructor": "Gordon Savage" }
+    ]
+  },
+  {
+    "type": "research",
+    "organization": "University of Waterloo",
+    "logo": "assets/image/logo/uwaterloo.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Graduate Research Assistant (BioMechatronic Systems)",
+    "employmentType": "Contract Full-time",
+    "date": {
+        "start": "2018-09-01",
+        "end": "2022-12-31"
+    },
+    "responsibilities": [],
+    "projects": [
+      {
+        "title": "Design, Dynamics, and Control of Active-Passive Exoskeletons Robotic",
+        "description": [
+            "Developed and verified adjustable biomechanical 20-DoF model using MATLAB and MapleSim",
+            "Designed, optimized and developed actuator of wearable robot in accordance with ISB standards",
+            "Conducted research and developed predictive models using machine learning ANN (artificial neural network), RNN (recurrent neural network), CNN (convolutional neural network), and RCNN (recurrent convolutional neural network) to estimate biomechanical (kinematic and kinetic) variables from noisy electromyography sensor data",
+            "Developed novel assist-as-needed control regulations for wearable robots using model-based predictive control and fuzzy logic techniques",
+            "Implemented torque and motion real-time control of active wearable robots with sEMG sensors and CAN-bus connection, leading to a 15% improvement in accuracy and a 25% increase in robot speed",
+            "Designed and implemented safety measures for autonomous systems to ensure compliance with human test, industry regulations and standards, resulting in successful attainment of safety approval and ethics certificate"
+        ]
+      }
+    ],
+    "conferences": [
+      "18th International Symposium on Computer Methods in Biomechanics and Biomedical Engineering, Paris, France, May 2023",
+      "Waterloo Robotics Day, Waterloo, Canada, March 2023",
+      "6th International Conference on Multibody System Dynamics, New Delhi, India, October 2022",
+      "CRE-MSD Conference on Manual Handling, Mississauga, Canada, October 2022",
+      "5th North American Congress on Biomechanics, Ottawa, Canada, August 2022",
+      "SYDE Graduate Symposium, Waterloo, Canada, June 2022",
+      "45th American Society of Biomechanics Annual Conference, Virtual, August 2021",
+      "45th Mechanisms and Robotics Conference, Virtual, August 2021",
+      "17th International Conference on Multibody Systems, Nonlinear Dynamics, and Control, Virtual, August 2021",
+      "7th International Conference of Control, Dynamic Systems, and Robotics, Virtual, November 2020",
+      "16th Annual Ontario Biomechanics Conference, Nottawasaga, Canada, March 2019"
+    ]
+  }
+]
