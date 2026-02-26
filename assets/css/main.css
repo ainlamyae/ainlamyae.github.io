@@ -1,12 +1,15 @@
+/* === Body and general styles === */
 body {
   font-family: Arial, sans-serif;
   max-width: 1000px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 80px 20px 20px 20px; 
   line-height: 1.5;
   color: #222;
+  scroll-behavior: smooth; 
 }
 
+/* === Header === */
 header {
   text-align: center;
   margin-bottom: 35px;
@@ -104,4 +107,41 @@ a:hover {
 
 ul {
   padding-left: 20px;
+}
+
+/* === Fixed Horizontal Navbar === */
+#navbar {
+  position: fixed;       /* stick to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0c3761; /* matches h1 color */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;         /* horizontal layout */
+  justify-content: center;
+}
+
+#navbar li {
+  margin: 0 15px;
+}
+
+#navbar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 18px 10px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+  background-color: #145DA0;
+  border-radius: 5px;
 }
