@@ -2,7 +2,7 @@
 {
   "institution": {
     "name": "University of Waterloo",
-    "logo": "assets/images/uwaterloo.png",
+    "logo": "assets/image/logo/uwaterloo.png",
     "address": "Waterloo, Canada"
   },
   "degree": {
@@ -26,9 +26,13 @@
     "abstract": "Modern power assistive technologies, neuromuscular rehabilitation engineering, and haptic research have all entered into a new age thanks to wearable exoskeleton robotics..."
   },
   "research_group": {
-    "supervisor": "Prof. John Joseph McPhee",
     "name": "Motion Research Group (MoRG)",
     "url": "https://uwaterloo.ca/motion-research-group/"
+  },
+  "supervisor": {
+    "name": "Prof. John Joseph McPhee",
+    "email": "mcphee@uwaterloo.ca",
+    "url": "https://uwaterloo.ca/systems-design-engineering/profile/mcphee"
   },
   "courses": {
     "enrolled": [
@@ -47,7 +51,7 @@
 {
   "institution": {
     "name": "K. N. Toosi University of Technology",
-    "logo": "assets/images/kntu.png",
+    "logo": "assets/image/logo/kntu.png",
     "address": "Tehran, Iran"
   },
   "degree": {
@@ -71,9 +75,13 @@
     "abstract": "One of the widely used of industrial robots is object manipulation (OM). Cable driven parallel robot (CDPR) has a very large workspace suitable for this application. However, there are possible cable collisions with the environment. Therefore, use of a Serial Manipulator (SM) is recommended penetrating the blind spots. Thus, the combination of CDPR-SM is recommended for OM. The tasks of OM, welding, surface finishing, cleaning, etc. need algorithms capable of determining the interaction force and position. In addition, constrained and suspended structure of CDPR is evaluated and the best structure for the control and construction is selected. Kinematics modeling of robots include CDPR and SM are provided. Topics such as inverse kinematics, Jacobian, velocity, acceleration analysis, singularity and sensitivity of CDPR are investigated. Also forward, inverse kinematics, velocity, acceleration, Jacobian, singularities and workspace analysis of SM are checked. Dynamics model for using in control subjects; simulation and system analysis take place. The SM dynamics is obtained by iterative Newton-Euler and CDPR dynamics is modeled by Newton-Euler method. An algorithm to optimize traction cable is also provided. In addition, a redundancy resolution algorithm is provided. However, a new method is proposed to reduce the redundancy of actuators. A virtual model verifies the equation. Structure of CDPR equipped with SM is optimized by criteria such as controllable, free singularity workspace, sensitivity and stiffness. Multiple impedance control (MIC) is used to OM in the presence of external disturbances. Also parallel and serial MIC with different coefficient is implemented. However, work and joint space unit impedance is also checked. Coefficients are optimised by error and wrench criteria. The CDPR, which discussed in this thesis for implementing control algorithms and studying performance is manufactured. According to the analysis, mechanical components of the robot are designed. In addition, electronic platform is prepared to send control commands. The pose of platform is obtained by a new method that combines machine vision and winch angles. The artificial neural network is trained for forward kinematics."
   },
   "research_group": {
-    "supervisor": "Prof. S. Ali A. Moosavian",
     "name": "Advanced Robotics & Automated Systems (ARAS) Laboratory",
     "url": "https://aras.kntu.ac.ir/"
+  },
+  "supervisor": {
+    "name": "Prof. S. Ali A. Moosavian",
+    "email": "moosavian@kntu.ac.ir",
+    "url": "https://wp.kntu.ac.ir/moosavian/"
   },
   "courses": {
     "enrolled": [
@@ -91,7 +99,7 @@
 {
   "institution": {
     "name": "Isfahan University of Technology",
-    "logo": "assets/images/iut.png",
+    "logo": "assets/image/logo/iut.png",
     "address": "Isfahan, Iran"
   },
   "degree": {
@@ -115,9 +123,13 @@
     "abstract": "This research delves into the satellite systems tethered by cables, a study undertaken several decades subsequent to the conceptualization of tethering space systems. Notably, this tethering mechanism finds application in the domain of space elevators as well. The employment of such tethers brings forth considerable advantages for robotic systems governed by extended tethers, prompting their substitution for human counterparts in space missions encompassing repair, equipment installation, and debris elimination from space stations, satellites, and space telescopes. This study focuses on the analysis of a four degrees of freedom tethered space robotic arm, specifically examining how the robot's end effector moves along predefined paths. Algorithms and models are created to describe the robot's setup, including an extended tether acting as an arm that allows the entire robot to move in a circular orbit around Earth. The tether is treated as a rigid, linear arm in mathematical models, and its tension is assessed to determine if the paths are feasible. The robot's movement starts from a platform attached to a spacecraft. Different trajectories, such as direct, oblique, and circular paths, are analyzed, considering historical angle changes in joint variables and the torque needed for these changes. The study calculates the robot's potential energy through gravitational force integration and employs Lagrange equations, kinetic energy, potential energy concepts, equilibrium equations, the Hamiltonian system, and tether tension equations to derive multibody dynamic model. Consideration is also given to torque constraints at the tether's initiation and culmination points, with viable trajectories delineated. Additionally, novel control methodologies for mitigating tether oscillations through length extension and positional adjustments at the tether's starting point are elucidated. The validation of the proposed algorithms and trajectory planning strategies is conducted through dynamic simulations and verification processes utilizing MATLAB and Simulink software. Finally, recommendations for enhancing this space system and avenues for future research are proposed based on the findings and analyses presented."
   },
   "research_group": {
-    "supervisor": "Prof. Mehdi Keshmiri",
     "name": "Advanced Robotics and Mechatronics Laboratory",
     "url": "https://armlab.iut.ac.ir/"
+  },
+  "supervisor": {
+    "name": "Prof. Mehdi Keshmiri",
+    "email": "mehdik@iut.ac.ir",
+    "url": "https://people.iut.ac.ir/en/keshmiri"
   },
   "courses": {
     "enrolled": [
