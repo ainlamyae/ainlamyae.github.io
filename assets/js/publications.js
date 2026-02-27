@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
       function renderGroup(title, items, typeKey) {
         if (!items || !items.length) return;
 
-        const h3 = document.createElement("h3");
-        h3.textContent = title;
-        container.appendChild(h3);
+        const h5 = document.createElement("h5");
+        h5.textContent = title;
+        container.appendChild(h5);
 
         // Sort descending by year
         items.sort((a, b) => getYear(b) - getYear(a));
