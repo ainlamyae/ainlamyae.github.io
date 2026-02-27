@@ -27,7 +27,7 @@
   },
   "research_group": {
     "name": "Motion Research Group (MoRG)",
-    "url": "https://uwaterloo.ca/motion-research-group/"
+    "url": "https://uwaterloo.ca/motion-research-group"
   },
   "supervisor": {
     "name": "Prof. John Joseph McPhee",
@@ -76,12 +76,12 @@
   },
   "research_group": {
     "name": "Advanced Robotics & Automated Systems (ARAS) Laboratory",
-    "url": "https://aras.kntu.ac.ir/"
+    "url": "https://aras.kntu.ac.ir"
   },
   "supervisor": {
     "name": "Prof. S. Ali A. Moosavian",
     "email": "moosavian@kntu.ac.ir",
-    "url": "https://wp.kntu.ac.ir/moosavian/"
+    "url": "https://wp.kntu.ac.ir/moosavian"
   },
   "courses": {
     "enrolled": [
@@ -124,7 +124,7 @@
   },
   "research_group": {
     "name": "Advanced Robotics and Mechatronics Laboratory",
-    "url": "https://armlab.iut.ac.ir/"
+    "url": "https://armlab.iut.ac.ir"
   },
   "supervisor": {
     "name": "Prof. Mehdi Keshmiri",
