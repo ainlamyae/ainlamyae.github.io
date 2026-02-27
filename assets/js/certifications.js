@@ -22,7 +22,7 @@ fetch('assets/data/certifications.json')
     Object.keys(grouped).forEach(type => {
 
       // Subsection heading (h3 matches shared CSS)
-      const categoryHeading = document.createElement('h5');
+      const categoryHeading = document.createElement('h4');
       categoryHeading.textContent = type;
       container.appendChild(categoryHeading);
 
