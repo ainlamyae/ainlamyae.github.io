@@ -3,7 +3,7 @@
   "institution": {
     "name": "University of Waterloo",
     "logo": "assets/image/logo/uwaterloo.png",
-    "address": "Waterloo, Canada"
+    "address": "Waterloo, Ontario, Canada"
   },
   "degree": {
     "level": "Doctor of Philosophy",
@@ -52,12 +52,12 @@
   "institution": {
     "name": "K. N. Toosi University of Technology",
     "logo": "assets/image/logo/kntu.png",
-    "address": "Tehran, Iran"
+    "address": "Tehran, Tehran, Iran"
   },
   "degree": {
     "level": "Master of Applied Science",
     "abbreviation": "M.Sc.",
-    "field": "Mechatronics, Robotics, and Automation Engineering"
+    "field": "Mechatronics Engineering"
   },
   "date": {
     "start": "2013-09-01",
@@ -100,7 +100,7 @@
   "institution": {
     "name": "Isfahan University of Technology",
     "logo": "assets/image/logo/iut.png",
-    "address": "Isfahan, Iran"
+    "address": "Isfahan, Esfahan, Iran"
   },
   "degree": {
     "level": "Bachelor of Applied Science",

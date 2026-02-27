@@ -1,123 +1,344 @@
 [
   {
-    "type": "research",
+    "type": "Research",
     "organization": "University of Waterloo",
     "logo": "assets/image/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
     "position": "Postdoctoral Research Associate (Autonomous Control)",
     "employmentType": "Contract Full-time",
     "date": {
-        "start": "2023-01-01",
-        "end": "2024-03-31"
+      "start": "2023-01-01",
+      "end": "2024-03-31"
     },
-    "responsibilities": [
-      "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM), coordinating presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
-    ],
-    "projects": [
+    "items": [
       {
-        "title": "Real-time Embedded Controller within Different Sensors and Intelligent Control",
+        "type": "Project",
+        "title": "Real-time Embedded Controller within Different Sensors and Intelligence Control",
         "description": [
-            "Successfully designed and implemented platform real-time communication and control software on Raspberry Pi 4B (Linux environment) to support advanced application features, resulting in a 20% increase in user engagement and a 30% reduction in software crashes",
-            "Developed machine learning-based real-time control unit with Python (multi threaded and object-oriented), resulting in improved system performance and accuracy",
-            "Proficient in developing mid-level programs with Bluetooth, CAN-bus, and SPI connections to achieve seamless communication between hardware and software",
-            "Conducted rigorous feature validation using hardware-in-the-loop (HIL) testing, ensuring the robustness and reliability of the system"
+          "Successfully designed and implemented platform real-time communication and control software on Raspberry Pi 4B (Linux environment) to support advanced application features, resulting in a 20% increase in user engagement and a 30% reduction in software crashes",
+          "Developed machine learning-based real-time control unit with Python (multi threaded and object-oriented), resulting in improved system performance and accuracy",
+          "Proficient in developing mid-level programs with Bluetooth, CAN-bus, and SPI connections to achieve seamless communication between hardware and software",
+          "Conducted rigorous feature validation using hardware-in-the-loop (HIL) testing, ensuring the robustness and reliability of the system"
         ]
       },
       {
+        "type": "Project",
         "title": "Generating Database for Marker-less Motion Capture Methods",
         "description": [
-            "Developed a human musculoskeletal model using biomechanical experimental data and anthropometric data",
-            "Refined manual annotations through kinematic, dynamic, and muscle modeling"
+          "Developed a human musculoskeletal model using biomechanical experimental data and anthropometric data",
+          "Refined manual annotations through kinematic, dynamic, and muscle modeling"
         ]
-      }
-    ],
-    "supervision": [
-      {
-        "student": "Tegan Asprey",
-        "year": "2023",
-        "project": "Muscle activation detector MyoBuzz watch prototype"
       },
       {
-        "student": "Vasylysa Korovkina",
-        "year": "2023",
-        "project": "Myoelectric controlled 1-DOF forearm-hand active prosthesis prototype"
+        "type": "Responsibility",
+        "title": "Postdoctoral Responsibilities",
+        "description": [
+          "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM)",
+          "Coordinated presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
+        ]
       },
       {
-        "student": "Lavan Sumanan",
-        "year": "2023",
-        "project": "Human motion animation using 3Ds Max for 3D pose estimation database"
+        "type": "Supervision",
+        "title": "Sub-supervised Undergraduate Research Assignments (URA) Students",
+        "description": [
+          "Tegan Asprey, Muscle activation detector MyoBuzz watch prototype, 2023",
+          "Vasylysa Korovkina, Myoelectric controlled 1-DOF forearm-hand active prosthesis prototype, 2023",
+          "Lavan Sumanan, Human motion animation using 3Ds Max for 3D pose estimation database, 2023"
+        ]
       }
     ]
   },
   {
-    "type": "teaching",
+    "type": "Teaching",
     "organization": "University of Waterloo",
     "logo": "assets/image/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
     "position": "Graduate Teaching Assistant",
     "employmentType": "Contract Part-time",
     "date": {
-        "start": "2019-01-01",
-        "end": "2023-04-30"
+      "start": "2019-01-01",
+      "end": "2023-04-30"
     },
-    "responsibilities": [
-      "Delivered tutorials and undergraduate instructional support.",
-      "Explained complex engineering concepts during laboratory sessions, office hours, and via email communication.",
-      "Evaluated assignments, projects, and examinations to assess student learning outcomes."
-    ],
-    "courses": [
-      { "code": "SYDE 544", "title": "Biomedical Measurement and Signal Processing", "term": "Winter 2023", "instructor": "Steven Pretty" },
-      { "code": "SYDE 252M", "title": "Linear Systems and Signals", "term": "Fall 2022", "instructor": "Charbel Azzi" },
-      { "code": "SYDE 252", "title": "Linear Systems and Signals", "term": "Spring 2022", "instructor": "Gordon Savage" },
-      { "code": "SYDE 352", "title": "Introduction to Control Systems", "term": "Winter 2022", "instructor": "Gordon Savage" },
-      { "code": "SYDE 121", "title": "Digital Computation", "term": "Fall 2021", "instructor": "Jason Foster" },
-      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Spring 2021", "instructor": "Gordon Savage" },
-      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Winter 2021", "instructor": "Gordon Savage" },
-      { "code": "SYDE 101", "title": "Communications in Systems Design Engineering", "term": "Fall 2020", "instructor": "Igor Ivkovic" },
-      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Spring 2020", "instructor": "Stephen Birkett" },
-      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Winter 2020", "instructor": "Gordon Savage" },
-      { "code": "SYDE 252", "title": "Linear Systems and Signals", "term": "Fall 2019", "instructor": "Ning Jiang" },
-      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Spring 2019", "instructor": "Gordon Savage" },
-      { "code": "SYDE 351", "title": "Systems Models 1", "term": "Winter 2019", "instructor": "Gordon Savage" }
+    "items": [
+      {
+        "type": "Responsibility",
+        "title": "Teaching Responsibilities",
+        "description": [
+          "Delivered tutorials and undergraduate instructional support",
+          "Explained complex engineering concepts during laboratory sessions, office hours, and via email communication",
+          "Evaluated assignments, projects, and examinations to assess student learning outcomes"
+        ]
+      },
+      {
+        "type": "Course",
+        "title": "Courses",
+        "description": [
+          "Biomedical Measurement and Signal Processing (SYDE 544), Mr. Steven Pretty, Winter 2023",
+          "Linear Systems and Signals (SYDE 252M), Dr. Charbel Azzi, Fall 2022",
+          "Linear Systems and Signals (SYDE 252), Prof. Gordon Savage, Spring 2022",
+          "Introduction to Control Systems (SYDE 352), Prof. Gordon Savage, Winter 2022",
+          "Digital Computation (SYDE 121), Mr. Jason Foster, Fall 2021",
+          "Systems Models 1 (SYDE 351), Prof. Gordon Savage, Spring 2021",
+          "Systems Models 1 (SYDE 351), Prof. Gordon Savage, Winter 2021",
+          "Communications in Systems Design Engineering (SYDE 101), Dr. Igor Ivkovic, Fall 2020",
+          "Systems Models 1 (SYDE 351), Prof. Stephen Birkett, Spring 2020",
+          "Systems Models 1 (SYDE 351), Prof. Gordon Savage, Winter 2020",
+          "Linear Systems and Signals (SYDE 252), Prof. Ning Jiang, Fall 2019",
+          "Systems Models 1 (SYDE 351), Prof. Gordon Savage, Spring 2019",
+          "Systems Models 1 (SYDE 351), Prof. Gordon Savage, Winter 2019"
+        ]
+      }
     ]
   },
   {
-    "type": "research",
+    "type": "Research",
     "organization": "University of Waterloo",
     "logo": "assets/image/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
     "position": "Graduate Research Assistant (BioMechatronic Systems)",
     "employmentType": "Contract Full-time",
     "date": {
-        "start": "2018-09-01",
-        "end": "2022-12-31"
+      "start": "2018-09-01",
+      "end": "2022-12-31"
     },
-    "responsibilities": [],
-    "projects": [
+    "items": [
       {
+        "type": "Project",
         "title": "Design, Dynamics, and Control of Active-Passive Exoskeletons Robotic",
         "description": [
-            "Developed and verified adjustable biomechanical 20-DoF model using MATLAB and MapleSim",
-            "Designed, optimized and developed actuator of wearable robot in accordance with ISB standards",
-            "Conducted research and developed predictive models using machine learning ANN (artificial neural network), RNN (recurrent neural network), CNN (convolutional neural network), and RCNN (recurrent convolutional neural network) to estimate biomechanical (kinematic and kinetic) variables from noisy electromyography sensor data",
-            "Developed novel assist-as-needed control regulations for wearable robots using model-based predictive control and fuzzy logic techniques",
-            "Implemented torque and motion real-time control of active wearable robots with sEMG sensors and CAN-bus connection, leading to a 15% improvement in accuracy and a 25% increase in robot speed",
-            "Designed and implemented safety measures for autonomous systems to ensure compliance with human test, industry regulations and standards, resulting in successful attainment of safety approval and ethics certificate"
+          "Developed and verified adjustable biomechanical 20-DoF model using MATLAB and MapleSim",
+          "Designed, optimized, and developed actuator of wearable robot in accordance with ISB standards",
+          "Conducted research and developed predictive models using ANN, RNN, CNN, and RCNN to estimate biomechanical (kinematic and kinetic) variables from noisy electromyography sensor data",
+          "Developed novel assist-as-needed control regulations for wearable robots using model-based predictive control and fuzzy logic techniques",
+          "Implemented torque and motion real-time control of active wearable robots with sEMG sensors and CAN-bus connection, leading to a 15% improvement in accuracy and a 25% increase in robot speed",
+          "Designed and implemented safety measures for autonomous systems to ensure compliance with human testing, industry regulations, and standards, resulting in successful attainment of safety approval and ethics certificate"
+        ]
+      },
+      {
+        "type": "Conference",
+        "title": "Conferences & Academic Activities",
+        "description": [
+          "18th International Symposium on Computer Methods in Biomechanics and Biomedical Engineering, Paris, France, May 2023",
+          "Waterloo Robotics Day, Waterloo, Canada, March 2023",
+          "6th International Conference on Multibody System Dynamics, New Delhi, India, October 2022",
+          "CRE-MSD Conference on Manual Handling, Mississauga, Canada, October 2022",
+          "5th North American Congress on Biomechanics, Ottawa, Canada, August 2022",
+          "SYDE Graduate Symposium, Waterloo, Canada, June 2022",
+          "45th American Society of Biomechanics Annual Conference, Virtual, August 2021",
+          "45th Mechanisms and Robotics Conference, Virtual, August 2021",
+          "17th International Conference on Multibody Systems, Nonlinear Dynamics, and Control, Virtual, August 2021",
+          "7th International Conference of Control, Dynamic Systems, and Robotics, Virtual, November 2020",
+          "16th Annual Ontario Biomechanics Conference, Nottawasaga, Canada, March 2019"
         ]
       }
-    ],
-    "conferences": [
-      "18th International Symposium on Computer Methods in Biomechanics and Biomedical Engineering, Paris, France, May 2023",
-      "Waterloo Robotics Day, Waterloo, Canada, March 2023",
-      "6th International Conference on Multibody System Dynamics, New Delhi, India, October 2022",
-      "CRE-MSD Conference on Manual Handling, Mississauga, Canada, October 2022",
-      "5th North American Congress on Biomechanics, Ottawa, Canada, August 2022",
-      "SYDE Graduate Symposium, Waterloo, Canada, June 2022",
-      "45th American Society of Biomechanics Annual Conference, Virtual, August 2021",
-      "45th Mechanisms and Robotics Conference, Virtual, August 2021",
-      "17th International Conference on Multibody Systems, Nonlinear Dynamics, and Control, Virtual, August 2021",
-      "7th International Conference of Control, Dynamic Systems, and Robotics, Virtual, November 2020",
-      "16th Annual Ontario Biomechanics Conference, Nottawasaga, Canada, March 2019"
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Techno Niro",
+    "logo": "assets/image/logo/technoniro.png",
+    "address": "Dorcheh, Esfahan, Iran",
+    "position": "R&D Mid-Level Engineer (Robotics)",
+    "employmentType": "Contract Full-time",
+    "date": {
+      "start": "2016-01-01",
+      "end": "2018-08-31"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Spatial 6 DoF 8 Cable-Driven Parallel Robot & 3 DoF Wrist Rehabilitation Robot",
+        "description": [
+          "Conducted comprehensive inverse kinematic and dynamic modeling and analysis for the Spatial 6 DoF 8 Cable-Driven Parallel Robot",
+          "Validated the developed models using the SimMechanics Toolbox",
+          "Designed an optimal cable structure attachment for the robot",
+          "Simulated PD Partial, LQR, Robust, and Adaptive Control in the presence of noise and disturbance",
+          "Designed conceptual and mechanical parts for the 3 DoF Wrist Rehabilitation Robot and conducted kinematic and dynamic modeling",
+          "Implemented modified impedance control for enhanced human-robot interaction"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Techno Niro",
+    "logo": "assets/image/logo/technoniro.png",
+    "address": "Dorcheh, Esfahan, Iran",
+    "position": "R&D Junior Engineer (Robotics)",
+    "employmentType": "Contract Part-time",
+    "date": {
+      "start": "2013-09-01",
+      "end": "2015-12-31"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "6 DoF Industrial Serial Manipulator Modeling & Control",
+        "description": [
+          "Conducted comprehensive kinematic and dynamic modeling and analysis for the 6 DoF Industrial Serial Manipulator, assessing workspace, dexterity, and performance",
+          "Utilized CATIA software for the design of mechanical parts, performed finite element analysis, and supervised the manufacturing process using CNC machines",
+          "Prepared the hardware-in-loop of the control system using LabVIEW and MATLAB, and conducted motor parameters identification",
+          "Implemented PID control, adjusted control coefficients for different maneuvers, and planned trajectory using ARM-controller programming"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Techno Niro",
+    "logo": "assets/image/logo/technoniro.png",
+    "address": "Dorcheh, Esfahan, Iran",
+    "position": "R&D Intern",
+    "employmentType": "Contract Part-time",
+    "date": {
+      "start": "2009-06-01",
+      "end": "2013-08-31"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Plant Mechatronic Design, Maintenance, and Project Management",
+        "description": [
+          "Developed and supervised the implementation of a comprehensive mechatronic scheme for the plant, utilizing ePlan software and programming Siemens PLC for optimal performance",
+          "Provided proactive maintenance and effective troubleshooting for mechanical systems and equipment",
+          "Actively participated in project planning and execution, fostering collaboration to meet project deadlines",
+          "Ensured adherence to quality standards, conducted regular inspections, and maintained accurate documentation of all mechanical systems",
+          "Stayed abreast of industry trends and advancements, and pursued continuous learning through workshops and training"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "K. N. Toosi University of Technology",
+    "logo": "assets/image/logo/kntu.png",
+    "address": "Tehran, Tehran, Iran",
+    "position": "Graduate Research Assistant (System Control)",
+    "employmentType": "Contract Part-time",
+    "date": {
+      "start": "2014-09-01",
+      "end": "2015-12-31"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Multiple Impedance Control of Hybrid Parallel-Serial Manipulator for Object Manipulation",
+        "description": [
+          "Designed and developed a MATLAB/Simulink model for an 8 cable-driven parallel robot prototype with a serial manipulator, and verified its performance",
+          "Conducted a comprehensive analysis of stiffness, sensitivity, singularity, and workspace volume to optimize the structure of a constraint and suspended parallel robot, using Genetic Algorithm (GA)",
+          "Simulated and evaluated multiple impedance control algorithms, including serial and parallel, for object manipulation and human-robot force/moment interaction",
+          "Prototyped the 8 cable constraint parallel robot, integrated image processing (vision) and IMU modules for precise position and orientation feedback, proposed an algorithm to address sensor shortage, and successfully implemented real-time motion control"
+        ]
+      },
+      {
+        "type": "Supervision",
+        "title": "Sub-supervised Students",
+        "description": [
+          "Mohammadreza Mousavi, 'Control of Cable-Driven Redundant Parallel Manipulator', Master Thesis, 2016",
+          "Masoud Ghanbari, 'Optimal Motion Planning for Cable Robots with Uncertain Jacobian', Master Thesis, 2016",
+          "Nima Arteghzadeh and Maryam Sadat Nabipour, 'Automated Ball Tracking Camera Manipulated by Cable Parallel Robot', BSc Project, 2016"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Teaching",
+    "organization": "K. N. Toosi University of Technology",
+    "logo": "assets/image/logo/kntu.png",
+    "address": "Tehran, Tehran, Iran",
+    "position": "Graduate Marker",
+    "employmentType": "Remote",
+    "date": {
+      "start": "2015-09-01",
+      "end": "2015-11-30"
+    },
+    "items": [
+      {
+        "type": "Responsibilities",
+        "title": "Teaching Responsibilities",
+        "description": [
+          "Assessed student learning through evaluating assignments, projects, and exams"
+        ]
+      },
+      {
+        "type": "Course",
+        "title": "Course",
+        "description": [
+          "Kinematics and Dynamics of Machines, Prof. S. Ali A. Moosavian, Fall 2015"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Kian Control Apadana Co. (Festo Authorized Distributor)",
+    "logo": "assets/image/logo/kian.png",
+    "address": "Isfahan, Esfahan, Iran",
+    "position": "R&D Intern (Automation)",
+    "employmentType": "Internship",
+    "date": {
+      "start": "2013-06-01",
+      "end": "2013-08-31"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Automation and Mechatronic System Development",
+        "description": [
+          "Developed the mechatronic scheme for a steel plant using ePLAN software, including designing the sensors, actuators, and wiring for the system",
+          "Conducted extensive research on the hydraulic variable displacement pump action, exploring various modes of operation and optimizing their efficiency"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Isfahan University of Technology",
+    "logo": "assets/image/logo/iut.png",
+    "address": "Isfahan, Esfahan, Iran",
+    "position": "Undergraduate Research Assistant",
+    "employmentType": "Contract Part-time",
+    "date": {
+      "start": "2012-09-01",
+      "end": "2013-08-31"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Joint Space Energy Optimization of Tethered Space Robot for End-Effector Optimal Path",
+        "description": [
+          "Developed a comprehensive model of forward kinematics, workspace, and dynamics of a 4-DoF tethered space robot and conducted in-depth analysis to evaluate its performance",
+          "Proposed and simulated a highly effective nonlinear control algorithm for a redundant robot vibration stabilizer and demonstrated its effectiveness through simulations and experiments"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Teaching",
+    "organization": "Isfahan University of Technology",
+    "logo": "assets/image/logo/iut.png",
+    "address": "Isfahan, Esfahan, Iran",
+    "position": "Undergraduate Marker",
+    "employmentType": "Hybrid",
+    "date": {
+      "start": "2013-01-01",
+      "end": "2013-05-31"
+    },
+    "items": [
+      {
+        "type": "Responsibilities",
+        "title": "Teaching Responsibilities",
+        "description": [
+          "Assessed student learning by marking assignments"
+        ]
+      },
+      {
+        "type": "Course",
+        "title": "Course List",
+        "description": [
+          "Fundamentals of Mechatronic Systems, Prof. Saeed Behbahani, Winter 2013"
+        ]
+      }
     ]
   }
 ]
