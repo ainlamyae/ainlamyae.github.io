@@ -36,7 +36,7 @@ fetch('assets/data/education.json')
       textDiv.style.minWidth = '0';
 
       // University Name
-      const uniHeading = document.createElement('h3');
+      const uniHeading = document.createElement('h4');
       uniHeading.textContent = edu.institution.name;
       uniHeading.style.margin = '0 0 2px 0';
       textDiv.appendChild(uniHeading);
