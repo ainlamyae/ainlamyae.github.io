@@ -31,19 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           return author;
         });
-
         if (formatted.length === 1) return formatted[0];
         if (formatted.length === 2) return formatted.join(" and ");
-        // more than 2 authors: separate last with ', and'
         return formatted.slice(0, -1).join(", ") + ", and " + formatted[formatted.length - 1];
       }
 
-      function renderGroup(title, items, typeKey) {
+      function renderGroup(title, items, typeKey, index) {
         if (!items || !items.length) return;
 
-        const h4 = document.createElement("h4");
-        h4.textContent = title;
-        container.appendChild(h4);
+        // --- Create dropdown wrapper ---
+        const section = document.createElement("div");
+        section.classList.add("dropdown-section");
+        section.dataset.sectionId = `pub-${index}`;
+
+        // --- Clickable heading ---
+        const heading = document.createElement("h4");
+        heading.classList.add("dropdown-toggle");
+        heading.textContent = title;
+        section.appendChild(heading);
+
+        // --- Content container ---
+        const content = document.createElement("div");
+        content.classList.add("dropdown-content");
 
         // Sort descending by year
         items.sort((a, b) => getYear(b) - getYear(a));
@@ -51,14 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const total = items.length;
 
         items.forEach((pub, idx) => {
-
           const entryDiv = document.createElement("div");
           entryDiv.classList.add("entry");
 
           // ===== AUTHORS =====
           const authors = formatAuthors(pub.authors);
 
-          // ===== PUBLISHER + JOURNAL/BOOKTITLE =====
+          // ===== VENUE / EXTRA =====
           let venue = "";
           if (pub.type === "article") {
             const parts = [];
@@ -74,39 +82,22 @@ document.addEventListener("DOMContentLoaded", function () {
           } else if (pub.type === "patent") {
             if (pub.publisher) venue = `<span class="org"><em>${pub.publisher}</em></span>`;
           } else if (pub.type === "thesis") {
-            let parts = [];
-            let degreePart = "";
-            let publisherPart = "";
-
-            if (pub.degree) degreePart = pub.degree;               // keep degree plain
-            if (pub.publisher) publisherPart = `<em>${pub.publisher}</em>`;  // italic university
-
-            if (degreePart && publisherPart) {
-              parts = `${degreePart}, ${publisherPart}`;
-            } else if (degreePart) {
-              parts = degreePart;
-            } else if (publisherPart) {
-              parts = publisherPart;
-            }
-
-            venue = parts;
+            const degreePart = pub.degree || "";
+            const publisherPart = pub.publisher ? `<em>${pub.publisher}</em>` : "";
+            venue = degreePart && publisherPart ? `${degreePart}, ${publisherPart}` : (degreePart || publisherPart);
           }
 
-          // ===== VOLUME / NUMBER / PAGES =====
+          // Volume / number / pages
           const extraParts = [];
           if (pub.volume) extraParts.push(`vol. ${pub.volume}`);
           if (pub.number) extraParts.push(`no. ${pub.number}`);
           if (pub.pages) {
-            const pages = pub.pages.replace(/\s+/g, ""); // remove spaces
-            if (pages.includes("-")) {
-              extraParts.push(`pp. ${pages}`);
-            } else {
-              extraParts.push(`p. ${pages}`);
-            }
+            const pages = pub.pages.replace(/\s+/g, "");
+            extraParts.push(pages.includes("-") ? `pp. ${pages}` : `p. ${pages}`);
           }
           const extra = extraParts.length ? ", " + extraParts.join(", ") : "";
 
-          // ===== TITLE =====
+          // Title with link
           const link = pub.doi ? `https://doi.org/${pub.doi}` : (pub.url || "");
           const titleHTML = link
             ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${pub.title || ""}</a>`
@@ -114,16 +105,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const number = total - idx;
 
-          // ===== FINAL ENTRY =====
-          entryDiv.innerHTML =  `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
-          container.appendChild(entryDiv);
+          entryDiv.innerHTML = `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
+
+          content.appendChild(entryDiv);
         });
+
+        section.appendChild(content);
+        container.appendChild(section);
       }
 
-      renderGroup("Patent", groups.patent, "patent");
-      renderGroup("Journal", groups.article, "article");
-      renderGroup("Conference", groups.inproceedings, "inproceedings");
-      renderGroup("Thesis", groups.thesis, "thesis");
+      let i = 0;
+      renderGroup("Journal", groups.article, "article", i++);
+      renderGroup("Conference", groups.inproceedings, "inproceedings", i++);
+      renderGroup("Patent", groups.patent, "patent", i++);
+      renderGroup("Thesis", groups.thesis, "thesis", i++);
 
     })
     .catch(error => console.error("Error loading publications:", error));

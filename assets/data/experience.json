@@ -1,6 +1,115 @@
 [
   {
     "type": "Research",
+    "organization": "Huawei Technologies Canada",
+    "logo": "assets/image/logo/huawei.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
+    "employmentType": "Permanent Full-time",
+    "date": {
+      "start": "2023-11-01",
+      "end": null
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
+        "description": [
+          "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "Explainable & Reliable System Architecture for LLM-based Script Generator",
+        "description": [
+          "Architected a multi-stage LLM reliability pipeline with confidence estimation, output gating, and policy-driven decision enforcement",
+          "Implemented probability-based and token-level uncertainty scoring to dynamically control acceptance, remediation, or escalation of LLM outputs",
+          "Applied voting and consensus mechanisms across multiple LLM outputs to improve consistency and select highest-agreement results",
+          "Engineered an assurance loop with temperature adjustment, prompt perturbation, and model switching for iterative refinement",
+          "Implemented a Decision Maker using a Markov Decision Process (MDP) for policy enforcement under system constraints",
+          "Enabled fail-safe escalation paths including re-execution with alternative models, LLM-as-Judge evaluation, and human-in-the-loop review",
+          "Designed an explainable JSON-based output schema ensuring traceability of generated variables and intermediate decisions",
+          "Proposed metamorphic prompt perturbation via semantic-preserving sentence swapping (Chinese inputs) to test robustness and consistency"
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "Runtime Behavioural Validation of Self-adaptive AI-enabled Systems",
+        "description": [
+          "Led and coordinated the uOttawa engineering team, aligning technical efforts and ensuring milestone delivery",
+          "Extended metamorphic testing methodologies to LLM-based software and defined practical application strategies",
+          "Collected and formalized metamorphic relations for LLM applications to detect subtle undesirable behaviors beyond explicit failures",
+          "Supervised development of a search-based test generation approach for autonomous driving scenarios",
+          "Oversaw case studies implemented in CARLA simulator on the Interfuser autonomous driving system",
+          "Directed automated offline system-level testing combining Metamorphic Testing with Evolutionary Algorithms"
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
+        "description": [
+          "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
+          "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
+          "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
+        ]
+      },
+      {
+        "type": "Conference",
+        "title": "Strategic Insights and Innovations from Global Technology Conferences",
+        "description": [
+          "39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov–Dec 2025",
+          "34th International Joint Conference on Artificial Intelligence (IJCAI), Montreal, Canada, Aug 2025",
+          "38th Annual Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada, Dec 2024",
+          "OpenMind Research Institute Banff Retreat, Banff, Canada, Oct 2024",
+          "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, USA, Jun 2024",
+          "Systems Engineering Workshop for Complex Intelligent Systems, Hong Kong Science Park, Hong Kong, May 2024",
+          "Symposium on Innovative Robotics Technologies and Applications, Hong Kong Science Park, Hong Kong, May 2024",
+          "Strategy and Technology Workshop by Huawei R&D Teams, Shenzhen and Dongguan, China, May 2024",
+          "18th Annual IEEE International Systems Conference (SysCon), Montreal, Canada, Apr 2024",
+          "38th Annual AAAI Conference on Artificial Intelligence (AAAI), Vancouver, Canada, Feb 2024"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Huawei Technologies Canada",
+    "logo": "assets/image/logo/huawei.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Senior R&D Engineer (AI Assurance in Autonomous Driving)",
+    "employmentType": "Contract Full-time",
+    "date": {
+      "start": "2023-06-01",
+      "end": "2023-11-30"
+    },
+    "items": [
+      {
+        "type": "Project",
+        "title": "Run-time Assurance (AI Consistency and Accuracy) System for Autonomous Driving Systems",
+        "description": [
+          "Researched failure measurement and monitoring of learning-enabled control systems across Perception, Prediction, and Planning modules",
+          "Performed systems-theoretic process analysis and defined risk boundaries for autonomous driving systems",
+          "Formulated and implemented C++ algorithms for monitoring, risk assessment, and secure disengagement protocols",
+          "Designed a comprehensive run-time assurance architecture for AI consistency and accuracy validation",
+          "Evaluated advanced autonomous driving modules by integrating Baidu Apollo Auto with CARLA Simulator using C++ and Python",
+          "Designed pre-crash, adverse weather, and empirical simulation scenarios to validate robustness and safety"
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "Run-time Assurance (Vehicle Safety) System for Autonomous Driving Systems",
+        "description": [
+          "Designed, developed, and tested vehicle recovery software for safety violations in autonomous driving systems",
+          "Implemented proactive risk prediction and adaptive threshold tuning mechanisms",
+          "Extracted requirements from ISO 26262, ISO 25058, and AVSC 6202103 to design compliant safety-oriented software architecture",
+          "Developed AI system testing strategies including white-box and black-box evaluation for behavioral and activation coverage analysis",
+          "Prototyped system components in Python and C++ and collaborated with simulation and production teams for validation"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
     "organization": "University of Waterloo",
     "logo": "assets/image/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",

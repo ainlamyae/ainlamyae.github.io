@@ -19,12 +19,20 @@ fetch('assets/data/certifications.json')
       return acc;
     }, {});
 
-    Object.keys(grouped).forEach(type => {
+    Object.keys(grouped).forEach((type, index) => {
+      // Create dropdown section wrapper
+      const section = document.createElement('div');
+      section.classList.add('dropdown-section');
+      section.dataset.sectionId = `cert-${index}`; // unique id
 
-      // Subsection heading (h3 matches shared CSS)
-      const categoryHeading = document.createElement('h4');
-      categoryHeading.textContent = type;
-      container.appendChild(categoryHeading);
+      // Create clickable heading
+      const heading = document.createElement('h4');
+      heading.classList.add('dropdown-toggle');
+      heading.textContent = type;
+
+      // Create content container
+      const content = document.createElement('div');
+      content.classList.add('dropdown-content');
 
       // Sort newest → oldest
       grouped[type].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -33,44 +41,36 @@ fetch('assets/data/certifications.json')
       const ul = document.createElement('ul');
 
       grouped[type].forEach(cert => {
-
-        // Create <li> for each certification
+        // Each certificate as one <li>
         const li = document.createElement('li');
+        li.classList.add('entry');
 
-        // Title (hyperlink if exists)
-        let titleElement;
+        // Certificate title
         if (cert.url && cert.url.trim() !== "") {
-          titleElement = document.createElement('a');
-          titleElement.href = cert.url;
-          titleElement.target = '_blank';
-          titleElement.rel = 'noopener noreferrer';
-          titleElement.textContent = cert.title;
+          const a = document.createElement('a');
+          a.href = cert.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = cert.title;
+          li.appendChild(a);
         } else {
-          titleElement = document.createElement('span');
-          titleElement.textContent = cert.title;
+          li.textContent = cert.title;
         }
 
-        // Organization
-        const orgSpan = document.createElement('span');
-        orgSpan.classList.add('org');
-        orgSpan.innerHTML = `<em>${cert.organization}</em>`;
-
-        // Year
-        const yearSpan = document.createElement('span');
-        yearSpan.classList.add('year');
-        yearSpan.textContent = cert.date.split('-')[0];
-
-        // Assemble line
-        li.appendChild(titleElement);
-        li.appendChild(document.createTextNode(", "));
-        li.appendChild(orgSpan);
-        li.appendChild(document.createTextNode(", "));
-        li.appendChild(yearSpan);
+        // Organization and Year
+        const details = document.createElement('span');
+        details.classList.add('org-year');
+        details.innerHTML = `, <em>${cert.organization}</em>, ${cert.date.split('-')[0]}`;
+        li.appendChild(details);
 
         ul.appendChild(li);
       });
 
-      container.appendChild(ul); // append <ul> under the heading
+      // Assemble section
+      content.appendChild(ul);
+      section.appendChild(heading);
+      section.appendChild(content);
+      container.appendChild(section);
     });
   })
   .catch(error => console.error('Error loading certifications:', error));
