@@ -57,9 +57,10 @@
         "type": "Supervision",
         "title": "Supervision of Interns and Co-op Engineers",
         "description": [
-          "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2026",
+          "Hossein Yousefizadeh, Shenghui Gu, Lionel C. Briand, Run-time Behavioural Validation of Self-adaptive AI-enabled Systems, 2024-2026",
+          "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2025-2026",
           "Brooke Yang, Co-op Engineer, LLM-based System Reliability, 2025",
-          "Xiaoliang (Spencer) Zhou, Junior Engineer, C++ Real-Time Processing Engine for Monitoring Software, 2024"
+          "Xiaoliang (Spencer) Zhou, Junior Engineer, C++ Real-Time Processing Engine for Monitoring Software, 2023-2024"
         ]
       },
       {
@@ -163,7 +164,7 @@
         ]
       },
       {
-          "type": "Supervision",
+          "type": "Leadership",
           "title": "Myography-based Controlled 1-DoF Hand Prosthesis",
           "description": [
             "Designed an electrically controlled single degree-of-freedom (1-DOF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
@@ -174,7 +175,7 @@
           ]
       },
       {
-          "type": "Supervision",
+          "type": "Leadership",
           "title": "MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments",
           "description": [
             "Developed MyoBuzz, a limb-worn EMG device providing real-time feedback on muscle activation for dynamometry experiments.",
@@ -187,8 +188,8 @@
         "type": "Supervision",
         "title": "Sub-supervised Undergraduate Research Assistant (URA) Students",
         "description": [
-          "Tegan Asprey, Muscle activation detector MyoBuzz watch prototype, 2023",
-          "Vasylysa Korovkina, Myoelectric controlled 1-DOF forearm-hand active prosthesis prototype, 2023",
+          "Vasylysa Korovkina, Myography-based Controlled 1-DoF Hand Prosthesis, 2023",
+          "Tegan Asprey, MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments, 2023",
           "Lavan Sumanan, Human motion animation using 3Ds Max for 3D pose estimation database, 2023"
         ]
       },
@@ -425,9 +426,10 @@
         "type": "Supervision",
         "title": "Sub-supervised Students",
         "description": [
-          "Mohammadreza Mousavi, 'Control of Cable-Driven Redundant Parallel Manipulator', Master Thesis, 2016",
-          "Masoud Ghanbari, 'Optimal Motion Planning for Cable Robots with Uncertain Jacobian', Master Thesis, 2016",
-          "Nima Arteghzadeh and Maryam Sadat Nabipour, 'Automated Ball Tracking Camera Manipulated by Cable Parallel Robot', BSc Project, 2016"
+          "Mohammadreza Mousavi, Master Thesis, Control of Cable-Driven Redundant Parallel Manipulator, 2016",
+          "Masoud Ghanbari, Master Thesis, Optimal Motion Planning for Cable Robots with Uncertain Jacobian, 2016",
+          "Nima Arteghzadeh and Maryam Sadat Nabipour, BSc Project, Automated Ball Tracking Camera Manipulated by Cable Parallel Robot, 2016",
+          "Yasaman Parandian, Digital Image Processing of Ball and Plate System Using Artificial Neural Network, 2015"
         ]
       }
     ]
