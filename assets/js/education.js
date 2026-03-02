@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         textDiv.style.minWidth = '0';
 
         // University Name + Location line (always visible)
-        const uniHeading = document.createElement('h5');
+        const uniHeading = document.createElement('h4');
         uniHeading.textContent = edu.institution.name;
         uniHeading.style.margin = '0 0 2px 0';
         textDiv.appendChild(uniHeading);
