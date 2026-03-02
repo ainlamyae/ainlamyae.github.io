@@ -25,10 +25,11 @@ fetch('assets/data/certifications.json')
       section.classList.add('dropdown-section');
       section.dataset.sectionId = `cert-${index}`; // unique id
 
-      // Create clickable heading
+      // Create clickable heading with count
       const heading = document.createElement('h4');
       heading.classList.add('dropdown-toggle');
-      heading.textContent = type;
+      const count = grouped[type].length;
+      heading.textContent = `${type} (${count})`; // <-- Add count here
 
       // Create content container
       const content = document.createElement('div');
