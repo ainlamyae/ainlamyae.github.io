@@ -8,6 +8,16 @@ fetch('assets/data/experience.json')
     const container = document.getElementById('experience');
     if (!container) return;
 
+    // Map item types to emojis
+    const typeEmoji = {
+      "Project": "⚙️",
+      "Leadership": "🧭",
+      "Supervision": "👥",
+      "Conference": "🎤",
+      "Course": "📖",
+      "Responsibility": "🗂️",
+    };
+
     function formatDate(dateString) {
       if (!dateString || dateString === "Present") {
         return "Present";
@@ -93,6 +103,7 @@ fetch('assets/data/experience.json')
 
         return getEndDate(b) - getEndDate(a); // descending
       });
+
       orgExperiences.forEach(exp => {
 
         // Position title
@@ -114,10 +125,11 @@ fetch('assets/data/experience.json')
         // Loop over all items for this position
         exp.items.forEach(item => {
 
-          // Optional section title
+          // Optional section title with emoji
           if (item.title) {
             const titleEl = document.createElement('p');
-            titleEl.innerHTML = `<strong>${item.title}</strong>`;
+            const emoji = typeEmoji[item.type] || "";
+            titleEl.innerHTML = `<strong>${emoji ? emoji + " " : ""}${item.title}</strong>`;
             textDiv.appendChild(titleEl);
           }
 

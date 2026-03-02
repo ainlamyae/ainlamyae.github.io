@@ -145,3 +145,14 @@ ul {
   background-color: #4279ad;
   border-radius: 5px;
 }
+
+
+/* === Footer === */
+#site-footer {
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-top: 100px;
+}
