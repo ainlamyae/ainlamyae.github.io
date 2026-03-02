@@ -12,13 +12,6 @@
     },
     "items": [
       {
-        "type": "Leadership",
-        "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
-        "description": [
-          "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
-        ]
-      },
-      {
         "type": "Project",
         "title": "Explainable & Reliable System Architecture for LLM-based Script Generator",
         "description": [
@@ -30,6 +23,22 @@
           "Enabled fail-safe escalation paths including re-execution with alternative models, LLM-as-Judge evaluation, and human-in-the-loop review",
           "Designed an explainable JSON-based output schema ensuring traceability of generated variables and intermediate decisions",
           "Proposed metamorphic prompt perturbation via semantic-preserving sentence swapping (Chinese inputs) to test robustness and consistency"
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
+        "description": [
+          "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
+          "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
+          "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
+        ]
+      },
+      {
+        "type": "Leadership",
+        "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
+        "description": [
+          "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
         ]
       },
       {
@@ -45,20 +54,11 @@
         ]
       },
       {
-        "type": "Project",
-        "title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
-        "description": [
-          "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
-          "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
-          "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
-        ]
-      },
-      {
         "type": "Supervision",
         "title": "Supervision of Interns and Co-op Engineers",
         "description": [
           "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2026",
-          "Brooke Yang, Co-op Engineer, AI System Reliability, 2025",
+          "Brooke Yang, Co-op Engineer, LLM-based System Reliability, 2025",
           "Xiaoliang (Spencer) Zhou, Junior Engineer, C++ Real-Time Processing Engine for Monitoring Software, 2024"
         ]
       },
@@ -184,20 +184,20 @@
           ]
       },
       {
-        "type": "Responsibility",
-        "title": "Postdoctoral Responsibilities",
-        "description": [
-          "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM)",
-          "Coordinated presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
-        ]
-      },
-      {
         "type": "Supervision",
         "title": "Sub-supervised Undergraduate Research Assistant (URA) Students",
         "description": [
           "Tegan Asprey, Muscle activation detector MyoBuzz watch prototype, 2023",
           "Vasylysa Korovkina, Myoelectric controlled 1-DOF forearm-hand active prosthesis prototype, 2023",
           "Lavan Sumanan, Human motion animation using 3Ds Max for 3D pose estimation database, 2023"
+        ]
+      },
+            {
+        "type": "Responsibility",
+        "title": "Postdoctoral Responsibilities",
+        "description": [
+          "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM)",
+          "Coordinated presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
         ]
       }
     ]
