@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const heading = document.createElement('h3');
       heading.classList.add('dropdown-toggle');
-      heading.textContent = "Awards & Achievements";
+      heading.textContent = "Awards";
 
       const content = document.createElement('div');
       content.classList.add('dropdown-content');
