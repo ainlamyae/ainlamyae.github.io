@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Alireza Poostindouz",
+    "relationship": "Colleague",
+    "organization": "Huawei Technologies Canada Co., Ltd.",
+    "url": "https://ca.linkedin.com/in/poostindouz",
+    "date": "2025-12-08",
+    "recommendation": "Ali and I have known each other personally for over twenty years and professionally for more than four, and during our time working together at Huawei he consistently stood out as someone you can rely on. He’s an exceptional AI and ML engineer with deep research experience and a strong publication record. I was especially impressed when he built a full graph-RAG system from scratch to address one of our group’s toughest challenges. Ali is proactive, takes initiative, and delivers high-quality results quickly. He owned one of the core sub-projects in our yearly roadmap and, despite working mostly on his own, always met his deadlines. He’s also incredibly supportive and helped me significantly when I was developing an LLM-based chat system. In group settings, Ali is thoughtful, collaborative, and brings insights that genuinely influence decisions. On a personal level, he’s energetic, fun to be around, and contributes to a positive team culture. His rare combination of expertise, reliability, and personality makes him a strong fit for engineering and research roles. I’ll genuinely miss our day-to-day conversations and the easy camaraderie we shared."
+  },
+  {
+    "name": "Frederic Risacher",
+    "relationship": "Manager",
+    "organization": "Huawei Technologies Canada Co., Ltd.",
+    "url": "https://ca.linkedin.com/in/fredericrisacher",
+    "date": "2025-09-03",
+    "recommendation": "I had the pleasure of hiring Ali into my team at Huawei to work on advancing autonomous driving safety. From the very beginning, I was impressed by his efficiency and technical expertise. Ali designed a monitoring-based system relying on safety metrics, leveraging his deep knowledge of state-of-the-art technologies gained through conference participation and thorough literature review. He successfully prototyped the solution in Python, and the validation leveraging a leading simulation environment—using an actual autonomous driving stack—demonstrated measurable safety improvements across a wide range of driving scenarios. In addition to his technical contributions, Ali effectively managed collaboration with a Canadian university, providing valuable feedback and clear guidance that ensured the project was executed on time. What I appreciated most, however, was his adaptability in a fast-paced, dynamic environment. With AI evolving so rapidly, Ali consistently applied the latest advancements to enhance Huawei’s products and deliver real value. I warmly recommend Ali for any role requiring strong expertise in AI, as well as in the design of complex and intelligent systems."
+  },
+  {
+    "name": "Zohreh Aghababaeyan",
+    "relationship": "Colleague",
+    "organization": "Huawei Technologies Canada Co., Ltd.",
+    "url": "https://ca.linkedin.com/in/zoeag",
+    "date": "2024-08-23",
+    "recommendation": "I am writing to recommend my colleague, Ali Nasr, for his work as a C++ programmer and algorithm designer at Huawei Inc. Ali contributed to the restructuring of the RTA monitor section's detailed design, integrating the RAMs team monitor functionality. His work was instrumental in providing key details for 15 monitors, which played a significant role in the success of the project. His attention to detail and commitment to producing quality work have been valuable to the team. I believe Ali would be a strong addition to any team or organization seeking a skilled and dedicated programmer and algorithm designer. I recommend him without hesitation."
+  },
+  {
+    "name": "Maxime Raison",
+    "relationship": "Ph.D. Thesis Examiner",
+    "organization": "Ecole Polytechnique de Montreal",
+    "url": "https://ca.linkedin.com/in/maxime-raison-38877859",
+    "date": "2022-11-28",
+    "recommendation": "I am delighted to write this letter of support for Ph.D. candidate Ali Nasr. I am external examiner of his PhD defense with the title of Design, Dynamics, and Control of Active-passive Upper-limb Exoskeleton Robots. Ali analyzed bioelectric signal and implemented a model that addressed the current challenges in the field of bio-signal and human-robot control. In addition, Ali experimentally evaluated active-passive exoskeleton for human-in-the-loop study, successfully.Ali has generated novel and significant results for the human intent estimation by bio-signal and published several scientific articles in leading-edge journals from IOP, Springer, ASME, MDPI, and Fronters publishers. Ali won best paper awards in two different conferences. Academically, Ali is one of the top students in bio-signal processing despite not having a background in kinesiology. He worked hard to acquire background knowledge, it is clear to me that Ali has great research potential, and I expect his post-doc work to have a significant impact on human-robot control. He has shown leadership skills and I highly recommend him."
+  },
+   {
+    "name": "Clark R Dickerson",
+    "relationship": "Ph.D. Thesis Examiner",
+    "organization": "University of Waterloo",
+    "url": "https://ca.linkedin.com/in/clark-dickerson-uwaterloo",
+    "date": "2022-11-30",
+    "recommendation": "I am delighted to write this letter of support for Ph.D. candidate Ali Nasr. Ali began his doctoral studies in September 2018, I reviewed his doctoral proposal, and provide collaboration opportunities, and consecutive advice over personal meetings. Since the start of the experimental data evaluation study, Ali has greatly impressed me with his intellectual, research, communication, and leadership abilities. Ali analyzed data and implemented a model that addressed the current challenges in the field of bio-signal and human-robot control. Ali’s research is into the use of signal processing and control of active exoskeletons. In the last 4 years, Ali has generated very novel and significant results for the human intent regression by bio-signal and published several scientific articles in leading-edge journals from IOP, Springer, ASME, MDPI, and Fronters publishers. Ali has presented his cutting-edge research at prestigious conferences contain the North American Congress of Biomechanics and ASME International Design Engineering Technical Conferences and won best paper awards in two different conferences. He is continuing to work closely with me to provide rapid and meaningful analyses of his techniques and strategies. Despite not having a kinesiology background, Ali is among the best students in bio-signal processing academically. Ali put a lot of effort into building up his background knowledge, it is obvious to me that he has considerable research potential, and I anticipate that his post-doctoral work will significantly advance human-robot control. He has demonstrated exceptional leadership, communication, and analytical abilities, and I wholeheartedly suggest him."
+  },
+  {
+    "name": "John Joseph McPhee",
+    "relationship": "Ph.D. Supervisor",
+    "organization": "University of Waterloo",
+    "url": "https://ca.linkedin.com/in/john-mcphee-1b573215",
+    "date": "2022-07-15",
+    "recommendation": "Outstanding progress, Ali. You continue to be the hardest-working member of our group, with an amazing record of papers published in the top-tier journals. Keep up the fantastic work!"
+  },
+  {
+    "name": "Hamid D. Taghirad",
+    "relationship": "Teacher and M.Sc. Thesis Examiner",
+    "organization": "K. N. Toosi University of Technology",
+    "url": "https://ir.linkedin.com/in/hamid-taghirad",
+    "date": "2018-01-23",
+    "recommendation": "I know Ali more than one years in the capacity of being his teacher for one graduate course and his thesis internal examiner. I find him hard working and an organaized student, resulting in being among top 5% student I have the pleasure to teach. In his term project research and in his master thesis he proves his ability to communicate with a group of students, and to present his research result quite well. He has a hands-on-experiment character, and he has implemented the designed controller of his thesis on an experimental platform. I found him a well motivated and hard working student, with a pleasing personality who is liked by his fellow student and staff. Finally, I recommend him without any reservation to your department, and I am quite confident that he is able to significantly contribute in his research toward his postgraduate studies especially if it needs a hand-on-experiment personality. Please don’t hesitate to contact me, shall I be of any further assistance."
+  },
+    {
+    "name": "Mehdi Keshmiri",
+    "relationship": "B.Sc. Supervisor",
+    "organization": "Isfahan University of Technology",
+    "url": "https://www.linkedin.com/in/mehdi-keshmiri-91b47010b",
+    "date": "2017-12-08",
+    "recommendation": "I have known Ali since September 2009 when he had started his education at Isfahan University of Technology (IUT). According to his high score in Robotics, Dynamic, Mechatronics, and Programming, along with his eagerness to do a high-quality project, I accepted to supervise his B.Sc. project. I have found him very active in the practical and theoretical research project. He has been an excellent student and an asset to my research group. I would like to take this opportunity to recommend Ali. I feel confident that he will continue to succeed in his Graduate studies. Ali has done research such as his bachelor thesis under my supervision in Dynamic; Robotic Research Center. He mainly focused on Tethered Space Robot. He proposed a nonlinear control algorithm in order to isolate vibration of tether by modification in cable length which was incredibly novel. During this projects, I have found him strong in modeling, simulation, and control. I strongly recommend him for any research position or any relevant Ph.D. program in the field of control, dynamics, robotics, and mechatronics, and I am sure he will satisfy all of your requirements. Besides his good research background, Ali has an excellent BSc and MSc GPA and I know that he gained first ranked in the electrical department during his MSc. As a teacher, I found him as one of the bests in the classroom with top final scores. Ali has good English language proficiency in reading, speaking and writing scientific contexts. He is very good at different programming language, especially C++, and computational software like Matlab/Simulink. In addition to all his technical qualifications, he has a pleasant personality which makes him an easy person to get along with. I should also mention here that Ali is a focused, honest, determined person and easy to communicate with. He is well prepared to enter into a graduate program in mechanical engineering thus I highly recommend him for graduate study at your university. Please feel free to contact me if I can be of further assistance."
+  } 
+]
