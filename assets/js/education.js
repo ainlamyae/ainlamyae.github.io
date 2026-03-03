@@ -137,6 +137,26 @@ document.addEventListener('DOMContentLoaded', function () {
           detailsList.appendChild(li);
         }
 
+        if (edu.degree && edu.degree.verification) {
+          const li = document.createElement('li');
+
+          li.textContent = 'Credential Evaluation: ';
+
+          if (edu.degree.url) {
+            const link = document.createElement('a');
+            link.href = edu.degree.url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = edu.degree.verification;
+
+            li.appendChild(link);
+          } else {
+            li.textContent += edu.degree.verification;
+          }
+
+          detailsList.appendChild(li);
+        }
+
         if (edu.courses && edu.courses.enrolled && edu.courses.enrolled.length > 0) {
           const li = document.createElement('li');
           li.textContent = "Selected/Enrolled Courses: " + edu.courses.enrolled.join(", ");
