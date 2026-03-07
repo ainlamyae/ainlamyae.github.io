@@ -32,14 +32,14 @@
   "date": "2025-05-01",
   "type": "article",
   "title": "Safety in wearable robotic exoskeletons: Design, control, and testing guidelines",
-  "authors": ["Nasr, Ali", "Inkol, Keaton", "McPhee, John"],
+  "authors": ["Nasr, Ali", "Inkol, Keaton A", "McPhee, John"],
   "volume": "17",
   "number": "5",
   "pages": "050801",
   "journal": "Journal of Mechanisms and Robotics",
   "publisher": "ASME",
   "doi": "10.1115/1.4066900",
-  "abstract": "Exoskeletons, wearable robotic devices designed to enhance human strength and endurance, find applications in various fields such as healthcare and industry; however, stringent safety measures should be adopted in such settings. This paper presents a comprehensive exploration of challenges associated with exoskeleton technology, ranging from mechanical issues to regulatory and ethical considerations. The enumerated challenges include joint hyper-extension or flexion, rapid or sudden motion, misalignment, fit, and comfort issues, mechanical failure, weight and mobility limitations, environmental challenges, power supply issues, high energy consumption and regeneration, fall risk or stability concerns, sensor failures, control algorithm malfunctions, machine-learning model challenges, communication disconnection, actuator malfunctions, unexpected human–robot interactions, and regulatory and ethical considerations. The paper outlines possible risks and suggests practical solutions based on design, control, and testing methods for each challenge. The objective is to offer a guideline for developers and users, emphasizing safety, reliability, and optimal performance in the ever-evolving landscape of exoskeleton technology. The guideline covers preoperation checks, user training, emergency response, real-time monitoring, and user interaction to ensure responsible innovation and user-centricity in exoskeleton development and deployment."
+  "abstract": "Exoskeletons, wearable robotic devices designed to enhance human strength and endurance, find applications in various fields such as healthcare and industry; however, stringent safety measures should be adopted in such settings. This paper presents a comprehensive exploration of challenges associated with exoskeleton technology, ranging from mechanical issues to regulatory and ethical considerations. The enumerated challenges include joint hyper-extension or flexion, rapid or sudden motion, misalignment, fit, and comfort issues, mechanical failure, weight and mobility limitations, environmental challenges, power supply issues, high energy consumption and regeneration, fall risk or stability concerns, sensor failures, control algorithm malfunctions, machine-learning model challenges, communication disconnection, actuator malfunctions, unexpected human-robot interactions, and regulatory and ethical considerations. The paper outlines possible risks and suggests practical solutions based on design, control, and testing methods for each challenge. The objective is to offer a guideline for developers and users, emphasizing safety, reliability, and optimal performance in the ever-evolving landscape of exoskeleton technology. The guideline covers preoperation checks, user training, emergency response, real-time monitoring, and user interaction to ensure responsible innovation and user-centricity in exoskeleton development and deployment."
 },
 {
   "id": "nazm2024u",
@@ -49,8 +49,8 @@
   "authors": ["Nasr, Ali", "Zhu, Kevin", "McPhee, John"],
   "volume": "64",
   "number": null,
-  "pages": "737–770",
-  "journal": "Multibody System Dynamics",
+  "pages": "737-770",
+  "journal": "Journal of Multibody System Dynamics",
   "publisher": "Springer",
   "doi": "10.1007/s11044-024-10021-5",
   "abstract": "Human motion capture technology is utilized in many industries, including entertainment, sports, medicine, augmented reality, virtual reality, and robotics. However, motion capture data only allows the user to analyze human movement at a kinematic level. In order to study the corresponding dynamics and muscle properties, additional sensors such as force plates and electromyography sensors are needed to collect the relevant data. Collecting, processing, and synchronizing data from multiple sources could be laborious and time-consuming. This study proposes a method to generate the dynamics and muscle properties of existing motion capture datasets. To do so, our method reconstructs motions via kinematics, dynamics, and muscle modeling with a musculoskeletal model consisting of 14 joints, 40 degrees of freedom, and 15 segments. Compared to current physics simulators, our method also infers muscle properties to ensure our human model is realistic. We have met International Society of Biomechanics standards for all terminologies and representations. Furthermore, our integrated musculoskeletal model allows the user to preselect various anthropometric features of the human performing the motion, such as height, mass, level of athleticism, handedness, and skin temperature, which are often infeasible to estimate from monocular videos without appropriate annotations. We apply our method on the Human3.6M dataset and show that our reconstructed motion is kinematically similar to the ground truth markers while being dynamically plausible when compared to experimental data found in literature. The generated data (Human3.6M+) is available for download."
@@ -126,17 +126,17 @@
   "authors": ["Nasr, Ali", "Bell, Sydney", "Whittaker, Rachel L", "Dickerson, Clark R", "McPhee, John"],
   "volume": "21",
   "number": null,
-  "pages": "270–287",
+  "pages": "270-287",
   "journal": "Journal of Bionic Engineering",
   "publisher": "Springer",
   "doi": "10.1007/s42235-023-00453-8",
-  "abstract": "A machine learning model for regression of interrupted Surface Electromyography (sEMG) signals to future control-oriented signals (e.g., robot’s joint angle and assistive torque) of an active biomechatronic device for high-level myoelectric-based hierarchical control is proposed. A Recurrent Neural Network (RNN) was trained using output data, initially obtained from offline optimization of the biomechatronic (human–robot) device and shifted by the prediction horizon. The input of the RNN consisted of interrupted sEMG signals (to mimic signal disconnections) and previous kinematic signals of the assistive system. The RNN with a 0.1-s prediction horizon could predict the control-oriented joint angle and assistive torque with 92% and 86.5% regression accuracy, respectively, for the test dataset. This proposed approach permits a fast, predictive, and direct estimation of control-oriented signals instead of an iterative process that optimizes assistive torque in the inverse dynamic simulation of a multibody human–robot system. Training with these interrupted input signals significantly improves the regression accuracy in the case of sEMG signal disconnection. This Robust Predictive Control-oriented Machine Learning (Robust-MuscleNET) model can support volitional high-level myoelectric-based control of biomechatronic devices, such as exoskeletons, prostheses, and assistive/resistive robots. Future work should study the application to prosthesis control as well as the repeatability of the high-level controller with electrode shift. The low-level hierarchical controller that manages the human–robot interaction, the assistance/resistance strategy, and the actuator coordination should also be studied."
+  "abstract": "A machine learning model for regression of interrupted Surface Electromyography (sEMG) signals to future control-oriented signals (e.g., robot’s joint angle and assistive torque) of an active biomechatronic device for high-level myoelectric-based hierarchical control is proposed. A Recurrent Neural Network (RNN) was trained using output data, initially obtained from offline optimization of the biomechatronic (human-robot) device and shifted by the prediction horizon. The input of the RNN consisted of interrupted sEMG signals (to mimic signal disconnections) and previous kinematic signals of the assistive system. The RNN with a 0.1-s prediction horizon could predict the control-oriented joint angle and assistive torque with 92% and 86.5% regression accuracy, respectively, for the test dataset. This proposed approach permits a fast, predictive, and direct estimation of control-oriented signals instead of an iterative process that optimizes assistive torque in the inverse dynamic simulation of a multibody human-robot system. Training with these interrupted input signals significantly improves the regression accuracy in the case of sEMG signal disconnection. This Robust Predictive Control-oriented Machine Learning (Robust-MuscleNET) model can support volitional high-level myoelectric-based control of biomechatronic devices, such as exoskeletons, prostheses, and assistive/resistive robots. Future work should study the application to prosthesis control as well as the repeatability of the high-level controller with electrode shift. The low-level hierarchical controller that manages the human-robot interaction, the assistance/resistance strategy, and the actuator coordination should also be studied."
 },
 {
   "id": "nadm2023e",
   "date": "2023-12-22",
   "type": "article",
-  "title": "Experimental study of fully passive, fully active, and active–passive upper-limb exoskeleton efficiency: An assessment of lifting tasks",
+  "title": "Experimental study of fully passive, fully active, and active-passive upper-limb exoskeleton efficiency: An assessment of lifting tasks",
   "authors": ["Nasr, Ali", "Dickerson, Clark R", "McPhee, John"],
   "volume": "24",
   "number": "1",
@@ -144,7 +144,7 @@
   "journal": "Journal of Sensors",
   "publisher": "MDPI",
   "doi": "10.3390/s24010063",
-  "abstract": "Recently, robotic exoskeletons are gaining attention for assisting industrial workers. The exoskeleton power source ranges from fully passive (FP) to fully active (FA), or a mixture of both. The objective of this experimental study was to assess the efficiency of a new active–passive (AP) shoulder exoskeleton using statistical analyses of 11 quantitative measures from surface electromyography (sEMG) and kinematic data and a user survey for weight lifting tasks. Two groups of females and males lifted heavy kettlebells, while a shoulder exoskeleton helped them in modes of fully passive (FP), fully active (FA), and active–passive (AP). The AP exoskeleton outperformed the FP and FA exoskeletons because the participants could hold the weighted object for nearly twice as long before fatigue occurred. Future developments should concentrate on developing sex-specific controllers as well as on better-fitting wearable devices for women."
+  "abstract": "Recently, robotic exoskeletons are gaining attention for assisting industrial workers. The exoskeleton power source ranges from fully passive (FP) to fully active (FA), or a mixture of both. The objective of this experimental study was to assess the efficiency of a new active-passive (AP) shoulder exoskeleton using statistical analyses of 11 quantitative measures from surface electromyography (sEMG) and kinematic data and a user survey for weight lifting tasks. Two groups of females and males lifted heavy kettlebells, while a shoulder exoskeleton helped them in modes of fully passive (FP), fully active (FA), and active-passive (AP). The AP exoskeleton outperformed the FP and FA exoskeletons because the participants could hold the weighted object for nearly twice as long before fatigue occurred. Future developments should concentrate on developing sex-specific controllers as well as on better-fitting wearable devices for women."
 },
 {
   "id": "hnih2023h",
@@ -173,7 +173,7 @@
   "id": "nhdm2023e",
   "date": "2023-05-15",
   "type": "article",
-  "title": "Evaluation of a machine-learning-driven active–passive upper-limb exoskeleton robot: Experimental human-in-the-loop study",
+  "title": "Evaluation of a machine-learning-driven active-passive upper-limb exoskeleton robot: Experimental human-in-the-loop study",
   "authors": ["Nasr, Ali", "Hunter, Jason", "Dickerson, Clark R", "McPhee, John"],
   "volume": "4",
   "number": null,
@@ -181,7 +181,7 @@
   "journal": "Journal of Wearable Technologies",
   "publisher": "Cambridge University Press",
   "doi": "10.1017/wtc.2023.9",
-  "abstract": "Evaluating exoskeleton actuation methods and designing an effective controller for these exoskeletons are both challenging and time-consuming tasks. This is largely due to the complicated human–robot interactions, the selection of sensors and actuators, electrical/command connection issues, and communication delays. In this research, a test framework for evaluating a new active–passive shoulder exoskeleton was developed, and a surface electromyography (sEMG)-based human-robot cooperative control method was created to execute the wearer’s movement intentions. The hierarchical control used sEMG-based intention estimation, mid-level strength regulation, and low-level actuator control. It was then applied to shoulder joint elevation experiments to verify the exoskeleton controller’s effectiveness. The active–passive assistance was compared with fully passive and fully active exoskeleton control using the following criteria: (1) post-test survey, (2) load tolerance duration, and (3) computed human torque, power, and metabolic energy expenditure using sEMG signals and inverse dynamic simulation. The experimental outcomes showed that active–passive exoskeletons required less muscular activation torque (50%) from the user and reduced fatigue duration indicators by a factor of 3, compared to fully passive ones."
+  "abstract": "Evaluating exoskeleton actuation methods and designing an effective controller for these exoskeletons are both challenging and time-consuming tasks. This is largely due to the complicated human-robot interactions, the selection of sensors and actuators, electrical/command connection issues, and communication delays. In this research, a test framework for evaluating a new active-passive shoulder exoskeleton was developed, and a surface electromyography (sEMG)-based human-robot cooperative control method was created to execute the wearer’s movement intentions. The hierarchical control used sEMG-based intention estimation, mid-level strength regulation, and low-level actuator control. It was then applied to shoulder joint elevation experiments to verify the exoskeleton controller’s effectiveness. The active-passive assistance was compared with fully passive and fully active exoskeleton control using the following criteria: (1) post-test survey, (2) load tolerance duration, and (3) computed human torque, power, and metabolic energy expenditure using sEMG signals and inverse dynamic simulation. The experimental outcomes showed that active-passive exoskeletons required less muscular activation torque (50%) from the user and reduced fatigue duration indicators by a factor of 3, compared to fully passive ones."
 },
 {
   "id": "namc2023c",
@@ -216,7 +216,7 @@
   "authors": ["Nasr, Ali", "Bell, Sydney", "McPhee, John"],
   "volume": "57",
   "number": null,
-  "pages": "73–106",
+  "pages": "73-106",
   "journal": "Journal of Multibody System Dynamics",
   "publisher": "Springer",
   "doi": "10.1007/s11044-022-09855-8",
@@ -230,7 +230,7 @@
   "authors": ["Febrer-Nafria, Miriam", "Nasr, Ali", "Ezati, Mahdokht", "Brown, Peter", "Font-Llagunes, Josep M", "McPhee, John"],
   "volume": "58",
   "number": null,
-  "pages": "299–339",
+  "pages": "299-339",
   "journal": "Journal of Multibody System Dynamics",
   "publisher": "Springer",
   "doi": "10.1007/s11044-022-09852-x",
@@ -285,7 +285,7 @@
   "journal": "Journal of Robotics",
   "publisher": "MDPI",
   "doi": "10.3390/robotics11010020",
-  "abstract": "The closed-loop human–robot system requires developing an effective robotic controller that considers models of both the human and the robot, as well as human adaptation to the robot. This paper develops a mid-level controller providing assist-as-needed (AAN) policies in a hierarchical control setting using two novel methods: model-based and fuzzy logic rule. The goal of AAN is to provide the required extra torque because of the robot’s dynamics and external load compared to the human limb free movement. The human–robot adaptation is simulated using a nonlinear model predictive controller (NMPC) as the human central nervous system (CNS) for three conditions of initial (the initial session of wearing the robot, without any previous experience), short-term (the entire first session, e.g., 45 min), and long-term experiences. The results showed that the two methods (model-based and fuzzy logic) outperform the traditional proportional method in providing AAN by considering distinctive human and robot models. Additionally, the CNS actuator model has difficulty in the initial experience and activates both antagonist and agonist muscles to reduce movement oscillations. In the long-term experience, the simulation shows no oscillation when the CNS NMPC learns the robot model and modifies its weights to simulate realistic human behavior. We found that the desired strength of the robot should be increased gradually to ignore unexpected human–robot interactions (e.g., robot vibration, human spasticity). The proposed mid-level controllers can be used for wearable assistive devices, exoskeletons, and rehabilitation robots."
+  "abstract": "The closed-loop human-robot system requires developing an effective robotic controller that considers models of both the human and the robot, as well as human adaptation to the robot. This paper develops a mid-level controller providing assist-as-needed (AAN) policies in a hierarchical control setting using two novel methods: model-based and fuzzy logic rule. The goal of AAN is to provide the required extra torque because of the robot’s dynamics and external load compared to the human limb free movement. The human-robot adaptation is simulated using a nonlinear model predictive controller (NMPC) as the human central nervous system (CNS) for three conditions of initial (the initial session of wearing the robot, without any previous experience), short-term (the entire first session, e.g., 45 min), and long-term experiences. The results showed that the two methods (model-based and fuzzy logic) outperform the traditional proportional method in providing AAN by considering distinctive human and robot models. Additionally, the CNS actuator model has difficulty in the initial experience and activates both antagonist and agonist muscles to reduce movement oscillations. In the long-term experience, the simulation shows no oscillation when the CNS NMPC learns the robot model and modifies its weights to simulate realistic human behavior. We found that the desired strength of the robot should be increased gradually to ignore unexpected human-robot interactions (e.g., robot vibration, human spasticity). The proposed mid-level controllers can be used for wearable assistive devices, exoskeletons, and rehabilitation robots."
 },
 {
   "id": "namc2022b",
@@ -310,7 +310,7 @@
   "journal": "Journal of Frontiers in Computational Neuroscience",
   "publisher": "Frontiers Media SA",
   "doi": "10.3389/fncom.2021.759489",
-  "abstract": "InverseMuscleNET, a machine learning model, is proposed as an alternative to static optimization for resolving the redundancy issue in inverse muscle models. A recurrent neural network (RNN) was optimally configured, trained, and tested to estimate the pattern of muscle activation signals. Five biomechanical variables (joint angle, joint velocity, joint acceleration, joint torque, and activation torque) were used as inputs to the RNN. A set of surface electromyography (EMG) signals, experimentally measured around the shoulder joint for flexion/extension, were used to train and validate the RNN model. The obtained machine learning model yields a normalized regression in the range of 88–91% between experimental data and estimated muscle activation. A sequential backward selection algorithm was used as a sensitivity analysis to discover the less dominant inputs. The order of most essential signals to least dominant ones was as follows: joint angle, activation torque, joint torque, joint velocity, and joint acceleration. The RNN model required 0.06 s of the previous biomechanical input signals and 0.01 s of the predicted feedback EMG signals, demonstrating the dynamic temporal relationships of the muscle activation profiles. The proposed approach permits a fast and direct estimation ability instead of iterative solutions for the inverse muscle model. It raises the possibility of integrating such a model in a real-time device for functional rehabilitation and sports evaluation devices with real-time estimation and tracking. This method provides clinicians with a means of estimating EMG activity without an invasive electrode setup."
+  "abstract": "InverseMuscleNET, a machine learning model, is proposed as an alternative to static optimization for resolving the redundancy issue in inverse muscle models. A recurrent neural network (RNN) was optimally configured, trained, and tested to estimate the pattern of muscle activation signals. Five biomechanical variables (joint angle, joint velocity, joint acceleration, joint torque, and activation torque) were used as inputs to the RNN. A set of surface electromyography (EMG) signals, experimentally measured around the shoulder joint for flexion/extension, were used to train and validate the RNN model. The obtained machine learning model yields a normalized regression in the range of 88-91% between experimental data and estimated muscle activation. A sequential backward selection algorithm was used as a sensitivity analysis to discover the less dominant inputs. The order of most essential signals to least dominant ones was as follows: joint angle, activation torque, joint torque, joint velocity, and joint acceleration. The RNN model required 0.06 s of the previous biomechanical input signals and 0.01 s of the predicted feedback EMG signals, demonstrating the dynamic temporal relationships of the muscle activation profiles. The proposed approach permits a fast and direct estimation ability instead of iterative solutions for the inverse muscle model. It raises the possibility of integrating such a model in a real-time device for functional rehabilitation and sports evaluation devices with real-time estimation and tracking. This method provides clinicians with a means of estimating EMG activity without an invasive electrode setup."
 },
 {
   "id": "nafm2021m",
@@ -520,7 +520,7 @@
   "id": "nass2014o",
   "date": "2014-04-22",
   "type": "inproceedings",
-  "title": "Optimization in joint space of of six-legged walking robots",
+  "title": "Optimization in joint space of six-legged walking robots",
   "authors": ["Nasr, Ali", "Shahriari, Yasser", "Sadati, Sayed Hussein"],
   "booktitle": "Proceedings of the 22nd Annual International Conference on Mechanical Engineering (ISME)",
   "publisher": "Iranian Society of Mechanical Engineers (ISME)",
