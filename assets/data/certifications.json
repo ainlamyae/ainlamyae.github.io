@@ -1,5 +1,14 @@
 [
     {
+        "id": "atsw2026",
+        "date": "2026-03-09",
+        "type": "Generative AI, LLMs & AI Agents",
+        "title": "AI Text Summarization with Hugging Face",
+        "organization": "LinkedIn Learning",
+        "url": "https://www.linkedin.com/learning/certificates/4ed9229185114a24b9c7adb08695bfbc4398f52692bc2348e761bbd3a3c1504f",
+        "file": null
+    },
+    {
         "id": "pipd2026",
         "date": "2026-02-25",
         "type": "Software Engineering & Programming",
