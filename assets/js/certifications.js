@@ -7,7 +7,10 @@ fetch('assets/data/certifications.json')
   })
   .then(data => {
     const container = document.getElementById('certifications');
-    if (!container) return console.error('Element with id "certifications" not found.');
+    if (!container) {
+      console.error('Element with id "certifications" not found.');
+      return;
+    }
 
     // Group by type
     const grouped = data.reduce((acc, cert) => {
@@ -17,25 +20,25 @@ fetch('assets/data/certifications.json')
     }, {});
 
     Object.keys(grouped).forEach(type => {
-      const groupDiv = document.createElement('div');
-      groupDiv.classList.add('type-group');
 
-      // Category heading
+      // Subsection heading (h3 matches shared CSS)
       const categoryHeading = document.createElement('h3');
       categoryHeading.textContent = type;
-      groupDiv.appendChild(categoryHeading);
+      container.appendChild(categoryHeading);
 
-      // Sort newest to oldest
+      // Sort newest → oldest
       grouped[type].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-      // Create a <ul> for the certificates
-      const ul = document.createElement('ul');
-
       grouped[type].forEach(cert => {
-        const li = document.createElement('li');
-        li.classList.add('certificate');
 
-        // Title (hyperlink)
+        // Shared entry container
+        const entryDiv = document.createElement('div');
+        entryDiv.classList.add('entry');
+
+        // DASH at the beginning
+        entryDiv.appendChild(document.createTextNode("- "));
+
+        // Title (hyperlink if exists)
         let titleElement;
         if (cert.url && cert.url.trim() !== "") {
           titleElement = document.createElement('a');
@@ -51,25 +54,22 @@ fetch('assets/data/certifications.json')
         // Organization
         const orgSpan = document.createElement('span');
         orgSpan.classList.add('org');
-        orgSpan.textContent = cert.organization;
+        orgSpan.innerHTML = `<em>${cert.organization}</em>`;
 
-        // Year with dot
+        // Year
         const yearSpan = document.createElement('span');
         yearSpan.classList.add('year');
         yearSpan.textContent = cert.date.split('-')[0] + ".";
 
-        // Combine text: Title, Organization, Year
-        li.appendChild(titleElement);
-        li.appendChild(document.createTextNode(", "));
-        li.appendChild(orgSpan);
-        li.appendChild(document.createTextNode(", "));
-        li.appendChild(yearSpan);
+        // Assemble line
+        entryDiv.appendChild(titleElement);
+        entryDiv.appendChild(document.createTextNode(", "));
+        entryDiv.appendChild(orgSpan);
+        entryDiv.appendChild(document.createTextNode(", "));
+        entryDiv.appendChild(yearSpan);
 
-        ul.appendChild(li);
+        container.appendChild(entryDiv);
       });
-
-      groupDiv.appendChild(ul);
-      container.appendChild(groupDiv);
     });
   })
   .catch(error => console.error('Error loading certifications:', error));
