@@ -18,30 +18,54 @@ fetch('assets/data/education.json')
 
     data.forEach(edu => {
 
-      // ===== University Name (h3) =====
+      // ===== Container for logo + first 4 lines =====
+      const topDiv = document.createElement('div');
+      topDiv.style.display = 'flex';
+      topDiv.style.alignItems = 'flex-start';
+      topDiv.style.marginBottom = '6px';
+
+      // ===== Logo =====
+      if (edu.institution.logo) {
+        const logoImg = document.createElement('img');
+        logoImg.src = edu.institution.logo;
+        logoImg.alt = edu.institution.name + " logo";
+        logoImg.style.width = '100px';
+        logoImg.style.height = 'auto';
+        logoImg.style.objectFit = 'contain';
+        logoImg.style.marginRight = '15px';
+        topDiv.appendChild(logoImg);
+      }
+
+      // ===== Text Block =====
+      const textDiv = document.createElement('div');
+      textDiv.style.flex = '1';
+
+      // University Name (h3)
       const uniHeading = document.createElement('h3');
       uniHeading.textContent = edu.institution.name;
-      container.appendChild(uniHeading);
+      uniHeading.style.margin = '0 0 2px 0';
+      textDiv.appendChild(uniHeading);
 
-      // ===== Location + Year =====
+      // Location + Year
       const locationLine = document.createElement('p');
-      locationLine.style.margin = '2px 0';
+      locationLine.style.margin = '0 0 2px 0';
       locationLine.textContent = `${edu.institution.address}, ${edu.date.start.split('-')[0]}–${edu.date.end.split('-')[0]}`;
-      container.appendChild(locationLine);
+      textDiv.appendChild(locationLine);
 
-        // ===== Degree =====
-        const degreeLine = document.createElement('p');
-        degreeLine.style.margin = '2px 0';
+      // Degree
+      const degreeLine = document.createElement('p');
+      degreeLine.style.margin = '0 0 2px 0';
+      degreeLine.innerHTML = `<strong>${edu.degree.level}</strong> (${edu.degree.abbreviation})`;
+      textDiv.appendChild(degreeLine);
 
-        // Bold the level, keep abbreviation normal
-        degreeLine.innerHTML = `<strong>${edu.degree.level}</strong> (${edu.degree.abbreviation})`;
-        container.appendChild(degreeLine);
-
-      // ===== Field =====
+      // Field
       const fieldLine = document.createElement('p');
-      fieldLine.style.margin = '2px 0';
+      fieldLine.style.margin = '0 0 2px 0';
       fieldLine.textContent = edu.degree.field;
-      container.appendChild(fieldLine);
+      textDiv.appendChild(fieldLine);
+
+      topDiv.appendChild(textDiv);
+      container.appendChild(topDiv);
 
       // ===== Extra Details =====
       const detailsDiv = document.createElement('div');
