@@ -2,12 +2,13 @@
   {
     "type": "Research",
     "organization": "Huawei Technologies Canada",
-    "logo": "assets/image/logo/huawei.png",
+    "logo": "assets/media/logo/huawei.png",
     "address": "Waterloo, Ontario, Canada",
-    "position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
+    "group": "Trustworthy Technology and Engineering Laboratory, Intelligent Complex Systems Engineering Laboratory, System Engineering",
+    "position": "Staff R&D Engineer (GenAI Systems & Assurance Architect)",
     "employmentType": "Permanent Full-time",
     "date": {
-      "start": "2023-11-01",
+      "start": "2025-08-31",
       "end": null
     },
     "items": [
@@ -26,19 +27,49 @@
         ]
       },
       {
+        "type": "Leadership",
+        "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
+        "description": [
+          "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
+        ]
+      },
+      {
+        "type": "Supervision",
+        "title": "Supervision of Interns and Co-op Engineers",
+        "description": [
+          "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2025-2026"
+        ]
+      },
+      {
+        "type": "Conference",
+        "title": "Strategic Insights and Innovations from Global Technology Conferences",
+        "description": [
+          "14th International Conference on Learning Representations (ICLR),  Rio de Janeiro, Brazil, Apr 2026",
+          "39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov\u2013Dec 2025"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Research",
+    "organization": "Huawei Technologies Canada",
+    "logo": "assets/media/logo/huawei.png",
+    "address": "Waterloo, Ontario, Canada",
+    "group": "Trustworthy Technology and Engineering Laboratory, Waterloo Complex Intelligent Systems Laboratory",
+    "position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
+    "employmentType": "Permanent Full-time",
+    "date": {
+      "start": "2023-11-01",
+      "end": "2025-08-31"
+    },
+    "items": [
+      {
         "type": "Project",
         "title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
         "description": [
           "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
           "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
           "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
-        ]
-      },
-      {
-        "type": "Leadership",
-        "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
-        "description": [
-          "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
         ]
       },
       {
@@ -54,11 +85,19 @@
         ]
       },
       {
+        "type": "Responsibility",
+        "title": "Technical Interviewer Responsibilities",
+        "description": [
+          "Identified team skill gaps and collaborated with leadership to define role requirements, and draft job descriptions",
+          "Screened 1,000+ resumes, and shortlisted high-potential candidates based on technical qualifications",
+          "Conducted 50+ remote technical interviews, evaluating problem-solving and programming ability"
+        ]
+      },
+      {
         "type": "Supervision",
         "title": "Supervision of Interns and Co-op Engineers",
         "description": [
           "Hossein Yousefizadeh, Shenghui Gu, Lionel C. Briand, Run-time Behavioural Validation of Self-adaptive AI-enabled Systems, 2024-2026",
-          "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2025-2026",
           "Brooke Yang, Co-op Engineer, LLM-based System Reliability, 2025",
           "Xiaoliang (Spencer) Zhou, Junior Engineer, C++ Real-Time Processing Engine for Monitoring Software, 2023-2024"
         ]
@@ -67,7 +106,6 @@
         "type": "Conference",
         "title": "Strategic Insights and Innovations from Global Technology Conferences",
         "description": [
-          "39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov–Dec 2025",
           "34th International Joint Conference on Artificial Intelligence (IJCAI), Montreal, Canada, Aug 2025",
           "38th Annual Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada, Dec 2024",
           "OpenMind Research Institute Banff Retreat, Banff, Canada, Oct 2024",
@@ -84,8 +122,9 @@
   {
     "type": "Research",
     "organization": "Huawei Technologies Canada",
-    "logo": "assets/image/logo/huawei.png",
+    "logo": "assets/media/logo/huawei.png",
     "address": "Waterloo, Ontario, Canada",
+    "group": "Trustworthy Technology and Engineering Laboratory, Waterloo Complex Intelligent Systems Laboratory",
     "position": "Senior R&D Engineer (AI Assurance in Autonomous Driving)",
     "employmentType": "Contract Full-time",
     "date": {
@@ -121,8 +160,9 @@
   {
     "type": "Research",
     "organization": "University of Waterloo",
-    "logo": "assets/image/logo/uwaterloo.png",
+    "logo": "assets/media/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
+    "group": "Department of Systems Design Engineering",
     "position": "Postdoctoral Research Associate (Autonomous Control)",
     "employmentType": "Contract Full-time",
     "date": {
@@ -164,25 +204,25 @@
         ]
       },
       {
-          "type": "Leadership",
-          "title": "Myography-based Controlled 1-DoF Hand Prosthesis",
-          "description": [
-            "Designed an electrically controlled single degree-of-freedom (1-DOF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
-            "Achieved precise thumb controllability through electrical component development, control system refinement, mechanical design, and final assembly.",
-            "Prototype serves as an active pediatric prosthesis using EMG-based control rather than muscle strength, despite being limited to a single finger.",
-            "Future improvements planned: refine 3D model, optimize electronic housing, enhance EMG control precision, and incorporate motors for full-finger control.",
-            "Prototype is a pivotal tool for initiating prosthesis control learning in rehabilitation."
-          ]
+        "type": "Leadership",
+        "title": "Myography-based Controlled 1-DoF Hand Prosthesis",
+        "description": [
+          "Designed an electrically controlled single degree-of-freedom (1-DOF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
+          "Achieved precise thumb controllability through electrical component development, control system refinement, mechanical design, and final assembly.",
+          "Prototype serves as an active pediatric prosthesis using EMG-based control rather than muscle strength, despite being limited to a single finger.",
+          "Future improvements planned: refine 3D model, optimize electronic housing, enhance EMG control precision, and incorporate motors for full-finger control.",
+          "Prototype is a pivotal tool for initiating prosthesis control learning in rehabilitation."
+        ]
       },
       {
-          "type": "Leadership",
-          "title": "MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments",
-          "description": [
-            "Developed MyoBuzz, a limb-worn EMG device providing real-time feedback on muscle activation for dynamometry experiments.",
-            "Limb-specific band with strategically positioned electrodes, visual and auditory alerts, customizable activation threshold, and adjustable sensitivity.",
-            "Electrodes are attachable via clips; strap ensures comfort; rechargeable 3.7V battery supports one-hour operation and two-hour recharge.",
-            "Facilitates real-time monitoring and mitigation of inadvertent muscle activation during joint torque evaluations."
-          ]
+        "type": "Leadership",
+        "title": "MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments",
+        "description": [
+          "Developed MyoBuzz, a limb-worn EMG device providing real-time feedback on muscle activation for dynamometry experiments.",
+          "Limb-specific band with strategically positioned electrodes, visual and auditory alerts, customizable activation threshold, and adjustable sensitivity.",
+          "Electrodes are attachable via clips; strap ensures comfort; rechargeable 3.7V battery supports one-hour operation and two-hour recharge.",
+          "Facilitates real-time monitoring and mitigation of inadvertent muscle activation during joint torque evaluations."
+        ]
       },
       {
         "type": "Supervision",
@@ -193,7 +233,7 @@
           "Lavan Sumanan, Human motion animation using 3Ds Max for 3D pose estimation database, 2023"
         ]
       },
-            {
+      {
         "type": "Responsibility",
         "title": "Postdoctoral Responsibilities",
         "description": [
@@ -206,8 +246,9 @@
   {
     "type": "Teaching",
     "organization": "University of Waterloo",
-    "logo": "assets/image/logo/uwaterloo.png",
+    "logo": "assets/media/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
+    "group": "Department of Systems Design Engineering",
     "position": "Graduate Teaching Assistant",
     "employmentType": "Contract Part-time",
     "date": {
@@ -248,8 +289,9 @@
   {
     "type": "Research",
     "organization": "University of Waterloo",
-    "logo": "assets/image/logo/uwaterloo.png",
+    "logo": "assets/media/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
+    "group": "Motion Research Group",
     "position": "Graduate Research Assistant (BioMechatronic Systems)",
     "employmentType": "Contract Full-time",
     "date": {
@@ -285,19 +327,19 @@
         "description": [
           "Introduced MuscleNET, a set of ML models (ANN, RNN, CNN, RCNN) mapping sEMG signals to joint angle, velocity, acceleration, torque, and activation torque.",
           "RobustMuscleNET RNN predicts control-oriented signals in real-time with 92% regression accuracy for joint angle and 86.5% for assistive torque.",
-          "InverseMuscleNET resolves redundancy in inverse muscle models using RNNs, achieving 88–91% normalized regression between estimated and experimental muscle activation.",
+          "InverseMuscleNET resolves redundancy in inverse muscle models using RNNs, achieving 88\u201391% normalized regression between estimated and experimental muscle activation.",
           "Enables fast, direct estimation for real-time applications in rehabilitation and sports evaluation without invasive electrodes."
         ]
       },
       {
-          "type": "Project",
-          "title": "Scalable Human Musculoskeletal Model",
-          "description": [
-            "Developed a MapleSim biomechanics-based musculoskeletal (MSK) model covering upper and lower body movements for biomechanical analysis.",
-            "Estimated biomechanical joint torque using muscle torque generators with active and passive components.",
-            "Created adjustable multibody kinematic model accommodating diverse anthropometric measurements (sex, age, body mass, height, dominant side, physical activity, skin temperature) with 40 DoF.",
-            "Validated model equations through simulations of joint range of motion and torque, demonstrating robust agreement with existing research findings."
-          ]
+        "type": "Project",
+        "title": "Scalable Human Musculoskeletal Model",
+        "description": [
+          "Developed a MapleSim biomechanics-based musculoskeletal (MSK) model covering upper and lower body movements for biomechanical analysis.",
+          "Estimated biomechanical joint torque using muscle torque generators with active and passive components.",
+          "Created adjustable multibody kinematic model accommodating diverse anthropometric measurements (sex, age, body mass, height, dominant side, physical activity, skin temperature) with 40 DoF.",
+          "Validated model equations through simulations of joint range of motion and torque, demonstrating robust agreement with existing research findings."
+        ]
       },
       {
         "type": "Conference",
@@ -321,7 +363,7 @@
   {
     "type": "Research",
     "organization": "Techno Niro",
-    "logo": "assets/image/logo/technoniro.png",
+    "logo": "assets/media/logo/technoniro.png",
     "address": "Dorcheh, Esfahan, Iran",
     "position": "R&D Mid-Level Engineer (Robotics)",
     "employmentType": "Contract Full-time",
@@ -346,7 +388,7 @@
         "description": [
           "Designed conceptual and mechanical parts for the 3 DoF Wrist Rehabilitation Robot and conducted kinematic and dynamic modeling.",
           "Implemented modified impedance control for enhanced human-robot interaction.",
-          "Prototyped the wrist rehabilitation robot (Jan 2016 – Jan 2017), integrating modeling, mechanical design, and control for testing."
+          "Prototyped the wrist rehabilitation robot (Jan 2016 \u2013 Jan 2017), integrating modeling, mechanical design, and control for testing."
         ]
       }
     ]
@@ -354,7 +396,7 @@
   {
     "type": "Research",
     "organization": "Techno Niro",
-    "logo": "assets/image/logo/technoniro.png",
+    "logo": "assets/media/logo/technoniro.png",
     "address": "Dorcheh, Esfahan, Iran",
     "position": "R&D Junior Engineer (Robotics)",
     "employmentType": "Contract Part-time",
@@ -378,7 +420,7 @@
   {
     "type": "Research",
     "organization": "Techno Niro",
-    "logo": "assets/image/logo/technoniro.png",
+    "logo": "assets/media/logo/technoniro.png",
     "address": "Dorcheh, Esfahan, Iran",
     "position": "R&D Intern",
     "employmentType": "Contract Part-time",
@@ -403,8 +445,9 @@
   {
     "type": "Research",
     "organization": "K. N. Toosi University of Technology",
-    "logo": "assets/image/logo/kntu.png",
+    "logo": "assets/media/logo/kntu.png",
     "address": "Tehran, Tehran, Iran",
+    "group": "Advanced Robotics & Automated Systems (ARAS) Laboratory",
     "position": "Graduate Research Assistant (System Control)",
     "employmentType": "Contract Part-time",
     "date": {
@@ -437,8 +480,9 @@
   {
     "type": "Teaching",
     "organization": "K. N. Toosi University of Technology",
-    "logo": "assets/image/logo/kntu.png",
+    "logo": "assets/media/logo/kntu.png",
     "address": "Tehran, Tehran, Iran",
+    "group": "Faculty of Mechanical Engineering",
     "position": "Graduate Marker",
     "employmentType": "Remote",
     "date": {
@@ -465,7 +509,7 @@
   {
     "type": "Research",
     "organization": "Kian Control Apadana Co. (Festo Authorized Distributor)",
-    "logo": "assets/image/logo/kian.png",
+    "logo": "assets/media/logo/kian.png",
     "address": "Isfahan, Esfahan, Iran",
     "position": "R&D Intern (Automation)",
     "employmentType": "Internship",
@@ -487,8 +531,9 @@
   {
     "type": "Research",
     "organization": "Isfahan University of Technology",
-    "logo": "assets/image/logo/iut.png",
+    "logo": "assets/media/logo/iut.png",
     "address": "Isfahan, Esfahan, Iran",
+    "group": "Department of Mechanical Engineering",
     "position": "Undergraduate Research Assistant",
     "employmentType": "Contract Part-time",
     "date": {
@@ -514,7 +559,7 @@
   {
     "type": "Teaching",
     "organization": "Isfahan University of Technology",
-    "logo": "assets/image/logo/iut.png",
+    "logo": "assets/media/logo/iut.png",
     "address": "Isfahan, Esfahan, Iran",
     "position": "Undergraduate Marker",
     "employmentType": "Hybrid",

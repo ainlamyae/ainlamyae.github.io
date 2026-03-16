@@ -42,7 +42,6 @@ fetch('assets/data/certifications.json')
       const ul = document.createElement('ul');
 
       grouped[type].forEach(cert => {
-        // Each certificate as one <li>
         const li = document.createElement('li');
         li.classList.add('entry');
 
@@ -63,6 +62,22 @@ fetch('assets/data/certifications.json')
         details.classList.add('org-year');
         details.innerHTML = `, <em>${cert.organization}</em>, ${cert.date.split('-')[0]}`;
         li.appendChild(details);
+
+        // 📜 Certificate file icon (only if file exists)
+        if (cert.file && cert.file.trim() !== "") {
+          const fileLink = document.createElement('a');
+          fileLink.href = "#";
+          fileLink.textContent = " 📜";
+          fileLink.title = "View Certificate";
+
+          fileLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            // treat certificate as a single-item media list
+            openMediaModal([{ src: cert.file, caption: cert.title }], 0);
+          });
+
+          li.appendChild(fileLink);
+        }
 
         ul.appendChild(li);
       });
