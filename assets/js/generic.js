@@ -35,7 +35,6 @@ function collapseDropdownById(id) {
 
 // === Modal setup ===
 const modal = document.getElementById("cert-modal");
-const modalImg = document.getElementById("cert-modal-img");
 const closeBtn = document.querySelector(".cert-close");
 const prevBtn = document.querySelector(".cert-prev");
 const nextBtn = document.querySelector(".cert-next");
@@ -43,7 +42,7 @@ const nextBtn = document.querySelector(".cert-next");
 let currentMediaList = [];
 let currentMediaIndex = 0;
 
-// Universal open function for media (projects & certificates)
+// Universal open function for media (image or pdf)
 function openMediaModal(mediaList, index) {
   if (!mediaList || mediaList.length === 0) return;
 
@@ -51,10 +50,34 @@ function openMediaModal(mediaList, index) {
   currentMediaIndex = index;
 
   modal.style.display = "block";
+
+  const modalContent = document.getElementById("cert-modal-content");
+  modalContent.innerHTML = ""; // clear previous content
+
   const current = currentMediaList[currentMediaIndex];
-  modalImg.src = current.src;
-  modalImg.alt = current.caption || "";
-  modalImg.title = current.caption || ""; // <-- add this line
+  const isPDF = current.src.toLowerCase().endsWith(".pdf");
+
+  if (isPDF) {
+    const embed = document.createElement("embed");
+    embed.src = current.src;
+    embed.type = "application/pdf";
+
+    embed.style.width = "100%";
+    embed.style.height = "100%";
+    embed.style.display = "block";
+
+    modalContent.appendChild(embed);
+
+  } else {
+    const img = document.createElement("img");
+    img.src = current.src;
+    img.alt = current.caption || "";
+    img.title = current.caption || "";
+    img.style.maxWidth = "100%";
+    img.style.maxHeight = "80vh";
+
+    modalContent.appendChild(img);
+  }
 }
 
 // Close modal

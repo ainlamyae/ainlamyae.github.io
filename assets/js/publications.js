@@ -107,6 +107,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
           entryDiv.innerHTML = `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
 
+          // 📄 Publication file icon (PDF preview)
+          if (pub.file && pub.file.trim() !== "") {
+            const fileLink = document.createElement('a');
+            fileLink.href = "#";
+            fileLink.textContent = " 📄";
+            fileLink.title = "View PDF";
+
+            fileLink.style.marginLeft = "6px";
+
+            fileLink.addEventListener("click", (e) => {
+              e.preventDefault();
+              openMediaModal(
+                [{ src: pub.file, caption: pub.title || "Publication" }],
+                0
+              );
+            });
+
+            entryDiv.appendChild(fileLink);
+          }
           content.appendChild(entryDiv);
         });
 

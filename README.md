@@ -1,12 +1,10 @@
-# ainlamyae.github.io
+# Resume
 
 This repository contains the source code for my personal GitHub Pages website.
 
 ## 🌐 Website
 
-The site is hosted using GitHub Pages and is available at:
-
-https://ainlamyae.github.io/
+The site is hosted using GitHub Pages.
 
 ## 📁 Project Structure
 
