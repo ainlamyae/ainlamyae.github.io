@@ -29,14 +29,14 @@ fetch('assets/data/certifications.json')
       // Sort newest → oldest
       grouped[type].sort((a, b) => new Date(b.date) - new Date(a.date));
 
+      // Create <ul> for this category
+      const ul = document.createElement('ul');
+
       grouped[type].forEach(cert => {
 
-        // Shared entry container
-        const entryDiv = document.createElement('div');
-        entryDiv.classList.add('entry');
-
-        // DASH at the beginning
-        entryDiv.appendChild(document.createTextNode("- "));
+        // Create <li> for each certification
+        const li = document.createElement('li');
+        li.classList.add('entry'); // optional, keeps CSS styling
 
         // Title (hyperlink if exists)
         let titleElement;
@@ -62,14 +62,16 @@ fetch('assets/data/certifications.json')
         yearSpan.textContent = cert.date.split('-')[0] + ".";
 
         // Assemble line
-        entryDiv.appendChild(titleElement);
-        entryDiv.appendChild(document.createTextNode(", "));
-        entryDiv.appendChild(orgSpan);
-        entryDiv.appendChild(document.createTextNode(", "));
-        entryDiv.appendChild(yearSpan);
+        li.appendChild(titleElement);
+        li.appendChild(document.createTextNode(", "));
+        li.appendChild(orgSpan);
+        li.appendChild(document.createTextNode(", "));
+        li.appendChild(yearSpan);
 
-        container.appendChild(entryDiv);
+        ul.appendChild(li);
       });
+
+      container.appendChild(ul); // append <ul> under the heading
     });
   })
   .catch(error => console.error('Error loading certifications:', error));
