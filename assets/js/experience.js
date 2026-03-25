@@ -1,5 +1,3 @@
-// assets/js/experience.js
-
 fetch('assets/data/experience.json')
   .then(response => {
     if (!response.ok) throw new Error('Failed to load experience.json');
@@ -8,217 +6,123 @@ fetch('assets/data/experience.json')
   .then(data => {
 
     const container = document.getElementById('experience');
-    if (!container) {
-      console.error('Element with id "experience" not found.');
-      return;
+    if (!container) return;
+
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
     }
 
-    // ===== Group by organization =====
-    const orgMap = new Map();
-    data.forEach(job => {
-      const orgKey = job.organization?.name || job.organization || "Unknown Organization";
-      if (!orgMap.has(orgKey)) orgMap.set(orgKey, []);
-      orgMap.get(orgKey).push(job);
+    function calculateDuration(startDate, endDate) {
+      const start = new Date(startDate);
+      const end = new Date(endDate);
+
+      let months =
+        (end.getFullYear() - start.getFullYear()) * 12 +
+        (end.getMonth() - start.getMonth());
+
+      const years = Math.floor(months / 12);
+      months = months % 12;
+
+      let result = '';
+      if (years > 0) result += `${years} yr${years > 1 ? 's' : ''} `;
+      if (months > 0) result += `${months} mo${months > 1 ? 's' : ''}`;
+      return result.trim();
+    }
+
+    // Group experiences by organization
+    const orgMap = {};
+    data.forEach(exp => {
+      if (!orgMap[exp.organization]) orgMap[exp.organization] = [];
+      orgMap[exp.organization].push(exp);
     });
 
-    // ===== Sort jobs inside each organization by start date ascending =====
-    orgMap.forEach((jobs, orgName) => {
-      jobs.sort((a, b) => {
-  const aEnd = a.date.end ? new Date(a.date.end) : new Date(); // treat ongoing as today
-  const bEnd = b.date.end ? new Date(b.date.end) : new Date();
-  return bEnd - aEnd; // descending: newest first
-});
-    });
+    // Render each organization once
+    Object.keys(orgMap).forEach(orgName => {
+      const orgExperiences = orgMap[orgName];
 
-    // ===== Render each organization =====
-    orgMap.forEach((jobs, orgName) => {
+      // Use the first entry for logo and address
+      const firstEntry = orgExperiences[0];
 
-      // ===== Calculate org-wide start/end and duration =====
-      const orgStartDate = new Date(Math.min(...jobs.map(j => new Date(j.date.start))));
-      const orgEndDate = new Date(Math.max(...jobs.map(j => new Date(j.date.end))));
-      const monthsDiff = (orgEndDate.getFullYear() - orgStartDate.getFullYear()) * 12 +
-                         (orgEndDate.getMonth() - orgStartDate.getMonth());
-      const orgYears = Math.floor(monthsDiff / 12);
-      const orgMonths = monthsDiff % 12;
-      const options = { month: 'short', year: 'numeric' };
-      const orgStartStr = orgStartDate.toLocaleDateString('en-US', options);
-      const orgEndStr = orgEndDate.toLocaleDateString('en-US', options);
-
-      // ===== Top container for org + first job =====
-      const topDiv = document.createElement('div');
-      topDiv.style.display = 'flex';
-      topDiv.style.alignItems = 'flex-start'; // logo aligned with org container
-      topDiv.style.marginBottom = '6px';
+      const entryDiv = document.createElement('div');
+      entryDiv.style.display = 'flex';
+      entryDiv.style.alignItems = 'flex-start';
+      entryDiv.style.marginBottom = '40px';
 
       // Logo
-      if (jobs[0].logo) {
+      if (firstEntry.logo) {
         const logoImg = document.createElement('img');
-        logoImg.src = jobs[0].logo;
-        logoImg.alt = jobs[0].organization + " logo";
+        logoImg.src = firstEntry.logo;
+        logoImg.alt = orgName + " logo";
         logoImg.style.width = '80px';
-        logoImg.style.height = 'auto';
-        logoImg.style.objectFit = 'contain';
         logoImg.style.marginRight = '15px';
-        logoImg.style.alignSelf = 'flex-start'; // explicitly align top with orgHeading
-        topDiv.appendChild(logoImg);
+        logoImg.style.flex = '0 0 80px';
+        entryDiv.appendChild(logoImg);
       }
 
-      // Text block
+      // Text content
       const textDiv = document.createElement('div');
       textDiv.style.flex = '1';
 
-      // ===== Org Heading + Address/Date =====
-      const orgContainer = document.createElement('div'); // container for h3 + address/date
-      orgContainer.style.display = 'flex';
-      orgContainer.style.flexDirection = 'column';
-
+      // Organization name and address once
       const orgHeading = document.createElement('h3');
-      orgHeading.textContent = orgName || (jobs[0].organization?.name || "Organization");
-      orgHeading.style.margin = '0 0 2px 0';
-      orgContainer.appendChild(orgHeading);
+      orgHeading.textContent = orgName;
+      orgHeading.style.margin = '0 0 4px 0';
+      textDiv.appendChild(orgHeading);
 
-      const infoLine = document.createElement('p');
-      infoLine.style.margin = '0';
-      infoLine.style.fontStyle = 'italic';
-      infoLine.style.fontSize = '0.95em';
+      const addressLine = document.createElement('p');
+      addressLine.textContent = firstEntry.address;
+      textDiv.appendChild(addressLine);
 
-      let text = jobs[0].address || "Unknown Location";
-      text += ` | ${orgStartStr} - ${orgEndStr} · ${orgYears} yrs ${orgMonths} mos`;
-      infoLine.textContent = text;
-      orgContainer.appendChild(infoLine);
+      // Sort positions by end date descending
+      orgExperiences.sort((a, b) => new Date(b.date.end) - new Date(a.date.end));
 
-      textDiv.appendChild(orgContainer);
+      orgExperiences.forEach(exp => {
 
-      // ===== First Position =====
-      if (jobs[0].position) {
-        const posHeading = document.createElement('h4');
-        posHeading.textContent = jobs[0].position;
-        textDiv.appendChild(posHeading);
+        // Position title
+        const positionHeading = document.createElement('h4');
+        positionHeading.style.margin = '12px 0 4px 0';
+        positionHeading.textContent = exp.position;
+        textDiv.appendChild(positionHeading);
 
-        const startDate = new Date(jobs[0].date.start);
-        const endDate = new Date(jobs[0].date.end);
-        const monthsDiff = (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-                          (endDate.getMonth() - startDate.getMonth());
-        const years = Math.floor(monthsDiff / 12);
-        const months = monthsDiff % 12;
-        const startStr = startDate.toLocaleDateString('en-US', options);
-        const endStr = endDate.toLocaleDateString('en-US', options);
+        // Employment type + date + duration on same line
+        const startFormatted = formatDate(exp.date.start);
+        const endFormatted = formatDate(exp.date.end);
+        const duration = calculateDuration(exp.date.start, exp.date.end);
 
-        const metaLine = document.createElement('p');
-        metaLine.textContent = `${jobs[0].employmentType} | ${startStr} - ${endStr} · ${years} yrs ${months} mos`;
-        textDiv.appendChild(metaLine);
-      }
+        const typeDateLine = document.createElement('p');
+        typeDateLine.style.margin = '0 0 6px 0';
+        typeDateLine.textContent = `${exp.employmentType} | ${startFormatted} - ${endFormatted} · ${duration}`;
+        textDiv.appendChild(typeDateLine);
 
-      topDiv.appendChild(textDiv);
-      container.appendChild(topDiv);
+        // Loop over all items for this position
+        exp.items.forEach(item => {
 
-      // ===== Extra details for all jobs =====
-      const detailsDiv = document.createElement('div');
-      detailsDiv.style.marginTop = '2px';
-      detailsDiv.style.lineHeight = '1.3';
+          // Optional section title
+          if (item.title) {
+            const titleEl = document.createElement('p');
+            titleEl.innerHTML = `<strong>${item.title}</strong>`;
+            textDiv.appendChild(titleEl);
+          }
 
-      jobs.forEach((job, index) => {
-        const isFirstJob = index === 0;
+          // Item description list
+          if (item.description?.length) {
+            const ul = document.createElement('ul');
+            item.description.forEach(desc => {
+              const li = document.createElement('li');
+              li.textContent = desc;
+              ul.appendChild(li);
+            });
+            textDiv.appendChild(ul);
+          }
 
-        // Skip rendering position heading for first job (already done)
-        if (!isFirstJob && job.position) {
-          const posHeading = document.createElement('h4');
-          posHeading.textContent = job.position;
-          detailsDiv.appendChild(posHeading);
-
-          // Position-specific duration
-          const startDate = new Date(job.date.start);
-          const endDate = new Date(job.date.end);
-          const monthsDiff = (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-                             (endDate.getMonth() - startDate.getMonth());
-          const years = Math.floor(monthsDiff / 12);
-          const months = monthsDiff % 12;
-          const startStr = startDate.toLocaleDateString('en-US', options);
-          const endStr = endDate.toLocaleDateString('en-US', options);
-
-          const metaLine = document.createElement('p');
-          metaLine.textContent = `${job.employmentType} | ${startStr} - ${endStr} · ${years} yrs ${months} mos`;
-          detailsDiv.appendChild(metaLine);
-        }
-
-        // Responsibilities
-        if (job.responsibilities?.length > 0) {
-          const ul = document.createElement('ul');
-          job.responsibilities.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            ul.appendChild(li);
-          });
-          detailsDiv.appendChild(ul);
-        }
-
-        // Projects
-        if (job.projects?.length > 0) {
-          job.projects.forEach(project => {
-            const projTitle = document.createElement('h5');
-            projTitle.textContent = project.title;
-            detailsDiv.appendChild(projTitle);
-
-            if (project.description?.length > 0) {
-              const ul = document.createElement('ul');
-              project.description.forEach(desc => {
-                const li = document.createElement('li');
-                li.textContent = desc;
-                ul.appendChild(li);
-              });
-              detailsDiv.appendChild(ul);
-            }
-          });
-        }
-
-        // Courses
-        if (job.courses?.length > 0) {
-          const cTitle = document.createElement('h5');
-          cTitle.textContent = "Courses";
-          detailsDiv.appendChild(cTitle);
-
-          const ul = document.createElement('ul');
-          job.courses.forEach(course => {
-            const li = document.createElement('li');
-            li.textContent = `${course.code} – ${course.title} (${course.term}), ${course.instructor}`;
-            ul.appendChild(li);
-          });
-          detailsDiv.appendChild(ul);
-        }
-
-        // Supervision
-        if (job.supervision?.length > 0) {
-          const supTitle = document.createElement('h5');
-          supTitle.textContent = "Student Supervision";
-          detailsDiv.appendChild(supTitle);
-
-          const ul = document.createElement('ul');
-          job.supervision.forEach(student => {
-            const li = document.createElement('li');
-            li.textContent = `${student.student} (${student.year}) – ${student.project}`;
-            ul.appendChild(li);
-          });
-          detailsDiv.appendChild(ul);
-        }
-
-        // Conferences
-        if (job.conferences?.length > 0) {
-          const confTitle = document.createElement('h5');
-          confTitle.textContent = "Conferences & Academic Activities";
-          detailsDiv.appendChild(confTitle);
-
-          const ul = document.createElement('ul');
-          job.conferences.forEach(conf => {
-            const li = document.createElement('li');
-            li.textContent = conf;
-            ul.appendChild(li);
-          });
-          detailsDiv.appendChild(ul);
-        }
+        });
 
       });
 
-      container.appendChild(detailsDiv);
+      entryDiv.appendChild(textDiv);
+      container.appendChild(entryDiv);
+
     });
 
   })

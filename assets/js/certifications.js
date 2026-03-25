@@ -36,7 +36,6 @@ fetch('assets/data/certifications.json')
 
         // Create <li> for each certification
         const li = document.createElement('li');
-        li.classList.add('entry'); // optional, keeps CSS styling
 
         // Title (hyperlink if exists)
         let titleElement;

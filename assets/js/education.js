@@ -1,28 +1,23 @@
-// assets/js/education.js
-
 fetch('assets/data/education.json')
   .then(response => {
     if (!response.ok) throw new Error('Failed to load education.json');
     return response.json();
   })
   .then(data => {
-
     const container = document.getElementById('education');
-    if (!container) {
-      console.error('Element with id "education" not found.');
-      return;
-    }
+    if (!container) return console.error('Element with id "education" not found.');
 
     // Sort newest → oldest
     data.sort((a, b) => new Date(b.date.end) - new Date(a.date.end));
 
     data.forEach(edu => {
 
-      // ===== Container for logo + first 4 lines =====
-      const topDiv = document.createElement('div');
-      topDiv.style.display = 'flex';
-      topDiv.style.alignItems = 'flex-start';
-      topDiv.style.marginBottom = '6px';
+      // ===== Main container: logo + all text =====
+      const entryDiv = document.createElement('div');
+      entryDiv.style.display = 'flex';
+      entryDiv.style.alignItems = 'flex-start';
+      entryDiv.style.marginBottom = '20px';
+      entryDiv.style.width = '100%';
 
       // ===== Logo =====
       if (edu.institution.logo) {
@@ -30,17 +25,17 @@ fetch('assets/data/education.json')
         logoImg.src = edu.institution.logo;
         logoImg.alt = edu.institution.name + " logo";
         logoImg.style.width = '80px';
-        logoImg.style.height = 'auto';
-        logoImg.style.objectFit = 'contain';
         logoImg.style.marginRight = '15px';
-        topDiv.appendChild(logoImg);
+        logoImg.style.flex = '0 0 80px';
+        entryDiv.appendChild(logoImg);
       }
 
-      // ===== Text Block =====
+      // ===== Text Column =====
       const textDiv = document.createElement('div');
       textDiv.style.flex = '1';
+      textDiv.style.minWidth = '0';
 
-      // University Name (h3)
+      // University Name
       const uniHeading = document.createElement('h3');
       uniHeading.textContent = edu.institution.name;
       uniHeading.style.margin = '0 0 2px 0';
@@ -61,102 +56,94 @@ fetch('assets/data/education.json')
       fieldLine.textContent = edu.degree.field;
       textDiv.appendChild(fieldLine);
 
-      topDiv.appendChild(textDiv);
-      container.appendChild(topDiv);
-
-      // ===== Extra Details =====
-      const detailsDiv = document.createElement('div');
-      detailsDiv.style.lineHeight = '1.3';
+      // ===== Extra Details as Bullets =====
+      const detailsList = document.createElement('ul');
+      detailsList.style.margin = '5px 0 0 0';
+      detailsList.style.paddingLeft = '20px';
 
       // Major
       if (edu.major) {
-        const p = document.createElement('p');
-        p.textContent = `Major: ${edu.major}`;
-        detailsDiv.appendChild(p);
+        const li = document.createElement('li');
+        li.textContent = `Major: ${edu.major}`;
+        detailsList.appendChild(li);
       }
 
       // Thesis
       if (edu.thesis && edu.thesis.title) {
-        const p = document.createElement('p');
+        const li = document.createElement('li');
         if (edu.thesis.url) {
           const link = document.createElement('a');
           link.href = edu.thesis.url;
           link.target = '_blank';
           link.rel = 'noopener noreferrer';
           link.textContent = edu.thesis.title;
-          p.textContent = 'Thesis: ';
-          p.appendChild(link);
+          li.textContent = 'Thesis: ';
+          li.appendChild(link);
         } else {
-          p.textContent = `Thesis: ${edu.thesis.title}`;
+          li.textContent = `Thesis: ${edu.thesis.title}`;
         }
-        detailsDiv.appendChild(p);
+        detailsList.appendChild(li);
       }
 
-        // Supervisor
-        if (edu.supervisor && edu.supervisor.name) {
-          const p = document.createElement('p');
-
-          if (edu.supervisor.url) {
-            const link = document.createElement('a');
-            link.href = edu.supervisor.url;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = edu.supervisor.name;
-            p.textContent = 'Supervisor: ';
-            p.appendChild(link);
-          } else {
-            p.textContent = `Supervisor: ${edu.supervisor.name}`;
-          }
-
-          detailsDiv.appendChild(p);
+      // Supervisor
+      if (edu.supervisor && edu.supervisor.name) {
+        const li = document.createElement('li');
+        if (edu.supervisor.url) {
+          const link = document.createElement('a');
+          link.href = edu.supervisor.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = edu.supervisor.name;
+          li.textContent = 'Supervisor: ';
+          li.appendChild(link);
+        } else {
+          li.textContent = `Supervisor: ${edu.supervisor.name}`;
         }
+        detailsList.appendChild(li);
+      }
 
-        // Group/Laboratory
-        if (edu.research_group && edu.research_group.name) {
-          const groupLine = document.createElement('p');
-
-          if (edu.research_group.url) {
-            const link = document.createElement('a');
-            link.href = edu.research_group.url;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = edu.research_group.name;
-            groupLine.textContent = 'Group/Laboratory: ';
-            groupLine.appendChild(link);
-          } else {
-            groupLine.textContent = `Group/Laboratory: ${edu.research_group.name}`;
-          }
-
-          detailsDiv.appendChild(groupLine);
+      // Group/Laboratory
+      if (edu.research_group && edu.research_group.name) {
+        const li = document.createElement('li');
+        if (edu.research_group.url) {
+          const link = document.createElement('a');
+          link.href = edu.research_group.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = edu.research_group.name;
+          li.textContent = 'Group/Laboratory: ';
+          li.appendChild(link);
+        } else {
+          li.textContent = `Group/Laboratory: ${edu.research_group.name}`;
         }
+        detailsList.appendChild(li);
+      }
 
-      // GPA (only if value exists)
+      // GPA
       if (edu.gpa && edu.gpa.value !== null) {
-        const pGPA = document.createElement('p');
-        pGPA.textContent = `GPA: ${edu.gpa.value}/${edu.gpa.scale}`;
-        detailsDiv.appendChild(pGPA);
+        const li = document.createElement('li');
+        li.textContent = `GPA: ${edu.gpa.value}/${edu.gpa.scale}`;
+        detailsList.appendChild(li);
       }
 
-      // Courses (comma separated)
+      // Selected/Enrolled Courses
       if (edu.courses && edu.courses.enrolled.length > 0) {
-        const pCourses = document.createElement('p');
-        pCourses.textContent = "Selected/Enrolled Courses: " + edu.courses.enrolled.join(", ");
-        detailsDiv.appendChild(pCourses);
+        const li = document.createElement('li');
+        li.textContent = "Selected/Enrolled Courses: " + edu.courses.enrolled.join(", ");
+        detailsList.appendChild(li);
       }
-      // Audited courses (comma separated)
-        if (edu.courses && edu.courses.audited && edu.courses.audited.length > 0) {
-        const pAudited = document.createElement('p');
-        pAudited.textContent = "Audited Courses: " + edu.courses.audited.join(", ");
-        detailsDiv.appendChild(pAudited);
-        }
 
-      container.appendChild(detailsDiv);
-      // Add extra spacing after each education entry
-      const spacer = document.createElement('div');
-      spacer.style.height = '20px';  // adjust to whatever spacing you like
-      container.appendChild(spacer);
+      // Audited Courses
+      if (edu.courses && edu.courses.audited && edu.courses.audited.length > 0) {
+        const li = document.createElement('li');
+        li.textContent = "Audited Courses: " + edu.courses.audited.join(", ");
+        detailsList.appendChild(li);
+      }
+
+      textDiv.appendChild(detailsList);
+      entryDiv.appendChild(textDiv);
+      container.appendChild(entryDiv);
 
     });
-
   })
   .catch(error => console.error('Error loading education:', error));
