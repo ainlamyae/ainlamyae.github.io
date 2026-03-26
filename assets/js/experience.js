@@ -1,177 +1,271 @@
-function renderExperience(type, containerId) {
-  fetch('assets/data/experience.json')
-    .then(response => {
-      if (!response.ok) throw new Error('Failed to load experience.json');
-      return response.json();
-    })
-    .then(data => {
+/**
+ * experience.js
+ * Load experience data from JSON and render the Experience section
+ * Each item title is now a dropdown that shows/hides its details
+ */
 
-      const container = document.getElementById(containerId);
-      if (!container) return;
+fetch('assets/data/experience.json')
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to load experience.json');
+    return response.json();
+  })
+  .then(data => {
 
-      // ✅ filter by type (ONLY change in data handling)
-      const filteredData = data.filter(exp => exp.type === type);
+    // ==============================
+    // SECTION 1: INITIAL SETUP
+    // ==============================
 
-      // Map item types to emojis
-      const typeEmoji = {
-        "Project": "⚙️",
-        "Leadership": "🧭",
-        "Supervision": "👥",
-        "Conference": "🎤",
-        "Course": "📖",
-        "Responsibility": "🗂️",
-      };
+    // Container for all experiences
+    const container = document.getElementById("experience");
+    if (!container) return; // Exit if container is not found
 
-      function formatDate(dateString) {
-        if (!dateString || dateString === "Present") {
-          return "Present";
-        }
-        const date = new Date(dateString);
-        return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
-      }
+    // Emoji mapping for item categories
+    const categoryEmoji = {
+      "Project": "⚙️",
+      "Leadership": "🧭",
+      "Service": "🗂️",
+      "Teaching": "📖"
+    };
 
-      function calculateDuration(startDate, endDate) {
-        const start = new Date(startDate);
-        const end = (endDate === "Present" || !endDate)
-          ? new Date()
-          : new Date(endDate);
+    /**
+     * Format a date string to "Mon YYYY" format
+     * @param {string} dateString
+     * @returns {string}
+     */
+    function formatDate(dateString) {
+      if (!dateString) return "Present";
+      const date = new Date(dateString);
+      return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+    }
 
-        let months =
-          (end.getFullYear() - start.getFullYear()) * 12 +
-          (end.getMonth() - start.getMonth());
+    /**
+     * Calculate duration between two dates in years and months
+     * @param {string} startDate
+     * @param {string} endDate
+     * @returns {string}
+     */
+    function calculateDuration(startDate, endDate) {
+      const start = new Date(startDate);
+      const end = endDate ? new Date(endDate) : new Date();
 
-        const years = Math.floor(months / 12);
-        months = months % 12;
+      let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+      const years = Math.floor(months / 12);
+      months = months % 12;
 
-        let result = '';
-        if (years > 0) result += `${years} yr${years > 1 ? 's' : ''} `;
-        if (months > 0) result += `${months} mo${months > 1 ? 's' : ''}`;
+      let result = '';
+      if (years > 0) result += `${years} yr${years > 1 ? 's' : ''} `;
+      if (months > 0) result += `${months} mo${months > 1 ? 's' : ''}`;
+      return result.trim();
+    }
 
-        return result.trim();
-      }
+    // ==============================
+    // SECTION 2: GROUP EXPERIENCES BY ORGANIZATION
+    // ==============================
 
-      // Group experiences by organization
-      const orgMap = {};
-      filteredData.forEach(exp => {
-        if (!orgMap[exp.organization]) orgMap[exp.organization] = [];
-        orgMap[exp.organization].push(exp);
+    // Create a map where key = organization name, value = array of experiences
+    const orgMap = {};
+    data.forEach(exp => {
+      if (!orgMap[exp.organization]) orgMap[exp.organization] = [];
+      orgMap[exp.organization].push(exp);
+    });
+
+    // ==============================
+    // SECTION 3: RENDER EACH ORGANIZATION
+    // ==============================
+
+    Object.keys(orgMap).forEach(orgName => {
+
+      const orgExperiences = orgMap[orgName];
+
+      // Sort experiences within organization by most recent end date
+      orgExperiences.sort((a, b) => {
+        const getEnd = e => e.date?.end ? new Date(e.date.end) : new Date();
+        return getEnd(b) - getEnd(a);
       });
 
-      // Render each organization once
-      Object.keys(orgMap).forEach(orgName => {
-        const orgExperiences = orgMap[orgName];
+      const firstEntry = orgExperiences[0];
 
-        const firstEntry = orgExperiences[0];
+      // ===== ORGANIZATION CONTAINER =====
+      const entryDiv = document.createElement('div');
+      entryDiv.style.display = 'flex';
+      entryDiv.style.alignItems = 'flex-start';
+      entryDiv.style.marginBottom = '40px';
 
-        const entryDiv = document.createElement('div');
-        entryDiv.style.display = 'flex';
-        entryDiv.style.alignItems = 'flex-start';
-        entryDiv.style.marginBottom = '40px';
+      // ==============================
+      // SECTION 3.1: LOGO (LEFT SIDE)
+      // ==============================
+      if (firstEntry.logo) {
+        const logoImg = document.createElement('img');
+        logoImg.src = firstEntry.logo;
+        logoImg.alt = orgName + " logo";
+        logoImg.style.width = '80px';
+        logoImg.style.marginRight = '15px';
+        logoImg.style.flex = '0 0 80px';
+        logoImg.style.marginTop = '2px'; // subtle top alignment tweak
+        entryDiv.appendChild(logoImg);
+      }
 
-        // Logo
-        if (firstEntry.logo) {
-          const logoImg = document.createElement('img');
-          logoImg.src = firstEntry.logo;
-          logoImg.alt = orgName + " logo";
-          logoImg.style.width = '80px';
-          logoImg.style.marginRight = '15px';
-          logoImg.style.flex = '0 0 80px';
-          entryDiv.appendChild(logoImg);
-        }
+      // ==============================
+      // SECTION 3.2: ORGANIZATION HEADER (RIGHT SIDE)
+      // ==============================
+      const textDiv = document.createElement('div');
+      textDiv.style.flex = '1';
 
-        // Text content
-        const textDiv = document.createElement('div');
-        textDiv.style.flex = '1';
+      const orgHeading = document.createElement('h3');
+      orgHeading.textContent = orgName;
+      orgHeading.style.marginTop = '0';
+      orgHeading.style.marginBottom = '4px';
+      textDiv.appendChild(orgHeading);
 
-        const orgHeading = document.createElement('h3');
-        orgHeading.textContent = orgName;
-        orgHeading.style.margin = '0 0 4px 0';
-        textDiv.appendChild(orgHeading);
-
+      if (firstEntry.address) {
         const addressLine = document.createElement('p');
         addressLine.textContent = firstEntry.address;
         textDiv.appendChild(addressLine);
+      }
 
-        // Sort positions
-        orgExperiences.sort((a, b) => {
-          const getEndDate = (exp) => {
-            if (!exp.date.end || exp.date.end === "Present") return new Date();
-            return new Date(exp.date.end);
-          };
-          return getEndDate(b) - getEndDate(a);
-        });
+      // ==============================
+      // SECTION 4: RENDER EACH ROLE
+      // ==============================
+      orgExperiences.forEach(exp => {
 
-        orgExperiences.forEach(exp => {
+        // Role / position title
+        const positionHeading = document.createElement('h4');
+        positionHeading.textContent = exp.position;
+        textDiv.appendChild(positionHeading);
 
-          const positionHeading = document.createElement('h4');
-          positionHeading.style.margin = '12px 0 4px 0';
-          positionHeading.textContent = exp.position;
-          textDiv.appendChild(positionHeading);
+        // Group / lab info (italic)
+        if (exp.group) {
+          const groupLine = document.createElement('p');
+          groupLine.style.fontStyle = 'italic';
+          groupLine.textContent = exp.group;
+          textDiv.appendChild(groupLine);
+        }
 
-          if (exp.group) {
-            const groupLine = document.createElement('p');
-            groupLine.style.margin = '0 0 4px 0';
-            groupLine.style.fontStyle = 'italic';
-            groupLine.textContent = exp.group;
-            textDiv.appendChild(groupLine);
-          }
-
+        // Employment type + dates + duration
+        if (exp.date?.start) {
           const startFormatted = formatDate(exp.date.start);
           const endFormatted = formatDate(exp.date.end);
           const duration = calculateDuration(exp.date.start, exp.date.end);
 
-          const typeDateLine = document.createElement('p');
-          typeDateLine.style.margin = '0 0 6px 0';
-          typeDateLine.textContent = `${exp.employmentType} | ${startFormatted} - ${endFormatted} · ${duration}`;
-          textDiv.appendChild(typeDateLine);
+          const metaLine = document.createElement('p');
+          metaLine.textContent = `${exp.employmentType || ""} | ${startFormatted} - ${endFormatted} · ${duration}`;
+          textDiv.appendChild(metaLine);
+        }
 
-          exp.items.forEach(item => {
+        // ==============================
+        // SECTION 5: RENDER EACH ITEM WITH DROPDOWN
+        // ==============================
+        exp.items?.forEach(item => {
 
-            if (item.title) {
-              const titleEl = document.createElement('p');
-              const emoji = typeEmoji[item.type] || "";
-              titleEl.innerHTML = `<strong>${emoji ? emoji + " " : ""}${item.title}</strong>`;
-              textDiv.appendChild(titleEl);
-            }
+        // ==============================
+        // NEW: Dropdown Section Wrapper
+        // ==============================
+        const section = document.createElement('div');
+        section.classList.add('dropdown-section', 'keyword-expandable');
 
-            if (item.description?.length) {
-              const ul = document.createElement('ul');
-              item.description.forEach(desc => {
-                const li = document.createElement('li');
-                li.textContent = desc;
-                ul.appendChild(li);
-              });
-              textDiv.appendChild(ul);
-            }
+        // ==============================
+        // TITLE (Dropdown Toggle)
+        // ==============================
+        if (item.title) {
+          const titleEl = document.createElement('p');
+          const emoji = categoryEmoji[item.category] || "";
 
-            if (item.media?.length) {
-              const mediaRow = document.createElement('div');
-              mediaRow.className = 'media-row';
-              item.media.forEach((media, index) => {
-                if (!media.src) return;
-                const img = document.createElement('img');
-                const caption = media.caption || "";
-                img.src = media.src;
-                img.alt = caption;
-                img.title = caption;
-                img.className = 'media-img';
-                img.addEventListener("click", (e) => {
-                  e.preventDefault();
-                  openMediaModal(item.media, index);
-                });
-                mediaRow.appendChild(img);
-              });
-              textDiv.appendChild(mediaRow);
-            }
+          titleEl.innerHTML =
+            `<strong>${emoji ? emoji + " " : ""}${item.title}</strong>`;
 
+          titleEl.classList.add('dropdown-toggle');
+          titleEl.style.cursor = 'pointer';
+
+          section.appendChild(titleEl);
+        }
+
+        // ==============================
+        // CONTENT (Dropdown Body)
+        // ==============================
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('dropdown-content');
+
+        // Contributor + Date
+        if (item.contributor || item.date?.start) {
+          const contributorLine = document.createElement('p');
+
+          contributorLine.style.marginTop = '-4px';
+          contributorLine.style.marginBottom = '4px';
+          contributorLine.style.fontSize = '0.95em';
+          contributorLine.style.color = '#666';
+
+          let contributorText = item.contributor || "";
+          let dateText = "";
+
+          if (item.date?.start) {
+            const startFormatted = formatDate(item.date.start);
+            const endFormatted = formatDate(item.date.end);
+            const duration = calculateDuration(item.date.start, item.date.end);
+
+            dateText = `${startFormatted} - ${endFormatted} · ${duration}`;
+          }
+
+          contributorLine.textContent =
+            contributorText && dateText
+              ? `${contributorText} | ${dateText}`
+              : contributorText || dateText;
+
+          contentDiv.appendChild(contributorLine);
+        }
+
+        // Description
+        if (item.description?.length) {
+          const ul = document.createElement('ul');
+
+          item.description.forEach(desc => {
+            const li = document.createElement('li');
+            li.textContent = desc;
+            ul.appendChild(li);
           });
 
-        });
+          contentDiv.appendChild(ul);
+        }
 
-        entryDiv.appendChild(textDiv);
-        container.appendChild(entryDiv);
+        // Media
+        if (item.media?.length) {
+          const mediaRow = document.createElement('div');
+          mediaRow.className = 'media-row';
+
+          item.media.forEach((media, index) => {
+            if (!media.src) return;
+
+            const img = document.createElement('img');
+            img.src = media.src;
+            img.alt = media.caption || "";
+            img.title = media.caption || "";
+            img.className = 'media-img';
+
+            img.addEventListener("click", (e) => {
+              e.preventDefault();
+              if (typeof openMediaModal === "function") {
+                openMediaModal(item.media, index);
+              }
+            });
+
+            mediaRow.appendChild(img);
+          });
+
+          contentDiv.appendChild(mediaRow);
+        }
+
+        // ==============================
+        // Assemble Section
+        // ==============================
+        section.appendChild(contentDiv);
+        textDiv.appendChild(section);
+      });
       });
 
-    })
-    .catch(error => console.error('Error loading experience:', error));
-}
+      // Append organization block to main container
+      entryDiv.appendChild(textDiv);
+      container.appendChild(entryDiv);
+
+    });
+
+  })
+  .catch(error => console.error('Error loading experience:', error));
