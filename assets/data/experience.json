@@ -46,7 +46,11 @@
         "category": "Leadership",
         "contributor": "Zhenyang Xu (Research Intern)",
         "title": "Uncertainty Monitoring System for LLM-Based Generative Software",
-        "description": [],
+        "description": [
+          "Implemented the core uncertainty computation for the LLM outputs, forming the foundation for the monitoring system",
+          "Developed the decision-making logic to act on uncertainty measures and partially contributed to coding the overall system",
+          "Assisted in project planning and integration, supporting the application of uncertainty metrics to JSON-based outputs"
+        ],
         "date": {
           "start": "2025-01-01",
           "end": "2026-12-31"
@@ -112,34 +116,43 @@
       },
       {
         "category": "Project",
-        "title": "Run-time Assurance (AI Consistency and Accuracy) System for Autonomous Driving Systems",
+        "title": "2D Bird\u2019s-Eye View Risk Monitoring for Autonomous Driving",
         "description": [
-          "Researched failure measurement and monitoring of learning-enabled control systems across Perception, Prediction, and Planning modules",
-          "Performed systems-theoretic process analysis and defined risk boundaries for autonomous driving systems",
-          "Formulated and implemented C++ algorithms for monitoring, risk assessment, and secure disengagement protocols",
-          "Designed a comprehensive run-time assurance architecture for AI consistency and accuracy validation",
-          "Evaluated advanced autonomous driving modules by integrating Baidu Apollo Auto with CARLA Simulator using C++ and Python",
-          "Designed pre-crash, adverse weather, and empirical simulation scenarios to validate robustness and safety"
-        ]
+          "Developed a CNN-based risk assessment module that processes 2D bird\u2019s-eye views of the vehicle\u2019s surroundings to predict the future driving risk",
+          "Implemented risk detection using a 2D Time-to-Collision (TTC) algorithm for precived object and obstructed phantom object",
+          "Coded and integrated C++ modules into Baidu Apollo Auto ADS, enabling real-time risk evaluation and decision-making",
+          "Verified and tested the system under diverse conditions, analyzing accident scenarios and validating robustness of the risk detection algorithms",
+          "Animated 2D bird\u2019s-eye views and reconstructed accident cases from China for kinematic analysis and validation"
+        ],
+        "date": {
+          "start": "2024-09-01",
+          "end": "2025-04-31"
+        }
       },
       {
         "category": "Leadership",
         "contributor": "Brooke Yang (Co-op Engineer)",
         "title": "LLM-based System Reliability",
-        "description": [],
+        "description": [
+          "Guided implementation of probability extraction from LLMs within LangChain"
+        ],
         "date": {
           "start": "2025-01-01",
-          "end": "2025-12-31"
+          "end": "2025-08-31"
         }
       },
       {
         "category": "Leadership",
         "contributor": "Xiaoliang (Spencer) Zhou (Junior Engineer)",
         "title": "C++ Real-Time Processing Engine for Monitoring Software",
-        "description": [],
+        "description": [
+          "Developed prototype of C++ modules for processing as part of the monitoring software project",
+          "Conducted testing and validation of the C++ components to ensure reliability before integration",
+          "Delivered ready-to-use modules to assistant for integration into the larger framework"
+        ],
         "date": {
-          "start": "2023-01-01",
-          "end": "2024-12-31"
+          "start": "2023-10-01",
+          "end": "2024-09-31"
         }
       },
       {
@@ -166,6 +179,18 @@
       "end": "2023-11-30"
     },
     "items": [
+      {
+        "category": "Project",
+        "title": "Run-time Assurance (AI Consistency and Accuracy) System for Autonomous Driving Systems",
+        "description": [
+          "Researched failure measurement and monitoring of learning-enabled control systems across Perception, Prediction, and Planning modules",
+          "Performed systems-theoretic process analysis and defined risk boundaries for autonomous driving systems",
+          "Formulated and implemented C++ algorithms for monitoring, risk assessment, and secure disengagement protocols",
+          "Designed a comprehensive run-time assurance architecture for AI consistency and accuracy validation",
+          "Evaluated advanced autonomous driving modules by integrating Baidu Apollo Auto with CARLA Simulator using C++ and Python",
+          "Designed pre-crash, adverse weather, and empirical simulation scenarios to validate robustness and safety"
+        ]
+      },
       {
         "category": "Project",
         "title": "Run-time Assurance (Vehicle Safety) System for Autonomous Driving Systems",
@@ -238,15 +263,15 @@
         "contributor": "Vasylysa Korovkina (Master Student)",
         "title": "Myography-based Controlled 1-DoF Hand Prosthesis",
         "description": [
-          "Designed an electrically controlled single degree-of-freedom (1-DOF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
+          "Designed an electrically controlled single degree-of-freedom (1-DoF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
           "Achieved precise thumb controllability through electrical component development, control system refinement, mechanical design, and final assembly.",
           "Prototype serves as an active pediatric prosthesis using EMG-based control rather than muscle strength, despite being limited to a single finger.",
           "Future improvements planned: refine 3D model, optimize electronic housing, enhance EMG control precision, and incorporate motors for full-finger control.",
           "Prototype is a pivotal tool for initiating prosthesis control learning in rehabilitation."
         ],
         "date": {
-          "start": "2023-01-01",
-          "end": "2023-12-31"
+          "start": "2023-05-01",
+          "end": "2023-08-31"
         }
       },
       {
@@ -260,7 +285,7 @@
           "Facilitates real-time monitoring and mitigation of inadvertent muscle activation during joint torque evaluations."
         ],
         "date": {
-          "start": "2023-01-01",
+          "start": "2023-05-01",
           "end": "2023-12-31"
         }
       },
@@ -268,10 +293,13 @@
         "category": "Leadership",
         "contributor": "Lavan Sumanan (Undergraduate Research Assistant)",
         "title": "Human motion animation using 3Ds Max for 3D pose estimation database",
-        "description": [],
+        "description": [
+          "Guided in setting up 3Ds Max environment and workflow for creating human motion animations for synthetic dataset generation",
+          "Provided joint position data and guidance to support annotation for training the 3D pose estimation machine learning model"
+        ],
         "date": {
-          "start": "2023-01-01",
-          "end": "2023-12-31"
+          "start": "2023-05-01",
+          "end": "2023-08-31"
         }
       }
     ]
@@ -500,42 +528,58 @@
       },
       {
         "category": "Leadership",
-        "contributor": "Mohammadreza Mousavi (Master Thesis)",
-        "title": "Control of Cable-Driven Redundant Parallel Manipulator",
-        "description": [],
+        "contributor": "Mohammad Reza Mousavi (Master Thesis)",
+        "title": "Optimal redundancy resolution scheme in a cable-driven parallel robot",
+        "description": [
+          "Developed an enhanced kinematic modeling of pulleys and cables for more accurate representation of cable-driven parallel robots",
+          "Improved tension distribution analysis by integrating precise cable attachement modeling into the system framework",
+          "Implemented a basic optimization approach using fmincon for estimating actuator force distribution"
+        ],
         "date": {
           "start": "2016-01-01",
-          "end": "2016-12-31"
+          "end": "2016-09-31"
         }
       },
       {
         "category": "Leadership",
         "contributor": "Masoud Ghanbari (Master Thesis)",
-        "title": "Optimal Motion Planning for Cable Robots with Uncertain Jacobian",
-        "description": [],
+        "title": "Sensory feedback and experimental evaluation for cable robots with uncertain Jacobian",
+        "description": [
+          "Led the mathematical modeling, algorithm coding, and manufacturing of the prototype of the cable-driven parallel robot",
+          "Integrated the experimental and theoretical foundations on the robot\u2019s design and optimization approach",
+          "Assisted the team with hardware, software, and modeling efforts"
+        ],
         "date": {
           "start": "2016-01-01",
-          "end": "2016-12-31"
+          "end": "2016-09-31"
         }
       },
       {
         "category": "Leadership",
         "contributor": "Nima Arteghzadeh, Maryam Sadat Nabipour (Undergraduate Project)",
-        "title": "Automated Ball Tracking Camera Manipulated by Cable Parallel Robot",
-        "description": [],
+        "title": "Visual servoing in a cable robot using Microsoft Kinect v2 sensor",
+        "description": [
+          "Developed the kinematic model and control code for the parallel cable robot",
+          "Supported integration between the robot and the visual tracking system",
+          "Guided the use and modification of the Microsoft Kinect sensor for experiments"
+        ],
         "date": {
-          "start": "2016-01-01",
-          "end": "2016-12-31"
+          "start": "2016-05-01",
+          "end": "2016-09-31"
         }
       },
       {
         "category": "Leadership",
         "contributor": "Yasaman Parandian (Undergraduate Research Assistant)",
-        "title": "Digital Image Processing of Ball and Plate System Using Artificial Neural Network",
-        "description": [],
+        "title": "Digital image processing of ball and plate system using artificial neural network",
+        "description": [
+          "Integrated camera with MATLAB for real-time ball position tracking using classical image processing techniques",
+          "Contributed to development of a vision-based closed-loop control system",
+          "Improved stability and responsiveness of ball positioning on a two-axis tilting platform"
+        ],
         "date": {
-          "start": "2015-01-01",
-          "end": "2015-12-31"
+          "start": "2015-04-01",
+          "end": "2015-09-31"
         }
       }
     ]
