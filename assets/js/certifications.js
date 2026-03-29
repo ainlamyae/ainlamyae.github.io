@@ -58,7 +58,7 @@ fetch('assets/data/certifications.json')
         // Year
         const yearSpan = document.createElement('span');
         yearSpan.classList.add('year');
-        yearSpan.textContent = cert.date.split('-')[0] + ".";
+        yearSpan.textContent = cert.date.split('-')[0];
 
         // Assemble line
         li.appendChild(titleElement);
