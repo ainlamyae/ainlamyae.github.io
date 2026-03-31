@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const number = total - idx;
 
           // ===== FINAL ENTRY =====
-          entryDiv.innerHTML =  `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>.`;
+          entryDiv.innerHTML =  `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
           container.appendChild(entryDiv);
         });
       }
