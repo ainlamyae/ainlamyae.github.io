@@ -69,8 +69,7 @@ h5 {
 .entry {
   display: block;
   margin: 0 0 12px;
-  padding-left: 2.6em;
-  text-indent: -2.6em;
+
   line-height: 1.25;
   text-align: justify;
 }
@@ -123,20 +122,19 @@ h5 {
   letter-spacing: 0.5px;
 }
 
-
 /* === Dropdown adjustments === */
 .dropdown-section .dropdown-content {
-  max-height: 0;                 /* hide initially */
-  overflow: hidden;              /* prevent spill */
-  transition: max-height 0.5s ease, padding 0.5s ease; /* smooth animation */
-  padding: 0 15px;               /* horizontal padding */
+  max-height: 0;                 
+  overflow: hidden;              
+  transition: max-height 0.5s ease, padding 0.5s ease; 
+  padding: 0 15px;               
   box-sizing: border-box;
 }
 
 /* Expanded dropdown */
 .dropdown-section.active .dropdown-content {
-  max-height: 2000px;            /* enough for long lists */
-  padding: 10px 15px;            /* vertical + horizontal padding */
+  max-height: 2000px;            
+  padding: 10px 15px;            
 }
 
 /* Arrow on left of heading */
@@ -160,6 +158,7 @@ h5 {
   margin: 0;
 }
 
+
 .dropdown-content li.entry {
   display: list-item;
   margin-bottom: 6px;
@@ -179,7 +178,7 @@ h5 {
 
 /* === Keyword highlight effect === */
 .keyword-highlight {
-  background: #f9e270;              /* soft yellow */
+  background: #f9e270;              
   padding: 0 2px;
   border-radius: 3px;
   box-shadow: 0 0 10px #f9e270;
@@ -198,7 +197,7 @@ h5 {
   }
 }
 
-
+/* === Modal for media (PDF/certificates) === */
 .cert-modal {
   display: none;
   position: fixed;
@@ -261,38 +260,48 @@ h5 {
   user-select: none;
 }
 
-.cert-prev {
-  left: 20px;
-}
-
-.cert-next {
-  right: 20px;
-}
+.cert-prev { left: 20px; }
+.cert-next { right: 20px; }
 
 .cert-prev:hover,
-.cert-next:hover {
-  opacity: 0.7;
-}
+.cert-next:hover { opacity: 0.7; }
 
+/* === Media rows and images === */
 .media-row {
-  display: flex;
+  display: none;   /* hidden by default for regular visitors */
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 10px;
+  transition: opacity 0.3s ease;
 }
 
 .media-img {
   height: 80px;
   width: auto;
   cursor: pointer;
-
-  border: 3px solid black;
+  border: 3px solid #222;
   border-radius: 8px;
   padding: 2px;
   background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .media-img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.media-icon {
+  display: none;            /* hidden by default */
+  font-size: 1.2em;
+  margin-left: 6px;          /* space after text */
+  cursor: pointer;
+  vertical-align: text-bottom; /* aligns nicely with year */
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.media-icon:hover {
+  transform: scale(1.2);
+  color: #0c3761;
 }

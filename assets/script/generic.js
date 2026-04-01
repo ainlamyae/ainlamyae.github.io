@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         section.classList.toggle("active"); // toggle show/hide with CSS
     });
+
+    
     // ==============================
     // Keyword-based auto-expand dropdowns
     // Works with ?g=group query in URL
@@ -208,3 +210,26 @@ nextBtn.addEventListener("click", () => {
     currentMediaIndex = (currentMediaIndex + 1) % currentMediaList.length;
     openMediaModal(currentMediaList, currentMediaIndex);
 });
+
+// ==============================
+// Function to unhide media for special visitors
+// ==============================
+function unhideMedia() {
+    // If there is a query string, even just "?", unhide
+    if (!window.location.search) return; 
+
+    // Show all media rows
+    document.querySelectorAll('.media-row').forEach(row => {
+        row.style.display = 'flex';
+        row.style.opacity = '1';
+    });
+
+    // Show all media icons
+    document.querySelectorAll('.media-icon').forEach(icon => {
+        icon.style.display = 'inline-block';
+        icon.style.opacity = '1';
+    });
+}
+
+// Make sure DOM is loaded first
+document.addEventListener('DOMContentLoaded', unhideMedia);

@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
           titleLink.target = "_blank"; // open in new tab
           titleLink.rel = "noopener noreferrer";
           li.appendChild(titleLink);
-          li.appendChild(document.createTextNode(" - "));
+          li.appendChild(document.createTextNode(", "));
         } else {
-          const titleText = document.createTextNode(`${item.title} - `);
+          const titleText = document.createTextNode(`${item.title}, `);
           li.appendChild(titleText);
         }
 
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           fileLink.href = "#";
           fileLink.textContent = " 🏆";
           fileLink.title = "View Award";
+		  fileLink.className = "media-icon";
 
           fileLink.addEventListener("click", (e) => {
             e.preventDefault();
@@ -73,6 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
       section.appendChild(heading);
       section.appendChild(content);
       container.appendChild(section);
+	  
+      // <-- Call unhideMedia **once** here, after all icons exist
+      if (typeof unhideMedia === "function") unhideMedia();
     })
     .catch(err => console.error('Awards JS error:', err));
 });
