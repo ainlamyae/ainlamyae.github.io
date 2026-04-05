@@ -43,18 +43,30 @@ fetch('assets/data/education.json')
 
       // Location + Year
       const locationLine = document.createElement('p');
-      locationLine.textContent = `${edu.institution.address}, ${edu.date.start.split('-')[0]}–${edu.date.end.split('-')[0]}`;
+      // Parse start and end dates
+      const startDate = new Date(edu.date.start);
+      const endDate = new Date(edu.date.end);
+      
+      // Format as "Mon YYYY" (e.g., Sept 2018)
+      const options = { month: 'short', year: 'numeric' };
+      const startStr = startDate.toLocaleDateString('en-US', options);
+      const endStr = endDate.toLocaleDateString('en-US', options);
+      
+      // Calculate duration in years and months
+      let months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+      months += endDate.getMonth() - startDate.getMonth();
+      const years = Math.floor(months / 12);
+      const remMonths = months % 12;
+      const durationStr = `${years > 0 ? years + ' yr' + (years > 1 ? 's' : '') : ''}${years && remMonths ? ' ' : ''}${remMonths > 0 ? remMonths + ' mos' : ''}`;
+      
+      // Set text
+      locationLine.textContent = `${edu.institution.address} | ${startStr} - ${endStr} · ${durationStr}`;
       textDiv.appendChild(locationLine);
 
-      // Degree
+      // Degree + Field in one line
       const degreeLine = document.createElement('p');
-      degreeLine.innerHTML = `<strong>${edu.degree.level}</strong> (${edu.degree.abbreviation})`;
+      degreeLine.innerHTML = `<strong>${edu.degree.level}</strong> (${edu.degree.abbreviation}) in ${edu.degree.field}`;
       textDiv.appendChild(degreeLine);
-
-      // Field
-      const fieldLine = document.createElement('p');
-      fieldLine.textContent = edu.degree.field;
-      textDiv.appendChild(fieldLine);
 
       // ===== Extra Details as Bullets =====
       const detailsList = document.createElement('ul');
