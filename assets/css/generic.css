@@ -1,0 +1,41 @@
+/* === Dropdown adjustments === */
+.dropdown-section .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 15px;
+}
+
+.dropdown-section.active .dropdown-content {
+  max-height: 2000px; /* enough for items */
+  padding: 10px 15px;
+}
+
+/* Arrow on left side of heading */
+.dropdown-toggle::before {
+  content: "▶";          /* arrow symbol */
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when active */
+.dropdown-section.active .dropdown-toggle::before {
+  transform: rotate(90deg);
+}
+
+/* Ensure bullets appear inside dropdown */
+.dropdown-content ul {
+  list-style-type: disc;      /* classic bullet */
+  list-style-position: outside; /* bullet outside text */
+  padding-left: 40px;         /* standard indent */
+  margin: 8px 0;              /* spacing between items */
+}
+
+/* Entry items should behave like normal list items */
+.dropdown-content li.entry {
+  display: list-item;         /* show bullet */
+  text-indent: 0;             /* remove negative indent */
+  padding-left: 0;            /* reset padding */
+  margin-bottom: 6px;
+}

@@ -9,13 +9,19 @@ fetch('assets/data/experience.json')
     if (!container) return;
 
     function formatDate(dateString) {
+      if (!dateString || dateString === "Present") {
+        return "Present";
+      }
+
       const date = new Date(dateString);
       return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
     }
 
     function calculateDuration(startDate, endDate) {
       const start = new Date(startDate);
-      const end = new Date(endDate);
+      const end = (endDate === "Present" || !endDate)
+        ? new Date()
+        : new Date(endDate);
 
       let months =
         (end.getFullYear() - start.getFullYear()) * 12 +
@@ -27,6 +33,7 @@ fetch('assets/data/experience.json')
       let result = '';
       if (years > 0) result += `${years} yr${years > 1 ? 's' : ''} `;
       if (months > 0) result += `${months} mo${months > 1 ? 's' : ''}`;
+
       return result.trim();
     }
 
@@ -75,8 +82,17 @@ fetch('assets/data/experience.json')
       textDiv.appendChild(addressLine);
 
       // Sort positions by end date descending
-      orgExperiences.sort((a, b) => new Date(b.date.end) - new Date(a.date.end));
+      orgExperiences.sort((a, b) => {
 
+        const getEndDate = (exp) => {
+          if (!exp.date.end || exp.date.end === "Present") {
+            return new Date(); // treat Present as today
+          }
+          return new Date(exp.date.end);
+        };
+
+        return getEndDate(b) - getEndDate(a); // descending
+      });
       orgExperiences.forEach(exp => {
 
         // Position title
