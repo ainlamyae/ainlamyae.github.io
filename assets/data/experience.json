@@ -12,7 +12,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "type": "Leadership",
         "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
         "description": [
           "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
@@ -33,8 +33,8 @@
         ]
       },
       {
-        "type": "Project",
-        "title": "Runtime Behavioural Validation of Self-adaptive AI-enabled Systems",
+        "type": "Leadership",
+        "title": "Run-time Behavioural Validation of Self-adaptive AI-enabled Systems",
         "description": [
           "Led and coordinated the uOttawa engineering team, aligning technical efforts and ensuring milestone delivery",
           "Extended metamorphic testing methodologies to LLM-based software and defined practical application strategies",
@@ -51,6 +51,15 @@
           "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
           "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
           "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
+        ]
+      },
+      {
+        "type": "Supervision",
+        "title": "Supervision of Interns and Co-op Engineers",
+        "description": [
+          "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2026",
+          "Brooke Yang, Co-op Engineer, AI System Reliability, 2025",
+          "Xiaoliang (Spencer) Zhou, Junior Engineer, C++ Real-Time Processing Engine for Monitoring Software, 2024"
         ]
       },
       {
@@ -132,11 +141,47 @@
       },
       {
         "type": "Project",
-        "title": "Generating Database for Marker-less Motion Capture Methods",
+        "title": "Electrical Energy Regenerative Shoulder Exoskeletons",
         "description": [
-          "Developed a human musculoskeletal model using biomechanical experimental data and anthropometric data",
-          "Refined manual annotations through kinematic, dynamic, and muscle modeling"
+          "Implementation of energy-regenerating actuators in robotic exoskeletons to enhance efficiency and extend battery life by converting a portion of energy typically lost during negative mechanical work into electrical energy.",
+          "Evaluated the electrical energy regeneration capabilities of a shoulder wearable exoskeleton.",
+          "Motor parameters were determined through experiments using a joint dynamometer system.",
+          "Developed an electro-mechanical model for human-exoskeleton interaction focusing on energy regeneration.",
+          "Conducted task-based experiments to measure energy regeneration during real-life usage of the exoskeleton.",
+          "Results compared with practical usage scenarios to assess feasibility; electricity generated was relatively low due to motor characteristics, but indicated potential for energy regeneration with certain limitations."
         ]
+      },
+      {
+        "type": "Project",
+        "title": "Human3.6M+: Generated Human Motion Data to Support 3D Pose, Motion, Kinetic, and Muscle Estimation",
+        "description": [
+          "Developed marker-less motion capture technology for 3D human pose estimation to overcome usability constraints of traditional marker-based systems.",
+          "Synthesized dynamics and muscle properties from existing motion capture datasets to generate training and validation data for deep learning models.",
+          "Reconstructed motions using kinematics, dynamics, and muscle modeling while ensuring adherence to International Society of Biomechanics standards.",
+          "Integrated musculoskeletal model with customizable anthropometric features (height, mass, athleticism level, handedness, skin temperature) to enhance realism.",
+          "Applied methodology to Human3.6M dataset, demonstrating kinematic similarity to ground truth markers and dynamic plausibility compared to experimental data."
+        ]
+      },
+      {
+          "type": "Supervision",
+          "title": "Myography-based Controlled 1-DoF Hand Prosthesis",
+          "description": [
+            "Designed an electrically controlled single degree-of-freedom (1-DOF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
+            "Achieved precise thumb controllability through electrical component development, control system refinement, mechanical design, and final assembly.",
+            "Prototype serves as an active pediatric prosthesis using EMG-based control rather than muscle strength, despite being limited to a single finger.",
+            "Future improvements planned: refine 3D model, optimize electronic housing, enhance EMG control precision, and incorporate motors for full-finger control.",
+            "Prototype is a pivotal tool for initiating prosthesis control learning in rehabilitation."
+          ]
+      },
+      {
+          "type": "Supervision",
+          "title": "MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments",
+          "description": [
+            "Developed MyoBuzz, a limb-worn EMG device providing real-time feedback on muscle activation for dynamometry experiments.",
+            "Limb-specific band with strategically positioned electrodes, visual and auditory alerts, customizable activation threshold, and adjustable sensitivity.",
+            "Electrodes are attachable via clips; strap ensures comfort; rechargeable 3.7V battery supports one-hour operation and two-hour recharge.",
+            "Facilitates real-time monitoring and mitigation of inadvertent muscle activation during joint torque evaluations."
+          ]
       },
       {
         "type": "Responsibility",
@@ -224,6 +269,36 @@
         ]
       },
       {
+        "type": "Project",
+        "title": "Active-passive Shoulder Exoskeleton",
+        "description": [
+          "Developed active-passive shoulder exoskeleton integrating passive mechanisms and powered actuators to optimize human movement assistance.",
+          "Established multibody kinematics and dynamics model for upper body, implemented optimal controller for reducing muscular activation torque.",
+          "Optimized exoskeleton design to enhance user comfort and reduce fatigue while maintaining functional assistance.",
+          "Results demonstrate substantial reduction in fatigue and functional improvement over fully passive or fully active systems."
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "MuscleNET: Biomechatronic Electromyography Signal Processing",
+        "description": [
+          "Introduced MuscleNET, a set of ML models (ANN, RNN, CNN, RCNN) mapping sEMG signals to joint angle, velocity, acceleration, torque, and activation torque.",
+          "RobustMuscleNET RNN predicts control-oriented signals in real-time with 92% regression accuracy for joint angle and 86.5% for assistive torque.",
+          "InverseMuscleNET resolves redundancy in inverse muscle models using RNNs, achieving 88–91% normalized regression between estimated and experimental muscle activation.",
+          "Enables fast, direct estimation for real-time applications in rehabilitation and sports evaluation without invasive electrodes."
+        ]
+      },
+      {
+          "type": "Project",
+          "title": "Scalable Human Musculoskeletal Model",
+          "description": [
+            "Developed a MapleSim biomechanics-based musculoskeletal (MSK) model covering upper and lower body movements for biomechanical analysis.",
+            "Estimated biomechanical joint torque using muscle torque generators with active and passive components.",
+            "Created adjustable multibody kinematic model accommodating diverse anthropometric measurements (sex, age, body mass, height, dominant side, physical activity, skin temperature) with 40 DoF.",
+            "Validated model equations through simulations of joint range of motion and torque, demonstrating robust agreement with existing research findings."
+          ]
+      },
+      {
         "type": "Conference",
         "title": "Conferences & Academic Activities",
         "description": [
@@ -256,14 +331,21 @@
     "items": [
       {
         "type": "Project",
-        "title": "Spatial 6 DoF 8 Cable-Driven Parallel Robot & 3 DoF Wrist Rehabilitation Robot",
+        "title": "Spatial 6 DoF 8 Cable-Driven Parallel Robot",
         "description": [
-          "Conducted comprehensive inverse kinematic and dynamic modeling and analysis for the Spatial 6 DoF 8 Cable-Driven Parallel Robot",
-          "Validated the developed models using the SimMechanics Toolbox",
-          "Designed an optimal cable structure attachment for the robot",
-          "Simulated PD Partial, LQR, Robust, and Adaptive Control in the presence of noise and disturbance",
-          "Designed conceptual and mechanical parts for the 3 DoF Wrist Rehabilitation Robot and conducted kinematic and dynamic modeling",
-          "Implemented modified impedance control for enhanced human-robot interaction"
+          "Conducted comprehensive inverse kinematic and dynamic modeling and analysis for the Spatial 6 DoF 8 Cable-Driven Parallel Robot.",
+          "Validated the developed models using the SimMechanics Toolbox.",
+          "Designed an optimal cable structure attachment for the robot.",
+          "Simulated PD Partial, LQR, Robust, and Adaptive Control in the presence of noise and disturbance."
+        ]
+      },
+      {
+        "type": "Project",
+        "title": "3 DoF Wrist Rehabilitation Robot",
+        "description": [
+          "Designed conceptual and mechanical parts for the 3 DoF Wrist Rehabilitation Robot and conducted kinematic and dynamic modeling.",
+          "Implemented modified impedance control for enhanced human-robot interaction.",
+          "Prototyped the wrist rehabilitation robot (Jan 2016 – Jan 2017), integrating modeling, mechanical design, and control for testing."
         ]
       }
     ]
@@ -363,7 +445,7 @@
     },
     "items": [
       {
-        "type": "Responsibilities",
+        "type": "Responsibility",
         "title": "Teaching Responsibilities",
         "description": [
           "Assessed student learning through evaluating assignments, projects, and exams"
@@ -416,8 +498,13 @@
         "type": "Project",
         "title": "Joint Space Energy Optimization of Tethered Space Robot for End-Effector Optimal Path",
         "description": [
-          "Developed a comprehensive model of forward kinematics, workspace, and dynamics of a 4-DoF tethered space robot and conducted in-depth analysis to evaluate its performance",
-          "Proposed and simulated a highly effective nonlinear control algorithm for a redundant robot vibration stabilizer and demonstrated its effectiveness through simulations and experiments"
+          "Conducted research on tethered satellite systems and tether-connected space manipulators for applications such as satellite repair and space debris removal.",
+          "Modeled a tethered space manipulator system using a straight, rigid rod for the tether, restricting motion to the orbital plane with the platform following a circular orbit around Earth.",
+          "Analyzed system dynamics with the end-effector tracing prescribed trajectories, monitoring tether tension to prevent compressive forces.",
+          "Investigated feasible end-effector trajectories under torque restrictions, ensuring torques on tether attachment points were zero.",
+          "Proposed a method to determine possible end-effector paths between two points while satisfying the zero-torque constraint on the tether.",
+          "Developed and simulated a nonlinear control algorithm for vibration reduction in a redundant robot by adjusting cable length, validated through simulations and experiments.",
+          "Performed comprehensive modeling of forward kinematics, workspace, and dynamics of a 4-DoF tethered space robot to evaluate performance and energy efficiency."
         ]
       }
     ]
@@ -435,7 +522,7 @@
     },
     "items": [
       {
-        "type": "Responsibilities",
+        "type": "Responsibility",
         "title": "Teaching Responsibilities",
         "description": [
           "Assessed student learning by marking assignments"

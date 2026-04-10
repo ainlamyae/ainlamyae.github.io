@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
         section.classList.add("dropdown-section");
         section.dataset.sectionId = `pub-${index}`;
 
-        // --- Clickable heading ---
+        // --- Clickable heading with count ---
         const heading = document.createElement("h4");
         heading.classList.add("dropdown-toggle");
-        heading.textContent = title;
+        heading.textContent = `${title} (${items.length})`; // <-- Add count here
         section.appendChild(heading);
 
         // --- Content container ---
