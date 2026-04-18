@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         section.dataset.sectionId = `edu-${index}`;
 
         // Degree line (clickable)
-        const degreeHeading = document.createElement('h4');
+        const degreeHeading = document.createElement('h5');
         degreeHeading.classList.add('dropdown-toggle');
         degreeHeading.textContent = `${edu.degree.level} (${edu.degree.abbreviation}) in ${edu.degree.field}`;
         section.appendChild(degreeHeading);
