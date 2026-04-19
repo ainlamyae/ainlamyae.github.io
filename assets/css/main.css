@@ -117,3 +117,69 @@ h5 {
   font: 14px Arial, sans-serif;
   letter-spacing: 0.5px;
 }
+
+
+/* === Dropdown adjustments === */
+.dropdown-section .dropdown-content {
+  max-height: 0;                 /* hide initially */
+  overflow: hidden;              /* prevent spill */
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 15px;               /* horizontal padding */
+  box-sizing: border-box;
+}
+
+/* Expanded dropdown */
+.dropdown-section.active .dropdown-content {
+  max-height: 2000px;            /* enough for long lists */
+  padding: 10px 15px;            /* vertical + horizontal padding */
+}
+
+/* Arrow on left of heading */
+.dropdown-toggle::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+/* Rotate arrow when active */
+.dropdown-section.active .dropdown-toggle::before {
+  transform: rotate(90deg);
+}
+
+/* List style */
+.dropdown-content ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin: 0;
+}
+
+.dropdown-content li.entry {
+  display: list-item;
+  margin-bottom: 6px;
+}
+
+/* Specific style for h3 headings in dropdowns (Awards) */
+.dropdown-section h3.dropdown-toggle {
+  cursor: pointer;           
+  margin: 0;                 
+  padding: 10px 15px;
+  background: #0c3761;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: smooth expansion for mobile */
+@media (max-width: 600px) {
+  .dropdown-content {
+    padding: 0 10px;
+  }
+
+  .dropdown-section.active .dropdown-content {
+    max-height: 9999px;
+    padding: 10px 15px;
+  }
+}

@@ -57,7 +57,9 @@
   "degree": {
     "level": "Master of Science",
     "abbreviation": "M.Sc.",
-    "field": "Mechatronics Engineering"
+    "field": "Mechatronics Engineering",
+    "verification": "World Education Services (WES)",
+    "url": "https://www.credly.com/badges/0a4f222d-656b-481b-b65c-0a75af37bf25"
   },
   "date": {
     "start": "2013-09-01",
@@ -105,7 +107,9 @@
   "degree": {
     "level": "Bachelor of Science",
     "abbreviation": "B.Sc.",
-    "field": "Mechanical Engineering"
+    "field": "Mechanical Engineering",
+    "verification": "World Education Services (WES)",
+    "url": "https://www.credly.com/badges/0a4f222d-656b-481b-b65c-0a75af37bf25"
   },
   "date": {
     "start": "2009-09-01",
