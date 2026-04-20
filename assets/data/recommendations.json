@@ -1,5 +1,12 @@
 [
   {
+    "name": "Khaled Ahmed",
+    "relationship": "Colleague",
+    "organization": "Huawei Technologies Canada Co., Ltd.",
+    "date": "2026-04-20",
+    "recommendation": "I know Ali from our time working in the same group. I had the opportunity to collaborate closely with him on several AI initiatives, particularly those focused on verifying and improving the reliability and robustness of large language model systems. Ali brings a rare combination of deep technical rigor and practical systems engineering. He is highly knowledgeable in designing and evaluating AI architectures, with a strong focus on ensuring behavioral correctness and dependability in real-world production environments. During our collaboration, he consistently demonstrated strong expertise in Retrieval-Augmented Generation (RAG), uncertainty estimation, and probabilistic reasoning over model outputs. What stands out most about Ali is his ability to look beyond standard probabilistic feature development and instead focus on verifiable system reliability. He possesses a strong understanding of LLM-as-a-judge evaluation frameworks, confidence scoring methods, and the structured validation of API-driven LLM workflows. He is particularly adept at pinpointing the root causes of failure modes in LLM pipelines and designing practical, interpretable mechanisms to detect, measure, and mitigate them. Furthermore, Ali has solid experience working with API-based LLM integrations and complex, multi-step AI workflows. He ensures that systems are not merely functional but strictly stable, observable, and production-ready. His work reflects a rigorous balance between research-driven insight and software engineering discipline. On a personal note, Ali is excellent to work with. He frequently engages in deep, thoughtful discussions, and he is consistently helpful, enthusiastic, and approachable. Overall, I highly recommend Ali for any role involving advanced AI systems, LLM reliability, or production-grade generative AI applications. He consistently brings depth, clarity, and analytical rigor to complex problems. I would be highly confident working with him again in any high-stakes system development environment."
+  },
+  {
     "name": "Alireza Poostindouz",
     "relationship": "Colleague",
     "organization": "Huawei Technologies Canada Co., Ltd.",
