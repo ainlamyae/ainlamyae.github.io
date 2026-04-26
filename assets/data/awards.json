@@ -1,67 +1,108 @@
 [
   {
+    "id": "ieft2026",
+    "title": "Innovation Excellence for Trustworthy AI Architecture in Cloud Core Networks",
+    "institution": "Huawei Technologies Canada Co., Ltd.",
+    "date": "2026-03-05",
+    "file": null
+  },
+  {
+    "id": "fust2025",
     "title": "2025 Future Star",
     "institution": "Huawei Technologies Canada Co., Ltd.",
-    "date": "2025-12-01"
+    "date": "2025-12-01",
+    "file": null
   },
   {
+    "id": "maaa2025",
+    "title": "Multi-AI Agent Architecture Innovation Award",
+    "institution": "Huawei Technologies Canada Co., Ltd.",
+    "date": "2025-06-01",
+    "file": null
+  },
+  {
+    "id": "paaw2025",
     "title": "Presentation Award at Waterloo Innovation Forum - Staff Insights",
     "institution": "Huawei Technologies Canada Co., Ltd.",
-    "date": "2025-02-01"
+    "date": "2025-02-01",
+    "file": null
   },
   {
+    "id": "paas2022",
     "title": "1st Place Award at 2022 SYDE Graduate Student Symposium",
     "institution": "Department of Systems Design Engineering, University of Waterloo",
-    "date": "2022-06-01"
+    "date": "2022-06-01",
+    "file": null
   },
   {
+    "id": "paaw2021",
     "title": "3rd Place Award at Waterloo.AI GRADflix competition",
     "institution": "Waterloo Artificial Intelligence Institute, University of Waterloo",
-    "date": "2021-09-01"
+    "date": "2021-09-01",
+    "url": "https://www.youtube.com/watch?v=udDV9aJMXos",
+    "file": null
   },
   {
+    "id": "bpai2021",
     "title": "Best Paper Award in the Area of Multibody Dynamics",
     "institution": "American Society of Mechanical Engineers (ASME)",
-    "date": "2021-08-01"
+    "date": "2021-08-01",
+    "file": null
   },
   {
+    "id": "bpai2020",
     "title": "Best Paper Award in Control, Dynamic Systems, and Robotics fields",
     "institution": "7th International Conference of Control, Dynamic Systems, and Robotics",
-    "date": "2020-11-01"
+    "date": "2020-11-01",
+    "file": null
   },
   {
+    "id": "grsf2018",
     "title": "$119K Graduate Research Studentship (GRS) from NSERC and CRC program for four years",
     "institution": "University of Waterloo",
-    "date": "2018-09-01"
+    "date": "2018-09-01",
+    "file": null
   },
   {
+    "id": "idsa2018",
     "title": "$58K International Doctoral Student Award (IDSA)",
     "institution": "University of Waterloo",
-    "date": "2018-09-01"
+    "date": "2018-09-01",
+    "file": null
   },
   {
+    "id": "ritm2016",
     "title": "1st Ranked in the Mechatronics Groups at the Department of Electrical Engineering",
     "institution": "K.N. Toosi University of Technology",
-    "date": "2016-01-01"
+    "date": "2016-01-01",
+    "file": null
   },
   {
+    "id": "paog2015",
     "title": "2nd Place and One Gold Coin Award at the Creativity Exhibition",
     "institution": "The 3rd International Conference on Robotics and Mechatronics",
-    "date": "2015-11-01"
+    "date": "2015-11-01",
+    "file": null
   },
   {
+    "id": "fsot2013",
     "title": "Full Scholarship or Tuition Waiver for Graduate Education",
     "institution": "K.N. Toosi University of Technology",
-    "date": "2013-09-01"
+    "date": "2013-09-01",
+    "file": null
   },
   {
+    "id": "paog2010",
     "title": "1st Place and One Gold Coin Award at the Gravity Challenge",
     "institution": "University of Payam Noor",
-    "date": "2010-04-01"
+    "date": "2010-04-01",
+    "file": null
   },
   {
+    "id": "fsot2009",
     "title": "Full Scholarship or Tuition Waiver for Undergraduate Education",
     "institution": "Isfahan University of Technology",
-    "date": "2009-09-01"
+    "date": "2009-09-01",
+    "file": null
   }
 ]

@@ -2,7 +2,7 @@
 {
   "institution": {
     "name": "University of Waterloo",
-    "logo": "assets/image/logo/uwaterloo.png",
+    "logo": "assets/media/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada"
   },
   "degree": {
@@ -51,7 +51,7 @@
 {
   "institution": {
     "name": "K. N. Toosi University of Technology",
-    "logo": "assets/image/logo/kntu.png",
+    "logo": "assets/media/logo/kntu.png",
     "address": "Tehran, Tehran, Iran"
   },
   "degree": {
@@ -101,7 +101,7 @@
 {
   "institution": {
     "name": "Isfahan University of Technology",
-    "logo": "assets/image/logo/iut.png",
+    "logo": "assets/media/logo/iut.png",
     "address": "Isfahan, Esfahan, Iran"
   },
   "degree": {

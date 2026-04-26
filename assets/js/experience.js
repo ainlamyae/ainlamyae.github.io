@@ -112,6 +112,15 @@ fetch('assets/data/experience.json')
         positionHeading.textContent = exp.position;
         textDiv.appendChild(positionHeading);
 
+        // Group / Lab name
+        if (exp.group) {
+          const groupLine = document.createElement('p');
+          groupLine.style.margin = '0 0 4px 0';
+          groupLine.style.fontStyle = 'italic';
+          groupLine.textContent = exp.group;
+          textDiv.appendChild(groupLine);
+        }
+
         // Employment type + date + duration on same line
         const startFormatted = formatDate(exp.date.start);
         const endFormatted = formatDate(exp.date.end);
@@ -142,6 +151,27 @@ fetch('assets/data/experience.json')
               ul.appendChild(li);
             });
             textDiv.appendChild(ul);
+          }
+
+          // MEDIA DISPLAY (images row)
+          if (item.media?.length) {
+            const mediaRow = document.createElement('div');
+            mediaRow.className = 'media-row';
+            item.media.forEach((media, index) => {
+              if (!media.src) return;
+              const img = document.createElement('img');
+              const caption = media.caption || "";
+              img.src = media.src;
+              img.alt = caption;
+              img.title = caption;
+              img.className = 'media-img';
+              img.addEventListener("click", (e) => {
+                e.preventDefault();
+                openMediaModal(item.media, index);
+              });
+              mediaRow.appendChild(img);
+            });
+            textDiv.appendChild(mediaRow);
           }
 
         });
