@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           fileLink.addEventListener("click", (e) => {
             e.preventDefault();
-            openCertModal(item.file);
+            // Wrap the single award file in a mediaList
+            openMediaModal([{ src: item.file, caption: item.title }], 0);
           });
 
           li.appendChild(fileLink);
