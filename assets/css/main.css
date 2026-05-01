@@ -189,8 +189,9 @@ h5 {
   }
 }
 
+
 .cert-modal {
-  display: none;               /* keep hidden initially */
+  display: none;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -198,19 +199,31 @@ h5 {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.85);
-  justify-content: center;     /* horizontal center */
-  align-items: center;         /* vertical center */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .cert-modal-content {
-  display: block;            /* ensure image behaves as a block */
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 6px;
-  object-fit: contain;       /* scale proportionally */
-  margin: 0 auto;            /* horizontal center fallback */
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-modal-content iframe,
+.cert-modal-content embed,
+.cert-modal-content img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
 }
 
 .cert-close {
@@ -271,6 +284,6 @@ h5 {
 }
 
 .media-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
