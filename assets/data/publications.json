@@ -50,6 +50,7 @@
     "journal": "Journal of Mechanisms and Robotics",
     "publisher": "ASME",
     "doi": "10.1115/1.4068430",
+    "file": null,
     "abstract": "Implementing back-drivable actuators with energy regeneration capabilities can improve the efficiency and extend the battery life of robotic exoskeletons, by converting a portion of dissipated energy during negative mechanical work into electrical energy. We present the first study of the regeneration capabilities of shoulder exoskeletons, which includes experimental motor parameter identification, the development of an electromechanical upper-limb human-exoskeleton model for energy regeneration, and task-based experiments assessing real-world energy generation despite inherent motor limitations. Initial steps involve motor parameter identification using a joint dynamometer system and modeling of the human-exoskeleton system with a specific emphasis on energy regeneration in the shoulder region. Task-based experiments were conducted to evaluate energy regeneration during daily exoskeleton usage. Our experimental identification reveals that the regenerated current follows a third-degree polynomial relationship with joint angular speed. Task-based simulations indicate that electrical energy recovery ranges from 30.4 microjoule during slow motions to 1.02 mJ during very fast movements. Efficiency analysis shows that performance peaks at approximately 60 deg/s, where the trade-off between increased current generation and rising frictional losses is optimized. Despite challenges such as limited electricity generation due to motor characteristics, our findings demonstrate the feasibility of energy regeneration in shoulder exoskeletons, albeit with certain constraints."
   },
   {
@@ -290,6 +291,7 @@
     "journal": "Journal of Computer Methods in Biomechanics and Biomedical Engineering",
     "publisher": "Taylor & Francis",
     "doi": "10.1080/10255842.2023.2184747",
+    "file": null,
     "abstract": "A musculoskeletal (MSK) model is a valuable tool for assessing complex biomechanical problems, estimating joint torques during motion, optimizing motion in sports, and designing exoskeletons and prostheses. This study proposes an open-source upper body MSK model that supports biomechanical analysis of human motion. The MSK model of the upper body consists of 8 body segments (torso, head, left/right upper arm, left/right forearm, and left/right hand). The model has 20 degrees of freedom (DoFs) and 40 muscle torque generators (MTGs), which are constructed using experimental data. The model is adjustable for different anthropometric measurements and subject body characteristics: sex, age, body mass, height, dominant side, and physical activity. Joint limits are modeled using experimental dynamometer data within the proposed multi-DoF MTG model. The model equations are verified by simulating the joint range of motion (ROM) and torque; all simulation results have a good agreement with previously published research."
   },
   {
