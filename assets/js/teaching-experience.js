@@ -66,7 +66,7 @@ fetch('assets/data/experience.json')
       textDiv.style.flex = '1';
 
       // Organization heading
-      const orgHeading = document.createElement('h3');
+      const orgHeading = document.createElement('h4');
       orgHeading.textContent = orgName;
       orgHeading.style.margin = '0 0 4px 0';
       textDiv.appendChild(orgHeading);
