@@ -22,7 +22,7 @@ fetch('assets/data/certifications.json')
     Object.keys(grouped).forEach((type, index) => {
       // Create dropdown section wrapper
       const section = document.createElement('div');
-      section.classList.add('dropdown-section');
+      section.classList.add('dropdown-section', 'keyword-expandable');
       section.dataset.sectionId = `cert-${index}`; // unique id
 
       // Create clickable heading with count

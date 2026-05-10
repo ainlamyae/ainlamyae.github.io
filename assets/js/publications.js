@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // --- Create dropdown wrapper ---
         const section = document.createElement("div");
-        section.classList.add("dropdown-section");
+        section.classList.add('dropdown-section', 'keyword-expandable');
         section.dataset.sectionId = `pub-${index}`;
 
         // --- Clickable heading with count ---

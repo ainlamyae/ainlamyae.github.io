@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // --- Dropdown Section for degree + details ---
         const section = document.createElement('div');
-        section.classList.add('dropdown-section');
+        section.classList.add('dropdown-section', 'keyword-expandable');
         section.dataset.sectionId = `edu-${index}`;
 
         // Degree line (clickable)

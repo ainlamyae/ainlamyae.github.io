@@ -1,6 +1,6 @@
 [
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "Huawei Technologies Canada",
     "logo": "assets/media/logo/huawei.png",
     "address": "Waterloo, Ontario, Canada",
@@ -13,7 +13,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Explainable & Reliable System Architecture for LLM-based Script Generator",
         "description": [
           "Architected a multi-stage LLM reliability pipeline with confidence estimation, output gating, and policy-driven decision enforcement",
@@ -24,56 +24,37 @@
           "Enabled fail-safe escalation paths including re-execution with alternative models, LLM-as-Judge evaluation, and human-in-the-loop review",
           "Designed an explainable JSON-based output schema ensuring traceability of generated variables and intermediate decisions",
           "Proposed metamorphic prompt perturbation via semantic-preserving sentence swapping (Chinese inputs) to test robustness and consistency"
-        ]
+        ],
+        "date": {
+          "start": "2025-10-01",
+          "end": "2026-02-28"
+        }
       },
       {
-        "type": "Leadership",
+        "category": "Leadership",
+        "contributor": "Investing Project at University of Waterloo",
         "title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
         "description": [
           "Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
-        ]
+        ],
+        "date": {
+          "start": "2025-11-01",
+          "end": null
+        }
       },
       {
-        "type": "Supervision",
-        "title": "Supervision of Interns and Co-op Engineers",
-        "description": [
-          "Zhenyang Xu, Research Intern, Uncertainty Monitoring System for LLM-Based Generative Software, 2025-2026"
-        ]
+        "category": "Leadership",
+        "contributor": "Zhenyang Xu (Research Intern)",
+        "title": "Uncertainty Monitoring System for LLM-Based Generative Software",
+        "description": [],
+        "date": {
+          "start": "2025-01-01",
+          "end": "2026-12-31"
+        }
       },
       {
-        "type": "Conference",
-        "title": "Strategic Insights and Innovations from Global Technology Conferences",
-        "description": [
-          "14th International Conference on Learning Representations (ICLR),  Rio de Janeiro, Brazil, Apr 2026",
-          "39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov\u2013Dec 2025"
-        ]
-      }
-    ]
-  },
-  {
-    "type": "Research",
-    "organization": "Huawei Technologies Canada",
-    "logo": "assets/media/logo/huawei.png",
-    "address": "Waterloo, Ontario, Canada",
-    "group": "Trustworthy Technology and Engineering Laboratory, Waterloo Complex Intelligent Systems Laboratory",
-    "position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
-    "employmentType": "Permanent Full-time",
-    "date": {
-      "start": "2023-11-01",
-      "end": "2025-08-31"
-    },
-    "items": [
-      {
-        "type": "Project",
-        "title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
-        "description": [
-          "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
-          "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
-          "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
-        ]
-      },
-      {
-        "type": "Leadership",
+        "category": "Leadership",
+        "contributor": "Hossein Yousefizadeh, Shenghui Gu, Lionel C. Briand (Investing Project at University of Ottawa)",
         "title": "Run-time Behavioural Validation of Self-adaptive AI-enabled Systems",
         "description": [
           "Led and coordinated the uOttawa engineering team, aligning technical efforts and ensuring milestone delivery",
@@ -82,30 +63,18 @@
           "Supervised development of a search-based test generation approach for autonomous driving scenarios",
           "Oversaw case studies implemented in CARLA simulator on the Interfuser autonomous driving system",
           "Directed automated offline system-level testing combining Metamorphic Testing with Evolutionary Algorithms"
-        ]
+        ],
+        "date": {
+          "start": "2024-03-01",
+          "end": "2026-06-30"
+        }
       },
       {
-        "type": "Responsibility",
-        "title": "Technical Interviewer Responsibilities",
-        "description": [
-          "Identified team skill gaps and collaborated with leadership to define role requirements, and draft job descriptions",
-          "Screened 1,000+ resumes, and shortlisted high-potential candidates based on technical qualifications",
-          "Conducted 50+ remote technical interviews, evaluating problem-solving and programming ability"
-        ]
-      },
-      {
-        "type": "Supervision",
-        "title": "Supervision of Interns and Co-op Engineers",
-        "description": [
-          "Hossein Yousefizadeh, Shenghui Gu, Lionel C. Briand, Run-time Behavioural Validation of Self-adaptive AI-enabled Systems, 2024-2026",
-          "Brooke Yang, Co-op Engineer, LLM-based System Reliability, 2025",
-          "Xiaoliang (Spencer) Zhou, Junior Engineer, C++ Real-Time Processing Engine for Monitoring Software, 2023-2024"
-        ]
-      },
-      {
-        "type": "Conference",
+        "category": "Service",
         "title": "Strategic Insights and Innovations from Global Technology Conferences",
         "description": [
+          "14th International Conference on Learning Representations (ICLR),  Rio de Janeiro, Brazil, Apr 2026",
+          "39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov\u2013Dec 2025",
           "34th International Joint Conference on Artificial Intelligence (IJCAI), Montreal, Canada, Aug 2025",
           "38th Annual Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada, Dec 2024",
           "OpenMind Research Institute Banff Retreat, Banff, Canada, Oct 2024",
@@ -120,7 +89,72 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
+    "organization": "Huawei Technologies Canada",
+    "logo": "assets/media/logo/huawei.png",
+    "address": "Waterloo, Ontario, Canada",
+    "group": "Trustworthy Technology and Engineering Laboratory, Waterloo Complex Intelligent Systems Laboratory",
+    "position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
+    "employmentType": "Permanent Full-time",
+    "date": {
+      "start": "2023-11-01",
+      "end": "2025-08-31"
+    },
+    "items": [
+      {
+        "category": "Project",
+        "title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
+        "description": [
+          "Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
+          "Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
+          "Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
+        ]
+      },
+      {
+        "category": "Project",
+        "title": "Run-time Assurance (AI Consistency and Accuracy) System for Autonomous Driving Systems",
+        "description": [
+          "Researched failure measurement and monitoring of learning-enabled control systems across Perception, Prediction, and Planning modules",
+          "Performed systems-theoretic process analysis and defined risk boundaries for autonomous driving systems",
+          "Formulated and implemented C++ algorithms for monitoring, risk assessment, and secure disengagement protocols",
+          "Designed a comprehensive run-time assurance architecture for AI consistency and accuracy validation",
+          "Evaluated advanced autonomous driving modules by integrating Baidu Apollo Auto with CARLA Simulator using C++ and Python",
+          "Designed pre-crash, adverse weather, and empirical simulation scenarios to validate robustness and safety"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "contributor": "Brooke Yang (Co-op Engineer)",
+        "title": "LLM-based System Reliability",
+        "description": [],
+        "date": {
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      {
+        "category": "Leadership",
+        "contributor": "Xiaoliang (Spencer) Zhou (Junior Engineer)",
+        "title": "C++ Real-Time Processing Engine for Monitoring Software",
+        "description": [],
+        "date": {
+          "start": "2023-01-01",
+          "end": "2024-12-31"
+        }
+      },
+      {
+        "category": "Service",
+        "title": "Technical Interviewer Responsibilities",
+        "description": [
+          "Identified team skill gaps and collaborated with leadership to define role requirements, and draft job descriptions",
+          "Screened 1,000+ resumes, and shortlisted high-potential candidates based on technical qualifications",
+          "Conducted 50+ remote technical interviews, evaluating problem-solving and programming ability"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Work",
     "organization": "Huawei Technologies Canada",
     "logo": "assets/media/logo/huawei.png",
     "address": "Waterloo, Ontario, Canada",
@@ -133,19 +167,7 @@
     },
     "items": [
       {
-        "type": "Project",
-        "title": "Run-time Assurance (AI Consistency and Accuracy) System for Autonomous Driving Systems",
-        "description": [
-          "Researched failure measurement and monitoring of learning-enabled control systems across Perception, Prediction, and Planning modules",
-          "Performed systems-theoretic process analysis and defined risk boundaries for autonomous driving systems",
-          "Formulated and implemented C++ algorithms for monitoring, risk assessment, and secure disengagement protocols",
-          "Designed a comprehensive run-time assurance architecture for AI consistency and accuracy validation",
-          "Evaluated advanced autonomous driving modules by integrating Baidu Apollo Auto with CARLA Simulator using C++ and Python",
-          "Designed pre-crash, adverse weather, and empirical simulation scenarios to validate robustness and safety"
-        ]
-      },
-      {
-        "type": "Project",
+        "category": "Project",
         "title": "Run-time Assurance (Vehicle Safety) System for Autonomous Driving Systems",
         "description": [
           "Designed, developed, and tested vehicle recovery software for safety violations in autonomous driving systems",
@@ -158,7 +180,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "University of Waterloo",
     "logo": "assets/media/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
@@ -171,7 +193,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Real-time Embedded Controller within Different Sensors and Intelligence Control",
         "description": [
           "Successfully designed and implemented platform real-time communication and control software on Raspberry Pi 4B (Linux environment) to support advanced application features, resulting in a 20% increase in user engagement and a 30% reduction in software crashes",
@@ -181,7 +203,7 @@
         ]
       },
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Electrical Energy Regenerative Shoulder Exoskeletons",
         "description": [
           "Implementation of energy-regenerating actuators in robotic exoskeletons to enhance efficiency and extend battery life by converting a portion of energy typically lost during negative mechanical work into electrical energy.",
@@ -193,7 +215,7 @@
         ]
       },
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Human3.6M+: Generated Human Motion Data to Support 3D Pose, Motion, Kinetic, and Muscle Estimation",
         "description": [
           "Developed marker-less motion capture technology for 3D human pose estimation to overcome usability constraints of traditional marker-based systems.",
@@ -204,7 +226,16 @@
         ]
       },
       {
-        "type": "Leadership",
+        "category": "Service",
+        "title": "Postdoctoral Responsibilities",
+        "description": [
+          "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM)",
+          "Coordinated presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
+        ]
+      },
+      {
+        "category": "Leadership",
+        "contributor": "Vasylysa Korovkina (Master Student)",
         "title": "Myography-based Controlled 1-DoF Hand Prosthesis",
         "description": [
           "Designed an electrically controlled single degree-of-freedom (1-DOF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
@@ -212,34 +243,36 @@
           "Prototype serves as an active pediatric prosthesis using EMG-based control rather than muscle strength, despite being limited to a single finger.",
           "Future improvements planned: refine 3D model, optimize electronic housing, enhance EMG control precision, and incorporate motors for full-finger control.",
           "Prototype is a pivotal tool for initiating prosthesis control learning in rehabilitation."
-        ]
+        ],
+        "date": {
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        }
       },
       {
-        "type": "Leadership",
+        "category": "Leadership",
+        "contributor": "Tegan Asprey (Undergraduate Research Assistant)",
         "title": "MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments",
         "description": [
           "Developed MyoBuzz, a limb-worn EMG device providing real-time feedback on muscle activation for dynamometry experiments.",
           "Limb-specific band with strategically positioned electrodes, visual and auditory alerts, customizable activation threshold, and adjustable sensitivity.",
           "Electrodes are attachable via clips; strap ensures comfort; rechargeable 3.7V battery supports one-hour operation and two-hour recharge.",
           "Facilitates real-time monitoring and mitigation of inadvertent muscle activation during joint torque evaluations."
-        ]
+        ],
+        "date": {
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        }
       },
       {
-        "type": "Supervision",
-        "title": "Sub-supervised Undergraduate Research Assistant (URA) Students",
-        "description": [
-          "Vasylysa Korovkina, Myography-based Controlled 1-DoF Hand Prosthesis, 2023",
-          "Tegan Asprey, MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments, 2023",
-          "Lavan Sumanan, Human motion animation using 3Ds Max for 3D pose estimation database, 2023"
-        ]
-      },
-      {
-        "type": "Responsibility",
-        "title": "Postdoctoral Responsibilities",
-        "description": [
-          "Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM)",
-          "Coordinated presentations on topics ranging from humanoid robot demonstrations to advanced research in biomechanics and control systems"
-        ]
+        "category": "Leadership",
+        "contributor": "Lavan Sumanan (Undergraduate Research Assistant)",
+        "title": "Human motion animation using 3Ds Max for 3D pose estimation database",
+        "description": [],
+        "date": {
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        }
       }
     ]
   },
@@ -257,7 +290,7 @@
     },
     "items": [
       {
-        "type": "Responsibility",
+        "category": "Service",
         "title": "Teaching Responsibilities",
         "description": [
           "Delivered tutorials and undergraduate instructional support",
@@ -266,8 +299,8 @@
         ]
       },
       {
-        "type": "Course",
-        "title": "Courses",
+        "category": "Teaching",
+        "title": "Course List:",
         "description": [
           "Biomedical Measurement and Signal Processing (SYDE 544), Mr. Steven Pretty, Winter 2023",
           "Linear Systems and Signals (SYDE 252M), Dr. Charbel Azzi, Fall 2022",
@@ -287,7 +320,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "University of Waterloo",
     "logo": "assets/media/logo/uwaterloo.png",
     "address": "Waterloo, Ontario, Canada",
@@ -300,7 +333,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Design, Dynamics, and Control of Active-Passive Exoskeletons Robotic",
         "description": [
           "Developed and verified adjustable biomechanical 20-DoF model using MATLAB and MapleSim",
@@ -312,7 +345,7 @@
         ]
       },
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Active-passive Shoulder Exoskeleton",
         "description": [
           "Developed active-passive shoulder exoskeleton integrating passive mechanisms and powered actuators to optimize human movement assistance.",
@@ -322,7 +355,7 @@
         ]
       },
       {
-        "type": "Project",
+        "category": "Project",
         "title": "MuscleNET: Biomechatronic Electromyography Signal Processing",
         "description": [
           "Introduced MuscleNET, a set of ML models (ANN, RNN, CNN, RCNN) mapping sEMG signals to joint angle, velocity, acceleration, torque, and activation torque.",
@@ -332,7 +365,7 @@
         ]
       },
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Scalable Human Musculoskeletal Model",
         "description": [
           "Developed a MapleSim biomechanics-based musculoskeletal (MSK) model covering upper and lower body movements for biomechanical analysis.",
@@ -342,7 +375,7 @@
         ]
       },
       {
-        "type": "Conference",
+        "category": "Service",
         "title": "Conferences & Academic Activities",
         "description": [
           "18th International Symposium on Computer Methods in Biomechanics and Biomedical Engineering, Paris, France, May 2023",
@@ -361,7 +394,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "Techno Niro",
     "logo": "assets/media/logo/technoniro.png",
     "address": "Dorcheh, Esfahan, Iran",
@@ -373,7 +406,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Spatial 6 DoF 8 Cable-Driven Parallel Robot",
         "description": [
           "Conducted comprehensive inverse kinematic and dynamic modeling and analysis for the Spatial 6 DoF 8 Cable-Driven Parallel Robot.",
@@ -383,7 +416,7 @@
         ]
       },
       {
-        "type": "Project",
+        "category": "Project",
         "title": "3 DoF Wrist Rehabilitation Robot",
         "description": [
           "Designed conceptual and mechanical parts for the 3 DoF Wrist Rehabilitation Robot and conducted kinematic and dynamic modeling.",
@@ -394,7 +427,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "Techno Niro",
     "logo": "assets/media/logo/technoniro.png",
     "address": "Dorcheh, Esfahan, Iran",
@@ -406,7 +439,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "6 DoF Industrial Serial Manipulator Modeling & Control",
         "description": [
           "Conducted comprehensive kinematic and dynamic modeling and analysis for the 6 DoF Industrial Serial Manipulator, assessing workspace, dexterity, and performance",
@@ -418,7 +451,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "Techno Niro",
     "logo": "assets/media/logo/technoniro.png",
     "address": "Dorcheh, Esfahan, Iran",
@@ -430,7 +463,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Plant Mechatronic Design, Maintenance, and Project Management",
         "description": [
           "Developed and supervised the implementation of a comprehensive mechatronic scheme for the plant, utilizing ePlan software and programming Siemens PLC for optimal performance",
@@ -443,7 +476,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "K. N. Toosi University of Technology",
     "logo": "assets/media/logo/kntu.png",
     "address": "Tehran, Tehran, Iran",
@@ -456,7 +489,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Multiple Impedance Control of Hybrid Parallel-Serial Manipulator for Object Manipulation",
         "description": [
           "Designed and developed a MATLAB/Simulink model for an 8 cable-driven parallel robot prototype with a serial manipulator, and verified its performance",
@@ -466,14 +499,44 @@
         ]
       },
       {
-        "type": "Supervision",
-        "title": "Sub-supervised Students",
-        "description": [
-          "Mohammadreza Mousavi, Master Thesis, Control of Cable-Driven Redundant Parallel Manipulator, 2016",
-          "Masoud Ghanbari, Master Thesis, Optimal Motion Planning for Cable Robots with Uncertain Jacobian, 2016",
-          "Nima Arteghzadeh and Maryam Sadat Nabipour, BSc Project, Automated Ball Tracking Camera Manipulated by Cable Parallel Robot, 2016",
-          "Yasaman Parandian, Digital Image Processing of Ball and Plate System Using Artificial Neural Network, 2015"
-        ]
+        "category": "Leadership",
+        "contributor": "Mohammadreza Mousavi (Master Thesis)",
+        "title": "Control of Cable-Driven Redundant Parallel Manipulator",
+        "description": [],
+        "date": {
+          "start": "2016-01-01",
+          "end": "2016-12-31"
+        }
+      },
+      {
+        "category": "Leadership",
+        "contributor": "Masoud Ghanbari (Master Thesis)",
+        "title": "Optimal Motion Planning for Cable Robots with Uncertain Jacobian",
+        "description": [],
+        "date": {
+          "start": "2016-01-01",
+          "end": "2016-12-31"
+        }
+      },
+      {
+        "category": "Leadership",
+        "contributor": "Nima Arteghzadeh, Maryam Sadat Nabipour (Undergraduate Project)",
+        "title": "Automated Ball Tracking Camera Manipulated by Cable Parallel Robot",
+        "description": [],
+        "date": {
+          "start": "2016-01-01",
+          "end": "2016-12-31"
+        }
+      },
+      {
+        "category": "Leadership",
+        "contributor": "Yasaman Parandian (Undergraduate Research Assistant)",
+        "title": "Digital Image Processing of Ball and Plate System Using Artificial Neural Network",
+        "description": [],
+        "date": {
+          "start": "2015-01-01",
+          "end": "2015-12-31"
+        }
       }
     ]
   },
@@ -491,15 +554,15 @@
     },
     "items": [
       {
-        "type": "Responsibility",
+        "category": "Service",
         "title": "Teaching Responsibilities",
         "description": [
           "Assessed student learning through evaluating assignments, projects, and exams"
         ]
       },
       {
-        "type": "Course",
-        "title": "Course",
+        "category": "Teaching",
+        "title": "Course List:",
         "description": [
           "Kinematics and Dynamics of Machines, Prof. S. Ali A. Moosavian, Fall 2015"
         ]
@@ -507,7 +570,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "Kian Control Apadana Co. (Festo Authorized Distributor)",
     "logo": "assets/media/logo/kian.png",
     "address": "Isfahan, Esfahan, Iran",
@@ -519,7 +582,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Automation and Mechatronic System Development",
         "description": [
           "Developed the mechatronic scheme for a steel plant using ePLAN software, including designing the sensors, actuators, and wiring for the system",
@@ -529,7 +592,7 @@
     ]
   },
   {
-    "type": "Research",
+    "type": "Work",
     "organization": "Isfahan University of Technology",
     "logo": "assets/media/logo/iut.png",
     "address": "Isfahan, Esfahan, Iran",
@@ -542,7 +605,7 @@
     },
     "items": [
       {
-        "type": "Project",
+        "category": "Project",
         "title": "Joint Space Energy Optimization of Tethered Space Robot for End-Effector Optimal Path",
         "description": [
           "Conducted research on tethered satellite systems and tether-connected space manipulators for applications such as satellite repair and space debris removal.",
@@ -569,15 +632,15 @@
     },
     "items": [
       {
-        "type": "Responsibility",
+        "category": "Service",
         "title": "Teaching Responsibilities",
         "description": [
           "Assessed student learning by marking assignments"
         ]
       },
       {
-        "type": "Course",
-        "title": "Course List",
+        "category": "Teaching",
+        "title": "Course List:",
         "description": [
           "Fundamentals of Mechatronic Systems, Prof. Saeed Behbahani, Winter 2013"
         ]
