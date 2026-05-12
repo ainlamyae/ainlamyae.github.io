@@ -7,7 +7,7 @@
     "authors": [
       "Yousefizadeh, Hossein",
       "Gu, Shenghui",
-      "Briand, Lionel C",
+      "Briand, Lionel C.",
       "Nasr, Ali"
     ],
     "booktitle": "Proceedings of the IEEE/ACM International Conference on Software Engineering (ICSE)",
@@ -24,7 +24,7 @@
     "authors": [
       "Yousefizadeh, Hossein",
       "Gu, Shenghui",
-      "Briand, Lionel C",
+      "Briand, Lionel C.",
       "Nasr, Ali"
     ],
     "volume": "15",
@@ -61,7 +61,7 @@
     "title": "Safety in wearable robotic exoskeletons: Design, control, and testing guidelines",
     "authors": [
       "Nasr, Ali",
-      "Inkol, Keaton A",
+      "Inkol, Keaton A.",
       "McPhee, John"
     ],
     "volume": "17",
@@ -185,8 +185,8 @@
     "authors": [
       "Nasr, Ali",
       "Bell, Sydney",
-      "Whittaker, Rachel L",
-      "Dickerson, Clark R",
+      "Whittaker, Rachel L.",
+      "Dickerson, Clark R.",
       "McPhee, John"
     ],
     "volume": "21",
@@ -205,7 +205,7 @@
     "title": "Experimental study of fully passive, fully active, and active-passive upper-limb exoskeleton efficiency: An assessment of lifting tasks",
     "authors": [
       "Nasr, Ali",
-      "Dickerson, Clark R",
+      "Dickerson, Clark R.",
       "McPhee, John"
     ],
     "volume": "24",
@@ -225,7 +225,7 @@
     "authors": [
       "Haraguchi, Naoto",
       "Nasr, Ali",
-      "Inkol, Keaton A",
+      "Inkol, Keaton A.",
       "Hase, Kazunori",
       "McPhee, John"
     ],
@@ -257,7 +257,7 @@
     "authors": [
       "Nasr, Ali",
       "Hunter, Jason",
-      "Dickerson, Clark R",
+      "Dickerson, Clark R.",
       "McPhee, John"
     ],
     "volume": "4",
@@ -433,7 +433,7 @@
     "title": "InverseMuscleNET: alternative machine learning solution to static optimization and inverse muscle modeling",
     "authors": [
       "Nasr, Ali",
-      "Inkol, Keaton A",
+      "Inkol, Keaton A.",
       "Bell, Sydney",
       "McPhee, John"
     ],
@@ -491,8 +491,8 @@
       "Nasr, Ali",
       "Bell, Sydney",
       "He, Jiayuan",
-      "Whittaker, Rachel L",
-      "Dickerson, Clark R",
+      "Whittaker, Rachel L.",
+      "Dickerson, Clark R.",
       "Jiang, Ning",
       "McPhee, John"
     ],
@@ -594,7 +594,7 @@
     "type": "inproceedings",
     "title": "Sensory feedback performance improvement on robocab: An experimental approach to wire-driven parallel manipulator",
     "authors": [
-      "Mousavi, Mohammadreza",
+      "Mousavi, Mohammad Reza",
       "Ghanbari, Masoud",
       "Nasr, Ali",
       "Moosavian, S Ali A",
