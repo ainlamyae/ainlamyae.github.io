@@ -14,6 +14,21 @@
     "items": [
       {
         "category": "Project",
+        "title": "Run-Time Reliability in LLM-Based Multi-Agent Systems: A Review of Self-Evaluation and Self-Correction Mechanisms",
+        "description": [
+          "Developed a system-level taxonomy for LLM-based applications, categorizing systems across dimensions such as verifiability, actionability, risk, and output structure to guide evaluation and deployment strategies",
+          "Designed a multi-step evaluation framework (inspired by ISO/IEC AI standards) to define system properties, assign measurable goals, and map them to appropriate runtime evaluation and correction methods",
+          "Implemented uncertainty quantification techniques (e.g., token log-probability, entropy, and confidence thresholds) to detect low-confidence outputs and improve reliability in LLM-generated results",
+          "Built a runtime assurance pipeline incorporating confidence gating, consistency checks (self-consistency, Cohen\u2019s/Fleiss\u2019 Kappa), and adaptive thresholding for dynamic decision-making",
+          "Proposed and validated multi-layered correction strategies including model swapping, LLM-as-a-judge, and human-in-the-loop escalation to ensure safe operation in high-risk, action-triggering systems (e.g., telecom automation)."
+        ],
+        "date": {
+          "start": "2026-02-01",
+          "end": "2026-03-28"
+        }
+      },
+      {
+        "category": "Project",
         "title": "Explainable & Reliable System Architecture for LLM-based Script Generator",
         "description": [
           "Architected a multi-stage LLM reliability pipeline with confidence estimation, output gating, and policy-driven decision enforcement",
@@ -27,7 +42,7 @@
         ],
         "date": {
           "start": "2025-10-01",
-          "end": "2026-02-28"
+          "end": "2026-01-28"
         }
       },
       {
@@ -70,7 +85,7 @@
         ],
         "date": {
           "start": "2024-03-01",
-          "end": "2026-06-30"
+          "end": "2026-03-30"
         }
       },
       {
@@ -157,8 +172,9 @@
       },
       {
         "category": "Service",
-        "title": "Technical Interviewer Responsibilities",
+        "title": "Project Manager & Technical Interviewer Responsibilities",
         "description": [
+          "Managed project workflows using Jira, tracked progress, led status updates, and prepared detailed project progress reports",
           "Identified team skill gaps and collaborated with leadership to define role requirements, and draft job descriptions",
           "Screened 1,000+ resumes, and shortlisted high-potential candidates based on technical qualifications",
           "Conducted 50+ remote technical interviews, evaluating problem-solving and programming ability"
@@ -292,7 +308,7 @@
       {
         "category": "Leadership",
         "contributor": "Lavan Sumanan (Undergraduate Research Assistant)",
-        "title": "Human motion animation using 3Ds Max for 3D pose estimation database",
+        "title": "Human Motion Animation Using 3Ds Max for 3D Pose Estimation Database",
         "description": [
           "Guided in setting up 3Ds Max environment and workflow for creating human motion animations for synthetic dataset generation",
           "Provided joint position data and guidance to support annotation for training the 3D pose estimation machine learning model"
@@ -529,7 +545,7 @@
       {
         "category": "Leadership",
         "contributor": "Mohammad Reza Mousavi (Master Thesis)",
-        "title": "Optimal redundancy resolution scheme in a cable-driven parallel robot",
+        "title": "Optimal Redundancy Resolution Scheme in a Cable-Driven Parallel Robot",
         "description": [
           "Developed an enhanced kinematic modeling of pulleys and cables for more accurate representation of cable-driven parallel robots",
           "Improved tension distribution analysis by integrating precise cable attachement modeling into the system framework",
@@ -543,7 +559,7 @@
       {
         "category": "Leadership",
         "contributor": "Masoud Ghanbari (Master Thesis)",
-        "title": "Sensory feedback and experimental evaluation for cable robots with uncertain Jacobian",
+        "title": "Sensory Feedback and Experimental Evaluation for Cable Robots with Uncertain Jacobian",
         "description": [
           "Led the mathematical modeling, algorithm coding, and manufacturing of the prototype of the cable-driven parallel robot",
           "Integrated the experimental and theoretical foundations on the robot\u2019s design and optimization approach",
@@ -557,7 +573,7 @@
       {
         "category": "Leadership",
         "contributor": "Nima Arteghzadeh, Maryam Sadat Nabipour (Undergraduate Project)",
-        "title": "Visual servoing in a cable robot using Microsoft Kinect v2 sensor",
+        "title": "Visual Servoing in a Cable Robot Using Microsoft Kinect V2 Sensor",
         "description": [
           "Developed the kinematic model and control code for the parallel cable robot",
           "Supported integration between the robot and the visual tracking system",
@@ -571,7 +587,7 @@
       {
         "category": "Leadership",
         "contributor": "Yasaman Parandian (Undergraduate Research Assistant)",
-        "title": "Digital image processing of ball and plate system using artificial neural network",
+        "title": "Digital Image Processing of Ball-and-Plate System Using Artificial Neural Network",
         "description": [
           "Integrated camera with MATLAB for real-time ball position tracking using classical image processing techniques",
           "Contributed to development of a vision-based closed-loop control system",
