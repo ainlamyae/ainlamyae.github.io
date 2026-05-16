@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Keyword-based auto-expand dropdowns
     // Works with ?g=group query in URL
     // ==============================
-    const urlParams = new URLSearchParams(window.location.search);
-    const groupQuery = urlParams.get('g'); // e.g., ?g=ai
+    const queryString = window.location.search.substring(1); // removes '?'
+    const groupQuery = queryString || null; // e.g., ?ai → "ai"
 
     if (groupQuery) {
         // Delay to ensure dynamically loaded sections exist
