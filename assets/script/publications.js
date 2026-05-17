@@ -39,34 +39,26 @@ document.addEventListener("DOMContentLoaded", function () {
       function renderGroup(title, items, typeKey, index) {
         if (!items || !items.length) return;
 
-        // --- Create dropdown wrapper ---
         const section = document.createElement("div");
         section.classList.add('dropdown-section', 'keyword-expandable');
         section.dataset.sectionId = `pub-${index}`;
 
-        // --- Clickable heading with count ---
         const heading = document.createElement("h4");
         heading.classList.add("dropdown-toggle");
-        heading.textContent = `${title} (${items.length})`; // <-- Add count here
+        heading.textContent = `${title} (${items.length})`;
         section.appendChild(heading);
 
-        // --- Content container ---
         const content = document.createElement("div");
         content.classList.add("dropdown-content");
 
-        // Sort descending by year
         items.sort((a, b) => getYear(b) - getYear(a));
 
         const total = items.length;
 
         items.forEach((pub, idx) => {
-          const entryDiv = document.createElement("div");
-          entryDiv.classList.add("entry");
-
-          // ===== AUTHORS =====
+          const number = total - idx;
           const authors = formatAuthors(pub.authors);
 
-          // ===== VENUE / EXTRA =====
           let venue = "";
           if (pub.type === "article") {
             const parts = [];
@@ -87,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
             venue = degreePart && publisherPart ? `${degreePart}, ${publisherPart}` : (degreePart || publisherPart);
           }
 
-          // Volume / number / pages
           const extraParts = [];
           if (pub.volume) extraParts.push(`vol. ${pub.volume}`);
           if (pub.number) extraParts.push(`no. ${pub.number}`);
@@ -97,36 +88,35 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           const extra = extraParts.length ? ", " + extraParts.join(", ") : "";
 
-          // Title with link
           const link = pub.doi ? `https://doi.org/${pub.doi}` : (pub.url || "");
           const titleHTML = link
             ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${pub.title || ""}</a>`
             : (pub.title || "");
 
-          const number = total - idx;
+          // ===== Create entry =====
+          const entryDiv = document.createElement("div");
+          entryDiv.classList.add("entry");
 
-          entryDiv.innerHTML = `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
+          // ===== Wrap text + icon in a single span =====
+          const fullSpan = document.createElement("span");
+          fullSpan.innerHTML = `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
 
-          // 📄 Publication file icon (PDF preview)
+          // Add icon HTML if file exists
           if (pub.file && pub.file.trim() !== "") {
-            const fileLink = document.createElement('a');
-            fileLink.href = "#";
-            fileLink.textContent = " 📄";
-            fileLink.title = "View PDF";
-
-            fileLink.style.marginLeft = "6px";
-
-            fileLink.addEventListener("click", (e) => {
-              e.preventDefault();
-              openMediaModal(
-                [{ src: pub.file, caption: pub.title || "Publication" }],
-                0
-              );
-            });
-
-            entryDiv.appendChild(fileLink);
+            fullSpan.innerHTML += ` <a href="#" class="media-icon" title="View PDF">📄</a>`;
           }
+
+          entryDiv.appendChild(fullSpan);
           content.appendChild(entryDiv);
+
+          // Add event listener to icon
+          if (pub.file && pub.file.trim() !== "") {
+            const fileLink = fullSpan.querySelector(".media-icon");
+            fileLink.addEventListener("click", e => {
+              e.preventDefault();
+              openMediaModal([{ src: pub.file, caption: pub.title || "Publication" }], 0);
+            });
+          }
         });
 
         section.appendChild(content);

@@ -25,13 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.classList.add('entry');
 
-        const year = new Date(item.date).getFullYear();
+        const dateObj = new Date(item.date);
+        const formattedDate = dateObj.toLocaleString('en-US', {
+          month: 'short',
+          year: 'numeric'
+        });
+
+        // Check if URL exists and is not empty
+        const nameHTML = item.url 
+          ? `<a href="${item.url}" target="_blank"><strong>${item.name}</strong></a>`
+          : `<strong>${item.name}</strong>`;
 
         li.innerHTML = `
-          <a href="${item.url}" target="_blank"><strong>${item.name}</strong></a> - 
-          ${item.relationship}, 
-          <em>${item.organization}</em>, 
-          ${year}
+          ${nameHTML} (${item.relationship}), <em>${item.organization}</em>, ${formattedDate}
           <br>
           ${item.recommendation}
         `;

@@ -1,10 +1,6 @@
 [
   {
-    "group": "ai",
-    "keywords": ["AI", "Artificial Intelligence", "Machine Learning", "LLM", "RNN", "CNN", "RCNN"]
-  },
-  {
-    "group": "robot",
-    "keywords": ["robot", "exoskeleton", "dynamics"]
+    "group": "ML",
+    "keywords": ["Machine Learning", "LLM", "RNN", "CNN", "RCNN"]
   }
 ]

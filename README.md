@@ -14,7 +14,7 @@ The site is hosted using GitHub Pages.
 ├── assets
 │   ├── css
 │   │   └── stylesheets for the website
-│   ├── js
+│   ├── script
 │   │   └── JavaScript files
 │   ├── data
 │   │   └── JSON data files used by the site
