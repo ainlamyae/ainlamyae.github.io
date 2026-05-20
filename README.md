@@ -1,8 +1,6 @@
 # ainlamyae.github.io
 
-Personal resume website for Ali Nasr — Systems Architect and R&D Lead.
-Hosted via GitHub Pages at [ainlamyae.github.io](https://ainlamyae.github.io).
-
+Personal resume website
 ---
 
 ## Architecture Overview
