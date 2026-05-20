@@ -4,11 +4,11 @@
 		"organization": "Huawei Technologies Canada",
 		"logo": "assets/media/logo/huawei.png",
 		"address": "Waterloo, Ontario, Canada",
-		"group": "Trustworthy Technology and Engineering Laboratory, Intelligent Complex Systems Engineering Laboratory, System Engineering",
-		"position": "Staff R&D Engineer (GenAI Systems & Assurance Architect)",
+		"group": "Trustworthy Technology and Engineering Laboratory, Waterloo Complex Intelligent Systems Laboratory",
+		"position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
 		"employmentType": "Permanent Full-time",
 		"date": {
-			"start": "2025-08-31",
+			"start": "2023-11-01",			
 			"end": null
 		},
 		"items": [
@@ -81,6 +81,30 @@
 				]
 			},
 			{
+				"category": "Project",
+				"title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
+				"description": [
+					"Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
+					"Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
+					"Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
+				]
+			},
+			{
+				"category": "Project",
+				"title": "2D Bird’s-Eye View Risk Monitoring for Autonomous Driving",
+				"description": [
+					"Developed a CNN-based risk assessment module that processes 2D bird’s-eye views of the vehicle’s surroundings to predict the future driving risk",
+					"Implemented risk detection using a 2D Time-to-Collision (TTC) algorithm for precived object and obstructed phantom object",
+					"Coded and integrated C++ modules into Baidu Apollo Auto ADS, enabling real-time risk evaluation and decision-making",
+					"Verified and tested the system under diverse conditions, analyzing accident scenarios and validating robustness of the risk detection algorithms",
+					"Animated 2D bird’s-eye views and reconstructed accident cases from China for kinematic analysis and validation"
+				],
+				"date": {
+					"start": "2024-09-01",
+					"end": "2025-04-31"
+				}
+			},
+			{
 				"category": "Leadership",
 				"contributor": "Investing Project at University of Waterloo",
 				"title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
@@ -134,62 +158,6 @@
 				]
 			},
 			{
-				"category": "Service",
-				"title": "Strategic Insights and Innovations from Global Technology Conferences",
-				"description": [
-					"- 14th International Conference on Learning Representations (ICLR), Rio de Janeiro, Brazil, Apr 2026",
-					"39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov–Dec 2025",
-					"34th International Joint Conference on Artificial Intelligence (IJCAI), Montreal, Canada, Aug 2025",
-					"38th Annual Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada, Dec 2024",
-					"OpenMind Research Institute Banff Retreat, Banff, Canada, Oct 2024",
-					"IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, USA, Jun 2024",
-					"Systems Engineering Workshop for Complex Intelligent Systems, Hong Kong Science Park, Hong Kong, May 2024",
-					"Symposium on Innovative Robotics Technologies and Applications, Hong Kong Science Park, Hong Kong, May 2024",
-					"Strategy and Technology Workshop by Huawei R&D Teams, Shenzhen and Dongguan, China, May 2024",
-					"18th Annual IEEE International Systems Conference (SysCon), Montreal, Canada, Apr 2024",
-					"38th Annual AAAI Conference on Artificial Intelligence (AAAI), Vancouver, Canada, Feb 2024"
-				]
-			}
-		]
-	},
-	{
-		"type": "Work",
-		"organization": "Huawei Technologies Canada",
-		"logo": "assets/media/logo/huawei.png",
-		"address": "Waterloo, Ontario, Canada",
-		"group": "Trustworthy Technology and Engineering Laboratory, Waterloo Complex Intelligent Systems Laboratory",
-		"position": "Senior R&D Engineer (Intelligence System Architecture and Design)",
-		"employmentType": "Permanent Full-time",
-		"date": {
-			"start": "2023-11-01",
-			"end": "2025-08-31"
-		},
-		"items": [
-			{
-				"category": "Project",
-				"title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
-				"description": [
-					"Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
-					"Developed run-time accuracy and consistency monitoring mechanisms for collaborative AI agents",
-					"Collaborated on embodied AI concepts for general-purpose intelligent assistance systems"
-				]
-			},
-			{
-				"category": "Project",
-				"title": "2D Bird’s-Eye View Risk Monitoring for Autonomous Driving",
-				"description": [
-					"Developed a CNN-based risk assessment module that processes 2D bird’s-eye views of the vehicle’s surroundings to predict the future driving risk",
-					"Implemented risk detection using a 2D Time-to-Collision (TTC) algorithm for precived object and obstructed phantom object",
-					"Coded and integrated C++ modules into Baidu Apollo Auto ADS, enabling real-time risk evaluation and decision-making",
-					"Verified and tested the system under diverse conditions, analyzing accident scenarios and validating robustness of the risk detection algorithms",
-					"Animated 2D bird’s-eye views and reconstructed accident cases from China for kinematic analysis and validation"
-				],
-				"date": {
-					"start": "2024-09-01",
-					"end": "2025-04-31"
-				}
-			},
-			{
 				"category": "Leadership",
 				"contributor": "Brooke Yang (Co-op Engineer)",
 				"title": "LLM-based System Reliability",
@@ -215,6 +183,23 @@
 					"end": "2024-09-31"
 				}
 			},
+			{
+				"category": "Service",
+				"title": "Strategic Insights and Innovations from Global Technology Conferences",
+				"description": [
+					"14th International Conference on Learning Representations (ICLR), Rio de Janeiro, Brazil, Apr 2026",
+					"39th Annual Conference on Neural Information Processing Systems (NeurIPS), Mexico City, Mexico, Nov–Dec 2025",
+					"34th International Joint Conference on Artificial Intelligence (IJCAI), Montreal, Canada, Aug 2025",
+					"38th Annual Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada, Dec 2024",
+					"OpenMind Research Institute Banff Retreat, Banff, Canada, Oct 2024",
+					"IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, USA, Jun 2024",
+					"Systems Engineering Workshop for Complex Intelligent Systems, Hong Kong Science Park, Hong Kong, May 2024",
+					"Symposium on Innovative Robotics Technologies and Applications, Hong Kong Science Park, Hong Kong, May 2024",
+					"Strategy and Technology Workshop by Huawei R&D Teams, Shenzhen and Dongguan, China, May 2024",
+					"18th Annual IEEE International Systems Conference (SysCon), Montreal, Canada, Apr 2024",
+					"38th Annual AAAI Conference on Artificial Intelligence (AAAI), Vancouver, Canada, Feb 2024"
+				]
+			}
 			{
 				"category": "Service",
 				"title": "Project Manager & Technical Interviewer Responsibilities",
