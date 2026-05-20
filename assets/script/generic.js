@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     // ==============================
+    // Active nav link on scroll
+    // ==============================
+    const navLinks = document.querySelectorAll('#navbar a[href^="#"]');
+    const sectionIds = Array.from(navLinks).map(a => a.getAttribute('href').slice(1));
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(a => a.classList.remove('active'));
+                const link = document.querySelector(`#navbar a[href="#${entry.target.id}"]`);
+                if (link) link.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-10% 0px -80% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ==============================
     // Footer: Update year dynamically
     // ==============================
     const footerYear = document.getElementById('footer-year');
@@ -121,27 +140,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 100); // small delay to wait for other JS sections to render
     }
 
-    // ==============================
-    // Control functions for dropdowns by ID
-    // ==============================
-    function toggleDropdownById(id) {
-        const section = document.querySelector(`[data-section-id="${id}"]`);
-        if (section)
-            section.classList.toggle("active");
-    }
-
-    function expandDropdownById(id) {
-        const section = document.querySelector(`[data-section-id="${id}"]`);
-        if (section)
-            section.classList.add("active");
-    }
-
-    function collapseDropdownById(id) {
-        const section = document.querySelector(`[data-section-id="${id}"]`);
-        if (section)
-            section.classList.remove("active");
-    }
 });
+
+// ==============================
+// Control functions for dropdowns by ID
+// ==============================
+function toggleDropdownById(id) {
+    const section = document.querySelector(`[data-section-id="${id}"]`);
+    if (section)
+        section.classList.toggle("active");
+}
+
+function expandDropdownById(id) {
+    const section = document.querySelector(`[data-section-id="${id}"]`);
+    if (section)
+        section.classList.add("active");
+}
+
+function collapseDropdownById(id) {
+    const section = document.querySelector(`[data-section-id="${id}"]`);
+    if (section)
+        section.classList.remove("active");
+}
 // ==============================
 // Modal setup for certificates / media
 // ==============================
@@ -161,7 +181,7 @@ function openMediaModal(mediaList, index) {
     currentMediaList = mediaList;
     currentMediaIndex = index;
 
-    modal.style.display = "block";
+    modal.style.display = "flex";
 
     const modalContent = document.getElementById("cert-modal-content");
     modalContent.innerHTML = ""; // clear previous

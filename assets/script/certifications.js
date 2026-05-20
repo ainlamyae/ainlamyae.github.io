@@ -88,8 +88,8 @@ fetch('assets/data/certifications.json')
       section.appendChild(heading);
       section.appendChild(content);
       container.appendChild(section);
-	  // <-- Call unhideMedia **once** here, after all icons exist
-      if (typeof unhideMedia === "function") unhideMedia();
     });
+
+    if (typeof unhideMedia === "function") unhideMedia();
   })
   .catch(error => console.error('Error loading certifications:', error));

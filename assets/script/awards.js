@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   fetch('assets/data/awards.json')
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error('Failed to load awards.json');
+      return res.json();
+    })
     .then(data => {
       const container = document.getElementById('awards');
       if (!container) return console.error('#awards not found');
@@ -74,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       section.appendChild(heading);
       section.appendChild(content);
       container.appendChild(section);
-	  
-      // <-- Call unhideMedia **once** here, after all icons exist
+
       if (typeof unhideMedia === "function") unhideMedia();
     })
     .catch(err => console.error('Awards JS error:', err));
