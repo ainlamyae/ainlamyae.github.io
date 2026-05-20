@@ -14,17 +14,34 @@
 		"items": [
 			{
 				"category": "Project",
-				"title": "Run-Time Reliability in LLM-Based Multi-Agent Systems: A Review of Self-Evaluation and Self-Correction Mechanisms",
+				"title": "LLMGuard Wrapper: A Runtime Assurance Framework for Reliable LLM Systems",
 				"description": [
-					"Developed a system-level taxonomy for LLM-based applications, categorizing systems across dimensions such as verifiability, actionability, risk, and output structure to guide evaluation and deployment strategies",
-					"Designed a multi-step evaluation framework (inspired by ISO/IEC AI standards) to define system properties, assign measurable goals, and map them to appropriate runtime evaluation and correction methods",
-					"Implemented uncertainty quantification techniques (e.g., token log-probability, entropy, and confidence thresholds) to detect low-confidence outputs and improve reliability in LLM-generated results",
-					"Built a runtime assurance pipeline incorporating confidence gating, consistency checks (self-consistency, Cohen’s/Fleiss’ Kappa), and adaptive thresholding for dynamic decision-making",
-					"Proposed and validated multi-layered correction strategies including model swapping, LLM-as-a-judge, and human-in-the-loop escalation to ensure safe operation in high-risk, action-triggering systems (e.g., telecom automation)."
+					"Designed and delivered a runtime monitoring and assurance architecture (GuardRailClient) for LLM-based multi-agent systems, enabling reliable and production-ready AI behavior through integrated monitoring, validation, and correction",
+					"Introduced a novel confidence-driven methodology that leverages token-level LogProbs aggregated into JSON-value scores to detect uncertainty and autonomously identify erroneous outputs without labeled data",
+					"Developed a modular, scalable framework (wrapper-based integration) that seamlessly plugs into existing LLM pipelines with minimal code changes, supporting both synchronous and asynchronous execution",
+					"Implemented an adaptive validation and recovery pipeline using LLM-as-a-Judge, multi-strategy correction (prompting, model switching, self-consistency), and optional human-in-the-loop escalation for high-risk cases",
+					"Engineered an efficient field-level correction mechanism that selectively fixes low-confidence outputs, reducing recomputation, lowering latency, and improving system stability in real-world deployments",
+					"Demonstrated measurable reliability improvements in a script generation system, successfully detecting ambiguous/erroneous outputs and enabling automated correction under real-world and adversarial scenarios"
 				],
 				"date": {
 					"start": "2026-02-01",
-					"end": "2026-03-28"
+					"end": "2026-04-30"
+				}
+			},
+			{
+				"category": "Project",
+				"title": "Uncertainty in LLMs: Theory, Methods, and Practical Reliability Frameworks",
+				"description": [
+					"Conducted a technical review and synthesis of uncertainty in LLMs, covering theory, state-of-the-art methods, and practical applications for improving reliability in real-world AI systems",
+					"Analyzed and formalized key uncertainty concepts (aleatoric, epistemic, semantic, entropy-based metrics), translating research insights into actionable frameworks for inference-time risk assessment",
+					"Evaluated and compared multiple uncertainty estimation techniques (token probability, entropy, sampling, self-check, and ensemble methods), identifying strengths, limitations, and failure modes such as “confidently wrong” predictions",
+					"Designed and executed experiments on hallucination detection using uncertainty features, including entropy, token probabilities, and Dirichlet-based metrics, demonstrating effective model-agnostic detection without ground truth",
+					"Developed and validated a multi-feature classification approach for hallucination detection, showing improved performance over single-metric methods and highlighting the importance of combining uncertainty signals",
+					"Derived system-level insights for production AI systems, including the impact of temperature on uncertainty, limitations of entropy-based metrics, and the need for multi-step uncertainty tracking in agent-based workflows"
+				],
+				"date": {
+					"start": "2026-01-01",
+					"end": "2026-02-28"
 				}
 			},
 			{
