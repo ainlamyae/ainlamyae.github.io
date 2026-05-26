@@ -44,16 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
         textDiv.appendChild(uniHeading);
 
         const locationLine = document.createElement('p');
-        const startDate = new Date(edu.date.start);
-        const endDate = new Date(edu.date.end);
-        const options = { month: 'short', year: 'numeric' };
-        const startStr = startDate.toLocaleDateString('en-US', options);
-        const endStr = endDate.toLocaleDateString('en-US', options);
-        let months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
-        months += endDate.getMonth() - startDate.getMonth();
-        const years = Math.floor(months / 12);
-        const remMonths = months % 12;
-        const durationStr = `${years > 0 ? years + ' yr' + (years > 1 ? 's' : '') : ''}${years && remMonths ? ' ' : ''}${remMonths > 0 ? remMonths + ' mos' : ''}`;
+        const startStr = formatDate(edu.date.start);
+        const endStr = formatDate(edu.date.end);
+        const durationStr = calculateDuration(edu.date.start, edu.date.end);
         locationLine.textContent = `${edu.institution.address} | ${startStr} - ${endStr} · ${durationStr}`;
         textDiv.appendChild(locationLine);
 

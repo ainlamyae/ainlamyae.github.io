@@ -25,22 +25,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.classList.add('entry');
 
-        const dateObj = new Date(item.date);
-        const formattedDate = dateObj.toLocaleString('en-US', {
+        const formattedDate = new Date(item.date).toLocaleString('en-US', {
           month: 'short',
           year: 'numeric'
         });
 
-        // Check if URL exists and is not empty
-        const nameHTML = item.url 
-          ? `<a href="${item.url}" target="_blank"><strong>${item.name}</strong></a>`
-          : `<strong>${item.name}</strong>`;
+        // Name (linked or plain)
+        const nameEl = document.createElement('strong');
+        if (item.url) {
+          const a = document.createElement('a');
+          a.href = item.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = item.name;
+          nameEl.appendChild(a);
+        } else {
+          nameEl.textContent = item.name;
+        }
+        li.appendChild(nameEl);
 
-        li.innerHTML = `
-          ${nameHTML} (${item.relationship}), <em>${item.organization}</em>, ${formattedDate}
-          <br>
-          ${item.recommendation}
-        `;
+        li.appendChild(document.createTextNode(` (${item.relationship}), `));
+
+        const orgEl = document.createElement('em');
+        orgEl.textContent = item.organization;
+        li.appendChild(orgEl);
+
+        li.appendChild(document.createTextNode(`, ${formattedDate}`));
+
+        li.appendChild(document.createElement('br'));
+
+        li.appendChild(document.createTextNode(item.recommendation));
 
         ul.appendChild(li);
       });
