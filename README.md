@@ -25,7 +25,7 @@ logic required.
 │   │   └── main.css              # Design tokens, layout, component styles, print rules
 │   ├── script
 │   │   ├── utils.js              # Shared utilities: formatDate(), calculateDuration()
-│   │   ├── generic.js            # Core runtime: dropdowns, modal, keyword engine, nav
+│   │   ├── app.js                # Core runtime: dropdowns, modal, keyword engine, nav
 │   │   ├── experience.js         # Experience renderer — org grouping, role hierarchy
 │   │   ├── education.js          # Education renderer — degree/thesis/supervisor details
 │   │   ├── publications.js       # Publications renderer
@@ -39,7 +39,7 @@ logic required.
 │   │   ├── certifications.json   # Certification records with type, date, file
 │   │   ├── awards.json           # Award records with institution, date, file
 │   │   ├── recommendations.json  # Recommendation records
-│   │   └── keyword.json          # Keyword groups mapped to URL query parameters
+│   │   └── keywords.json         # Keyword groups mapped to URL query parameters
 │   └── media
 │       ├── award/                # Award certificates (JPG, PDF)
 │       └── certification/        # Certification images (JPG)
