@@ -165,7 +165,7 @@ h5 {
 
 /* Expanded dropdown */
 .dropdown-section.active .dropdown-content {
-  max-height: 600px;
+  max-height: 6000px;
   padding: 10px 15px;
 }
 
@@ -233,7 +233,7 @@ a:focus-visible,
   }
 
   .dropdown-section.active .dropdown-content {
-    max-height: 600px;
+    max-height: 6000px;
     padding: 10px 15px;
   }
 }
