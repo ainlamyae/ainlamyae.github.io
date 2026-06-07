@@ -50,94 +50,101 @@ document.addEventListener("DOMContentLoaded", function () {
     const groupQuery = queryString || null; // e.g., ?ai → "ai"
 
     if (groupQuery) {
-        // Delay to ensure dynamically loaded sections exist
-        setTimeout(() => {
-            fetch('assets/data/keyword.json')
-            .then(resp => {
-                if (!resp.ok)
-                    throw new Error('Failed to load keyword.json');
-                return resp.json();
-            })
-            .then(keywordData => {
-                const targetGroup = keywordData.find(g => g.group.toLowerCase() === groupQuery.toLowerCase());
-                if (!targetGroup)
+        fetch('assets/data/keywords.json')
+        .then(resp => {
+            if (!resp.ok)
+                throw new Error('Failed to load keywords.json');
+            return resp.json();
+        })
+        .then(keywordData => {
+            const targetGroup = keywordData.find(g => g.group.toLowerCase() === groupQuery.toLowerCase());
+            if (!targetGroup)
+                return;
+
+            const keywords = targetGroup.keywords || [];
+
+            function keywordMatch(text, keyword) {
+                if (!text || !keyword)
+                    return false;
+                const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp(`\\b${escaped}\\b(?:-[\\w]+)?`, 'i');
+                return regex.test(text);
+            }
+
+            function highlightKeywords(container, keywords) {
+                if (!container || !keywords || !keywords.length)
                     return;
 
-                const keywords = targetGroup.keywords || [];
-                let delay = 0;
+                const skipTags = ['IMG', 'EMBED', 'VIDEO', 'AUDIO', 'IFRAME'];
 
-                function keywordMatch(text, keyword) {
-                    if (!text || !keyword)
-                        return false;
-                    const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                    const regex = new RegExp(`\\b${escaped}\\b(?:-[\\w]+)?`, 'i');
-                    return regex.test(text);
-                }
-
-                // ==============================
-                // Highlight matched keywords in text
-                // ==============================
-                function highlightKeywords(container, keywords) {
-                    if (!container || !keywords || !keywords.length)
+                function walk(node) {
+                    if (!node)
                         return;
-
-                    const skipTags = ['IMG', 'EMBED', 'VIDEO', 'AUDIO', 'IFRAME']; // tags to ignore
-
-                    // Recursive function to walk text nodes
-                    function walk(node) {
-                        if (!node)
-                            return;
-
-                        if (node.nodeType === Node.TEXT_NODE) {
-                            let text = node.nodeValue;
-                            keywords.forEach(keyword => {
-                                const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                                const regex = new RegExp(`\\b(${escaped})(?:-[\\w]+)?\\b`, 'gi');
-                                text = text.replace(regex, match => `<span class="keyword-highlight">${match}</span>`);
-                            });
-
-                            if (text !== node.nodeValue) {
-                                const span = document.createElement('span');
-                                span.innerHTML = text;
-                                node.parentNode.replaceChild(span, node);
-                            }
-                        } else if (node.nodeType === Node.ELEMENT_NODE && !skipTags.includes(node.tagName)) {
-                            // walk children
-                            Array.from(node.childNodes).forEach(child => walk(child));
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        let text = node.nodeValue;
+                        keywords.forEach(keyword => {
+                            const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                            const regex = new RegExp(`\\b(${escaped})(?:-[\\w]+)?\\b`, 'gi');
+                            text = text.replace(regex, match => `<span class="keyword-highlight">${match}</span>`);
+                        });
+                        if (text !== node.nodeValue) {
+                            const span = document.createElement('span');
+                            span.innerHTML = text;
+                            node.parentNode.replaceChild(span, node);
                         }
+                    } else if (node.nodeType === Node.ELEMENT_NODE && !skipTags.includes(node.tagName)) {
+                        Array.from(node.childNodes).forEach(child => walk(child));
                     }
-
-                    walk(container);
                 }
 
-                // Loop all dropdown sections
+                walk(container);
+            }
+
+            const processed = new WeakSet();
+
+            function expandMatching() {
                 document.querySelectorAll('.dropdown-section.keyword-expandable').forEach(section => {
+                    if (processed.has(section))
+                        return;
+                    processed.add(section);
+
                     const toggleEl = section.querySelector('.dropdown-toggle');
                     const contentEl = section.querySelector('.dropdown-content');
                     if (!toggleEl || !contentEl)
                         return;
 
-                    const textToSearch = (toggleEl.textContent + ' ' + contentEl.textContent);
-
+                    const textToSearch = toggleEl.textContent + ' ' + contentEl.textContent;
                     const matched = keywords.some(kw => keywordMatch(textToSearch, kw));
+
                     if (matched) {
-                        setTimeout(() => {
-                            section.classList.add('active');
+                        section.classList.add('active');
 
-                            // Highlight keywords safely, skip captions/media
-                            highlightKeywords(toggleEl, keywords);
-                            highlightKeywords(contentEl, keywords);
+                        // Open every ancestor dropdown so nested sections aren't hidden
+                        let ancestor = section.parentElement?.closest('.dropdown-section');
+                        while (ancestor) {
+                            ancestor.classList.add('active');
+                            ancestor = ancestor.parentElement?.closest('.dropdown-section');
+                        }
 
-                            toggleEl.style.backgroundColor = '#fffae6';
-                            setTimeout(() => toggleEl.style.backgroundColor = '', 1000);
-                        }, delay);
-                        delay += 100; // stagger effect
+                        highlightKeywords(toggleEl, keywords);
+                        highlightKeywords(contentEl, keywords);
+
+                        toggleEl.style.backgroundColor = '#fffae6';
+                        setTimeout(() => toggleEl.style.backgroundColor = '', 1000);
                     }
-
                 });
-            })
-            .catch(err => console.error('Keyword auto-expand error:', err));
-        }, 100); // small delay to wait for other JS sections to render
+            }
+
+            // Run immediately for any sections already in the DOM
+            expandMatching();
+
+            // Watch for sections added later by async scripts (experience, education, etc.)
+            const observer = new MutationObserver(expandMatching);
+            observer.observe(document.body, { childList: true, subtree: true });
+            // Stop watching once all async renderers have had time to finish
+            setTimeout(() => observer.disconnect(), 5000);
+        })
+        .catch(err => console.error('Keyword auto-expand error:', err));
     }
 
 });

@@ -1,0 +1,30 @@
+[
+    {
+        "category": "Personal",
+        "title": "AI-Powered Exam Preparation & Assessment Platform (Full-Stack Distributed SaaS Architecture)",
+        "description": [
+            "Architected an AI-powered examination & assessment platform using Next.js 15, React 18, TypeScript, Node.js, Express.js, PostgreSQL, Firebase Auth, Stripe, and Docker.",
+            "Designed a layered system architecture with SSR/CSR rendering, REST APIs, secure internal service communication, and containerized deployment via Docker Compose.",
+            "Built a modular frontend with Next.js App Router, protected routes, reusable components, and a hybrid exam engine combining React with vanilla JavaScript modules.",
+            "Implemented Firebase Auth + Admin SDK authentication with JWT verification middleware and RBAC-based access control (free, premium, admin roles).",
+            "Developed Stripe-based billing system with subscriptions, recurring payments, webhook processing, renewals, cancellations, promo codes, and payment reconciliation.",
+            "Built LLM-based AI scoring pipeline for writing/speaking tasks using structured prompts, JSON outputs, rubric-based evaluation, and stored feedback analytics.",
+            "Designed normalized PostgreSQL schema for users, content taxonomy, exams, AI scores, payments, audit logs, login history, and system configuration.",
+            "Implemented secure asset streaming via tokenized endpoints and backend validation for protected exam media delivery.",
+            "Built admin system for user management, content sync, taxonomy editing, promo codes, email templates, analytics, audit logs, and monitoring tools.",
+            "Added production security: Helmet.js headers, CORS policies, rate limiting, webhook signature verification, and centralized error logging.",
+            "Integrated external services (Stripe, Firebase, SMTP, LLM APIs) with resilient, fault-tolerant workflows and structured observability.",
+            "Containerized full stack using Docker with isolated services, environment configs, and production-ready deployment orchestration."
+        ],
+        "date": {
+            "start": "2026-04-01",
+            "end": "2026-05-31"
+        },
+        "media": [
+            {
+				"src": "assets/media/projects/epps2026.jpg",
+				"caption": "The exam preparation platform system architecture"
+			}
+        ]
+    }
+]
