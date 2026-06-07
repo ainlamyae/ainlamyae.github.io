@@ -20,29 +20,48 @@ logic required.
 ```
 .
 ├── index.html                    # Shell document — layout, nav, section anchors
+├── 404.html                      # Custom not-found page (served by GitHub Pages)
+├── robots.txt                    # Disallows all crawler indexing
+├── favicon.ico                   # Multi-resolution favicon (16/32/48)
+├── favicon-16x16.png             # Favicon — 16×16 PNG
+├── favicon-32x32.png             # Favicon — 32×32 PNG
+├── apple-touch-icon.png          # Favicon — 180×180 PNG (iOS/Safari)
 ├── assets
 │   ├── style
 │   │   └── main.css              # Design tokens, layout, component styles, print rules
 │   ├── script
 │   │   ├── utils.js              # Shared utilities: formatDate(), calculateDuration()
-│   │   ├── app.js                # Core runtime: dropdowns, modal, keyword engine, nav
+│   │   ├── education.js          # Education renderer — degree/thesis/supervisor/course-list details
 │   │   ├── experience.js         # Experience renderer — org grouping, role hierarchy
-│   │   ├── education.js          # Education renderer — degree/thesis/supervisor details
 │   │   ├── publications.js       # Publications renderer
+│   │   ├── projects.js           # Projects renderer
 │   │   ├── certifications.js     # Certifications renderer — grouped by type, sorted by date
 │   │   ├── awards.js             # Awards renderer
-│   │   └── recommendations.js    # Recommendations renderer
+│   │   ├── scores.js             # Test scores renderer
+│   │   ├── volunteering.js       # Volunteering renderer
+│   │   ├── recommendations.js    # Recommendations renderer
+│   │   ├── contact-form.js       # Contact form — Google Form submission + status messaging
+│   │   └── app.js                # Core runtime: dropdowns, modal, keyword engine, nav
 │   ├── data
 │   │   ├── experience.json       # Work history — organizations, roles, items, media
-│   │   ├── education.json        # Academic history — degrees, theses, supervisors
+│   │   ├── education.json        # Academic history — degrees, theses, supervisors, courses
 │   │   ├── publications.json     # Publication records
+│   │   ├── projects.json         # Project records
 │   │   ├── certifications.json   # Certification records with type, date, file
 │   │   ├── awards.json           # Award records with institution, date, file
+│   │   ├── scores.json           # Standardized test score records
+│   │   ├── volunteering.json     # Volunteering records
 │   │   ├── recommendations.json  # Recommendation records
+│   │   ├── contact.json          # Contact list (emails/instructors) — not the contact form
 │   │   └── keywords.json         # Keyword groups mapped to URL query parameters
 │   └── media
 │       ├── award/                # Award certificates (JPG, PDF)
-│       └── certification/        # Certification images (JPG)
+│       ├── certification/        # Certification images (JPG)
+│       ├── education/            # Education-related media (course PDFs, etc.)
+│       ├── experience/           # Experience-related media
+│       ├── logo/                 # Institution/employer logos
+│       ├── projects/             # Project media
+│       └── publication/          # Publication media
 └── README.md
 ```
 
@@ -74,6 +93,22 @@ shared `currentMediaList` array.
 **Print stylesheet.** `@media print` collapses the navbar, forces all dropdown content visible,
 strips decorative backgrounds, and resets typography to 11pt black — producing a clean
 single-pass PDF without any separate export pipeline.
+
+**Serverless contact form.** `contact-form.js` intercepts the `#contact-form` submit, maps its
+fields (name/email/subject/message) to a Google Form's `entry.*` IDs, and POSTs them to the
+form's `formResponse` endpoint with `mode: "no-cors"` — letting visitors send messages without
+any backend, while `#contact-status` reports a "Sending… / Thanks! / Something went wrong"
+status (styled via `.contact-status`/`.contact-status.error` in `main.css`). Because the
+response is opaque under `no-cors`, success here only confirms the request was sent, not that
+Google accepted it.
+
+**Branding & crawler controls.** A monogram favicon (`favicon.ico` / PNG variants /
+`apple-touch-icon.png`) is generated from the site's `--color-primary` palette and linked from
+`<head>`. `404.html` mirrors the site shell (navbar, header, footer) so broken links land on a
+page consistent with the rest of the site — GitHub Pages serves it automatically for unmatched
+routes on a `<username>.github.io` repo, no extra config needed. `robots.txt` plus
+`<meta name="robots" content="noindex, nofollow, noarchive">` on every page keep the site out
+of search indexes.
 
 ---
 
