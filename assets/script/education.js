@@ -162,6 +162,46 @@ document.addEventListener('DOMContentLoaded', function () {
           detailsList.appendChild(li);
         }
 
+        if (Array.isArray(edu.courses) && edu.courses.length > 0) {
+          const li = document.createElement('li');
+          li.textContent = 'Courses:';
+
+          const groups = new Map();
+          edu.courses.forEach(course => {
+            const type = course.type || 'Other';
+            if (!groups.has(type)) groups.set(type, []);
+            groups.get(type).push(course);
+          });
+
+          const typeList = document.createElement('ul');
+          typeList.style.margin = '5px 0 0 0';
+          typeList.style.paddingLeft = '20px';
+
+          groups.forEach((courses, type) => {
+            const typeLi = document.createElement('li');
+            typeLi.textContent = `${type}:`;
+
+            const courseList = document.createElement('ul');
+            courseList.style.margin = '5px 0 0 0';
+            courseList.style.paddingLeft = '20px';
+
+            courses.forEach(course => {
+              const courseLi = document.createElement('li');
+              const instructors = Array.isArray(course.instructors) ? course.instructors.join(', ') : null;
+              courseLi.textContent = instructors
+                ? `${course.name} — ${instructors} (${course.term})`
+                : `${course.name} (${course.term})`;
+              courseList.appendChild(courseLi);
+            });
+
+            typeLi.appendChild(courseList);
+            typeList.appendChild(typeLi);
+          });
+
+          li.appendChild(typeList);
+          detailsList.appendChild(li);
+        }
+
         content.appendChild(detailsList);
         section.appendChild(content);
 

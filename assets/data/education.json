@@ -132,28 +132,568 @@
     "name": "Prof. Mehdi Keshmiri",
     "url": "https://people.iut.ac.ir/en/keshmiri"
   },
-  "courses": {
-    "enrolled": [
-      "Robotics",
-      "Control Systems Design",
-      "Automatic Control",
-      "Dynamics",
-      "Dynamics of Machinery",
-      "Dynamics of Machinery and Vibration Lab",
-      "Mechanisms Design",
-      "Applied Vibrations",
-      "Mechanical Vibrations",
-      "Signal Processing of Mechatronic Systems",
-      "Fundamentals of Mechatronic Systems",
-      "Mechatronics Lab 1 and 2 (PLC and Microcontrollers)",
-      "Applied Electrics and Electronics",
-      "Computer Programming",
-      "CNC Machines",
-      "Production Methods and Workshop",
-      "Hydraulics and Pneumatics",
-      "Engineering Drawing",
-      "Numerical Methods"
-    ]
-  }
+  "courses": [
+    {
+  "code": 1510151,
+  "name": "Engineering Drawing I",
+  "units": 2,
+  "mark": 20.00,
+  "instructors": ["Hosein Moghbel"],
+  "assistants": ["Mohammad Salem", "Amir Mostashfi Habibabadi"],
+  "type": "Core",
+  "term": "2009 Fall"
+},
+{
+  "code": 1914106,
+  "name": "Calculus I",
+  "units": 4,
+  "mark": 15.60,
+  "instructors": ["Shadi Askari"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2009 Fall"
+},
+{
+  "code": 2010115,
+  "name": "General Physics I",
+  "units": 3,
+  "mark": 16.20,
+  "instructors": ["Mohammad Hasan Alamatsaz"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2009 Fall"
+},
+{
+  "code": 2110103,
+  "name": "General Chemistry",
+  "units": 3,
+  "mark": 17.20,
+  "instructors": ["Hossein Chiniforoshan Esfahani"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2009 Fall"
+},
+{
+  "code": 1020103,
+  "name": "Physical Education I",
+  "units": 1,
+  "mark": 13.50,
+  "instructors": ["Abbas Firouzian"],
+  "assistants": null,
+  "type": "General",
+  "term": "2009 Fall"
+},
+{
+  "code": 1512153,
+  "name": "Statics",
+  "units": 3,
+  "mark": 14.90,
+  "instructors": ["Hassan Moosavi"],
+  "assistants": ["Mohammadreza Karazmoozravari"],
+  "type": "Core",
+  "term": "2010 Winter"
+},
+{
+  "code": 1730150,
+  "name": "Computer Programming",
+  "units": 3,
+  "mark": 20,
+  "instructors": ["Ayoob Bagheri"],
+  "assistants": ["Mohammadsadegh Noorouzzadeh"],
+  "type": "Foundation",
+  "term": "2010 Winter"
+},
+{
+  "code": 1914107,
+  "name": "Calculus II",
+  "units": 4,
+  "mark": 16.50,
+  "instructors": ["Mojtaba Aghaei Foroushani"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2010 Winter"
+},
+{
+  "code": 1914251,
+  "name": "Elementary Differential Equations",
+  "units": 3,
+  "mark": 17.50,
+  "instructors": ["Ali Atabaigi Elmi"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2010 Winter"
+},
+{
+  "code": 2010116,
+  "name": "General Physics Laboratory (Heat)",
+  "units": 1,
+  "mark": 19.46,
+  "instructors": ["Mohammad Motlagh"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2010 Winter"
+},
+{
+  "code": 2010125,
+  "name": "General Physics II",
+  "units": 3,
+  "mark": 19.20,
+  "instructors": ["Ali Dadkhah"],
+  "assistants": null,
+  "type": "General",
+  "term": "2010 Winter"
+},
+{
+  "code": 10200044,
+  "name": "Human in Islam",
+  "units": 2,
+  "mark": 19.00,
+  "instructors": ["Mahdi Enshaei"],
+  "assistants": null,
+  "type": "General",
+  "term": "2010 Winter"
+},
+{
+  "code": 1020097,
+  "name": "Physical Education II",
+  "units": 1,
+  "mark": 16.50,
+  "instructors": ["Reza Khan Mohammadi"],
+  "assistants": null,
+  "type": "General",
+  "term": "2010 Winter"
+},
+{
+  "code": 1020079,
+  "name": "Islamic Thought 1",
+  "units": 2,
+  "mark": 17.00,
+  "instructors": null,
+  "assistants": null,
+  "type": "General",
+  "term": "2010 Summer"
+},
+{
+  "code": 1020065,
+  "name": "Subjective Interpretation of Nahj al-Balagha",
+  "units": 2,
+  "mark": 17.00,
+  "instructors": null,
+  "assistants": null,
+  "type": "General",
+  "term": "2010 Summer"
+},
+{
+  "code": 1518243,
+  "name": "Dynamics I",
+  "units": 4,
+  "mark": 16.30,
+  "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
+  "assistants": ["Masoud Fazeli-Varzaneh","Pouya Amiri"],
+  "type": "Core",
+  "term": "2010 Fall"
+},
+{
+  "code": 1512211,
+  "name": "Strength of Materials I",
+  "units": 3,
+  "mark": 15.10,
+  "instructors": ["Mehran Moradi Gharibond"],
+  "assistants": ["Mohammad Hedayati"],
+  "type": "Core",
+  "term": "2010 Fall"
+},
+{
+  "code": 1514210,
+  "name": "Thermodynamics I",
+  "units": 3,
+  "mark": 14.70,
+  "instructors": ["Sayed Saeed Mortazavi Ravari"],
+  "assistants": ["Omid Khalilpour"],
+  "type": "Core",
+  "term": "2010 Fall"
+},
+{
+  "code": 1914271,
+  "name": "Numerical Methods",
+  "units": 2,
+  "mark": 12.00,
+  "instructors": ["Reza Mokhtari"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2010 Fall"
+},
+{
+  "code": 2010116,
+  "name": "General Physics Laboratory (Electricity)",
+  "units": 1,
+  "mark": 20.00,
+  "instructors": ["Elaheh Elmi Ghorbani"],
+  "assistants": null,
+  "type": "Foundation",
+  "term": "2010 Fall"
+},
+{
+  "code": 1020102,
+  "name": "General English for Engineering",
+  "units": 3,
+  "mark": 15.20,
+  "instructors": ["Mohammad Baghaei"],
+  "assistants": null,
+  "type": "General",
+  "term": "2010 Fall"
+},
+{
+  "code": 1110308,
+  "name": "Materials Science",
+  "units": 3,
+  "mark": 15.80,
+  "instructors": ["Fathollah Karimzadeh"],
+  "assistants": ["Seyedeh Zahra Anvari"],
+  "type": "Core",
+  "term": "2011 Winter"
+},
+{
+  "code": 1510255,
+  "name": "Applied Electricity and Electronics",
+  "units": 3,
+  "mark": 16.00,
+  "instructors": ["Mohammad Danesh"],
+  "assistants": null,
+  "type": "Core",
+  "term": "2011 Winter"
+},
+{
+  "code": 1512299,
+  "name": "Strength of Materials II",
+  "units": 3,
+  "mark": 17.00,
+  "instructors": ["Saleh Akbarzadeh"],
+  "assistants": ["Sayed Hossein Ashrafizadeh"],
+  "type": "Core",
+  "term": "2011 Winter"
+},
+{
+  "code": 1518309,
+  "name": "Dynamics of Machinery",
+  "units": 3,
+  "mark": 15.00,
+  "instructors": ["Mohammad Mashayekhi"],
+  "assistants": ["Reza Tikani"],
+  "type": "Major",
+  "term": "2011 Winter"
+},
+{
+  "code": 1514250,
+  "name": "Fluid Mechanics I",
+  "units": 3,
+  "mark": 14.20,
+  "instructors": ["Mohsen Saghafian"],
+  "assistants": ["Somaye Yaghoubi Koupaei"],
+  "type": "Core",
+  "term": "2011 Winter"
+},
+{
+  "code": 1020083,
+  "name": "Way of Life",
+  "units": 2,
+  "mark": 19.50,
+  "instructors": ["Mohsen Karimi"],
+  "assistants": null,
+  "type": "General",
+  "term": "2011 Winter"
+},
+{
+  "code": 1020101,
+  "name": "Islamic Revolution of Iran",
+  "units": 2,
+  "mark": 18.89,
+  "instructors": null,
+  "assistants": null,
+  "type": "General",
+  "term": "2011 Summer"
+},
+{
+  "code": 1512301,
+  "name": "Machine Elements Design",
+  "units": 3,
+  "mark": 17.40,
+  "instructors": ["Saleh Akbarzadeh"],
+  "assistants": ["Keyvan Matin"],
+  "type": "Core",
+  "term": "2011 Fall"
+},
+{
+  "code": 1514262,
+  "name": "Thermodynamics II",
+  "units": 3,
+  "mark": 14.80,
+  "instructors": ["Sayed Saeed Mortazavi Ravari"],
+  "assistants": ["Reza Khazaeli Najafabadi"],
+  "type": "Core",
+  "term": "2011 Fall"
+},
+{
+  "code": 1514310,
+  "name": "Heat Transfer I",
+  "units": 3,
+  "mark": 15.00,
+  "instructors": ["Mohsen Davazdah Emami"],
+  "assistants": ["Ali Emadi Andani"],
+  "type": "Core",
+  "term": "2011 Fall"
+},
+{
+  "code": 1514314,
+  "name": "Fluid Mechanics II",
+  "units": 3,
+  "mark": 16.50,
+  "instructors": ["Ahmad Reza Azimian"],
+  "assistants": ["Omid Atlaschian"],
+  "type": "Core",
+  "term": "2011 Fall"
+},
+{
+  "code": 1914252,
+  "name": "Engineering Mathematics",
+  "units": 3,
+  "mark": 18.00,
+  "instructors": ["Reza Rezaeian Farashahi"],
+  "assistants": null,
+  "type": "Core",
+  "term": "2011 Fall"
+},
+{
+  "code": 1020054,
+  "name": "History of Islamic Culture and Civilization",
+  "units": 2,
+  "mark": 16.00,
+  "instructors": ["Bahman Zeinali"],
+  "assistants": null,
+  "type": "General",
+  "term": "2011 Fall"
+},
+{
+  "code": 1020108,
+  "name": "Persian",
+  "units": 3,
+  "mark": 20,
+  "instructors": ["Mohammadbagher Ketabi"],
+  "assistants": null,
+  "type": "General",
+  "term": "2011 Fall"
+},
+{
+  "code": 1510152,
+  "name": "Engineering Drawing II",
+  "units": 2,
+  "mark": 19.00,
+  "instructors": ["Majid Jabbari Nikabadi"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Winter"
+},
+{
+  "code": 1510479,
+  "name": "Research Methods and Documentation in Mechanical Engineering",
+  "units": 1,
+  "mark": 20.00,
+  "instructors": ["Saleh Akbarzadeh"],
+  "assistants": null,
+  "type": "Skill",
+  "term": "2012 Winter"
+},
+{
+  "code": 1512303,
+  "name": "Strength of Materials Laboratory",
+  "units": 1,
+  "mark": 17.00,
+  "instructors": ["Reza Tikani"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Winter"
+},
+{
+  "code": 1518311,
+  "name": "Mechanical Vibrations",
+  "units": 3,
+  "mark": 13.00,
+  "instructors": ["Saeed Ziaei Rad"],
+  "assistants": ["Amirhossein Karimi"],
+  "type": "Core",
+  "term": "2012 Winter"
+},
+{
+  "code": 1518365,
+  "name": "Robotics",
+  "units": 3,
+  "mark": 16.20,
+  "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Winter"
+},
+{
+  "code": 1512377,
+  "name": "Machine Elements Design II",
+  "units": 3,
+  "mark": 17.90,
+  "instructors": ["Mohsen Badrossamay"],
+  "assistants": ["Ali Akhavan Safaei"],
+  "type": "Core",
+  "term": "2012 Winter"
+},
+{
+  "code": 1518423,
+  "name": "Fundamentals of Mechatronic Systems",
+  "units": 3,
+  "mark": 13.30,
+  "instructors": ["Mahdi Moghimi Zand"],
+  "assistants": ["Rasoul Koosha"],
+  "type": "Core",
+  "term": "2012 Winter"
+},
+{
+  "code": 1518352,
+  "name": "Mechanisms Design",
+  "units": 3,
+  "mark": 17.60,
+  "instructors": ["Mohammad Mashayekhi"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Winter"
+},
+{
+  "code": 1514300,
+  "name": "Fluid Mechanics Laboratory",
+  "units": 1,
+  "mark": 16.70,
+  "instructors": ["Sayed Amin Faghihi"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Winter"
+},
+{
+  "code": 1518353,
+  "name": "Automatic Control",
+  "units": 3,
+  "mark": 18.00,
+  "instructors": ["Saeid Behbahani"],
+  "assistants": ["Salar Asayesh Ghalehseyf"],
+  "type": "Core",
+  "term": "2012 Fall"
+},
+{
+  "code": 1518354,
+  "name": "Mechatronics Laboratory",
+  "units": 1,
+  "mark": 18.50,
+  "instructors": ["Mahdi Salehi"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Fall"
+},
+{
+  "code": 1518412,
+  "name": "Applied Vibrations",
+  "units": 3,
+  "mark": 17.00,
+  "instructors": ["Saeed Ziaei Rad"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Fall"
+},
+{
+  "code": 1516423,
+  "name": "CNC Machines",
+  "units": 2,
+  "mark": 20.00,
+  "instructors": ["Hamid Montazerolghaem"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2012 Fall"
+},
+{
+  "code": 1510373,
+  "name": "Production Methods & Workshop",
+  "units": 3,
+  "mark": 16.50,
+  "instructors": ["Alireza Fadaie Tehrani"],
+  "assistants": null,
+  "type": "Core",
+  "term": "2013 Winter"
+},
+{
+  "code": 1510452,
+  "name": "Hydraulics and Pneumatics",
+  "units": 3,
+  "mark": 19.50,
+  "instructors": ["Mohammad Reza Forouzan"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2013 Winter"
+},
+{
+  "code": 1510499,
+  "name": "B.Sc. Project",
+  "units": 3,
+  "mark": 19.50,
+  "instructors": ["Mahdi Keshmiri"],
+  "assistants": null,
+  "type": "Project",
+  "term": "2013 Winter"
+},
+{
+  "code": 1518357,
+  "name": "Dynamics of Machinery and Vibrations Laboratory",
+  "units": 1,
+  "mark": 19.50,
+  "instructors": ["Mostafa Ghayour"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2013 Winter"
+},
+{
+  "code": 1518428,
+  "name": "Signal Processing of Mechatronic Systems",
+  "units": 3,
+  "mark": 19.70,
+  "instructors": ["Mohammad Danesh"],
+  "assistants": ["Mohammad Mahdi Savadi Mofrad"],
+  "type": "Major",
+  "term": "2013 Winter"
+},
+{
+  "code": 1518430,
+  "name": "Control Systems Design",
+  "units": 3,
+  "mark": 18.90,
+  "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
+  "assistants": null,
+  "type": "Major",
+  "term": "2013 Winter"
+},
+{
+  "code": 1518432,
+  "name": "Mechatronics Laboratory II",
+  "units": 1,
+  "mark": 20.00,
+  "instructors": ["Mohammad Danesh"],
+  "assistants": ["Mohsen Parsa"],
+  "type": "Major",
+  "term": "2013 Winter"
+},
+{
+  "code": 1510345,
+  "name": "Industrial Training",
+  "units": 2,
+  "mark": "Excellent",
+  "instructors": ["Mahdi Keshmiri"],
+  "assistants": null,
+  "type": "Skill",
+  "term": "2013 Summer"
+}
+  ]
+
 }
 ]
