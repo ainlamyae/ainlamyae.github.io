@@ -1,0 +1,120 @@
+[
+  {
+    "type": "Service",
+    "organization": "University of Waterloo",
+    "logo": "assets/media/logo/uwaterloo.png",
+    "address": "Waterloo, Ontario, Canada",
+    "group": "Department of Systems Design Engineering",
+    "position": "Technology Demonstrator",
+    "employmentType": "Volunteer",
+    "date": {
+      "start": "2022-01-01",
+      "end": "2024-04-30"
+    },
+    "items": [
+      {
+        "category": "Service",
+        "title": "Robotics and Human-Machine Interaction Technology Demonstration",
+        "description": [
+          "Demonstrated dynamometer robotic systems, rehabilitation robots, wearable exoskeletons, and sensing technologies to engage and educate students, faculty members, and external visitors",
+          "Presented robotics, sensing systems, and human-machine interaction technologies to visiting professors, graduate researchers (visiting PhD, PhD, and Master students), senior undergraduate students, and first-year engineering students",
+          "Supported educational outreach activities for courses and projects related to dynamic systems, biosignal processing, rehabilitation robotics, and intelligent sensing systems",
+          "Facilitated technical demonstrations and discussions for external visitors, including members of the Society of Professional Engineers"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Service",
+    "organization": "FIRST Robotics Canada",
+    "logo": "assets/media/logo/firstrobotics.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Judge",
+    "employmentType": "Volunteer",
+    "date": {
+      "start": "2023-03-01",
+      "end": "2023-03-31"
+    },
+    "items": [
+      {
+        "category": "Service",
+        "title": "FIRST Robotics Competition – University of Waterloo District Event",
+        "description": [
+          "Interviewed robotics teams and evaluated engineering design, technical innovation, project execution, and teamwork performance",
+          "Assessed competition submissions and team presentations to support award selection and judging decisions",
+          "Contributed to promoting STEM education, collaborative engineering practices, and student innovation in robotics competitions"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Service",
+    "organization": "FIRST Robotics Canada",
+    "logo": "assets/media/logo/firstrobotics.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Pit Administration Committee",
+    "employmentType": "Volunteer",
+    "date": {
+      "start": "2019-03-01",
+      "end": "2019-03-31"
+    },
+    "items": [
+      {
+        "category": "Service",
+        "title": "FIRST Robotics Competition – Pit Administration Operations",
+        "description": [
+          "Supported robotics teams in the pit administration area by coordinating team check-in and operational logistics",
+          "Answered participant questions, coordinated event announcements, and facilitated communication between teams and event organizers",
+          "Helped ensure safety compliance and smooth operation of pit activities during the competition event"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Service",
+    "organization": "University of Waterloo",
+    "logo": "assets/media/logo/uwaterloo.png",
+    "address": "Waterloo, Ontario, Canada",
+    "group": "Department of Systems Design Engineering",
+    "position": "Mentor",
+    "employmentType": "Volunteer",
+    "date": {
+      "start": "2019-12-01",
+      "end": "2019-12-31"
+    },
+    "items": [
+      {
+        "category": "Teaching",
+        "title": "ExpecTAtion Workshop for Teaching Assistants",
+        "description": [
+          "Mentored future teaching assistants during a two-day TA training workshop organized by the Systems Design Engineering Department",
+          "Provided guidance on effective tutorial delivery, assignment marking strategies, and general teaching assistant responsibilities",
+          "Supported trainee development in professional communication and interactions with course instructors and students"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Service",
+    "organization": "Huawei Technologies Canada",
+    "logo": "assets/media/logo/huawei.png",
+    "address": "Waterloo, Ontario, Canada",
+    "position": "Table Tennis Umpire",
+    "employmentType": "Volunteer",
+    "date": {
+      "start": "2025-04-01",
+      "end": "2025-05-31"
+    },
+    "items": [
+      {
+        "category": "Service",
+        "title": "Corporate Table Tennis Tournament Officiating",
+        "description": [
+          "Oversaw fair play and enforced tournament rules during men's and women's table tennis matches",
+          "Made officiating decisions regarding serves, scoring, and player conduct throughout tournament games",
+          "Recorded and submitted official match results to tournament organizers and event coordinators"
+        ]
+      }
+    ]
+  }
+]
