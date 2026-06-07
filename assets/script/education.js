@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return [parseInt(year, 10) || 0, seasonOrder[season] !== undefined ? seasonOrder[season] : 0];
           };
 
-          const typeOrder = ['Enrolled', 'Major', 'Compulsory Major', 'Optional Major', 'Optional', 'Core', 'Skill', 'Seminar', 'Project', 'Foundation', 'General', 'Milestone','Audit'];
+          const typeOrder = ['Enrolled', 'Major', 'Compulsory Major', 'Optional Major', 'Optional', 'Core',  'Foundation', 'General', 'Skill', 'Seminar', 'Project','Milestone','Audit'];
           const sortedTypes = [...groups.keys()].sort((a, b) => {
             const ai = typeOrder.indexOf(a);
             const bi = typeOrder.indexOf(b);
