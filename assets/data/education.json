@@ -408,7 +408,7 @@
   "units": 3,
   "mark": 20,
   "instructors": ["Ayoob Bagheri"],
-  "assistants": ["Mohammadsadegh Noorouzzadeh"],
+  "assistants": ["Mohammad Sadegh Noorouzzadeh"],
   "type": "Foundation",
   "term": "2010 Winter"
 },
@@ -687,7 +687,7 @@
   "name": "Persian",
   "units": 3,
   "mark": 20,
-  "instructors": ["Mohammadbagher Ketabi"],
+  "instructors": ["Mohammad Bagher Ketabi"],
   "assistants": null,
   "type": "General",
   "term": "2011 Fall"
@@ -847,7 +847,7 @@
   "name": "B.Sc. Project",
   "units": 3,
   "mark": 19.50,
-  "instructors": ["Mahdi Keshmiri"],
+  "instructors": ["Mehdi Keshmiri"],
   "assistants": null,
   "type": "Project",
   "term": "2013 Winter"
@@ -897,7 +897,7 @@
   "name": "Industrial Training",
   "units": 2,
   "mark": "Excellent",
-  "instructors": ["Mahdi Keshmiri"],
+  "instructors": ["Mehdi Keshmiri"],
   "assistants": null,
   "type": "Skill",
   "term": "2013 Summer"
