@@ -33,19 +33,128 @@
     "name": "Prof. John J. McPhee",
     "url": "https://uwaterloo.ca/systems-design-engineering/profile/mcphee"
   },
-  "courses": {
-    "enrolled": [
-      "Dynamics of Multibody Systems",
-      "Optimal Control",
-      "Special Topics in Mechatronics (Human Movement Neuromechanics)"
-    ],
-    "audited": [
-      "Fundamentals in Neural and Rehabilitation Engineering",
-      "Advanced Biomechanical Models",
-      "Biomechanics of Human Motion",
-      "Autonomous Mobile Robots"
-    ]
-  }
+  "courses": [
+    {
+  "code": "ACINTY 620",
+  "name": "Academic Integrity Module",
+  "units": 0,
+  "mark": "CR",
+  "instructors": null,
+  "assistants": null,
+  "type": "Enrolled",
+  "term": "2018 Fall"
+},
+{
+  "code": "ME 780",
+  "name": "Special Topics in Mechatronics (Human Movement Neuromechanics)",
+  "units": 0.5,
+  "mark": 87,
+  "instructors": ["Arash Arami"],
+  "assistants": null,
+  "type": "Enrolled",
+  "term": "2018 Fall"
+},
+{
+  "code": "SYDE 652",
+  "name": "Dynamics of Multibody Systems",
+  "units": 0.5,
+  "mark": 92,
+  "instructors": ["John Joseph McPhee"],
+  "assistants": ["Valerie Norman-Gerum"],
+  "type": "Enrolled",
+  "term": "2019 Winter"
+},
+{
+  "code": "SYDE 655",
+  "name": "Optimal Control",
+  "units": 0.5,
+  "mark": 84,
+  "instructors": ["Nasser Lashgarian Azad"],
+  "assistants": ["Mohammad Hossein Basiri"],
+  "type": "Enrolled",
+  "term": "2018 Fall"
+},
+{
+  "code": "EMLS 620R",
+  "name": "Scholarly Writing in English",
+  "units": 0.5,
+  "mark": "CR",
+  "instructors": ["Agnieszka Wolczuk"],
+  "assistants": null,
+  "type": "Enrolled",
+  "term": "2020 Winter"
+},
+{
+  "code": null,
+  "name": "PhD Seminar",
+  "units": null,
+  "mark": "CR",
+  "instructors": null,
+  "assistants": null,
+  "type": "Milestone",
+  "term": "2022 Summer"
+},
+{
+  "code": null,
+  "name": "PhD Comprehensive Exam",
+  "units": null,
+  "mark": "CR",
+  "instructors": null,
+  "assistants": null,
+  "type": "Milestone",
+  "term": "2020 Winter"
+},
+{
+  "code": null,
+  "name": "PhD Thesis 2.0",
+  "units": null,
+  "mark": "ACC",
+  "instructors": null,
+  "assistants": null,
+  "type": "Milestone",
+  "term": "2022 Fall"
+},
+{
+  "code": null,
+  "name": "Workplace Hazardous Materials Information System",
+  "units": null,
+  "mark": null,
+  "instructors": null,
+  "assistants": null,
+  "type": "Milestone",
+  "term": "2018 Fall"
+},
+{
+  "code": "KIN 613",
+  "name": "Modern Methods in Biomechanical Modeling, Kinematics, and Kinetics",
+  "units": null,
+  "mark": null,
+  "instructors": ["Stacey Acker"],
+  "assistants": null,
+  "type": "Audit",
+  "term": "2018 Fall"
+},
+{
+  "code": "BME 588",
+  "name": "Fundamentals in Neural and Rehabilitation Engineering",
+  "units": null,
+  "mark": null,
+  "instructors": ["James Tung"],
+  "assistants": null,
+  "type": "Audit",
+  "term": "2020 Winter"
+},
+{
+  "code": "MTE 544",
+  "name": "Autonomous Mobile Robots",
+  "units": null,
+  "mark": null,
+  "instructors": ["Soo Jeon"],
+  "assistants": ["Ahmad Reza Alghooneh"],
+  "type": "Audit",
+  "term": "2023 Winter"
+}
+  ]
 },
 {
   "institution": {
@@ -83,18 +192,118 @@
     "name": "Prof. S. Ali A. Moosavian",
     "url": "https://wp.kntu.ac.ir/moosavian"
   },
-  "courses": {
-    "enrolled": [
-      "Parallel Robotics",
-      "Control in Robotic",
-      "Advanced Control (Nonlinear, Adaptive and Sliding)",
-      "Fuzzy Logic and Neuro-Fuzzy Control",
-      "Modern Control",
-      "Advanced Dynamics",
-      "Mechatronics"
-    ],
-    "audited": []
-  }
+  "courses": [
+    {
+  "code": 3333104,
+  "name": "Advanced Mathematics I",
+  "units": 3,
+  "mark": 17.00,
+  "instructors": ["Seyed Hossein Sadati"],
+  "assistants": null,
+  "type": "Compulsory Major",
+  "term": "2013 Fall"
+},
+{
+  "code": 3333133,
+  "name": "Advanced Dynamics",
+  "units": 3,
+  "mark": 17.00,
+  "instructors": ["Seyed Ali Akbar Moosavian"],
+  "assistants": null,
+  "type": "Core",
+  "term": "2013 Fall"
+},
+{
+  "code": 3333152,
+  "name": "Fuzzy Logic & Neuro Fuzzy Control",
+  "units": 3,
+  "mark": 17.50,
+  "instructors": ["Ali Ghaffari"],
+  "assistants": null,
+  "type": "Optional Major",
+  "term": "2013 Fall"
+},
+{
+  "code": 1115082,
+  "name": "Parallel Robotics",
+  "units": 3,
+  "mark": 19.20,
+  "instructors": ["Hamid Reza Dokht Taghirad"],
+  "assistants": null,
+  "type": "Optional Major",
+  "term": "2014 Winter"
+},
+{
+  "code": 1117001,
+  "name": "Seminar",
+  "units": 2,
+  "mark": 20.00,
+  "instructors": ["Mahdi Aliyari Shoorehdeli"],
+  "assistants": null,
+  "type": "Seminar",
+  "term": "2014 Winter"
+},
+{
+  "code": 3333233,
+  "name": "Control in Robotics",
+  "units": 3,
+  "mark": 18.00,
+  "instructors": ["Seyed Ali Akbar Moosavian"],
+  "assistants": null,
+  "type": "Optional Major",
+  "term": "2014 Winter"
+},
+{
+  "code": 3366001,
+  "name": "Mechatronics I",
+  "units": 3,
+  "mark": 19.50,
+  "instructors": ["Alireza Basohbat Novinzadeh", "Amir Mousavinia"],
+  "assistants": null,
+  "type": "Core",
+  "term": "2014 Winter"
+},
+{
+  "code": 1115061,
+  "name": "Modern Control",
+  "units": 3,
+  "mark": 19.80,
+  "instructors": ["Hamid Reza Dokht Taghirad"],
+  "assistants": null,
+  "type": "Compulsory Major",
+  "term": "2014 Fall"
+},
+{
+  "code": 3333132,
+  "name": "Advanced Control II (Nonlinear, Adaptive, and Sliding)",
+  "units": 3,
+  "mark": 18.30,
+  "instructors": ["Shahram Azadi"],
+  "assistants": null,
+  "type": "Core",
+  "term": "2014 Fall"
+},
+{
+  "code": null,
+  "name": "Virtual Reality",
+  "units": null,
+  "mark": null,
+  "instructors": ["Ali Nahvi"],
+  "assistants": null,
+  "type": "Audit",
+  "term": "2014 Fall"
+},
+{
+  "code": 1110179,
+  "name": "Thesis",
+  "units": 6,
+  "mark": 20.00,
+  "instructors": ["Seyed Ali Akbar Moosavian"],
+  "assistants": null,
+  "type": "Project",
+  "term": "2015 Fall"
+}
+  ]
 },
 {
   "institution": {

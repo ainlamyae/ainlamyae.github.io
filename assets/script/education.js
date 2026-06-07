@@ -173,11 +173,35 @@ document.addEventListener('DOMContentLoaded', function () {
             groups.get(type).push(course);
           });
 
+          const seasonOrder = { 'Winter': 0, 'Spring': 1, 'Summer': 2, 'Fall': 3 };
+          const termRank = term => {
+            if (!term) return [0, 0];
+            const [year, season] = term.split(' ');
+            return [parseInt(year, 10) || 0, seasonOrder[season] !== undefined ? seasonOrder[season] : 0];
+          };
+
+          const typeOrder = ['Enrolled', 'Major', 'Compulsory Major', 'Optional Major', 'Optional', 'Core', 'Skill', 'Seminar', 'Project', 'Foundation', 'General', 'Milestone','Audit'];
+          const sortedTypes = [...groups.keys()].sort((a, b) => {
+            const ai = typeOrder.indexOf(a);
+            const bi = typeOrder.indexOf(b);
+            if (ai === -1 && bi === -1) return a.localeCompare(b);
+            if (ai === -1) return 1;
+            if (bi === -1) return -1;
+            return ai - bi;
+          });
+
           const typeList = document.createElement('ul');
           typeList.style.margin = '5px 0 0 0';
           typeList.style.paddingLeft = '20px';
 
-          groups.forEach((courses, type) => {
+          sortedTypes.forEach(type => {
+            const courses = groups.get(type).slice().sort((a, b) => {
+              const [aYear, aSeason] = termRank(a.term);
+              const [bYear, bSeason] = termRank(b.term);
+              if (aYear !== bYear) return aYear - bYear;
+              if (aSeason !== bSeason) return aSeason - bSeason;
+              return (a.name || '').localeCompare(b.name || '');
+            });
             const typeLi = document.createElement('li');
             typeLi.textContent = `${type}:`;
 
