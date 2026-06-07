@@ -215,6 +215,20 @@ document.addEventListener('DOMContentLoaded', function () {
               courseLi.textContent = instructors
                 ? `${course.name} — ${instructors} (${course.term})`
                 : `${course.name} (${course.term})`;
+
+              if (course.file && course.file.trim() !== '') {
+                const fileLink = document.createElement('a');
+                fileLink.href = '#';
+                fileLink.textContent = ' 📄';
+                fileLink.title = 'View Course Material';
+                fileLink.className = 'media-icon';
+                fileLink.addEventListener('click', (e) => {
+                  e.preventDefault();
+                  openMediaModal([{ src: course.file, caption: course.name }], 0);
+                });
+                courseLi.appendChild(fileLink);
+              }
+
               courseList.appendChild(courseLi);
             });
 
@@ -235,6 +249,8 @@ document.addEventListener('DOMContentLoaded', function () {
         container.appendChild(entryDiv);
 
       });
+
+      if (typeof unhideMedia === 'function') unhideMedia();
 
     })
     .catch(error => console.error('Error loading education:', error));
