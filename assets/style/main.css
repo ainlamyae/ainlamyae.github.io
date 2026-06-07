@@ -146,12 +146,36 @@ h5 {
   font-size: 1.1em;
   letter-spacing: 0.5px;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: letter-spacing 0.3s ease;
 }
 
-.nav-brand:hover {
-  background: var(--color-nav-hover);
+#navbar a.nav-brand:hover {
+  background: none;
+  border-radius: 5px;
   text-decoration: none;
+  letter-spacing: 2.5px;
+}
+
+.brand-initial {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 1.15em;
+  -webkit-text-stroke: 0.6px #fff;
+  text-stroke: 0.6px #fff;
+  animation: brand-initial-glow 3s ease-in-out infinite;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-brand:hover .brand-initial {
+  color: #fff;
+  transform: scale(1.35) rotate(-10deg);
+  animation-play-state: paused;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes brand-initial-glow {
+  0%, 100% { text-shadow: 0 0 0 rgba(139, 0, 0, 0); }
+  50% { text-shadow: 0 0 8px rgba(255, 90, 90, 0.85); }
 }
 
 #navbar ul {
@@ -580,8 +604,14 @@ a:focus-visible,
   h3,
   h3::after,
   .skill-tag,
-  .skill-tag::after {
+  .skill-tag::after,
+  .nav-brand,
+  .brand-initial {
     transition: none;
+  }
+
+  .brand-initial {
+    animation: none;
   }
 }
 
