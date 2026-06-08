@@ -89,59 +89,78 @@
     "file": "assets/media/projects/hcdr2013.pdf"
   },
   {
-  "category": "Course",
-  "title": "LabVIEW-Based Simultaneous Control of Three CNC Stepper Motors",
-  "description": [
-    "Designed and developed a LabVIEW-based motion control system for simultaneous operation of three stepper motors used in CNC applications.",
-    "Implemented real-time motor speed control by converting user-defined rotational speed inputs into synchronized timing and pulse-delay sequences.",
-    "Developed bidirectional motion control functionality with selectable clockwise and counterclockwise rotation modes.",
-    "Implemented full-step and half-step drive algorithms to provide configurable motion accuracy and positioning resolution.",
-    "Designed step-count and angular-position control modules for precise motor positioning and rotational displacement control.",
-    "Generated stepper motor excitation sequences and drive codes required for motor actuation through digital control signals.",
-    "Created a graphical Human-Machine Interface (HMI) in LabVIEW for monitoring motor status, operating parameters, and control signals.",
-    "Integrated parallel-port (LPT) communication to transmit control commands from a PC to stepper motor driver circuitry.",
-    "Implemented automated execution loops, start/stop functionality, and synchronized multi-axis control for coordinated motor operation."
-  ],
-  "date": {
-    "start": "2013-02-01",
-    "end": "2013-03-01"
+    "category": "Course",
+    "title": "LabVIEW-Based Simultaneous Control of Three CNC Stepper Motors",
+    "description": [
+      "Designed and developed a LabVIEW-based motion control system for simultaneous operation of three stepper motors used in CNC applications.",
+      "Implemented real-time motor speed control by converting user-defined rotational speed inputs into synchronized timing and pulse-delay sequences.",
+      "Developed bidirectional motion control functionality with selectable clockwise and counterclockwise rotation modes.",
+      "Implemented full-step and half-step drive algorithms to provide configurable motion accuracy and positioning resolution.",
+      "Designed step-count and angular-position control modules for precise motor positioning and rotational displacement control.",
+      "Generated stepper motor excitation sequences and drive codes required for motor actuation through digital control signals.",
+      "Created a graphical Human-Machine Interface (HMI) in LabVIEW for monitoring motor status, operating parameters, and control signals.",
+      "Integrated parallel-port (LPT) communication to transmit control commands from a PC to stepper motor driver circuitry.",
+      "Implemented automated execution loops, start/stop functionality, and synchronized multi-axis control for coordinated motor operation."
+    ],
+    "date": {
+      "start": "2013-02-01",
+      "end": "2013-03-01"
+    },
+    "file": "assets/media/projects/lsct2013.pdf"
   },
-  "file": "assets/media/projects/lsct2013.pdf"
-},
-{
-  "category": "Course",
-  "title": "Fuzzy Control of Truck-Trailer Auto Parking in the Presence of Obstacles",
-  "description": [
-    "Developed a hierarchical fuzzy logic controller in MATLAB/Simulink for autonomous reverse parking of a truck-trailer system.",
-    "Modeled the nonlinear kinematics of a 4-DOF trailer-truck vehicle and implemented steering control algorithms for reverse maneuvering.",
-    "Designed Mamdani and Takagi-Sugeno fuzzy inference systems to generate adaptive steering commands based on vehicle orientation and parking position.",
-    "Implemented an 8-direction fuzzy decision-making framework for trajectory planning and parking path correction during autonomous parking operations.",
-    "Integrated obstacle avoidance functionality using distance- and angle-based fuzzy rules to enable collision-free parking in constrained environments.",
-    "Developed fuzzy compensation mechanisms to regulate the articulation angle between the truck and trailer, improving maneuverability and stability.",
-    "Simulated multiple parking scenarios with varying initial conditions and obstacle configurations to evaluate controller performance and robustness.",
-    "Validated autonomous parking accuracy through trajectory analysis, demonstrating stable path tracking and successful parking completion."
-  ],
-  "date": {
-    "start": "2013-10-01",
-    "end": "2013-12-01"
+  {
+    "category": "Course",
+    "title": "Fuzzy Control of Truck-Trailer Auto Parking in the Presence of Obstacles",
+    "description": [
+      "Developed a hierarchical fuzzy logic controller in MATLAB/Simulink for autonomous reverse parking of a truck-trailer system.",
+      "Modeled the nonlinear kinematics of a 4-DOF trailer-truck vehicle and implemented steering control algorithms for reverse maneuvering.",
+      "Designed Mamdani and Takagi-Sugeno fuzzy inference systems to generate adaptive steering commands based on vehicle orientation and parking position.",
+      "Implemented an 8-direction fuzzy decision-making framework for trajectory planning and parking path correction during autonomous parking operations.",
+      "Integrated obstacle avoidance functionality using distance- and angle-based fuzzy rules to enable collision-free parking in constrained environments.",
+      "Developed fuzzy compensation mechanisms to regulate the articulation angle between the truck and trailer, improving maneuverability and stability.",
+      "Simulated multiple parking scenarios with varying initial conditions and obstacle configurations to evaluate controller performance and robustness.",
+      "Validated autonomous parking accuracy through trajectory analysis, demonstrating stable path tracking and successful parking completion."
+    ],
+    "date": {
+      "start": "2013-10-01",
+      "end": "2013-12-01"
+    },
+    "file": [
+      {
+        "src": "assets/media/projects/fctt2013.pdf",
+        "caption": "Project report"
+      },
+      {
+        "src": "assets/media/projects/fctt2013-2.pdf",
+        "caption": "Simulation results"
+      },
+      {
+        "src": "assets/media/projects/fctt2013-3.pdf",
+        "caption": "Presentation slides"
+      },
+      {
+        "src": "assets/media/projects/fctt2013-4.mp4",
+        "caption": "Simulation demo recording"
+      }
+    ]
   },
-  "file": [
-    {
-      "src": "assets/media/projects/fctt2013.pdf",
-      "caption": "Project report"
+  {
+    "category": "Course",
+    "title": "Design and Programming of a 3-DoF Robot Controller Circuit Board",
+    "description": [
+      "Designed and developed an embedded control system for a 3-DoF robotic manipulator using an ATmega32 AVR microcontroller.",
+      "Implemented simultaneous position and motion control of two servo motors and one DC motor to execute predefined robotic trajectories.",
+      "Programmed the controller in Embedded C to process user commands and generate real-time motor control signals.",
+      "Integrated keypad and LCD interfaces for user input, motion parameter configuration, and system status monitoring.",
+      "Designed motor driver circuitry using H-bridge drivers and supporting electronics for reliable actuator control.",
+      "Developed complete schematic diagrams and multi-layer PCB layouts, including power regulation, signal routing, and peripheral interfaces.",
+      "Performed circuit simulation and functional verification using Proteus prior to hardware implementation.",
+      "Fabricated, assembled, and tested the custom controller board, validating coordinated robotic motion and system functionality."
+    ],
+    "date": {
+      "start": "2013-04-01",
+      "end": "2013-07-01"
     },
-    {
-      "src": "assets/media/projects/fctt2013-2.pdf",
-      "caption": "Presentation slides"
-    },
-    {
-      "src": "assets/media/projects/fctt2013-3.pdf",
-      "caption": "Simulation results"
-    },
-    {
-      "src": "assets/media/projects/fctt2013-4.mp4",
-      "caption": "Simulation demo recording"
-    }
-  ]
-}
+    "file": "assets/media/projects/dprc2013.pdf"
+  }
 ]
