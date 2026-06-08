@@ -35,10 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
         section.classList.add('dropdown-section', 'keyword-expandable');
 
         // Title row (dropdown toggle)
-        const titleEl = document.createElement('p');
+        const titleEl = document.createElement('h4');
         titleEl.classList.add('dropdown-toggle');
-        titleEl.style.cursor = 'pointer';
-        titleEl.innerHTML = `<strong>${project.title}</strong>`;
+        titleEl.appendChild(document.createTextNode(project.title));
 
         if (project.file && project.file.trim() !== '') {
           const fileLink = document.createElement('a');
