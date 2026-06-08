@@ -247,7 +247,7 @@ def _pub_entry(pub: dict, label: str) -> str:
     extra = (", " + ", ".join(extras)) if extras else ""
 
     venue_part = f", {venue}" if venue else ""
-    return rf"\item[{{{label}}}] {authors}, ``{title_tex}''{venue_part}{extra}, {year}."
+    return rf"\item[{{[{label}]}}] {authors}, ``{title_tex}''{venue_part}{extra}, {year}."
 
 
 def build_publications() -> str:
@@ -269,12 +269,14 @@ def build_publications() -> str:
             continue
         total = len(items)
         out.append(rf"\textbf{{{titles[type_key]} ({total})}}\\[2pt]")
+        out.append(r"{\footnotesize")
         out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*,label={}]")
         for idx, pub in enumerate(items):
             number = total - idx       # descending: newest gets highest number
             label  = f"{prefix[type_key]}{number}"
             out.append(_pub_entry(pub, label))
         out.append(r"\end{itemize}")
+        out.append(r"}")
         out.append("")
 
     return "\n".join(out)
