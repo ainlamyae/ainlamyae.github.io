@@ -825,9 +825,10 @@ body, header, footer, section, nav { transition: background 0.25s, color 0.25s; 
 }
 [data-theme="dark"] body    { background: #12181f; color: #dde3ec; }
 [data-theme="dark"] a       { color: #6aa3d5; }
-[data-theme="dark"] header  { background: #0d1f33; }
+[data-theme="dark"] header  { background: #12181f; }
 [data-theme="dark"] section { background: #12181f; }
 [data-theme="dark"] footer  { background: #0d1f33; color: #8a9ab0; }
+[data-theme="dark"] h4      { color: #a8c8e8; border-color: #3a6a9a; }
 
 /* === Floating action buttons === */
 .fab-group {
