@@ -238,7 +238,7 @@ h5 {
 
 #navbar a {
   display: block;
-  padding: 14px 12px;
+  padding: 14px 8px;
   color: #fff;
   transition: background 0.3s;
 }
@@ -393,15 +393,6 @@ a:focus-visible,
     text-align: center;
   }
 
-  .dropdown-section > .dropdown-content {
-    padding: 0 10px;
-  }
-}
-
-/* Below this width the full menu wraps and collides with the absolutely
-   positioned brand and "Contact" link, so switch to the toggle menu earlier
-   than the header's own stacking breakpoint. */
-@media (max-width: 780px) {
   #navbar {
     /* .nav-brand is hidden and ul collapses, leaving only the absolutely
        positioned toggle — without an explicit height the bar shrinks to 0
@@ -436,6 +427,17 @@ a:focus-visible,
   #navbar ul li.nav-right {
     position: static;
     transform: none;
+  }
+
+  .dropdown-section > .dropdown-content {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  #navbar a {
+    padding: 10px 14px;
+    font-size: 0.85em;
   }
 }
 
