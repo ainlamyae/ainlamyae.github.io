@@ -189,24 +189,105 @@ def build_education() -> str:
     return "\n".join(out)
 
 
+def _format_authors(authors: list) -> str:
+    """Mirror the website's formatAuthors: 'Last, First' → 'F. Last', bold for Ali Nasr."""
+    if not authors:
+        return ""
+    formatted = []
+    for author in authors:
+        parts = author.split(",", 1)
+        if len(parts) == 2:
+            last  = parts[0].strip()
+            first = parts[1].strip()
+            initial = first[0].upper() + "." if first else ""
+            abbr = f"{initial} {last}" if initial else last
+            if last == "Nasr" and first == "Ali":
+                abbr = rf"\textbf{{{abbr}}}"
+            formatted.append(abbr)
+        else:
+            formatted.append(esc(author))
+    if len(formatted) == 1:
+        return formatted[0]
+    if len(formatted) == 2:
+        return f"{formatted[0]} and {formatted[1]}"
+    return ", ".join(formatted[:-1]) + ", and " + formatted[-1]
+
+
+def _pub_entry(pub: dict, label: str) -> str:
+    """Build one publication line matching the website's citation format."""
+    authors = _format_authors(pub.get("authors", []))
+    title   = esc(pub["title"])
+    year    = pub["date"][:4] if pub.get("date") else ""
+    ptype   = pub.get("type", "")
+
+    # Link: DOI preferred, then url field
+    doi = pub.get("doi", "").strip()
+    url = pub.get("url", "").strip()
+    link = (f"https://doi.org/{doi}" if doi else url)
+
+    title_tex = (rf"\href{{{link}}}{{{title}}}" if link else title)
+
+    # Venue string — mirrors JS renderGroup logic
+    if ptype == "article":
+        parts = []
+        if pub.get("publisher"): parts.append(esc(pub["publisher"]))
+        if pub.get("journal"):   parts.append(esc(pub["journal"]))
+        venue = rf"\textit{{{' '.join(parts)}}}" if parts else ""
+    elif ptype == "inproceedings":
+        parts = []
+        if pub.get("publisher"): parts.append(esc(pub["publisher"]))
+        if pub.get("booktitle"): parts.append(esc(pub["booktitle"]))
+        venue = rf"\textit{{{' '.join(parts)}}}" if parts else ""
+        if pub.get("address"):   venue += rf", {esc(pub['address'])}"
+    elif ptype == "patent":
+        venue = rf"\textit{{{esc(pub['publisher'])}}}" if pub.get("publisher") else ""
+    elif ptype == "thesis":
+        deg  = esc(pub.get("degree", ""))
+        pub_ = rf"\textit{{{esc(pub['publisher'])}}}" if pub.get("publisher") else ""
+        venue = f"{deg}, {pub_}" if deg and pub_ else (deg or pub_)
+    else:
+        venue = ""
+
+    # Volume / number / pages extras
+    extras = []
+    if pub.get("volume"): extras.append(rf"vol.~{esc(str(pub['volume']))}")
+    if pub.get("number"): extras.append(rf"no.~{esc(str(pub['number']))}")
+    if pub.get("pages"):
+        pages = pub["pages"].replace(" ", "")
+        extras.append(rf"pp.~{esc(pages)}" if "-" in pages else rf"p.~{esc(pages)}")
+    extra = (", " + ", ".join(extras)) if extras else ""
+
+    venue_part = f", {venue}" if venue else ""
+    return rf"\item[{{{label}}}] {authors}, ``{title_tex}''{venue_part}{extra}, {year}."
+
+
 def build_publications() -> str:
-    entries = sorted(load("publications"), key=lambda e: e["date"], reverse=True)
+    data = load("publications")
+
+    groups = {"article": [], "inproceedings": [], "patent": [], "thesis": []}
+    for pub in data:
+        if pub["type"] in groups:
+            groups[pub["type"]].append(pub)
+
+    prefix = {"article": "J", "inproceedings": "C", "patent": "P", "thesis": "T"}
+    titles = {"article": "Journal", "inproceedings": "Conference", "patent": "Patent", "thesis": "Thesis"}
+
     out = [section_link("publications", "Publications")]
-    out.append(r"\begin{enumerate}[noitemsep,topsep=2pt,leftmargin=*]")
-    for e in entries:
-        authors = ", ".join(
-            (r"\textbf{Nasr, Ali}" if "nasr, ali" in a.lower() else esc(a))
-            for a in e.get("authors", [])
-        )
-        title   = esc(e["title"])
-        journal = esc(e.get("journal") or e.get("publisher") or "")
-        year    = e["date"][:4]
-        doi     = e.get("doi", "")
-        line    = rf"  \item {authors}. \textit{{{title}}}. {journal} ({year})."
-        if doi:
-            line += rf" \href{{https://doi.org/{doi}}}{{doi:{esc(doi)}}}"
-        out.append(line)
-    out.append(r"\end{enumerate}")
+
+    for type_key in ("article", "inproceedings", "patent", "thesis"):
+        items = sorted(groups[type_key], key=lambda p: p["date"], reverse=True)
+        if not items:
+            continue
+        total = len(items)
+        out.append(rf"\textbf{{{titles[type_key]} ({total})}}\\[2pt]")
+        out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*,label={}]")
+        for idx, pub in enumerate(items):
+            number = total - idx       # descending: newest gets highest number
+            label  = f"{prefix[type_key]}{number}"
+            out.append(_pub_entry(pub, label))
+        out.append(r"\end{itemize}")
+        out.append("")
+
     return "\n".join(out)
 
 
