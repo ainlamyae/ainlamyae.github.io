@@ -214,10 +214,18 @@ h5 {
   transition: background 0.3s;
 }
 
+#navbar ul li.nav-right {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 #navbar a:hover,
 #navbar a.active {
   background: var(--color-nav-hover);
   border-radius: 5px;
+  text-decoration: none;
 }
 
 /* === Footer === */
@@ -346,6 +354,11 @@ a:focus-visible,
   #navbar a {
     padding: 12px 16px;
     font-size: 0.9em;
+  }
+
+  #navbar ul li.nav-right {
+    position: static;
+    transform: none;
   }
 
   .dropdown-section > .dropdown-content {
