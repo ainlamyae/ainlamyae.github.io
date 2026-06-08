@@ -357,8 +357,6 @@ def build_tex() -> str:
         build_experience(),
         build_education(),
         build_publications(),
-        build_credentials(),
-        build_engagement(),
     ]
 
     body = "\n\n".join(sections)
