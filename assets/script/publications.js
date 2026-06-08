@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
           fullSpan.innerHTML = `[${typePrefix[typeKey]}${number}] ${authors}, "${titleHTML}," ${venue}${extra}, <span class="year">${getYear(pub)}</span>`;
 
           // Add icon HTML if file exists
-          if (pub.file && pub.file.trim() !== "") {
+          if (MEDIA_UNLOCKED && pub.file && pub.file.trim() !== "") {
             fullSpan.innerHTML += ` <a href="#" class="media-icon" title="View PDF">📄</a>`;
           }
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
           content.appendChild(entryDiv);
 
           // Add event listener to icon
-          if (pub.file && pub.file.trim() !== "") {
+          if (MEDIA_UNLOCKED && pub.file && pub.file.trim() !== "") {
             const fileLink = fullSpan.querySelector(".media-icon");
             fileLink.addEventListener("click", e => {
               e.preventDefault();

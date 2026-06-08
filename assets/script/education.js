@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ? `${course.name} — ${instructors} (${course.term})`
                 : `${course.name} (${course.term})`;
 
-              if (course.file && course.file.trim() !== '') {
+              if (MEDIA_UNLOCKED && course.file && course.file.trim() !== '') {
                 const fileLink = document.createElement('a');
                 fileLink.href = '#';
                 fileLink.textContent = ' 📄';

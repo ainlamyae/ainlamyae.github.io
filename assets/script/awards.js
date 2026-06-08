@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         li.appendChild(yearText);
 
         // 📜 Award file icon (same logic as certifications)
-        if (item.file && item.file.trim() !== "") {
+        if (MEDIA_UNLOCKED && item.file && item.file.trim() !== "") {
           const fileLink = document.createElement('a');
           fileLink.href = "#";
           fileLink.textContent = " 🏆";
