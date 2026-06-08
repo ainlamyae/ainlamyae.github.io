@@ -15,28 +15,28 @@
   },
   {
     "id": "maaa2025",
-    "title": "Multi-AI Agent Architecture Innovation Award",
+    "title": "Multi-Agent AI Architecture Innovation Award",
     "institution": "Huawei Technologies Canada Co., Ltd.",
     "date": "2025-06-01",
     "file": "/assets/media/award/maaa2025.jpg"
   },
   {
     "id": "paaw2025",
-    "title": "Presentation Award at Waterloo Innovation Forum - Staff Insights",
+    "title": "Presentation Award at the Waterloo Innovation Forum – Staff Insights",
     "institution": "Huawei Technologies Canada Co., Ltd.",
     "date": "2025-02-01",
     "file": "/assets/media/award/paaw2025.jpg"
   },
   {
     "id": "paas2022",
-    "title": "1st Place Award at 2022 SYDE Graduate Student Symposium",
+    "title": "1st Place Award at the 2022 SYDE Graduate Student Symposium",
     "institution": "Department of Systems Design Engineering, University of Waterloo",
     "date": "2022-06-01",
     "file": "/assets/media/award/paas2022.jpg"
   },
   {
     "id": "paaw2021",
-    "title": "3rd Place Award at Waterloo.AI GRADflix competition",
+    "title": "3rd Place Award at Waterloo.AI GRADflix Competition",
     "institution": "Waterloo Artificial Intelligence Institute, University of Waterloo",
     "date": "2021-09-01",
     "url": "https://www.youtube.com/watch?v=udDV9aJMXos",
@@ -51,14 +51,14 @@
   },
   {
     "id": "bpai2020",
-    "title": "Best Paper Award in Control, Dynamic Systems, and Robotics fields",
+    "title": "Best Paper Award in the Fields of Control, Dynamic Systems, and Robotics",
     "institution": "7th International Conference of Control, Dynamic Systems, and Robotics",
     "date": "2020-11-01",
     "file": "/assets/media/award/bpai2020.jpg"
   },
   {
     "id": "grsf2018",
-    "title": "$119K Graduate Research Studentship (GRS) from NSERC and CRC program for four years",
+    "title": "$119K Graduate Research Studentship (GRS) from the NSERC and CRC Programs (Four Years)",
     "institution": "University of Waterloo",
     "date": "2018-09-01",
     "file": null
@@ -72,35 +72,42 @@
   },
   {
     "id": "ritm2016",
-    "title": "1st Ranked in the Mechatronics Groups at the Department of Electrical Engineering",
+    "title": "Ranked 1st Among Mechatronics Students in the Department of Electrical Engineering",
     "institution": "K.N. Toosi University of Technology",
     "date": "2016-01-01",
     "file": null
   },
   {
     "id": "paog2015",
-    "title": "2nd Place and One Gold Coin Award at the Creativity Exhibition",
+    "title": "2nd Place and Gold Coin Award at the Creativity Exhibition",
     "institution": "The 3rd International Conference on Robotics and Mechatronics",
     "date": "2015-11-01",
     "file": null
   },
   {
+    "id": "rrno2013",
+    "title": "Ranked 2nd in the Regional Skills Olympiad in Mechatronics (Qualified for the WorldSkills Competition, São Paulo, Brazil, 2015)",
+    "institution": "Esfahan Technical and Vocational Training Organization",
+    "date": "2013-05-01",
+    "file": null
+  },
+  {
     "id": "fsot2013",
-    "title": "Full Scholarship or Tuition Waiver for Graduate Education",
+    "title": "Full Scholarship / Tuition Waiver for Graduate Studies",
     "institution": "K.N. Toosi University of Technology",
     "date": "2013-09-01",
     "file": null
   },
   {
     "id": "paog2010",
-    "title": "1st Place and One Gold Coin Award at the Gravity Challenge",
+    "title": "1st Place and Gold Coin Award at the Gravity Challenge",
     "institution": "University of Payam Noor",
     "date": "2010-04-01",
     "file": null
   },
   {
     "id": "fsot2009",
-    "title": "Full Scholarship or Tuition Waiver for Undergraduate Education",
+    "title": "Top 0.4% in the Nationwide University Entrance Exam and Awarded a Full Scholarship / Tuition Waiver for Undergraduate Studies",
     "institution": "Isfahan University of Technology",
     "date": "2009-09-01",
     "file": null
