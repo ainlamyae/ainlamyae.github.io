@@ -124,9 +124,9 @@
   },
   {
     "category": "Course",
-    "title": "LabVIEW-Based Simultaneous Control of Three CNC Stepper Motors",
+    "title": "LabVIEW-Based Simultaneous Control of 3 CNC Stepper Motors",
     "description": [
-      "Designed and developed a LabVIEW-based motion control system for simultaneous operation of three stepper motors used in CNC applications.",
+      "Designed and developed a LabVIEW-based motion control system for simultaneous operation of 3 stepper motors used in CNC applications.",
       "Implemented real-time motor speed control by converting user-defined rotational speed inputs into synchronized timing and pulse-delay sequences.",
       "Developed bidirectional motion control functionality with selectable clockwise and counterclockwise rotation modes.",
       "Implemented full-step and half-step drive algorithms to provide configurable motion accuracy and positioning resolution.",
