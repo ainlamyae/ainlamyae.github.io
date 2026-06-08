@@ -4,6 +4,10 @@
  * Each item title is now a dropdown that shows/hides its details
  */
 
+// Container for all experiences
+const container = document.getElementById("experience");
+if (container) showSectionLoading(container);
+
 fetch('assets/data/experience.json')
   .then(response => {
     if (!response.ok) throw new Error('Failed to load experience.json');
@@ -15,9 +19,8 @@ fetch('assets/data/experience.json')
     // SECTION 1: INITIAL SETUP
     // ==============================
 
-    // Container for all experiences
-    const container = document.getElementById("experience");
     if (!container) return; // Exit if container is not found
+    container.innerHTML = ''; // clear loading placeholder
 
     // Emoji mapping for item categories
     const categoryEmoji = {
@@ -254,4 +257,7 @@ fetch('assets/data/experience.json')
     });
 
   })
-  .catch(error => console.error('Error loading experience:', error));
+  .catch(error => {
+    console.error('Error loading experience:', error);
+    if (container) showSectionError(container, 'experience');
+  });

@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  const container = document.getElementById('projects');
+  if (!container) return;
+  showSectionLoading(container);
+
   fetch('assets/data/projects.json')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load projects.json');
       return response.json();
     })
     .then(data => {
-      const container = document.getElementById('projects');
-      if (!container) return;
-
+      container.innerHTML = ''; // clear loading placeholder
       const categoryEmoji = {
         "Personal": "🛠️",
         "Hobby":    "🎯",
@@ -89,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
         container.appendChild(section);
       });
     })
-    .catch(error => console.error('Error loading projects:', error));
+    .catch(error => {
+      console.error('Error loading projects:', error);
+      showSectionError(container, 'projects');
+    });
 
 });

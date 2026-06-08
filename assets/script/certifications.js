@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const container = document.getElementById('certifications');
+  if (!container) return console.error('Element with id "certifications" not found.');
+  showSectionLoading(container);
+
   fetch('assets/data/certifications.json')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load certifications.json');
       return response.json();
     })
     .then(data => {
-      const container = document.getElementById('certifications');
-      if (!container) return console.error('Element with id "certifications" not found.');
-
+      container.innerHTML = ''; // clear loading placeholder
       // Outer dropdown — "Certifications" heading
       const outerSection = document.createElement('div');
       outerSection.classList.add('dropdown-section');
@@ -94,6 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (typeof unhideMedia === 'function') unhideMedia();
     })
-    .catch(error => console.error('Error loading certifications:', error));
+    .catch(error => {
+      console.error('Error loading certifications:', error);
+      showSectionError(container, 'certifications');
+    });
 
 });

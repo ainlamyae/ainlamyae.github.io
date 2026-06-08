@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('assets/data/recommendations.json')
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('recommendations');
-      if (!container) return console.error('#recommendations not found');
+  const container = document.getElementById('recommendations');
+  if (!container) return console.error('#recommendations not found');
+  showSectionLoading(container);
 
+  fetch('assets/data/recommendations.json')
+    .then(res => {
+      if (!res.ok) throw new Error('Failed to load recommendations.json');
+      return res.json();
+    })
+    .then(data => {
+      container.innerHTML = ''; // clear loading placeholder
       const section = document.createElement('div');
       section.classList.add('dropdown-section');
       section.dataset.sectionId = "recommendations-1";
@@ -64,5 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
       section.appendChild(content);
       container.appendChild(section);
     })
-    .catch(err => console.error('Recommendations JS error:', err));
+    .catch(err => {
+      console.error('Recommendations JS error:', err);
+      showSectionError(container, 'recommendations');
+    });
 });

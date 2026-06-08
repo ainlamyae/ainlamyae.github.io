@@ -19,3 +19,11 @@ function calculateDuration(startDate, endDate) {
   if (months > 0) result += `${months} mo${months > 1 ? 's' : ''}`;
   return result.trim();
 }
+
+function showSectionLoading(container) {
+  container.innerHTML = '<p class="section-status">Loading…</p>';
+}
+
+function showSectionError(container, label) {
+  container.innerHTML = `<p class="section-status section-status-error">Couldn't load ${label}. Please try refreshing the page.</p>`;
+}

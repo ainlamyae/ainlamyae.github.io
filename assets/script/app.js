@@ -19,6 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach(s => observer.observe(s));
 
     // ==============================
+    // Mobile hamburger menu
+    // ==============================
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('navbar-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            const isOpen = navMenu.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
+    // ==============================
     // Footer: Update year dynamically
     // ==============================
     const footerYear = document.getElementById('footer-year');
@@ -27,8 +47,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==============================
-    // Click-to-toggle dropdown sections
+    // Click/keyboard-to-toggle dropdown sections (with ARIA wiring)
     // ==============================
+    let dropdownContentCounter = 0;
+
+    function wireDropdownAria(section) {
+        const toggle = section.querySelector(":scope > .dropdown-toggle");
+        const content = section.querySelector(":scope > .dropdown-content");
+        if (!toggle || !content || toggle.dataset.ariaWired)
+            return;
+
+        if (!content.id) content.id = `dropdown-content-${++dropdownContentCounter}`;
+
+        toggle.dataset.ariaWired = "true";
+        toggle.setAttribute("role", "button");
+        toggle.setAttribute("tabindex", "0");
+        toggle.setAttribute("aria-controls", content.id);
+        toggle.setAttribute("aria-expanded", section.classList.contains("active") ? "true" : "false");
+    }
+
+    function syncDropdownAria(section) {
+        const toggle = section.querySelector(":scope > .dropdown-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", section.classList.contains("active") ? "true" : "false");
+    }
+
+    function toggleDropdownSection(section) {
+        section.classList.toggle("active"); // toggle show/hide with CSS
+        syncDropdownAria(section);
+    }
+
+    document.querySelectorAll(".dropdown-section").forEach(wireDropdownAria);
+    const dropdownAriaObserver = new MutationObserver(() => {
+        document.querySelectorAll(".dropdown-section").forEach(wireDropdownAria);
+    });
+    dropdownAriaObserver.observe(document.body, { childList: true, subtree: true });
+    setTimeout(() => dropdownAriaObserver.disconnect(), 5000);
+
     document.addEventListener("click", function (e) {
         const toggle = e.target.closest(".dropdown-toggle");
         if (!toggle)
@@ -38,10 +92,26 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!section)
             return;
 
-        section.classList.toggle("active"); // toggle show/hide with CSS
+        toggleDropdownSection(section);
     });
 
-    
+    document.addEventListener("keydown", function (e) {
+        if (e.key !== "Enter" && e.key !== " ")
+            return;
+
+        const toggle = e.target.closest(".dropdown-toggle");
+        if (!toggle)
+            return;
+
+        const section = toggle.closest(".dropdown-section");
+        if (!section)
+            return;
+
+        e.preventDefault(); // stop page scroll on Space
+        toggleDropdownSection(section);
+    });
+
+
     // ==============================
     // Keyword-based auto-expand dropdowns
     // Works with ?g=group query in URL
@@ -179,6 +249,45 @@ const nextBtn = document.querySelector(".cert-next");
 
 let currentMediaList = [];
 let currentMediaIndex = 0;
+let modalTriggerEl = null;
+
+const modalFocusables = [closeBtn, prevBtn, nextBtn];
+
+function closeModal() {
+    modal.style.display = "none";
+    if (modalTriggerEl && typeof modalTriggerEl.focus === "function") {
+        modalTriggerEl.focus();
+    }
+    modalTriggerEl = null;
+}
+
+document.addEventListener("keydown", e => {
+    if (modal.style.display !== "flex")
+        return;
+
+    if (e.key === "Escape") {
+        e.preventDefault();
+        closeModal();
+        return;
+    }
+
+    if (e.key === "Tab") {
+        const focusable = modalFocusables.filter(el => el && el.offsetParent !== null);
+        if (!focusable.length)
+            return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
+});
 
 // Universal media open function (image or PDF)
 function openMediaModal(mediaList, index) {
@@ -188,7 +297,10 @@ function openMediaModal(mediaList, index) {
     currentMediaList = mediaList;
     currentMediaIndex = index;
 
+    if (!modalTriggerEl) modalTriggerEl = document.activeElement;
+
     modal.style.display = "flex";
+    closeBtn.focus();
 
     const modalContent = document.getElementById("cert-modal-content");
     modalContent.innerHTML = ""; // clear previous
@@ -217,11 +329,11 @@ function openMediaModal(mediaList, index) {
 
 // Modal close
 closeBtn.onclick = () => {
-    modal.style.display = "none";
+    closeModal();
 };
 modal.onclick = e => {
     if (e.target === modal)
-        modal.style.display = "none";
+        closeModal();
 };
 
 // Navigate media
@@ -236,6 +348,17 @@ nextBtn.addEventListener("click", () => {
         return;
     currentMediaIndex = (currentMediaIndex + 1) % currentMediaList.length;
     openMediaModal(currentMediaList, currentMediaIndex);
+});
+
+// Make the <span> modal controls operable via keyboard (Enter/Space → click)
+modalFocusables.forEach(el => {
+    if (!el) return;
+    el.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            el.click();
+        }
+    });
 });
 
 // ==============================

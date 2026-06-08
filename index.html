@@ -4,26 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.googletagmanager.com;
+    connect-src 'self' https://*.google.com https://*.google.ca https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://*.g.doubleclick.net https://docs.google.com;
+    img-src 'self' data: https://*.google.com https://*.google.ca https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net;
+    frame-src https://www.google.com;
+    style-src 'self';
+    font-src 'self';
+    base-uri 'self';
+    form-action 'self';
+  ">
   <meta name="description" content="Ali Nasr – Solution-driven engineer specializing in system architecture, autonomous systems, robotics, AI, control design, and embedded development.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ali Nasr">
+  <meta property="og:description" content="Ali Nasr – Solution-driven engineer specializing in system architecture, autonomous systems, robotics, AI, control design, and embedded development.">
+  <meta property="og:url" content="https://ainlamyae.github.io/">
+  <meta property="og:image" content="https://ainlamyae.github.io/apple-touch-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ali Nasr">
+  <meta name="twitter:description" content="Ali Nasr – Solution-driven engineer specializing in system architecture, autonomous systems, robotics, AI, control design, and embedded development.">
+  <meta name="twitter:image" content="https://ainlamyae.github.io/apple-touch-icon.png">
   <title>Ali Nasr</title>
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXTHCRWJGT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXTHCRWJGT');
-  </script>
+  <script src="assets/script/analytics.js" defer></script>
+  <script src="assets/script/utils.js" defer></script>
+  <script src="assets/script/education.js" defer></script>
+  <script src="assets/script/experience.js" defer></script>
+  <script src="assets/script/publications.js" defer></script>
+  <script src="assets/script/projects.js" defer></script>
+  <script src="assets/script/certifications.js" defer></script>
+  <script src="assets/script/awards.js" defer></script>
+  <script src="assets/script/scores.js" defer></script>
+  <script src="assets/script/volunteering.js" defer></script>
+  <script src="assets/script/recommendations.js" defer></script>
+  <script src="assets/script/contact-form.js" defer></script>
+  <script src="assets/script/app.js" defer></script>
 </head>
 
 <body>
   <nav id="navbar">
     <a href="/" class="nav-brand"><span class="brand-initial">A</span>li <span class="brand-initial">N</span>asr</a>
-    <ul>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul id="navbar-menu">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience-section">Experience</a></li>
@@ -154,29 +184,17 @@
     </div>
   </section>
 
-  <div id="cert-modal" class="cert-modal">
-    <span class="cert-close">&times;</span>
+  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Media viewer">
+    <span class="cert-close" role="button" tabindex="0" aria-label="Close">&times;</span>
     <div class="cert-modal-content" id="cert-modal-content"></div>
-    <span class="cert-prev">&#10094;</span>
-    <span class="cert-next">&#10095;</span>
+    <span class="cert-prev" role="button" tabindex="0" aria-label="Previous">&#10094;</span>
+    <span class="cert-next" role="button" tabindex="0" aria-label="Next">&#10095;</span>
   </div>
 
   <footer id="site-footer">
     <span id="footer-year"></span>Ali. All rights reserved.
   </footer>
 
-  <script src="assets/script/utils.js"></script>
-  <script src="assets/script/education.js"></script>
-  <script src="assets/script/experience.js"></script>
-  <script src="assets/script/publications.js"></script>
-  <script src="assets/script/projects.js"></script>
-  <script src="assets/script/certifications.js"></script>
-  <script src="assets/script/awards.js"></script>
-  <script src="assets/script/scores.js"></script>
-  <script src="assets/script/volunteering.js"></script>
-  <script src="assets/script/recommendations.js"></script>
-  <script src="assets/script/contact-form.js"></script>
-  <script src="assets/script/app.js"></script>
 </body>
 </html>
 
