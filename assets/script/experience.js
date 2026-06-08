@@ -148,6 +148,30 @@ fetch('assets/data/experience.json')
           titleEl.classList.add('dropdown-toggle');
           titleEl.style.cursor = 'pointer';
 
+          // "file" may be a single path, or a list of { src, caption } for
+          // items with multiple related documents/recordings
+          const files = Array.isArray(item.file)
+            ? item.file
+            : (item.file && item.file.trim() !== '') ? [{ src: item.file, caption: item.title }] : [];
+
+          files.forEach((file, index) => {
+            if (!file.src) return;
+            const isVideo = /\.(mp4|webm|ogg)$/i.test(file.src);
+            const fileLink = document.createElement('a');
+            fileLink.href = '#';
+            fileLink.textContent = isVideo ? ' 🎬' : ' 📄';
+            fileLink.title = file.caption || (isVideo ? 'View Recording' : 'View File');
+            fileLink.className = 'media-icon';
+            fileLink.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              if (typeof openMediaModal === 'function') {
+                openMediaModal(files, index);
+              }
+            });
+            titleEl.appendChild(fileLink);
+          });
+
           section.appendChild(titleEl);
         }
 
