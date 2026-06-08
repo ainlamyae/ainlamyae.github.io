@@ -26,5 +26,31 @@
 				"caption": "The exam preparation platform system architecture"
 			}
         ]
+    },
+    {
+        "category": "Course",
+        "title": "Stable Path Planning and Body Angle Analysis of a Biped Robot",
+        "description": [
+            "Analyzed the influence of torso/body angle parameters on the dynamic stability of a biped robot using Zero Moment Point (ZMP) stability criteria.",
+            "Developed kinematic and dynamic models of a multi-link biped robot, including body segments, joints, mass distribution, and inertia properties.",
+            "Designed stable walking trajectories for single-support gait phases through joint-space path planning and motion constraint formulation.",
+            "Generated polynomial-based trajectories for hip, knee, ankle, and foot joints to ensure smooth locomotion and continuous motion profiles.",
+            "Performed forward and inverse kinematics calculations to determine joint positions, orientations, and limb trajectories during walking cycles.",
+            "Modeled center-of-mass (COM) motion for individual robot segments and the overall system to evaluate balance and gait performance.",
+            "Computed segment mass moments of inertia and incorporated dynamic parameters into stability and motion analyses.",
+            "Implemented mathematical models, simulations, and trajectory optimization algorithms using Wolfram Mathematica.",
+            "Validated walking stability by calculating ZMP trajectories and verifying that support constraints were maintained throughout locomotion.",
+            "Conducted sensitivity analysis on torso inclination and posture variations to determine their effects on gait stability and robot balance."
+        ],
+        "date": {
+            "start": "2012-03-01",
+            "end": "2012-06-01"
+        },
+        "media": [
+            {
+                "src": "assets/media/projects/sppb2012.pdf",
+                "caption": "Biped robot gait planning, trajectory generation, and ZMP-based stability analysis"
+            }
+        ]
     }
 ]
