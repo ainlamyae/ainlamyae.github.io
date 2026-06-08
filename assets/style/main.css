@@ -393,6 +393,15 @@ a:focus-visible,
     text-align: center;
   }
 
+  .dropdown-section > .dropdown-content {
+    padding: 0 10px;
+  }
+}
+
+/* Below this width the full menu wraps and collides with the absolutely
+   positioned brand and "Contact" link, so switch to the toggle menu earlier
+   than the header's own stacking breakpoint. */
+@media (max-width: 1100px) {
   #navbar {
     /* .nav-brand is hidden and ul collapses, leaving only the absolutely
        positioned toggle — without an explicit height the bar shrinks to 0
@@ -427,10 +436,6 @@ a:focus-visible,
   #navbar ul li.nav-right {
     position: static;
     transform: none;
-  }
-
-  .dropdown-section > .dropdown-content {
-    padding: 0 10px;
   }
 }
 
