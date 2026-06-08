@@ -5,7 +5,7 @@
  */
 
 // Container for all experiences
-const container = document.getElementById("experience");
+const container = document.getElementById("experience-list");
 if (container) showSectionLoading(container);
 
 fetch('assets/data/experience.json')
