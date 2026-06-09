@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Certification",
+    "organization": "CELPIP",
+    "fullName": "Canadian English Language Proficiency Index Program",
+    "date": {
+      "issued": "2023-08-01"
+    },
+    "score": {
+      "overall": "9/12",
+      "listening": "10/12",
+      "reading": "10/12",
+      "speaking": "9/12",
+      "writing": "9/12"
+    }
+  },
+  {
+    "type": "Certification",
+    "organization": "IELTS",
+    "fullName": "International English Language Testing System",
+    "date": {
+      "issued": "2021-01-01"
+    },
+    "score": {
+      "overall": "7.5/9.0",
+      "listening": "8.0/9.0",
+      "reading": "7.0/9.0",
+      "speaking": "7.5/9.0",
+      "writing": "6.5/9.0"
+    }
+  },
+  {
+    "type": "Certification",
+    "organization": "TOEFL",
+    "fullName": "Test of English as a Foreign Language",
+    "date": {
+      "issued": "2017-10-01"
+    },
+    "score": {
+      "overall": "98/120",
+      "listening": "27/30",
+      "reading": "25/30",
+      "speaking": "23/30",
+      "writing": "23/30"
+    }
+  }
+]
