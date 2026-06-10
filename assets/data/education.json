@@ -370,7 +370,7 @@
       },
       {
         "code": 2010115,
-        "name": "General Physics I",
+        "name": "General Physics",
         "units": 3,
         "mark": 16.20,
         "instructors": ["Mohammad Hasan Alamatsaz"],
@@ -638,7 +638,7 @@
       },
       {
         "code": 1512301,
-        "name": "Machine Elements Design",
+        "name": "Machine Elements Design I",
         "units": 3,
         "mark": 17.40,
         "instructors": ["Saleh Akbarzadeh"],
