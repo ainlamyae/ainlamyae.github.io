@@ -254,8 +254,8 @@ h5 {
 #navbar a {
   display: block;
   padding: 14px 8px;
-  color: #fff;
-  transition: background 0.3s;
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.25s ease;
 }
 
 #navbar ul li.nav-right {
@@ -265,11 +265,35 @@ h5 {
   transform: translateY(-50%);
 }
 
+#navbar-menu a {
+  position: relative;
+}
+
+#navbar-menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 16px var(--color-nav-hover);
+  opacity: 0;
+  transition: left 0.3s ease, right 0.3s ease, opacity 0.3s ease;
+}
+
 #navbar a:hover,
 #navbar a.active {
-  background: var(--color-nav-hover);
-  border-radius: 5px;
+  color: #fff;
   text-decoration: none;
+}
+
+#navbar-menu a:hover::after,
+#navbar-menu a.active::after {
+  left: 12%;
+  right: 12%;
+  opacity: 1;
 }
 
 /* === Footer === */
