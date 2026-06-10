@@ -200,6 +200,25 @@ function collapseDropdownById(id) {
     if (section)
         section.classList.remove("active");
 }
+
+// ==============================
+// Expand/collapse all dropdown sections
+// ==============================
+function setAllDropdowns(expand) {
+    document.querySelectorAll(".dropdown-section").forEach(section => {
+        section.classList.toggle("active", expand);
+        const toggle = section.querySelector(":scope > .dropdown-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", expand ? "true" : "false");
+    });
+}
+
+function toggleAllDropdowns() {
+    const sections = document.querySelectorAll(".dropdown-section");
+    const allExpanded = sections.length > 0 &&
+        Array.from(sections).every(s => s.classList.contains("active"));
+    setAllDropdowns(!allExpanded);
+    return !allExpanded; // true => now expanded
+}
 // ==============================
 // Modal setup for certificates / media
 // ==============================
