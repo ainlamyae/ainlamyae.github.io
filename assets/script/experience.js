@@ -57,6 +57,16 @@ fetch('assets/data/experience.json')
 
       const firstEntry = orgExperiences[0];
 
+      // Aggregate tenure across all roles at this organization
+      const orgStarts = orgExperiences.filter(e => e.date?.start).map(e => new Date(e.date.start));
+      const orgStart = orgStarts.length ? new Date(Math.min(...orgStarts)) : null;
+      const orgHasOngoing = orgExperiences.some(e => e.date?.start && !e.date?.end);
+      let orgEnd = null;
+      if (!orgHasOngoing) {
+        const orgEnds = orgExperiences.filter(e => e.date?.end).map(e => new Date(e.date.end));
+        orgEnd = orgEnds.length ? new Date(Math.max(...orgEnds)) : null;
+      }
+
       // ===== ORGANIZATION CONTAINER =====
       const entryDiv = document.createElement('div');
       entryDiv.style.display = 'flex';
@@ -91,7 +101,11 @@ fetch('assets/data/experience.json')
 
       if (firstEntry.address) {
         const addressLine = document.createElement('p');
-        addressLine.textContent = firstEntry.address;
+        let addressText = firstEntry.address;
+        if (orgStart) {
+          addressText += ` | ${calculateDuration(orgStart, orgEnd)}`;
+        }
+        addressLine.textContent = addressText;
         textDiv.appendChild(addressLine);
       }
 
