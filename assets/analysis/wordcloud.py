@@ -63,7 +63,7 @@ STOPWORDS = {
     "equation", "path", "input", "industrial",
     "present", "future", "component", "article",
     "however", "technical", "journal", "function", "complex", "object",
-    "improve",
+    "improve", "major",
 }
 
 
