@@ -1,5 +1,31 @@
 [
   {
+"category": "Personal",
+"title": "Ledger: Serverless Personal Finance Platform (Client-Side Cloud Architecture)",
+"description": [
+"Designed a serverless personal finance platform using GitHub Pages, Google OAuth 2.0, Google Sheets API, and browser-based JavaScript.",
+"Architected a zero-backend system where all application logic executes in the client, eliminating the need for dedicated servers and databases.",
+"Implemented secure OAuth-based authentication and authorization using Google Identity Services with direct browser-to-Google API communication.",
+"Designed a spreadsheet-as-database architecture using Google Sheets as the system of record for transactions, accounts, categories, and financial reports.",
+"Built a modular SPA architecture consisting of authentication, transaction management, account management, analytics, charting, and CSV import/export modules.",
+"Optimized performance through batch Google Sheets API operations and client-side caching using localStorage.",
+"Designed financial reporting workflows leveraging spreadsheet formulas for automated summaries, benchmarking, and trend analysis.",
+"Implemented end-to-end security architecture based on OAuth tokens, Google API authorization, and spreadsheet access controls.",
+"Reduced operational overhead and infrastructure costs through a fully serverless deployment model hosted on GitHub Pages.",
+"Produced system architecture, data flow, integration, and security design artifacts for platform documentation and technical reviews."
+],
+"date": {
+"start": "2026-06-01",
+"end": "2026-06-30"
+},
+"media": [
+{
+"src": "assets/media/projects/lspf2026.jpg",
+"caption": "High-level architecture of Ledger, a serverless personal finance application using GitHub Pages, Google OAuth, and Google Sheets."
+}
+]
+},
+  {
     "category": "Personal",
     "title": "AI-Powered Exam Preparation & Assessment Platform (Full-Stack Distributed SaaS Architecture)",
     "description": [
