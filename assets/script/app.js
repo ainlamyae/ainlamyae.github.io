@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Keyword-based auto-expand dropdowns
     // Works with ?g=group query in URL
     // ==============================
-    const queryString = window.location.search.substring(1); // removes '?'
-    const groupQuery = queryString || null; // e.g., ?ai → "ai"
+    const params = new URLSearchParams(window.location.search);
+    const groupQuery = params.get('k') || null; // e.g., ?k=ai → "ai"
 
     if (groupQuery) {
         fetch('assets/data/keywords.json')
