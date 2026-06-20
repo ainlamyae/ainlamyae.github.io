@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const outerHeading = document.createElement('h3');
       outerHeading.classList.add('dropdown-toggle');
-      outerHeading.textContent = 'Certifications';
+      outerHeading.textContent = `Certifications (${data.length})`;
 
       const outerContent = document.createElement('div');
       outerContent.classList.add('dropdown-content');
