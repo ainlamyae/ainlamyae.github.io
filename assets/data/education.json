@@ -1,908 +1,929 @@
 [
-{
-  "institution": {
-    "name": "University of Waterloo",
-    "logo": "assets/media/logo/uwaterloo.png",
-    "address": "Waterloo, Ontario, Canada"
-  },
-  "degree": {
-    "level": "Doctor of Philosophy",
-    "abbreviation": "Ph.D.",
-    "field": "Systems Design Engineering"
-  },
-  "date": {
-    "start": "2018-09-01",
-    "end": "2022-12-30"
-  },
-  "major": "Intelligent & Automated Systems; Biomechatronics Systems",
-  "gpa": {
-    "value": 88,
-    "scale": 100
+  {
+    "institution": {
+      "name": "University of Waterloo",
+      "logo": "assets/media/logo/uwaterloo.png",
+      "address": "Waterloo, Ontario, Canada"
     },
-  "thesis": {
-    "date": "2022-12-21",
-    "title": "Design, Dynamics, and Control of Active-passive Upper-limb Exoskeleton Robots",
-    "url": "http://hdl.handle.net/10012/18985",
-    "abstract": "Modern power assistive technologies, neuromuscular rehabilitation engineering, and haptic research have all entered into a new age thanks to wearable exoskeleton robotics..."
-  },
-  "research_group": {
-    "name": "Motion Research Group (MoRG)",
-    "url": "https://uwaterloo.ca/motion-research-group"
-  },
-  "supervisor": {
-    "name": "Prof. John J. McPhee",
-    "url": "https://uwaterloo.ca/systems-design-engineering/profile/mcphee"
-  },
-  "courses": [
-    {
-  "code": "ACINTY 620",
-  "name": "Academic Integrity Module",
-  "units": 0,
-  "mark": "CR",
-  "instructors": null,
-  "assistants": null,
-  "type": "Enrolled",
-  "term": "2018 Fall"
-},
-{
-  "code": "ME 780",
-  "name": "Special Topics in Mechatronics (Human Movement Neuromechanics)",
-  "units": 0.5,
-  "mark": 87,
-  "instructors": ["Arash Arami"],
-  "assistants": null,
-  "type": "Enrolled",
-  "term": "2018 Fall"
-},
-{
-  "code": "SYDE 652",
-  "name": "Dynamics of Multibody Systems",
-  "units": 0.5,
-  "mark": 92,
-  "instructors": ["John Joseph McPhee"],
-  "assistants": ["Valerie Norman-Gerum"],
-  "type": "Enrolled",
-  "term": "2019 Winter"
-},
-{
-  "code": "SYDE 655",
-  "name": "Optimal Control",
-  "units": 0.5,
-  "mark": 84,
-  "instructors": ["Nasser Lashgarian Azad"],
-  "assistants": ["Mohammad Hossein Basiri"],
-  "type": "Enrolled",
-  "term": "2018 Fall"
-},
-{
-  "code": "EMLS 620R",
-  "name": "Scholarly Writing in English",
-  "units": 0.5,
-  "mark": "CR",
-  "instructors": ["Agnieszka Wolczuk"],
-  "assistants": null,
-  "type": "Enrolled",
-  "term": "2020 Winter"
-},
-{
-  "code": null,
-  "name": "PhD Seminar",
-  "units": null,
-  "mark": "CR",
-  "instructors": null,
-  "assistants": null,
-  "type": "Milestone",
-  "term": "2022 Summer"
-},
-{
-  "code": null,
-  "name": "PhD Comprehensive Exam",
-  "units": null,
-  "mark": "CR",
-  "instructors": null,
-  "assistants": null,
-  "type": "Milestone",
-  "term": "2020 Winter"
-},
-{
-  "code": null,
-  "name": "PhD Thesis 2.0",
-  "units": null,
-  "mark": "ACC",
-  "instructors": null,
-  "assistants": null,
-  "type": "Milestone",
-  "term": "2022 Fall"
-},
-{
-  "code": null,
-  "name": "Workplace Hazardous Materials Information System",
-  "units": null,
-  "mark": null,
-  "instructors": null,
-  "assistants": null,
-  "type": "Milestone",
-  "term": "2018 Fall"
-},
-{
-  "code": "KIN 613",
-  "name": "Modern Methods in Biomechanical Modeling, Kinematics, and Kinetics",
-  "units": null,
-  "mark": null,
-  "instructors": ["Stacey Acker"],
-  "assistants": null,
-  "type": "Audit",
-  "term": "2018 Fall"
-},
-{
-  "code": "BME 588",
-  "name": "Fundamentals in Neural and Rehabilitation Engineering",
-  "units": null,
-  "mark": null,
-  "instructors": ["James Yungjen Tung"],
-  "assistants": null,
-  "type": "Audit",
-  "term": "2020 Winter"
-},
-{
-  "code": "MTE 544",
-  "name": "Autonomous Mobile Robots",
-  "units": null,
-  "mark": null,
-  "instructors": ["Soo Jeon"],
-  "assistants": ["Ahmad Reza Alghooneh"],
-  "type": "Audit",
-  "term": "2023 Winter"
-}
-  ]
-},
-{
-  "institution": {
-    "name": "K. N. Toosi University of Technology",
-    "logo": "assets/media/logo/kntu.png",
-    "address": "Tehran, Tehran, Iran"
-  },
-  "degree": {
-    "level": "Master of Science",
-    "abbreviation": "M.Sc.",
-    "field": "Mechatronics Engineering",
-    "verification": "World Education Services (WES)",
-    "url": "https://www.credly.com/badges/0a4f222d-656b-481b-b65c-0a75af37bf25"
-  },
-  "date": {
-    "start": "2013-09-01",
-    "end": "2015-12-30"
-  },
-  "major": "Design Robotic and Mechatronic Systems",
-  "gpa": {
-    "value": 19.20,
-    "scale": 20
+    "degree": {
+      "level": "Doctor of Philosophy",
+      "abbreviation": "Ph.D.",
+      "field": "Systems Design Engineering"
     },
-  "thesis": {
-    "date": "2015-12-31",
-    "title": "Multiple Impedance Control of Hybrid Parallel-Serial Manipulator for Object Manipulation",
-    "url": "https://www.researchgate.net/publication/379480054_Multiple_Impedance_Control_of_Hybrid_Parallel-Serial_Manipulator_for_Object_Manipulation",
-    "abstract": "One of the widely used of industrial robots is object manipulation (OM). Cable driven parallel robot (CDPR) has a very large workspace suitable for this application. However, there are possible cable collisions with the environment. Therefore, use of a Serial Manipulator (SM) is recommended penetrating the blind spots. Thus, the combination of CDPR-SM is recommended for OM. The tasks of OM, welding, surface finishing, cleaning, etc. need algorithms capable of determining the interaction force and position. In addition, constrained and suspended structure of CDPR is evaluated and the best structure for the control and construction is selected. Kinematics modeling of robots include CDPR and SM are provided. Topics such as inverse kinematics, Jacobian, velocity, acceleration analysis, singularity and sensitivity of CDPR are investigated. Also forward, inverse kinematics, velocity, acceleration, Jacobian, singularities and workspace analysis of SM are checked. Dynamics model for using in control subjects; simulation and system analysis take place. The SM dynamics is obtained by iterative Newton-Euler and CDPR dynamics is modeled by Newton-Euler method. An algorithm to optimize traction cable is also provided. In addition, a redundancy resolution algorithm is provided. However, a new method is proposed to reduce the redundancy of actuators. A virtual model verifies the equation. Structure of CDPR equipped with SM is optimized by criteria such as controllable, free singularity workspace, sensitivity and stiffness. Multiple impedance control (MIC) is used to OM in the presence of external disturbances. Also parallel and serial MIC with different coefficient is implemented. However, work and joint space unit impedance is also checked. Coefficients are optimised by error and wrench criteria. The CDPR, which discussed in this thesis for implementing control algorithms and studying performance is manufactured. According to the analysis, mechanical components of the robot are designed. In addition, electronic platform is prepared to send control commands. The pose of platform is obtained by a new method that combines machine vision and winch angles. The artificial neural network is trained for forward kinematics."
-  },
-  "research_group": {
-    "name": "Advanced Robotics & Automated Systems (ARAS) Laboratory",
-    "url": "https://aras.kntu.ac.ir"
-  },
-  "supervisor": {
-    "name": "Prof. S. Ali A. Moosavian",
-    "url": "https://wp.kntu.ac.ir/moosavian"
-  },
-  "courses": [
-    {
-  "code": 3333104,
-  "name": "Advanced Mathematics I",
-  "units": 3,
-  "mark": 17.00,
-  "instructors": ["Seyed Hossein Sadati"],
-  "assistants": null,
-  "type": "Compulsory Major",
-  "term": "2013 Fall"
-},
-{
-  "code": 3333133,
-  "name": "Advanced Dynamics",
-  "units": 3,
-  "mark": 17.00,
-  "instructors": ["Seyed Ali Akbar Moosavian"],
-  "assistants": null,
-  "type": "Core",
-  "term": "2013 Fall"
-},
-{
-  "code": 3333152,
-  "name": "Fuzzy Logic & Neuro Fuzzy Control",
-  "units": 3,
-  "mark": 17.50,
-  "instructors": ["Ali Ghaffari"],
-  "assistants": null,
-  "type": "Optional Major",
-  "term": "2013 Fall"
-},
-{
-  "code": 1115082,
-  "name": "Parallel Robotics",
-  "units": 3,
-  "mark": 19.20,
-  "instructors": ["Hamid Reza Dokht Taghirad"],
-  "assistants": null,
-  "type": "Optional Major",
-  "term": "2014 Winter"
-},
-{
-  "code": 1117001,
-  "name": "Seminar",
-  "units": 2,
-  "mark": 20.00,
-  "instructors": ["Mahdi Aliyari Shoorehdeli"],
-  "assistants": null,
-  "type": "Seminar",
-  "term": "2014 Winter"
-},
-{
-  "code": 3333233,
-  "name": "Control in Robotics",
-  "units": 3,
-  "mark": 18.00,
-  "instructors": ["Seyed Ali Akbar Moosavian"],
-  "assistants": null,
-  "type": "Optional Major",
-  "term": "2014 Winter"
-},
-{
-  "code": 3366001,
-  "name": "Mechatronics I",
-  "units": 3,
-  "mark": 19.50,
-  "instructors": ["Alireza Basohbat Novinzadeh", "Amir Mousavinia"],
-  "assistants": null,
-  "type": "Core",
-  "term": "2014 Winter"
-},
-{
-  "code": 1115061,
-  "name": "Modern Control",
-  "units": 3,
-  "mark": 19.80,
-  "instructors": ["Hamid Reza Dokht Taghirad"],
-  "assistants": null,
-  "type": "Compulsory Major",
-  "term": "2014 Fall"
-},
-{
-  "code": 3333132,
-  "name": "Advanced Control II (Nonlinear, Adaptive, and Sliding)",
-  "units": 3,
-  "mark": 18.30,
-  "instructors": ["Shahram Azadi"],
-  "assistants": null,
-  "type": "Core",
-  "term": "2014 Fall"
-},
-{
-  "code": null,
-  "name": "Virtual Reality",
-  "units": null,
-  "mark": null,
-  "instructors": ["Ali Nahvi"],
-  "assistants": null,
-  "type": "Audit",
-  "term": "2014 Fall"
-},
-{
-  "code": 1110179,
-  "name": "Thesis",
-  "units": 6,
-  "mark": 20.00,
-  "instructors": ["Seyed Ali Akbar Moosavian"],
-  "assistants": null,
-  "type": "Project",
-  "term": "2015 Fall"
-}
-  ]
-},
-{
-  "institution": {
-    "name": "Isfahan University of Technology",
-    "logo": "assets/media/logo/iut.png",
-    "address": "Isfahan, Esfahan, Iran"
-  },
-  "degree": {
-    "level": "Bachelor of Science",
-    "abbreviation": "B.Sc.",
-    "field": "Mechanical Engineering",
-    "verification": "World Education Services (WES)",
-    "url": "https://www.credly.com/badges/0a4f222d-656b-481b-b65c-0a75af37bf25"
-  },
-  "date": {
-    "start": "2009-09-01",
-    "end": "2013-08-30"
-  },
-  "major": "Mechatronics and Dynamic Systems",
-  "gpa": {
-    "value": 16.67,
-    "scale": 20
+    "date": {
+      "start": "2018-09-01",
+      "end": "2022-12-30"
     },
-  "thesis": {
-    "date": "2013-08-10",
-    "title": "Optimizing Joint Space Energy of Redundant Tethered Space Robots",
-    "url": "https://www.researchgate.net/publication/379478592_Optimizing_Joint_Space_Energy_of_Redundant_Tethered_Space_Robots",
-    "abstract": "This research delves into the satellite systems tethered by cables, a study undertaken several decades subsequent to the conceptualization of tethering space systems. Notably, this tethering mechanism finds application in the domain of space elevators as well. The employment of such tethers brings forth considerable advantages for robotic systems governed by extended tethers, prompting their substitution for human counterparts in space missions encompassing repair, equipment installation, and debris elimination from space stations, satellites, and space telescopes. This study focuses on the analysis of a four degrees of freedom tethered space robotic arm, specifically examining how the robot's end effector moves along predefined paths. Algorithms and models are created to describe the robot's setup, including an extended tether acting as an arm that allows the entire robot to move in a circular orbit around Earth. The tether is treated as a rigid, linear arm in mathematical models, and its tension is assessed to determine if the paths are feasible. The robot's movement starts from a platform attached to a spacecraft. Different trajectories, such as direct, oblique, and circular paths, are analyzed, considering historical angle changes in joint variables and the torque needed for these changes. The study calculates the robot's potential energy through gravitational force integration and employs Lagrange equations, kinetic energy, potential energy concepts, equilibrium equations, the Hamiltonian system, and tether tension equations to derive multibody dynamic model. Consideration is also given to torque constraints at the tether's initiation and culmination points, with viable trajectories delineated. Additionally, novel control methodologies for mitigating tether oscillations through length extension and positional adjustments at the tether's starting point are elucidated. The validation of the proposed algorithms and trajectory planning strategies is conducted through dynamic simulations and verification processes utilizing MATLAB and Simulink software. Finally, recommendations for enhancing this space system and avenues for future research are proposed based on the findings and analyses presented."
+    "major": "Intelligent & Automated Systems; Biomechatronics Systems",
+    "gpa": {
+      "value": 88,
+      "scale": 100
+    },
+    "thesis": {
+      "date": "2022-12-21",
+      "title": "Design, Dynamics, and Control of Active-passive Upper-limb Exoskeleton Robots",
+      "url": "http://hdl.handle.net/10012/18985",
+      "abstract": "Modern power assistive technologies, neuromuscular rehabilitation engineering, and haptic research have all entered into a new age thanks to wearable exoskeleton robotics..."
+    },
+    "research_group": {
+      "name": "Motion Research Group (MoRG)",
+      "url": "https://uwaterloo.ca/motion-research-group"
+    },
+    "supervisor": {
+      "name": "Prof. John J. McPhee",
+      "url": "https://uwaterloo.ca/systems-design-engineering/profile/mcphee"
+    },
+    "courses": [
+      {
+        "code": "ACINTY 620",
+        "name": "Academic Integrity Module",
+        "units": 0,
+        "mark": "CR",
+        "instructors": null,
+        "assistants": null,
+        "type": "Enrolled",
+        "term": "2018 Fall"
+      },
+      {
+        "code": "ME 780",
+        "name": "Special Topics in Mechatronics (Human Movement Neuromechanics)",
+        "units": 0.5,
+        "mark": 87,
+        "instructors": ["Arash Arami"],
+        "assistants": null,
+        "type": "Enrolled",
+        "term": "2018 Fall"
+      },
+      {
+        "code": "SYDE 652",
+        "name": "Dynamics of Multibody Systems",
+        "units": 0.5,
+        "mark": 92,
+        "instructors": ["John Joseph McPhee"],
+        "assistants": ["Valerie Norman-Gerum"],
+        "type": "Enrolled",
+        "term": "2019 Winter"
+      },
+      {
+        "code": "SYDE 655",
+        "name": "Optimal Control",
+        "units": 0.5,
+        "mark": 84,
+        "instructors": ["Nasser Lashgarian Azad"],
+        "assistants": ["Mohammad Hossein Basiri"],
+        "type": "Enrolled",
+        "term": "2018 Fall"
+      },
+      {
+        "code": "EMLS 620R",
+        "name": "Scholarly Writing in English",
+        "units": 0.5,
+        "mark": "CR",
+        "instructors": ["Agnieszka Wolczuk"],
+        "assistants": null,
+        "type": "Enrolled",
+        "term": "2020 Winter"
+      },
+      {
+        "code": null,
+        "name": "PhD Seminar",
+        "units": null,
+        "mark": "CR",
+        "instructors": null,
+        "assistants": null,
+        "type": "Milestone",
+        "term": "2022 Summer"
+      },
+      {
+        "code": null,
+        "name": "PhD Comprehensive Exam",
+        "units": null,
+        "mark": "CR",
+        "instructors": null,
+        "assistants": null,
+        "type": "Milestone",
+        "term": "2020 Winter"
+      },
+      {
+        "code": null,
+        "name": "PhD Thesis 2.0",
+        "units": null,
+        "mark": "ACC",
+        "instructors": null,
+        "assistants": null,
+        "type": "Milestone",
+        "term": "2022 Fall"
+      },
+      {
+        "code": null,
+        "name": "Workplace Hazardous Materials Information System",
+        "units": null,
+        "mark": null,
+        "instructors": null,
+        "assistants": null,
+        "type": "Milestone",
+        "term": "2018 Fall"
+      },
+      {
+        "code": "KIN 613",
+        "name": "Modern Methods in Biomechanical Modeling, Kinematics, and Kinetics",
+        "units": null,
+        "mark": null,
+        "instructors": ["Stacey Acker"],
+        "assistants": null,
+        "type": "Audit",
+        "term": "2018 Fall"
+      },
+      {
+        "code": "BME 588",
+        "name": "Fundamentals in Neural and Rehabilitation Engineering",
+        "units": null,
+        "mark": null,
+        "instructors": ["James Yungjen Tung"],
+        "assistants": null,
+        "type": "Audit",
+        "term": "2020 Winter"
+      },
+      {
+        "code": "MTE 544",
+        "name": "Autonomous Mobile Robots",
+        "units": null,
+        "mark": null,
+        "instructors": ["Soo Jeon"],
+        "assistants": ["Ahmad Reza Alghooneh"],
+        "type": "Audit",
+        "term": "2023 Winter"
+      }
+    ]
   },
-  "research_group": {
-    "name": "Advanced Robotics and Mechatronics Laboratory",
-    "url": "https://armlab.iut.ac.ir"
+  {
+    "institution": {
+      "name": "K. N. Toosi University of Technology",
+      "logo": "assets/media/logo/kntu.png",
+      "address": "Tehran, Tehran, Iran"
+    },
+    "degree": {
+      "level": "Master of Science",
+      "abbreviation": "M.Sc.",
+      "field": "Mechatronics Engineering",
+      "verification": "World Education Services (WES)",
+      "url": "https://www.credly.com/badges/0a4f222d-656b-481b-b65c-0a75af37bf25"
+    },
+    "date": {
+      "start": "2013-09-01",
+      "end": "2015-12-30"
+    },
+    "major": "Design Robotic and Mechatronic Systems",
+    "gpa": {
+      "value": 19.20,
+      "scale": 20
+    },
+    "thesis": {
+      "date": "2015-12-31",
+      "title": "Multiple Impedance Control of Hybrid Parallel-Serial Manipulator for Object Manipulation",
+      "url": "https://www.researchgate.net/publication/379480054_Multiple_Impedance_Control_of_Hybrid_Parallel-Serial_Manipulator_for_Object_Manipulation",
+      "abstract": "One of the widely used of industrial robots is object manipulation (OM). Cable driven parallel robot (CDPR) has a very large workspace suitable for this application. However, there are possible cable collisions with the environment. Therefore, use of a Serial Manipulator (SM) is recommended penetrating the blind spots. Thus, the combination of CDPR-SM is recommended for OM. The tasks of OM, welding, surface finishing, cleaning, etc. need algorithms capable of determining the interaction force and position. In addition, constrained and suspended structure of CDPR is evaluated and the best structure for the control and construction is selected. Kinematics modeling of robots include CDPR and SM are provided. Topics such as inverse kinematics, Jacobian, velocity, acceleration analysis, singularity and sensitivity of CDPR are investigated. Also forward, inverse kinematics, velocity, acceleration, Jacobian, singularities and workspace analysis of SM are checked. Dynamics model for using in control subjects; simulation and system analysis take place. The SM dynamics is obtained by iterative Newton-Euler and CDPR dynamics is modeled by Newton-Euler method. An algorithm to optimize traction cable is also provided. In addition, a redundancy resolution algorithm is provided. However, a new method is proposed to reduce the redundancy of actuators. A virtual model verifies the equation. Structure of CDPR equipped with SM is optimized by criteria such as controllable, free singularity workspace, sensitivity and stiffness. Multiple impedance control (MIC) is used to OM in the presence of external disturbances. Also parallel and serial MIC with different coefficient is implemented. However, work and joint space unit impedance is also checked. Coefficients are optimised by error and wrench criteria. The CDPR, which discussed in this thesis for implementing control algorithms and studying performance is manufactured. According to the analysis, mechanical components of the robot are designed. In addition, electronic platform is prepared to send control commands. The pose of platform is obtained by a new method that combines machine vision and winch angles. The artificial neural network is trained for forward kinematics."
+    },
+    "research_group": {
+      "name": "Advanced Robotics & Automated Systems (ARAS) Laboratory",
+      "url": "https://aras.kntu.ac.ir"
+    },
+    "supervisor": {
+      "name": "Prof. S. Ali A. Moosavian",
+      "url": "https://wp.kntu.ac.ir/moosavian"
+    },
+    "courses": [
+      {
+        "code": 3333104,
+        "name": "Advanced Mathematics I",
+        "units": 3,
+        "mark": 17.00,
+        "instructors": ["Seyed Hossein Sadati"],
+        "assistants": null,
+        "type": "Compulsory Major",
+        "term": "2013 Fall"
+      },
+      {
+        "code": 3333133,
+        "name": "Advanced Dynamics",
+        "units": 3,
+        "mark": 17.00,
+        "instructors": ["Seyed Ali Akbar Moosavian"],
+        "assistants": null,
+        "type": "Core",
+        "term": "2013 Fall"
+      },
+      {
+        "code": 3333152,
+        "name": "Fuzzy Logic and Neuro Fuzzy Control",
+        "units": 3,
+        "mark": 17.50,
+        "instructors": ["Ali Ghaffari"],
+        "assistants": null,
+        "type": "Optional Major",
+        "term": "2013 Fall",
+        "file": "/assets/media/education/Fuzzy Logic and Neuro Fuzzy Control.pdf"
+      },
+      {
+        "code": 1115082,
+        "name": "Parallel Robotics",
+        "units": 3,
+        "mark": 19.20,
+        "instructors": ["Hamid Reza Dokht Taghirad"],
+        "assistants": null,
+        "type": "Optional Major",
+        "term": "2014 Winter",
+        "file": "/assets/media/education/Parallel Robotics.pdf"
+      },
+      {
+        "code": 1117001,
+        "name": "Seminar",
+        "units": 2,
+        "mark": 20.00,
+        "instructors": ["Mahdi Aliyari Shoorehdeli"],
+        "assistants": null,
+        "type": "Seminar",
+        "term": "2014 Winter"
+      },
+      {
+        "code": 3333233,
+        "name": "Control in Robotics",
+        "units": 3,
+        "mark": 18.00,
+        "instructors": ["Seyed Ali Akbar Moosavian"],
+        "assistants": null,
+        "type": "Optional Major",
+        "term": "2014 Winter",
+        "file": "/assets/media/education/Control in Robotics.pdf"
+      },
+      {
+        "code": 3366001,
+        "name": "Mechatronics I",
+        "units": 3,
+        "mark": 19.50,
+        "instructors": ["Alireza Basohbat Novinzadeh", "Amir Mousavinia"],
+        "assistants": null,
+        "type": "Core",
+        "term": "2014 Winter"
+      },
+      {
+        "code": 1115061,
+        "name": "Modern Control",
+        "units": 3,
+        "mark": 19.80,
+        "instructors": ["Hamid Reza Dokht Taghirad"],
+        "assistants": null,
+        "type": "Compulsory Major",
+        "term": "2014 Fall",
+        "file": "/assets/media/education/Modern Control.pdf"
+      },
+      {
+        "code": 3333132,
+        "name": "Advanced Control II (Nonlinear, Adaptive, and Sliding)",
+        "units": 3,
+        "mark": 18.30,
+        "instructors": ["Shahram Azadi"],
+        "assistants": null,
+        "type": "Core",
+        "term": "2014 Fall",
+        "file": "/assets/media/education/Advanced Control II.pdf"
+      },
+      {
+        "code": null,
+        "name": "Virtual Reality",
+        "units": null,
+        "mark": null,
+        "instructors": ["Ali Nahvi"],
+        "assistants": null,
+        "type": "Audit",
+        "term": "2014 Fall"
+      },
+      {
+        "code": 1110179,
+        "name": "Thesis",
+        "units": 6,
+        "mark": 20.00,
+        "instructors": ["Seyed Ali Akbar Moosavian"],
+        "assistants": null,
+        "type": "Project",
+        "term": "2015 Fall"
+      }
+    ]
   },
-  "supervisor": {
-    "name": "Prof. Mehdi Keshmiri",
-    "url": "https://people.iut.ac.ir/en/keshmiri"
-  },
-  "courses": [
-    {
-  "code": 1510151,
-  "name": "Engineering Drawing I",
-  "units": 2,
-  "mark": 20.00,
-  "instructors": ["Hosein Moghbel"],
-  "assistants": ["Mohammad Salem", "Amir Mostashfi Habibabadi"],
-  "type": "Core",
-  "term": "2009 Fall"
-},
-{
-  "code": 1914106,
-  "name": "Calculus I",
-  "units": 4,
-  "mark": 15.60,
-  "instructors": ["Shadi Askari"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2009 Fall"
-},
-{
-  "code": 2010115,
-  "name": "General Physics I",
-  "units": 3,
-  "mark": 16.20,
-  "instructors": ["Mohammad Hasan Alamatsaz"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2009 Fall"
-},
-{
-  "code": 2110103,
-  "name": "General Chemistry",
-  "units": 3,
-  "mark": 17.20,
-  "instructors": ["Hossein Chiniforoshan Esfahani"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2009 Fall"
-},
-{
-  "code": 1020103,
-  "name": "Physical Education I",
-  "units": 1,
-  "mark": 13.50,
-  "instructors": ["Abbas Firouzian"],
-  "assistants": null,
-  "type": "General",
-  "term": "2009 Fall"
-},
-{
-  "code": 1512153,
-  "name": "Statics",
-  "units": 3,
-  "mark": 14.90,
-  "instructors": ["Hassan Moosavi"],
-  "assistants": ["Mohammad Reza Karazmoozravari"],
-  "type": "Core",
-  "term": "2010 Winter"
-},
-{
-  "code": 1730150,
-  "name": "Computer Programming",
-  "units": 3,
-  "mark": 20,
-  "instructors": ["Ayoob Bagheri"],
-  "assistants": ["Mohammad Sadegh Noorouzzadeh"],
-  "type": "Foundation",
-  "term": "2010 Winter"
-},
-{
-  "code": 1914107,
-  "name": "Calculus II",
-  "units": 4,
-  "mark": 16.50,
-  "instructors": ["Mojtaba Aghaei Foroushani"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2010 Winter"
-},
-{
-  "code": 1914251,
-  "name": "Elementary Differential Equations",
-  "units": 3,
-  "mark": 17.50,
-  "instructors": ["Ali Atabaigi Elmi"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2010 Winter"
-},
-{
-  "code": 2010116,
-  "name": "General Physics Laboratory (Heat)",
-  "units": 1,
-  "mark": 19.46,
-  "instructors": ["Mohammad Motlagh"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2010 Winter"
-},
-{
-  "code": 2010125,
-  "name": "General Physics II",
-  "units": 3,
-  "mark": 19.20,
-  "instructors": ["Ali Dadkhah"],
-  "assistants": null,
-  "type": "General",
-  "term": "2010 Winter"
-},
-{
-  "code": 10200044,
-  "name": "Human in Islam",
-  "units": 2,
-  "mark": 19.00,
-  "instructors": ["Mahdi Enshaei"],
-  "assistants": null,
-  "type": "General",
-  "term": "2010 Winter"
-},
-{
-  "code": 1020097,
-  "name": "Physical Education II",
-  "units": 1,
-  "mark": 16.50,
-  "instructors": ["Reza Khan Mohammadi"],
-  "assistants": null,
-  "type": "General",
-  "term": "2010 Winter"
-},
-{
-  "code": 1020079,
-  "name": "Islamic Thought 1",
-  "units": 2,
-  "mark": 17.00,
-  "instructors": null,
-  "assistants": null,
-  "type": "General",
-  "term": "2010 Summer"
-},
-{
-  "code": 1020065,
-  "name": "Subjective Interpretation of Nahj al-Balagha",
-  "units": 2,
-  "mark": 17.00,
-  "instructors": null,
-  "assistants": null,
-  "type": "General",
-  "term": "2010 Summer"
-},
-{
-  "code": 1518243,
-  "name": "Dynamics I",
-  "units": 4,
-  "mark": 16.30,
-  "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
-  "assistants": ["Masoud Fazeli-Varzaneh","Pouya Amiri"],
-  "type": "Core",
-  "term": "2010 Fall"
-},
-{
-  "code": 1512211,
-  "name": "Strength of Materials I",
-  "units": 3,
-  "mark": 15.10,
-  "instructors": ["Mehran Moradi Gharibond"],
-  "assistants": ["Mohammad Hedayati"],
-  "type": "Core",
-  "term": "2010 Fall"
-},
-{
-  "code": 1514210,
-  "name": "Thermodynamics I",
-  "units": 3,
-  "mark": 14.70,
-  "instructors": ["Sayed Saeed Mortazavi Ravari"],
-  "assistants": ["Omid Khalilpour"],
-  "type": "Core",
-  "term": "2010 Fall"
-},
-{
-  "code": 1914271,
-  "name": "Numerical Methods",
-  "units": 2,
-  "mark": 12.00,
-  "instructors": ["Reza Mokhtari"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2010 Fall"
-},
-{
-  "code": 2010116,
-  "name": "General Physics Laboratory (Electricity)",
-  "units": 1,
-  "mark": 20.00,
-  "instructors": ["Elaheh Elmi Ghorbani"],
-  "assistants": null,
-  "type": "Foundation",
-  "term": "2010 Fall"
-},
-{
-  "code": 1020102,
-  "name": "General English for Engineering",
-  "units": 3,
-  "mark": 15.20,
-  "instructors": ["Mohammad Baghaei"],
-  "assistants": null,
-  "type": "General",
-  "term": "2010 Fall"
-},
-{
-  "code": 1110308,
-  "name": "Materials Science",
-  "units": 3,
-  "mark": 15.80,
-  "instructors": ["Fathollah Karimzadeh"],
-  "assistants": ["Seyedeh Zahra Anvari"],
-  "type": "Core",
-  "term": "2011 Winter"
-},
-{
-  "code": 1510255,
-  "name": "Applied Electricity and Electronics",
-  "units": 3,
-  "mark": 16.00,
-  "instructors": ["Mohammad Danesh"],
-  "assistants": null,
-  "type": "Core",
-  "term": "2011 Winter"
-},
-{
-  "code": 1512299,
-  "name": "Strength of Materials II",
-  "units": 3,
-  "mark": 17.00,
-  "instructors": ["Saleh Akbarzadeh"],
-  "assistants": ["Sayed Hossein Ashrafizadeh"],
-  "type": "Core",
-  "term": "2011 Winter"
-},
-{
-  "code": 1518309,
-  "name": "Dynamics of Machinery",
-  "units": 3,
-  "mark": 15.00,
-  "instructors": ["Mohammad Mashayekhi"],
-  "assistants": ["Reza Tikani"],
-  "type": "Major",
-  "term": "2011 Winter"
-},
-{
-  "code": 1514250,
-  "name": "Fluid Mechanics I",
-  "units": 3,
-  "mark": 14.20,
-  "instructors": ["Mohsen Saghafian"],
-  "assistants": ["Somaye Yaghoubi Koupaei"],
-  "type": "Core",
-  "term": "2011 Winter"
-},
-{
-  "code": 1020083,
-  "name": "Way of Life",
-  "units": 2,
-  "mark": 19.50,
-  "instructors": ["Mohsen Karimi"],
-  "assistants": null,
-  "type": "General",
-  "term": "2011 Winter"
-},
-{
-  "code": 1020101,
-  "name": "Islamic Revolution of Iran",
-  "units": 2,
-  "mark": 18.89,
-  "instructors": null,
-  "assistants": null,
-  "type": "General",
-  "term": "2011 Summer"
-},
-{
-  "code": 1512301,
-  "name": "Machine Elements Design",
-  "units": 3,
-  "mark": 17.40,
-  "instructors": ["Saleh Akbarzadeh"],
-  "assistants": ["Keyvan Matin"],
-  "type": "Core",
-  "term": "2011 Fall"
-},
-{
-  "code": 1514262,
-  "name": "Thermodynamics II",
-  "units": 3,
-  "mark": 14.80,
-  "instructors": ["Sayed Saeed Mortazavi Ravari"],
-  "assistants": ["Reza Khazaeli Najafabadi"],
-  "type": "Core",
-  "term": "2011 Fall"
-},
-{
-  "code": 1514310,
-  "name": "Heat Transfer I",
-  "units": 3,
-  "mark": 15.00,
-  "instructors": ["Mohsen Davazdah Emami"],
-  "assistants": ["Ali Emadi Andani"],
-  "type": "Core",
-  "term": "2011 Fall"
-},
-{
-  "code": 1514314,
-  "name": "Fluid Mechanics II",
-  "units": 3,
-  "mark": 16.50,
-  "instructors": ["Ahmad Reza Azimian"],
-  "assistants": ["Omid Atlaschian"],
-  "type": "Core",
-  "term": "2011 Fall"
-},
-{
-  "code": 1914252,
-  "name": "Engineering Mathematics",
-  "units": 3,
-  "mark": 18.00,
-  "instructors": ["Reza Rezaeian Farashahi"],
-  "assistants": null,
-  "type": "Core",
-  "term": "2011 Fall"
-},
-{
-  "code": 1020054,
-  "name": "History of Islamic Culture and Civilization",
-  "units": 2,
-  "mark": 16.00,
-  "instructors": ["Bahman Zeinali"],
-  "assistants": null,
-  "type": "General",
-  "term": "2011 Fall"
-},
-{
-  "code": 1020108,
-  "name": "Persian",
-  "units": 3,
-  "mark": 20,
-  "instructors": ["Mohammad Bagher Ketabi"],
-  "assistants": null,
-  "type": "General",
-  "term": "2011 Fall"
-},
-{
-  "code": 1510152,
-  "name": "Engineering Drawing II",
-  "units": 2,
-  "mark": 19.00,
-  "instructors": ["Majid Jabbari Nikabadi"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Winter"
-},
-{
-  "code": 1510479,
-  "name": "Research Methods and Documentation in Mechanical Engineering",
-  "units": 1,
-  "mark": 20.00,
-  "instructors": ["Saleh Akbarzadeh"],
-  "assistants": null,
-  "type": "Skill",
-  "term": "2012 Winter"
-},
-{
-  "code": 1512303,
-  "name": "Strength of Materials Laboratory",
-  "units": 1,
-  "mark": 17.00,
-  "instructors": ["Reza Tikani"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Winter"
-},
-{
-  "code": 1518311,
-  "name": "Mechanical Vibrations",
-  "units": 3,
-  "mark": 13.00,
-  "instructors": ["Saeed Ziaei Rad"],
-  "assistants": ["Amirhossein Karimi"],
-  "type": "Core",
-  "term": "2012 Winter"
-},
-{
-  "code": 1518365,
-  "name": "Robotics",
-  "units": 3,
-  "mark": 16.20,
-  "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Winter"
-},
-{
-  "code": 1512377,
-  "name": "Machine Elements Design II",
-  "units": 3,
-  "mark": 17.90,
-  "instructors": ["Mohsen Badrossamay"],
-  "assistants": ["Ali Akhavan Safaei"],
-  "type": "Core",
-  "term": "2012 Winter"
-},
-{
-  "code": 1518423,
-  "name": "Fundamentals of Mechatronic Systems",
-  "units": 3,
-  "mark": 13.30,
-  "instructors": ["Mahdi Moghimi Zand"],
-  "assistants": ["Rasoul Koosha"],
-  "type": "Core",
-  "term": "2012 Winter"
-},
-{
-  "code": 1518352,
-  "name": "Mechanisms Design",
-  "units": 3,
-  "mark": 17.60,
-  "instructors": ["Mohammad Mashayekhi"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Winter"
-},
-{
-  "code": 1514300,
-  "name": "Fluid Mechanics Laboratory",
-  "units": 1,
-  "mark": 16.70,
-  "instructors": ["Sayed Amin Faghihi"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Winter"
-},
-{
-  "code": 1518353,
-  "name": "Automatic Control",
-  "units": 3,
-  "mark": 18.00,
-  "instructors": ["Saeid Behbahani"],
-  "assistants": ["Salar Asayesh Ghalehseyf"],
-  "type": "Core",
-  "term": "2012 Fall"
-},
-{
-  "code": 1518354,
-  "name": "Mechatronics Laboratory",
-  "units": 1,
-  "mark": 18.50,
-  "instructors": ["Mahdi Salehi"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Fall"
-},
-{
-  "code": 1518412,
-  "name": "Applied Vibrations",
-  "units": 3,
-  "mark": 17.00,
-  "instructors": ["Saeed Ziaei Rad"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Fall"
-},
-{
-  "code": 1516423,
-  "name": "CNC Machines",
-  "units": 2,
-  "mark": 20.00,
-  "instructors": ["Hamid Montazerolghaem"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2012 Fall"
-},
-{
-  "code": 1510373,
-  "name": "Production Methods & Workshop",
-  "units": 3,
-  "mark": 16.50,
-  "instructors": ["Alireza Fadaie Tehrani"],
-  "assistants": null,
-  "type": "Core",
-  "term": "2013 Winter"
-},
-{
-  "code": 1510452,
-  "name": "Hydraulics and Pneumatics",
-  "units": 3,
-  "mark": 19.50,
-  "instructors": ["Mohammad Reza Forouzan"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2013 Winter"
-},
-{
-  "code": 1510499,
-  "name": "B.Sc. Project",
-  "units": 3,
-  "mark": 19.50,
-  "instructors": ["Mehdi Keshmiri"],
-  "assistants": null,
-  "type": "Project",
-  "term": "2013 Winter"
-},
-{
-  "code": 1518357,
-  "name": "Dynamics of Machinery and Vibrations Laboratory",
-  "units": 1,
-  "mark": 19.50,
-  "instructors": ["Mostafa Ghayour"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2013 Winter"
-},
-{
-  "code": 1518428,
-  "name": "Signal Processing of Mechatronic Systems",
-  "units": 3,
-  "mark": 19.70,
-  "instructors": ["Mohammad Danesh"],
-  "assistants": ["Mohammad Mahdi Savadi Mofrad"],
-  "type": "Major",
-  "term": "2013 Winter"
-},
-{
-  "code": 1518430,
-  "name": "Control Systems Design",
-  "units": 3,
-  "mark": 18.90,
-  "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
-  "assistants": null,
-  "type": "Major",
-  "term": "2013 Winter"
-},
-{
-  "code": 1518432,
-  "name": "Mechatronics Laboratory II",
-  "units": 1,
-  "mark": 20.00,
-  "instructors": ["Mohammad Danesh"],
-  "assistants": ["Mohsen Parsa"],
-  "type": "Major",
-  "term": "2013 Winter"
-},
-{
-  "code": 1510345,
-  "name": "Industrial Training",
-  "units": 2,
-  "mark": "Excellent",
-  "instructors": ["Mehdi Keshmiri"],
-  "assistants": null,
-  "type": "Skill",
-  "term": "2013 Summer"
-}
-  ]
+  {
+    "institution": {
+      "name": "Isfahan University of Technology",
+      "logo": "assets/media/logo/iut.png",
+      "address": "Isfahan, Esfahan, Iran"
+    },
+    "degree": {
+      "level": "Bachelor of Science",
+      "abbreviation": "B.Sc.",
+      "field": "Mechanical Engineering",
+      "verification": "World Education Services (WES)",
+      "url": "https://www.credly.com/badges/0a4f222d-656b-481b-b65c-0a75af37bf25"
+    },
+    "date": {
+      "start": "2009-09-01",
+      "end": "2013-08-30"
+    },
+    "major": "Mechatronics and Dynamic Systems",
+    "gpa": {
+      "value": 16.67,
+      "scale": 20
+    },
+    "thesis": {
+      "date": "2013-08-10",
+      "title": "Optimizing Joint Space Energy of Redundant Tethered Space Robots",
+      "url": "https://www.researchgate.net/publication/379478592_Optimizing_Joint_Space_Energy_of_Redundant_Tethered_Space_Robots",
+      "abstract": "This research delves into the satellite systems tethered by cables, a study undertaken several decades subsequent to the conceptualization of tethering space systems. Notably, this tethering mechanism finds application in the domain of space elevators as well. The employment of such tethers brings forth considerable advantages for robotic systems governed by extended tethers, prompting their substitution for human counterparts in space missions encompassing repair, equipment installation, and debris elimination from space stations, satellites, and space telescopes. This study focuses on the analysis of a four degrees of freedom tethered space robotic arm, specifically examining how the robot's end effector moves along predefined paths. Algorithms and models are created to describe the robot's setup, including an extended tether acting as an arm that allows the entire robot to move in a circular orbit around Earth. The tether is treated as a rigid, linear arm in mathematical models, and its tension is assessed to determine if the paths are feasible. The robot's movement starts from a platform attached to a spacecraft. Different trajectories, such as direct, oblique, and circular paths, are analyzed, considering historical angle changes in joint variables and the torque needed for these changes. The study calculates the robot's potential energy through gravitational force integration and employs Lagrange equations, kinetic energy, potential energy concepts, equilibrium equations, the Hamiltonian system, and tether tension equations to derive multibody dynamic model. Consideration is also given to torque constraints at the tether's initiation and culmination points, with viable trajectories delineated. Additionally, novel control methodologies for mitigating tether oscillations through length extension and positional adjustments at the tether's starting point are elucidated. The validation of the proposed algorithms and trajectory planning strategies is conducted through dynamic simulations and verification processes utilizing MATLAB and Simulink software. Finally, recommendations for enhancing this space system and avenues for future research are proposed based on the findings and analyses presented."
+    },
+    "research_group": {
+      "name": "Advanced Robotics and Mechatronics Laboratory",
+      "url": "https://armlab.iut.ac.ir"
+    },
+    "supervisor": {
+      "name": "Prof. Mehdi Keshmiri",
+      "url": "https://people.iut.ac.ir/en/keshmiri"
+    },
+    "courses": [
+      {
+        "code": 1510151,
+        "name": "Engineering Drawing I",
+        "units": 2,
+        "mark": 20.00,
+        "instructors": ["Hosein Moghbel"],
+        "assistants": ["Mohammad Salem", "Amir Mostashfi Habibabadi"],
+        "type": "Core",
+        "term": "2009 Fall"
+      },
+      {
+        "code": 1914106,
+        "name": "Calculus I",
+        "units": 4,
+        "mark": 15.60,
+        "instructors": ["Shadi Askari"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2009 Fall",
+        "file": "/assets/media/education/Calculus I.pdf"
+      },
+      {
+        "code": 2010115,
+        "name": "General Physics I",
+        "units": 3,
+        "mark": 16.20,
+        "instructors": ["Mohammad Hasan Alamatsaz"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2009 Fall"
+      },
+      {
+        "code": 2110103,
+        "name": "General Chemistry",
+        "units": 3,
+        "mark": 17.20,
+        "instructors": ["Hossein Chiniforoshan Esfahani"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2009 Fall"
+      },
+      {
+        "code": 1020103,
+        "name": "Physical Education I",
+        "units": 1,
+        "mark": 13.50,
+        "instructors": ["Abbas Firouzian"],
+        "assistants": null,
+        "type": "General",
+        "term": "2009 Fall"
+      },
+      {
+        "code": 1512153,
+        "name": "Statics",
+        "units": 3,
+        "mark": 14.90,
+        "instructors": ["Hassan Moosavi"],
+        "assistants": ["Mohammad Reza Karazmoozravari"],
+        "type": "Core",
+        "term": "2010 Winter",
+        "file": "/assets/media/education/Statics.pdf"
+      },
+      {
+        "code": 1730150,
+        "name": "Computer Programming",
+        "units": 3,
+        "mark": 20,
+        "instructors": ["Ayoob Bagheri"],
+        "assistants": ["Mohammad Sadegh Noorouzzadeh"],
+        "type": "Foundation",
+        "term": "2010 Winter"
+      },
+      {
+        "code": 1914107,
+        "name": "Calculus II",
+        "units": 4,
+        "mark": 16.50,
+        "instructors": ["Mojtaba Aghaei Foroushani"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2010 Winter",
+        "file": "/assets/media/education/Calculus II.pdf"
+      },
+      {
+        "code": 1914251,
+        "name": "Elementary Differential Equations",
+        "units": 3,
+        "mark": 17.50,
+        "instructors": ["Ali Atabaigi Elmi"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2010 Winter"
+      },
+      {
+        "code": 2010116,
+        "name": "General Physics Laboratory (Heat)",
+        "units": 1,
+        "mark": 19.46,
+        "instructors": ["Mohammad Motlagh"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2010 Winter"
+      },
+      {
+        "code": 2010125,
+        "name": "General Physics II",
+        "units": 3,
+        "mark": 19.20,
+        "instructors": ["Ali Dadkhah"],
+        "assistants": null,
+        "type": "General",
+        "term": "2010 Winter"
+      },
+      {
+        "code": 10200044,
+        "name": "Human in Islam",
+        "units": 2,
+        "mark": 19.00,
+        "instructors": ["Mahdi Enshaei"],
+        "assistants": null,
+        "type": "General",
+        "term": "2010 Winter"
+      },
+      {
+        "code": 1020097,
+        "name": "Physical Education II",
+        "units": 1,
+        "mark": 16.50,
+        "instructors": ["Reza Khan Mohammadi"],
+        "assistants": null,
+        "type": "General",
+        "term": "2010 Winter"
+      },
+      {
+        "code": 1020079,
+        "name": "Islamic Thought 1",
+        "units": 2,
+        "mark": 17.00,
+        "instructors": null,
+        "assistants": null,
+        "type": "General",
+        "term": "2010 Summer"
+      },
+      {
+        "code": 1020065,
+        "name": "Subjective Interpretation of Nahj al-Balagha",
+        "units": 2,
+        "mark": 17.00,
+        "instructors": null,
+        "assistants": null,
+        "type": "General",
+        "term": "2010 Summer"
+      },
+      {
+        "code": 1518243,
+        "name": "Dynamics",
+        "units": 4,
+        "mark": 16.30,
+        "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
+        "assistants": ["Masoud Fazeli-Varzaneh","Pouya Amiri"],
+        "type": "Core",
+        "term": "2010 Fall",
+        "file": "/assets/media/education/Dynamics.pdf"
+      },
+      {
+        "code": 1512211,
+        "name": "Strength of Materials I",
+        "units": 3,
+        "mark": 15.10,
+        "instructors": ["Mehran Moradi Gharibond"],
+        "assistants": ["Mohammad Hedayati"],
+        "type": "Core",
+        "term": "2010 Fall",
+        "file": "/assets/media/education/Strength of Materials.pdf"
+      },
+      {
+        "code": 1514210,
+        "name": "Thermodynamics I",
+        "units": 3,
+        "mark": 14.70,
+        "instructors": ["Sayed Saeed Mortazavi Ravari"],
+        "assistants": ["Omid Khalilpour"],
+        "type": "Core",
+        "term": "2010 Fall",
+        "file": "/assets/media/education/Thermodynamics.pdf"
+      },
+      {
+        "code": 1914271,
+        "name": "Numerical Methods",
+        "units": 2,
+        "mark": 12.00,
+        "instructors": ["Reza Mokhtari"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2010 Fall"
+      },
+      {
+        "code": 2010116,
+        "name": "General Physics Laboratory (Electricity)",
+        "units": 1,
+        "mark": 20.00,
+        "instructors": ["Elaheh Elmi Ghorbani"],
+        "assistants": null,
+        "type": "Foundation",
+        "term": "2010 Fall"
+      },
+      {
+        "code": 1020102,
+        "name": "General English for Engineering",
+        "units": 3,
+        "mark": 15.20,
+        "instructors": ["Mohammad Baghaei"],
+        "assistants": null,
+        "type": "General",
+        "term": "2010 Fall"
+      },
+      {
+        "code": 1110308,
+        "name": "Materials Science",
+        "units": 3,
+        "mark": 15.80,
+        "instructors": ["Fathollah Karimzadeh"],
+        "assistants": ["Seyedeh Zahra Anvari"],
+        "type": "Core",
+        "term": "2011 Winter"
+      },
+      {
+        "code": 1510255,
+        "name": "Applied Electricity and Electronics",
+        "units": 3,
+        "mark": 16.00,
+        "instructors": ["Mohammad Danesh"],
+        "assistants": null,
+        "type": "Core",
+        "term": "2011 Winter"
+      },
+      {
+        "code": 1512299,
+        "name": "Strength of Materials II",
+        "units": 3,
+        "mark": 17.00,
+        "instructors": ["Saleh Akbarzadeh"],
+        "assistants": ["Sayed Hossein Ashrafizadeh"],
+        "type": "Core",
+        "term": "2011 Winter",
+        "file": "/assets/media/education/Strength of Materials.pdf"
+      },
+      {
+        "code": 1518309,
+        "name": "Dynamics of Machinery",
+        "units": 3,
+        "mark": 15.00,
+        "instructors": ["Mohammad Mashayekhi"],
+        "assistants": ["Reza Tikani"],
+        "type": "Major",
+        "term": "2011 Winter",
+        "file": "/assets/media/education/Dynamics of Machinery.pdf"
+      },
+      {
+        "code": 1514250,
+        "name": "Fluid Mechanics I",
+        "units": 3,
+        "mark": 14.20,
+        "instructors": ["Mohsen Saghafian"],
+        "assistants": ["Somaye Yaghoubi Koupaei"],
+        "type": "Core",
+        "term": "2011 Winter",
+        "file": "/assets/media/education/Fluid Mechanics I.pdf"
+      },
+      {
+        "code": 1020083,
+        "name": "Way of Life",
+        "units": 2,
+        "mark": 19.50,
+        "instructors": ["Mohsen Karimi"],
+        "assistants": null,
+        "type": "General",
+        "term": "2011 Winter"
+      },
+      {
+        "code": 1020101,
+        "name": "Islamic Revolution of Iran",
+        "units": 2,
+        "mark": 18.89,
+        "instructors": null,
+        "assistants": null,
+        "type": "General",
+        "term": "2011 Summer"
+      },
+      {
+        "code": 1512301,
+        "name": "Machine Elements Design",
+        "units": 3,
+        "mark": 17.40,
+        "instructors": ["Saleh Akbarzadeh"],
+        "assistants": ["Keyvan Matin"],
+        "type": "Core",
+        "term": "2011 Fall",
+        "file": "/assets/media/education/Machine Elements Design.pdf"
+      },
+      {
+        "code": 1514262,
+        "name": "Thermodynamics II",
+        "units": 3,
+        "mark": 14.80,
+        "instructors": ["Sayed Saeed Mortazavi Ravari"],
+        "assistants": ["Reza Khazaeli Najafabadi"],
+        "type": "Core",
+        "term": "2011 Fall",
+        "file": "/assets/media/education/Thermodynamics.pdf"
+      },
+      {
+        "code": 1514310,
+        "name": "Heat Transfer",
+        "units": 3,
+        "mark": 15.00,
+        "instructors": ["Mohsen Davazdah Emami"],
+        "assistants": ["Ali Emadi Andani"],
+        "type": "Core",
+        "term": "2011 Fall",
+        "file": "/assets/media/education/Heat Transfer.pdf"
+      },
+      {
+        "code": 1514314,
+        "name": "Fluid Mechanics II",
+        "units": 3,
+        "mark": 16.50,
+        "instructors": ["Ahmad Reza Azimian"],
+        "assistants": ["Omid Atlaschian"],
+        "type": "Core",
+        "term": "2011 Fall"
+      },
+      {
+        "code": 1914252,
+        "name": "Engineering Mathematics",
+        "units": 3,
+        "mark": 18.00,
+        "instructors": ["Reza Rezaeian Farashahi"],
+        "assistants": null,
+        "type": "Core",
+        "term": "2011 Fall"
+      },
+      {
+        "code": 1020054,
+        "name": "History of Islamic Culture and Civilization",
+        "units": 2,
+        "mark": 16.00,
+        "instructors": ["Bahman Zeinali"],
+        "assistants": null,
+        "type": "General",
+        "term": "2011 Fall"
+      },
+      {
+        "code": 1020108,
+        "name": "Persian",
+        "units": 3,
+        "mark": 20,
+        "instructors": ["Mohammad Bagher Ketabi"],
+        "assistants": null,
+        "type": "General",
+        "term": "2011 Fall"
+      },
+      {
+        "code": 1510152,
+        "name": "Engineering Drawing II",
+        "units": 2,
+        "mark": 19.00,
+        "instructors": ["Majid Jabbari Nikabadi"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1510479,
+        "name": "Research Methods and Documentation in Mechanical Engineering",
+        "units": 1,
+        "mark": 20.00,
+        "instructors": ["Saleh Akbarzadeh"],
+        "assistants": null,
+        "type": "Skill",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1512303,
+        "name": "Strength of Materials Laboratory",
+        "units": 1,
+        "mark": 17.00,
+        "instructors": ["Reza Tikani"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1518311,
+        "name": "Mechanical Vibrations",
+        "units": 3,
+        "mark": 13.00,
+        "instructors": ["Saeed Ziaei Rad"],
+        "assistants": ["Amirhossein Karimi"],
+        "type": "Core",
+        "term": "2012 Winter",
+        "file": "/assets/media/education/Mechanical Vibrations.pdf"
 
-}
+      },
+      {
+        "code": 1518365,
+        "name": "Robotics",
+        "units": 3,
+        "mark": 16.20,
+        "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1512377,
+        "name": "Machine Elements Design II",
+        "units": 3,
+        "mark": 17.90,
+        "instructors": ["Mohsen Badrossamay"],
+        "assistants": ["Ali Akhavan Safaei"],
+        "type": "Core",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1518423,
+        "name": "Fundamentals of Mechatronic Systems",
+        "units": 3,
+        "mark": 13.30,
+        "instructors": ["Mahdi Moghimi Zand"],
+        "assistants": ["Rasoul Koosha"],
+        "type": "Core",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1518352,
+        "name": "Mechanisms Design",
+        "units": 3,
+        "mark": 17.60,
+        "instructors": ["Mohammad Mashayekhi"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1514300,
+        "name": "Fluid Mechanics Laboratory",
+        "units": 1,
+        "mark": 16.70,
+        "instructors": ["Sayed Amin Faghihi"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Winter"
+      },
+      {
+        "code": 1518353,
+        "name": "Automatic Control",
+        "units": 3,
+        "mark": 18.00,
+        "instructors": ["Saeid Behbahani"],
+        "assistants": ["Salar Asayesh Ghalehseyf"],
+        "type": "Core",
+        "term": "2012 Fall",
+        "file": "/assets/media/education/Automatic Control.pdf"
+      },
+      {
+        "code": 1518354,
+        "name": "Mechatronics Laboratory",
+        "units": 1,
+        "mark": 18.50,
+        "instructors": ["Mahdi Salehi"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Fall"
+      },
+      {
+        "code": 1518412,
+        "name": "Applied Vibrations",
+        "units": 3,
+        "mark": 17.00,
+        "instructors": ["Saeed Ziaei Rad"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Fall"
+      },
+      {
+        "code": 1516423,
+        "name": "CNC Machines",
+        "units": 2,
+        "mark": 20.00,
+        "instructors": ["Hamid Montazerolghaem"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2012 Fall"
+      },
+      {
+        "code": 1510373,
+        "name": "Production Methods & Workshop",
+        "units": 3,
+        "mark": 16.50,
+        "instructors": ["Alireza Fadaie Tehrani"],
+        "assistants": null,
+        "type": "Core",
+        "term": "2013 Winter"
+      },
+      {
+        "code": 1510452,
+        "name": "Hydraulics and Pneumatics",
+        "units": 3,
+        "mark": 19.50,
+        "instructors": ["Mohammad Reza Forouzan"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2013 Winter",
+        "file": "/assets/media/education/Hydraulics and Pneumatics.pdf"
+      },
+      {
+        "code": 1510499,
+        "name": "B.Sc. Project",
+        "units": 3,
+        "mark": 19.50,
+        "instructors": ["Mehdi Keshmiri"],
+        "assistants": null,
+        "type": "Project",
+        "term": "2013 Winter"
+      },
+      {
+        "code": 1518357,
+        "name": "Dynamics of Machinery and Vibrations Laboratory",
+        "units": 1,
+        "mark": 19.50,
+        "instructors": ["Mostafa Ghayour"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2013 Winter"
+      },
+      {
+        "code": 1518428,
+        "name": "Signal Processing of Mechatronic Systems",
+        "units": 3,
+        "mark": 19.70,
+        "instructors": ["Mohammad Danesh"],
+        "assistants": ["Mohammad Mahdi Savadi Mofrad"],
+        "type": "Major",
+        "term": "2013 Winter"
+      },
+      {
+        "code": 1518430,
+        "name": "Control Systems Design",
+        "units": 3,
+        "mark": 18.90,
+        "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
+        "assistants": null,
+        "type": "Major",
+        "term": "2013 Winter",
+        "file": "/assets/media/education/Control Systems Design.pdf"
+      },
+      {
+        "code": 1518432,
+        "name": "Mechatronics Laboratory II",
+        "units": 1,
+        "mark": 20.00,
+        "instructors": ["Mohammad Danesh"],
+        "assistants": ["Mohsen Parsa"],
+        "type": "Major",
+        "term": "2013 Winter"
+      },
+      {
+        "code": 1510345,
+        "name": "Industrial Training",
+        "units": 2,
+        "mark": "Excellent",
+        "instructors": ["Mehdi Keshmiri"],
+        "assistants": null,
+        "type": "Skill",
+        "term": "2013 Summer"
+      }
+    ]
+  }
 ]
