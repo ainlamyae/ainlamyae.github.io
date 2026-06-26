@@ -16,7 +16,7 @@ html { scroll-padding-top: 60px; scroll-behavior: smooth; }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
-  max-width: 1050px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 80px 20px 20px;
   line-height: 1.5;
@@ -38,15 +38,6 @@ header {
   margin-bottom: 40px;
 }
 
-header p {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 18px;
-  margin: 6px 0;
-  font-size: 1em;
-  color: #555;
-}
 
 /* === Headings === */
 h1 {
@@ -197,6 +188,19 @@ h5 {
 .dropdown-section h3.dropdown-toggle {
   cursor: pointer;
   margin: 0;
+}
+
+/* Nested course list dropdown inside an education entry */
+.course-dropdown-item {
+  list-style: none;
+  margin-left: -1.4em;
+}
+
+.dropdown-content .dropdown-toggle {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 /* === Focus styles for keyboard accessibility === */
@@ -353,6 +357,147 @@ a:focus-visible,
   border-radius: 20px;
   font-size: 0.9em;
   line-height: 1.4;
+}
+
+/* === Contact form === */
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.contact-form-box,
+.contact-map {
+  flex: 1 1 380px;
+  min-height: 320px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form-box {
+  padding: 16px;
+}
+
+#contact-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-map {
+  overflow: hidden;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-row-grow {
+  flex: 1;
+}
+
+.form-row-grow textarea {
+  flex: 1;
+  min-height: 200px;
+}
+
+.form-row label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+.form-row input,
+.form-row textarea {
+  font: inherit;
+  font-size: 1.05em;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(12, 55, 97, 0.15);
+}
+
+#contact-submit {
+  font: inherit;
+  font-weight: bold;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#contact-submit:hover {
+  background: var(--color-nav-hover);
+}
+
+.contact-status {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-dark);
+}
+
+.contact-status:not(:empty) {
+  margin-top: 8px;
+}
+
+.contact-status.error {
+  color: var(--color-accent);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.social-links svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 /* === Print === */

@@ -164,7 +164,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (Array.isArray(edu.courses) && edu.courses.length > 0) {
           const li = document.createElement('li');
-          li.textContent = 'Courses:';
+          li.classList.add('course-dropdown-item');
+
+          const courseSection = document.createElement('div');
+          courseSection.classList.add('dropdown-section');
+
+          const courseToggle = document.createElement('span');
+          courseToggle.classList.add('dropdown-toggle');
+          courseToggle.textContent = 'Courses';
+          courseSection.appendChild(courseToggle);
+
+          const courseContent = document.createElement('div');
+          courseContent.classList.add('dropdown-content');
 
           const groups = new Map();
           edu.courses.forEach(course => {
@@ -236,7 +247,9 @@ document.addEventListener('DOMContentLoaded', function () {
             typeList.appendChild(typeLi);
           });
 
-          li.appendChild(typeList);
+          courseContent.appendChild(typeList);
+          courseSection.appendChild(courseContent);
+          li.appendChild(courseSection);
           detailsList.appendChild(li);
         }
 

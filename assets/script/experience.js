@@ -195,6 +195,23 @@ fetch('assets/data/experience.json')
           contentDiv.appendChild(ul);
         }
 
+        // Courses (structured: code, name, instructors, term)
+        if (item.courses?.length) {
+          const ul = document.createElement('ul');
+
+          item.courses.forEach(course => {
+            const li = document.createElement('li');
+            const instructors = Array.isArray(course.instructors) ? course.instructors.join(', ') : null;
+            const namePart = course.code ? `${course.name} (${course.code})` : course.name;
+            li.textContent = instructors
+              ? `${namePart} — ${instructors} (${course.term})`
+              : `${namePart} (${course.term})`;
+            ul.appendChild(li);
+          });
+
+          contentDiv.appendChild(ul);
+        }
+
         // Media
         if (item.media?.length) {
           const mediaRow = document.createElement('div');
