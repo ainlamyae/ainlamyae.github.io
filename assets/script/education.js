@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         section.dataset.sectionId = `edu-${index}`;
 
         // Degree line (clickable)
-        const degreeHeading = document.createElement('h5');
+        const degreeHeading = document.createElement('h3');
         degreeHeading.classList.add('dropdown-toggle');
         degreeHeading.textContent = `${edu.degree.level} (${edu.degree.abbreviation}) in ${edu.degree.field}`;
         section.appendChild(degreeHeading);
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           const courseToggle = document.createElement('span');
           courseToggle.classList.add('dropdown-toggle');
-          courseToggle.textContent = 'Courses';
+          courseToggle.textContent = `Courses (${edu.courses.length})`;
           courseSection.appendChild(courseToggle);
 
           const courseContent = document.createElement('div');
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const seasonOrder = { 'Winter': 0, 'Spring': 1, 'Summer': 2, 'Fall': 3 };
           const termRank = term => {
             if (!term) return [0, 0];
-            const [year, season] = term.split(' ');
+            const [season, year] = term.split(' ');
             return [parseInt(year, 10) || 0, seasonOrder[season] !== undefined ? seasonOrder[season] : 0];
           };
 

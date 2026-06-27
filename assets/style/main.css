@@ -57,6 +57,8 @@ h2 {
 }
 
 h3 {
+  position: relative;
+  overflow: hidden;
   margin: 30px 0 8px;
   padding: 8px 12px 8px 16px;
   background: var(--color-surface);
@@ -66,6 +68,29 @@ h3 {
   font-size: 1.1em;
   box-sizing: border-box;
   width: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+h3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(12, 55, 97, 0.2);
+}
+
+h3:hover::after {
+  left: 150%;
 }
 
 h4 {
@@ -108,6 +133,25 @@ h5 {
   background: var(--color-nav);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-brand {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 14px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-brand:hover {
+  background: var(--color-nav-hover);
+  text-decoration: none;
 }
 
 #navbar ul {
@@ -224,6 +268,10 @@ a:focus-visible,
 
 /* Optional: smooth expansion for mobile */
 @media (max-width: 768px) {
+  #navbar .nav-brand {
+    display: none;
+  }
+
   #navbar a {
     padding: 12px 16px;
     font-size: 0.9em;
@@ -350,6 +398,8 @@ a:focus-visible,
 }
 
 .skill-tag {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   padding: 5px 12px;
   background: var(--color-surface);
@@ -357,6 +407,31 @@ a:focus-visible,
   border-radius: 20px;
   font-size: 0.9em;
   line-height: 1.4;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-tag::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.skill-tag:hover {
+  background: #fff;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(12, 55, 97, 0.18);
+}
+
+.skill-tag:hover::after {
+  left: 150%;
 }
 
 /* === Contact form === */
@@ -498,6 +573,16 @@ a:focus-visible,
   width: 22px;
   height: 22px;
   fill: currentColor;
+}
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+  h3,
+  h3::after,
+  .skill-tag,
+  .skill-tag::after {
+    transition: none;
+  }
 }
 
 /* === Print === */

@@ -42,7 +42,7 @@
         "instructors": null,
         "assistants": null,
         "type": "Enrolled",
-        "term": "2018 Fall"
+        "term": "Fall 2018"
       },
       {
         "code": "ME 780",
@@ -52,7 +52,7 @@
         "instructors": ["Arash Arami"],
         "assistants": null,
         "type": "Enrolled",
-        "term": "2018 Fall"
+        "term": "Fall 2018"
       },
       {
         "code": "SYDE 652",
@@ -62,7 +62,7 @@
         "instructors": ["John Joseph McPhee"],
         "assistants": ["Valerie Norman-Gerum"],
         "type": "Enrolled",
-        "term": "2019 Winter"
+        "term": "Winter 2019"
       },
       {
         "code": "SYDE 655",
@@ -72,7 +72,7 @@
         "instructors": ["Nasser Lashgarian Azad"],
         "assistants": ["Mohammad Hossein Basiri"],
         "type": "Enrolled",
-        "term": "2018 Fall"
+        "term": "Fall 2018"
       },
       {
         "code": "EMLS 620R",
@@ -82,7 +82,7 @@
         "instructors": ["Agnieszka Wolczuk"],
         "assistants": null,
         "type": "Enrolled",
-        "term": "2020 Winter"
+        "term": "Winter 2020"
       },
       {
         "code": null,
@@ -92,7 +92,7 @@
         "instructors": null,
         "assistants": null,
         "type": "Milestone",
-        "term": "2022 Summer"
+        "term": "Summer 2022"
       },
       {
         "code": null,
@@ -102,7 +102,7 @@
         "instructors": null,
         "assistants": null,
         "type": "Milestone",
-        "term": "2020 Winter"
+        "term": "Winter 2020"
       },
       {
         "code": null,
@@ -112,7 +112,7 @@
         "instructors": null,
         "assistants": null,
         "type": "Milestone",
-        "term": "2022 Fall"
+        "term": "Fall 2022"
       },
       {
         "code": null,
@@ -122,7 +122,7 @@
         "instructors": null,
         "assistants": null,
         "type": "Milestone",
-        "term": "2018 Fall"
+        "term": "Fall 2018"
       },
       {
         "code": "KIN 613",
@@ -132,7 +132,7 @@
         "instructors": ["Stacey Acker"],
         "assistants": null,
         "type": "Audit",
-        "term": "2018 Fall"
+        "term": "Fall 2018"
       },
       {
         "code": "BME 588",
@@ -142,7 +142,7 @@
         "instructors": ["James Yungjen Tung"],
         "assistants": null,
         "type": "Audit",
-        "term": "2020 Winter"
+        "term": "Winter 2020"
       },
       {
         "code": "MTE 544",
@@ -152,7 +152,7 @@
         "instructors": ["Soo Jeon"],
         "assistants": ["Ahmad Reza Alghooneh"],
         "type": "Audit",
-        "term": "2023 Winter"
+        "term": "Winter 2023"
       }
     ]
   },
@@ -200,8 +200,8 @@
         "mark": 17.00,
         "instructors": ["Seyed Hossein Sadati"],
         "assistants": null,
-        "type": "Compulsory Major",
-        "term": "2013 Fall"
+        "type": "Major",
+        "term": "Fall 2013"
       },
       {
         "code": 3333133,
@@ -211,7 +211,7 @@
         "instructors": ["Seyed Ali Akbar Moosavian"],
         "assistants": null,
         "type": "Core",
-        "term": "2013 Fall"
+        "term": "Fall 2013"
       },
       {
         "code": 3333152,
@@ -220,8 +220,8 @@
         "mark": 17.50,
         "instructors": ["Ali Ghaffari"],
         "assistants": null,
-        "type": "Optional Major",
-        "term": "2013 Fall",
+        "type": "Major",
+        "term": "Fall 2013",
         "file": "/assets/media/education/Fuzzy Logic and Neuro Fuzzy Control.pdf"
       },
       {
@@ -231,8 +231,8 @@
         "mark": 19.20,
         "instructors": ["Hamid Reza Dokht Taghirad"],
         "assistants": null,
-        "type": "Optional Major",
-        "term": "2014 Winter",
+        "type": "Major",
+        "term": "Winter 2014",
         "file": "/assets/media/education/Parallel Robotics.pdf"
       },
       {
@@ -243,7 +243,7 @@
         "instructors": ["Mahdi Aliyari Shoorehdeli"],
         "assistants": null,
         "type": "Seminar",
-        "term": "2014 Winter"
+        "term": "Winter 2014"
       },
       {
         "code": 3333233,
@@ -252,8 +252,8 @@
         "mark": 18.00,
         "instructors": ["Seyed Ali Akbar Moosavian"],
         "assistants": null,
-        "type": "Optional Major",
-        "term": "2014 Winter",
+        "type": "Major",
+        "term": "Winter 2014",
         "file": "/assets/media/education/Control in Robotics.pdf"
       },
       {
@@ -264,7 +264,7 @@
         "instructors": ["Alireza Basohbat Novinzadeh", "Amir Mousavinia"],
         "assistants": null,
         "type": "Core",
-        "term": "2014 Winter"
+        "term": "Winter 2014"
       },
       {
         "code": 1115061,
@@ -273,8 +273,8 @@
         "mark": 19.80,
         "instructors": ["Hamid Reza Dokht Taghirad"],
         "assistants": null,
-        "type": "Compulsory Major",
-        "term": "2014 Fall",
+        "type": "Major",
+        "term": "Fall 2014",
         "file": "/assets/media/education/Modern Control.pdf"
       },
       {
@@ -285,7 +285,7 @@
         "instructors": ["Shahram Azadi"],
         "assistants": null,
         "type": "Core",
-        "term": "2014 Fall",
+        "term": "Fall 2014",
         "file": "/assets/media/education/Advanced Control II.pdf"
       },
       {
@@ -296,7 +296,7 @@
         "instructors": ["Ali Nahvi"],
         "assistants": null,
         "type": "Audit",
-        "term": "2014 Fall"
+        "term": "Fall 2014"
       },
       {
         "code": 1110179,
@@ -306,7 +306,7 @@
         "instructors": ["Seyed Ali Akbar Moosavian"],
         "assistants": null,
         "type": "Project",
-        "term": "2015 Fall"
+        "term": "Fall 2015"
       }
     ]
   },
@@ -355,7 +355,7 @@
         "instructors": ["Hosein Moghbel"],
         "assistants": ["Mohammad Salem", "Amir Mostashfi Habibabadi"],
         "type": "Core",
-        "term": "2009 Fall"
+        "term": "Fall 2009"
       },
       {
         "code": 1914106,
@@ -365,7 +365,7 @@
         "instructors": ["Shadi Askari"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2009 Fall",
+        "term": "Fall 2009",
         "file": "/assets/media/education/Calculus I.pdf"
       },
       {
@@ -376,7 +376,7 @@
         "instructors": ["Mohammad Hasan Alamatsaz"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2009 Fall"
+        "term": "Fall 2009"
       },
       {
         "code": 2110103,
@@ -386,7 +386,7 @@
         "instructors": ["Hossein Chiniforoshan Esfahani"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2009 Fall"
+        "term": "Fall 2009"
       },
       {
         "code": 1020103,
@@ -396,7 +396,7 @@
         "instructors": ["Abbas Firouzian"],
         "assistants": null,
         "type": "General",
-        "term": "2009 Fall"
+        "term": "Fall 2009"
       },
       {
         "code": 1512153,
@@ -406,7 +406,7 @@
         "instructors": ["Hassan Moosavi"],
         "assistants": ["Mohammad Reza Karazmoozravari"],
         "type": "Core",
-        "term": "2010 Winter",
+        "term": "Winter 2010",
         "file": "/assets/media/education/Statics.pdf"
       },
       {
@@ -417,7 +417,7 @@
         "instructors": ["Ayoob Bagheri"],
         "assistants": ["Mohammad Sadegh Noorouzzadeh"],
         "type": "Foundation",
-        "term": "2010 Winter"
+        "term": "Winter 2010"
       },
       {
         "code": 1914107,
@@ -427,7 +427,7 @@
         "instructors": ["Mojtaba Aghaei Foroushani"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2010 Winter",
+        "term": "Winter 2010",
         "file": "/assets/media/education/Calculus II.pdf"
       },
       {
@@ -438,7 +438,7 @@
         "instructors": ["Ali Atabaigi Elmi"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2010 Winter"
+        "term": "Winter 2010"
       },
       {
         "code": 2010116,
@@ -448,7 +448,7 @@
         "instructors": ["Mohammad Motlagh"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2010 Winter"
+        "term": "Winter 2010"
       },
       {
         "code": 2010125,
@@ -458,7 +458,7 @@
         "instructors": ["Ali Dadkhah"],
         "assistants": null,
         "type": "General",
-        "term": "2010 Winter"
+        "term": "Winter 2010"
       },
       {
         "code": 10200044,
@@ -468,7 +468,7 @@
         "instructors": ["Mahdi Enshaei"],
         "assistants": null,
         "type": "General",
-        "term": "2010 Winter"
+        "term": "Winter 2010"
       },
       {
         "code": 1020097,
@@ -478,7 +478,7 @@
         "instructors": ["Reza Khan Mohammadi"],
         "assistants": null,
         "type": "General",
-        "term": "2010 Winter"
+        "term": "Winter 2010"
       },
       {
         "code": 1020079,
@@ -488,7 +488,7 @@
         "instructors": null,
         "assistants": null,
         "type": "General",
-        "term": "2010 Summer"
+        "term": "Summer 2010"
       },
       {
         "code": 1020065,
@@ -498,7 +498,7 @@
         "instructors": null,
         "assistants": null,
         "type": "General",
-        "term": "2010 Summer"
+        "term": "Summer 2010"
       },
       {
         "code": 1518243,
@@ -508,7 +508,7 @@
         "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
         "assistants": ["Masoud Fazeli-Varzaneh","Pouya Amiri"],
         "type": "Core",
-        "term": "2010 Fall",
+        "term": "Fall 2010",
         "file": "/assets/media/education/Dynamics.pdf"
       },
       {
@@ -519,7 +519,7 @@
         "instructors": ["Mehran Moradi Gharibond"],
         "assistants": ["Mohammad Hedayati"],
         "type": "Core",
-        "term": "2010 Fall",
+        "term": "Fall 2010",
         "file": "/assets/media/education/Strength of Materials.pdf"
       },
       {
@@ -530,7 +530,7 @@
         "instructors": ["Sayed Saeed Mortazavi Ravari"],
         "assistants": ["Omid Khalilpour"],
         "type": "Core",
-        "term": "2010 Fall",
+        "term": "Fall 2010",
         "file": "/assets/media/education/Thermodynamics.pdf"
       },
       {
@@ -541,7 +541,7 @@
         "instructors": ["Reza Mokhtari"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2010 Fall"
+        "term": "Fall 2010"
       },
       {
         "code": 2010116,
@@ -551,7 +551,7 @@
         "instructors": ["Elaheh Elmi Ghorbani"],
         "assistants": null,
         "type": "Foundation",
-        "term": "2010 Fall"
+        "term": "Fall 2010"
       },
       {
         "code": 1020102,
@@ -561,7 +561,7 @@
         "instructors": ["Mohammad Baghaei"],
         "assistants": null,
         "type": "General",
-        "term": "2010 Fall"
+        "term": "Fall 2010"
       },
       {
         "code": 1110308,
@@ -571,7 +571,7 @@
         "instructors": ["Fathollah Karimzadeh"],
         "assistants": ["Seyedeh Zahra Anvari"],
         "type": "Core",
-        "term": "2011 Winter"
+        "term": "Winter 2011"
       },
       {
         "code": 1510255,
@@ -581,7 +581,7 @@
         "instructors": ["Mohammad Danesh"],
         "assistants": null,
         "type": "Core",
-        "term": "2011 Winter"
+        "term": "Winter 2011"
       },
       {
         "code": 1512299,
@@ -591,7 +591,7 @@
         "instructors": ["Saleh Akbarzadeh"],
         "assistants": ["Sayed Hossein Ashrafizadeh"],
         "type": "Core",
-        "term": "2011 Winter",
+        "term": "Winter 2011",
         "file": "/assets/media/education/Strength of Materials.pdf"
       },
       {
@@ -602,7 +602,7 @@
         "instructors": ["Mohammad Mashayekhi"],
         "assistants": ["Reza Tikani"],
         "type": "Major",
-        "term": "2011 Winter",
+        "term": "Winter 2011",
         "file": "/assets/media/education/Dynamics of Machinery.pdf"
       },
       {
@@ -613,7 +613,7 @@
         "instructors": ["Mohsen Saghafian"],
         "assistants": ["Somaye Yaghoubi Koupaei"],
         "type": "Core",
-        "term": "2011 Winter",
+        "term": "Winter 2011",
         "file": "/assets/media/education/Fluid Mechanics I.pdf"
       },
       {
@@ -624,7 +624,7 @@
         "instructors": ["Mohsen Karimi"],
         "assistants": null,
         "type": "General",
-        "term": "2011 Winter"
+        "term": "Winter 2011"
       },
       {
         "code": 1020101,
@@ -634,7 +634,7 @@
         "instructors": null,
         "assistants": null,
         "type": "General",
-        "term": "2011 Summer"
+        "term": "Summer 2011"
       },
       {
         "code": 1512301,
@@ -644,7 +644,7 @@
         "instructors": ["Saleh Akbarzadeh"],
         "assistants": ["Keyvan Matin"],
         "type": "Core",
-        "term": "2011 Fall",
+        "term": "Fall 2011",
         "file": "/assets/media/education/Machine Elements Design.pdf"
       },
       {
@@ -655,7 +655,7 @@
         "instructors": ["Sayed Saeed Mortazavi Ravari"],
         "assistants": ["Reza Khazaeli Najafabadi"],
         "type": "Core",
-        "term": "2011 Fall",
+        "term": "Fall 2011",
         "file": "/assets/media/education/Thermodynamics.pdf"
       },
       {
@@ -666,7 +666,7 @@
         "instructors": ["Mohsen Davazdah Emami"],
         "assistants": ["Ali Emadi Andani"],
         "type": "Core",
-        "term": "2011 Fall",
+        "term": "Fall 2011",
         "file": "/assets/media/education/Heat Transfer.pdf"
       },
       {
@@ -677,7 +677,7 @@
         "instructors": ["Ahmad Reza Azimian"],
         "assistants": ["Omid Atlaschian"],
         "type": "Core",
-        "term": "2011 Fall"
+        "term": "Fall 2011"
       },
       {
         "code": 1914252,
@@ -687,7 +687,7 @@
         "instructors": ["Reza Rezaeian Farashahi"],
         "assistants": null,
         "type": "Core",
-        "term": "2011 Fall"
+        "term": "Fall 2011"
       },
       {
         "code": 1020054,
@@ -697,7 +697,7 @@
         "instructors": ["Bahman Zeinali"],
         "assistants": null,
         "type": "General",
-        "term": "2011 Fall"
+        "term": "Fall 2011"
       },
       {
         "code": 1020108,
@@ -707,7 +707,7 @@
         "instructors": ["Mohammad Bagher Ketabi"],
         "assistants": null,
         "type": "General",
-        "term": "2011 Fall"
+        "term": "Fall 2011"
       },
       {
         "code": 1510152,
@@ -717,7 +717,7 @@
         "instructors": ["Majid Jabbari Nikabadi"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1510479,
@@ -727,7 +727,7 @@
         "instructors": ["Saleh Akbarzadeh"],
         "assistants": null,
         "type": "Skill",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1512303,
@@ -737,7 +737,7 @@
         "instructors": ["Reza Tikani"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1518311,
@@ -747,7 +747,7 @@
         "instructors": ["Saeed Ziaei Rad"],
         "assistants": ["Amirhossein Karimi"],
         "type": "Core",
-        "term": "2012 Winter",
+        "term": "Winter 2012",
         "file": "/assets/media/education/Mechanical Vibrations.pdf"
 
       },
@@ -759,7 +759,7 @@
         "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1512377,
@@ -769,7 +769,7 @@
         "instructors": ["Mohsen Badrossamay"],
         "assistants": ["Ali Akhavan Safaei"],
         "type": "Core",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1518423,
@@ -779,7 +779,7 @@
         "instructors": ["Mahdi Moghimi Zand"],
         "assistants": ["Rasoul Koosha"],
         "type": "Core",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1518352,
@@ -789,7 +789,7 @@
         "instructors": ["Mohammad Mashayekhi"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1514300,
@@ -799,7 +799,7 @@
         "instructors": ["Sayed Amin Faghihi"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Winter"
+        "term": "Winter 2012"
       },
       {
         "code": 1518353,
@@ -809,7 +809,7 @@
         "instructors": ["Saeid Behbahani"],
         "assistants": ["Salar Asayesh Ghalehseyf"],
         "type": "Core",
-        "term": "2012 Fall",
+        "term": "Fall 2012",
         "file": "/assets/media/education/Automatic Control.pdf"
       },
       {
@@ -820,7 +820,7 @@
         "instructors": ["Mahdi Salehi"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Fall"
+        "term": "Fall 2012"
       },
       {
         "code": 1518412,
@@ -830,7 +830,7 @@
         "instructors": ["Saeed Ziaei Rad"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Fall"
+        "term": "Fall 2012"
       },
       {
         "code": 1516423,
@@ -840,7 +840,7 @@
         "instructors": ["Hamid Montazerolghaem"],
         "assistants": null,
         "type": "Major",
-        "term": "2012 Fall"
+        "term": "Fall 2012"
       },
       {
         "code": 1510373,
@@ -850,7 +850,7 @@
         "instructors": ["Alireza Fadaie Tehrani"],
         "assistants": null,
         "type": "Core",
-        "term": "2013 Winter"
+        "term": "Winter 2013"
       },
       {
         "code": 1510452,
@@ -860,7 +860,7 @@
         "instructors": ["Mohammad Reza Forouzan"],
         "assistants": null,
         "type": "Major",
-        "term": "2013 Winter",
+        "term": "Winter 2013",
         "file": "/assets/media/education/Hydraulics and Pneumatics.pdf"
       },
       {
@@ -871,7 +871,7 @@
         "instructors": ["Mehdi Keshmiri"],
         "assistants": null,
         "type": "Project",
-        "term": "2013 Winter"
+        "term": "Winter 2013"
       },
       {
         "code": 1518357,
@@ -881,7 +881,7 @@
         "instructors": ["Mostafa Ghayour"],
         "assistants": null,
         "type": "Major",
-        "term": "2013 Winter"
+        "term": "Winter 2013"
       },
       {
         "code": 1518428,
@@ -891,7 +891,7 @@
         "instructors": ["Mohammad Danesh"],
         "assistants": ["Mohammad Mahdi Savadi Mofrad"],
         "type": "Major",
-        "term": "2013 Winter"
+        "term": "Winter 2013"
       },
       {
         "code": 1518430,
@@ -901,7 +901,7 @@
         "instructors": ["Mohammad Jafar Sadigh Damghanizadeh"],
         "assistants": null,
         "type": "Major",
-        "term": "2013 Winter",
+        "term": "Winter 2013",
         "file": "/assets/media/education/Control Systems Design.pdf"
       },
       {
@@ -912,7 +912,7 @@
         "instructors": ["Mohammad Danesh"],
         "assistants": ["Mohsen Parsa"],
         "type": "Major",
-        "term": "2013 Winter"
+        "term": "Winter 2013"
       },
       {
         "code": 1510345,
@@ -922,7 +922,7 @@
         "instructors": ["Mehdi Keshmiri"],
         "assistants": null,
         "type": "Skill",
-        "term": "2013 Summer"
+        "term": "Summer 2013"
       }
     ]
   }

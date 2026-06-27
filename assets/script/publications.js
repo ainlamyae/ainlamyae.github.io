@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         section.classList.add('dropdown-section', 'keyword-expandable');
         section.dataset.sectionId = `pub-${index}`;
 
-        const heading = document.createElement("h4");
+        const heading = document.createElement("h3");
         heading.classList.add("dropdown-toggle");
         heading.textContent = `${title} (${items.length})`;
         section.appendChild(heading);
