@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('awards');
+  if (!container) return console.error('#awards not found');
+  showSectionLoading(container);
+
   fetch('assets/data/awards.json')
     .then(res => {
       if (!res.ok) throw new Error('Failed to load awards.json');
       return res.json();
     })
     .then(data => {
-      const container = document.getElementById('awards');
-      if (!container) return console.error('#awards not found');
-
+      container.innerHTML = ''; // clear loading placeholder
       const section = document.createElement('div');
       section.classList.add('dropdown-section');
       section.dataset.sectionId = "awards-1";
@@ -80,5 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (typeof unhideMedia === "function") unhideMedia();
     })
-    .catch(err => console.error('Awards JS error:', err));
+    .catch(err => {
+      console.error('Awards JS error:', err);
+      showSectionError(container, 'awards');
+    });
 });

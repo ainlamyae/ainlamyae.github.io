@@ -1,13 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  const container = document.getElementById('education');
+  if (!container) return console.error('Element with id "education" not found.');
+  showSectionLoading(container);
+
   fetch('assets/data/education.json')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load education.json');
       return response.json();
     })
     .then(data => {
-      const container = document.getElementById('education');
-      if (!container) return console.error('Element with id "education" not found.');
+      container.innerHTML = ''; // clear loading placeholder
 
       // Sort newest → oldest
       data.sort((a, b) => new Date(b.date.end) - new Date(a.date.end));
@@ -169,9 +172,9 @@ document.addEventListener('DOMContentLoaded', function () {
           const courseSection = document.createElement('div');
           courseSection.classList.add('dropdown-section');
 
-          const courseToggle = document.createElement('span');
+          const courseToggle = document.createElement('p');
           courseToggle.classList.add('dropdown-toggle');
-          courseToggle.textContent = `Courses (${edu.courses.length})`;
+          courseToggle.innerHTML = `<strong>📖 Courses (${edu.courses.length})</strong>`;
           courseSection.appendChild(courseToggle);
 
           const courseContent = document.createElement('div');
@@ -266,6 +269,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (typeof unhideMedia === 'function') unhideMedia();
 
     })
-    .catch(error => console.error('Error loading education:', error));
+    .catch(error => {
+      console.error('Error loading education:', error);
+      showSectionError(container, 'education');
+    });
 
 });

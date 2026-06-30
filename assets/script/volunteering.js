@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('volunteering');
+  if (!container) return console.error('#volunteering not found');
+  showSectionLoading(container);
+
   fetch('assets/data/volunteering.json')
     .then(res => {
       if (!res.ok) throw new Error('Failed to load volunteering.json');
       return res.json();
     })
     .then(data => {
-      const container = document.getElementById('volunteering');
-      if (!container) return console.error('#volunteering not found');
-
+      container.innerHTML = ''; // clear loading placeholder
       const section = document.createElement('div');
       section.classList.add('dropdown-section');
       section.dataset.sectionId = "volunteering-1";
@@ -95,5 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
       section.appendChild(content);
       container.appendChild(section);
     })
-    .catch(err => console.error('Volunteering JS error:', err));
+    .catch(err => {
+      console.error('Volunteering JS error:', err);
+      showSectionError(container, 'volunteering');
+    });
 });

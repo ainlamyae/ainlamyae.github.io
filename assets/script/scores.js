@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('scores');
+  if (!container) return console.error('#scores not found');
+  showSectionLoading(container);
+
   fetch('assets/data/scores.json')
     .then(res => {
       if (!res.ok) throw new Error('Failed to load scores.json');
       return res.json();
     })
     .then(data => {
-      const container = document.getElementById('scores');
-      if (!container) return console.error('#scores not found');
-
+      container.innerHTML = ''; // clear loading placeholder
       const section = document.createElement('div');
       section.classList.add('dropdown-section');
       section.dataset.sectionId = "scores-1";
@@ -59,5 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (typeof unhideMedia === "function") unhideMedia();
     })
-    .catch(err => console.error('Scores JS error:', err));
+    .catch(err => {
+      console.error('Scores JS error:', err);
+      showSectionError(container, 'test scores');
+    });
 });

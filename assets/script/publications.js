@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  const container = document.getElementById("publications");
+  if (!container) return;
+  showSectionLoading(container);
+
   fetch("assets/data/publications.json")
     .then(response => {
       if (!response.ok) throw new Error("Failed to load JSON file.");
       return response.json();
     })
     .then(data => {
-
-      const container = document.getElementById("publications");
-      if (!container) return;
+      container.innerHTML = ''; // clear loading placeholder
 
       // Group publications by type
       const groups = { article: [], inproceedings: [], patent: [], thesis: [] };
@@ -130,6 +132,9 @@ document.addEventListener("DOMContentLoaded", function () {
       renderGroup("Thesis", groups.thesis, "thesis", i++);
 
     })
-    .catch(error => console.error("Error loading publications:", error));
+    .catch(error => {
+      console.error("Error loading publications:", error);
+      showSectionError(container, 'publications');
+    });
 
 });
