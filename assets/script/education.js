@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const container = document.getElementById('education');
-  if (!container) return console.error('Element with id "education" not found.');
+  const container = document.getElementById('education-list');
+  if (!container) return console.error('Element with id "education-list" not found.');
   showSectionLoading(container);
 
   fetch('assets/data/education.json')
