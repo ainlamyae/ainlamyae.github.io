@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const container = document.getElementById('projects');
+  const container = document.getElementById('projects-list');
   if (!container) return;
   showSectionLoading(container);
 
