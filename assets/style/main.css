@@ -317,6 +317,13 @@ a:focus-visible,
 
 /* Optional: smooth expansion for mobile */
 @media (max-width: 768px) {
+  #navbar {
+    /* .nav-brand is hidden and ul collapses, leaving only the absolutely
+       positioned toggle — without an explicit height the bar shrinks to 0
+       and the toggle's "top: 50%" centers on nothing, pushing it off-screen */
+    min-height: 52px;
+  }
+
   #navbar .nav-brand {
     display: none;
   }
