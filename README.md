@@ -52,7 +52,7 @@ logic required.
 │   │   ├── scores.json           # Standardized test score records
 │   │   ├── volunteering.json     # Volunteering records
 │   │   ├── recommendations.json  # Recommendation records
-│   │   ├── contact.json          # Contact list (emails/instructors) — not the contact form
+│   │   ├── people.json           # Directory of people — instructors, collaborators, co-authors, students
 │   │   └── keywords.json         # Keyword groups mapped to URL query parameters
 │   └── media
 │       ├── award/                # Award certificates (JPG, PDF)
