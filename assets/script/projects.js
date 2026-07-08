@@ -11,11 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(data => {
       container.innerHTML = ''; // clear loading placeholder
-      const categoryEmoji = {
-        "Personal": "🛠️",
-        "Hobby":    "🎯",
-        "Course":   "📚"
-      };
 
       data.forEach(project => {
         const section = document.createElement('div');
@@ -23,10 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Title row (dropdown toggle)
         const titleEl = document.createElement('p');
-        const emoji = categoryEmoji[project.category] || "";
         titleEl.classList.add('dropdown-toggle');
         titleEl.style.cursor = 'pointer';
-        titleEl.innerHTML = `<strong>${emoji ? emoji + " " : ""}${project.title}</strong>`;
+        titleEl.innerHTML = `<strong>${project.title}</strong>`;
         section.appendChild(titleEl);
 
         // Hidden content
@@ -90,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
         section.appendChild(contentDiv);
         container.appendChild(section);
       });
+
+      if (typeof unhideMedia === 'function') unhideMedia();
     })
     .catch(error => {
       console.error('Error loading projects:', error);

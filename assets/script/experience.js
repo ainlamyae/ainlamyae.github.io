@@ -256,6 +256,8 @@ fetch('assets/data/experience.json')
 
     });
 
+    if (typeof unhideMedia === 'function') unhideMedia();
+
   })
   .catch(error => {
     console.error('Error loading experience:', error);
