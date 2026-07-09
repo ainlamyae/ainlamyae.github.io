@@ -46,11 +46,6 @@
             "start": "2012-03-01",
             "end": "2012-06-01"
         },
-        "media": [
-            {
-                "src": "assets/media/projects/sppb2012.pdf",
-                "caption": "Biped robot gait planning, trajectory generation, and ZMP-based stability analysis"
-            }
-        ]
+        "file": "assets/media/projects/sppb2012.pdf"
     }
 ]

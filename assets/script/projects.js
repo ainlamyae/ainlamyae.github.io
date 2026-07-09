@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
         titleEl.classList.add('dropdown-toggle');
         titleEl.style.cursor = 'pointer';
         titleEl.innerHTML = `<strong>${project.title}</strong>`;
+
+        if (project.file && project.file.trim() !== '') {
+          const fileLink = document.createElement('a');
+          fileLink.href = '#';
+          fileLink.textContent = ' 📄';
+          fileLink.title = 'View Project File';
+          fileLink.className = 'media-icon';
+          fileLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof openMediaModal === 'function') {
+              openMediaModal([{ src: project.file, caption: project.title }], 0);
+            }
+          });
+          titleEl.appendChild(fileLink);
+        }
+
         section.appendChild(titleEl);
 
         // Hidden content
