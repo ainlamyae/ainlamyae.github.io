@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       container.innerHTML = ''; // clear loading placeholder
 
+      // Sort projects from newest to oldest by start date
+      data.sort((a, b) => {
+        const getStart = p => p.date?.start ? new Date(p.date.start) : new Date(0);
+        return getStart(b) - getStart(a);
+      });
+
       data.forEach(project => {
         const section = document.createElement('div');
         section.classList.add('dropdown-section', 'keyword-expandable');
