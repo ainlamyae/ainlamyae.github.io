@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const container = document.getElementById('projects-list');
+  const container = document.getElementById('projects');
   if (!container) return;
   showSectionLoading(container);
 
@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const getStart = p => p.date?.start ? new Date(p.date.start) : new Date(0);
         return getStart(b) - getStart(a);
       });
+
+      // Outer dropdown — "Projects" heading
+      const outerSection = document.createElement('div');
+      outerSection.classList.add('dropdown-section');
+      outerSection.dataset.sectionId = 'projects-1';
+
+      const outerHeading = document.createElement('h3');
+      outerHeading.classList.add('dropdown-toggle');
+      outerHeading.textContent = `Projects (${data.length})`;
+
+      const outerContent = document.createElement('div');
+      outerContent.classList.add('dropdown-content');
 
       data.forEach(project => {
         const section = document.createElement('div');
@@ -105,8 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         section.appendChild(contentDiv);
-        container.appendChild(section);
+        outerContent.appendChild(section);
       });
+
+      outerSection.appendChild(outerHeading);
+      outerSection.appendChild(outerContent);
+      container.appendChild(outerSection);
 
       if (typeof unhideMedia === 'function') unhideMedia();
     })
