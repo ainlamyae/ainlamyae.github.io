@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('gate-form');
   const emailInput = document.getElementById('gate-email');
   const status = document.getElementById('gate-status');
-  if (!form || !emailInput || !status) return;
+  const submitBtn = document.getElementById('gate-submit');
+  const submitLabel = document.getElementById('gate-submit-label');
+  if (!form || !emailInput || !status || !submitBtn || !submitLabel) return;
 
   const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScmhmwLw_NkpyTvkQyFHUNCtKweFjVNQx_05wbfox0vsSlYAw/formResponse';
   const GOOGLE_FORM_FIELDS = {
@@ -15,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
+
+  const VERIFY_DELAY_MS = 700;
+  const SUCCESS_DELAY_MS = 500;
 
   function reveal() {
     document.documentElement.classList.remove('gate-active');
@@ -36,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     status.textContent = '';
     status.classList.remove('error');
     form.dataset.submitting = 'true';
+    submitBtn.disabled = true;
+    submitBtn.classList.add('is-verifying');
+    submitLabel.textContent = 'Verifying…';
 
     const data = new FormData();
     data.append(GOOGLE_FORM_FIELDS.name, 'Visitor');
@@ -44,14 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
     data.append(GOOGLE_FORM_FIELDS.message, 'Automatic submission from the homepage gate.');
 
     // Google Forms doesn't send CORS headers, so the response is opaque
-    // ("no-cors"): we can't confirm delivery, so reveal the page right
-    // after dispatching rather than blocking on the request.
+    // ("no-cors"): we can't confirm delivery, so we don't block the
+    // verify/success animation or the reveal on the request settling.
     fetch(GOOGLE_FORM_ACTION, {
       method: 'POST',
       mode: 'no-cors',
       body: data
     }).catch(() => {});
 
-    reveal();
+    setTimeout(() => {
+      submitBtn.classList.remove('is-verifying');
+      submitBtn.classList.add('is-success');
+      submitLabel.textContent = 'Success!';
+
+      setTimeout(reveal, SUCCESS_DELAY_MS);
+    }, VERIFY_DELAY_MS);
   });
 });
