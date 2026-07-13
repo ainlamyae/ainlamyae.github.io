@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>
+    (function () {
+      try {
+        var bypass = window.location.search.length > 0 ||
+                     window.location.hash.length > 0 ||
+                     localStorage.getItem('gateVerified') === '1';
+        if (!bypass) document.documentElement.classList.add('gate-active');
+      } catch (e) {}
+    })();
+  </script>
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' https://www.googletagmanager.com;
@@ -53,9 +63,24 @@
   <script src="assets/script/recommendations.js" defer></script>
   <script src="assets/script/contact-form.js" defer></script>
   <script src="assets/script/app.js" defer></script>
+  <script src="assets/script/email-gate.js" defer></script>
 </head>
 
 <body>
+  <div id="email-gate">
+    <div class="gate-card">
+      <form id="gate-form" novalidate>
+        <div class="form-row">
+          <label for="gate-email">Email</label>
+          <input type="email" id="gate-email" name="email" autocomplete="email" autofocus required>
+        </div>
+        <button type="submit" id="gate-submit">I'm not a robot</button>
+        <p id="gate-status" class="contact-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="site-content">
   <div id="navbar-placeholder"></div>
 
   <div id="header-placeholder"></div>
@@ -113,6 +138,8 @@
     <button id="fab-expand" class="fab" aria-label="Expand all sections" title="Expand all sections">⏬</button>
   </div>
   <script src="assets/script/ui-controls.js" defer></script>
+
+  </div>
 
 </body>
 </html>

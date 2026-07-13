@@ -55,6 +55,7 @@ Two complementary patterns keep it maintainable:
 │   │   ├── volunteering.js       # Volunteering renderer
 │   │   ├── recommendations.js    # Recommendations renderer
 │   │   ├── contact-form.js       # Loads contact partial; Google Form submission + status messaging
+│   │   ├── email-gate.js         # Bare-URL interstitial: validates + submits visitor email, then reveals #site-content
 │   │   ├── ui-controls.js        # Floating action buttons: back-to-top, theme toggle, expand/collapse all
 │   │   └── app.js                # Core runtime: dropdowns (ARIA), keyword engine, lightbox modal
 │   ├── html
@@ -180,6 +181,18 @@ letting visitors send messages without any backend, while `#contact-status` repo
 success here only confirms the request was sent, not that Google accepted it. The same partial
 (and the same handler) powers both the in-page `#contact` section on the homepage and the
 standalone `contact.html` page.
+
+**Email-gated homepage.** Loading `index.html` with no `?query` and no `#hash` shows a plain
+interstitial (`#email-gate`) instead of the page content (`#site-content`), which stays
+`display: none` until the gate clears. The gate/bypass decision is made by a small inline
+`<script>` at the top of `<head>` — before any CSS paints — so there's no flash of hidden
+content: it adds a `gate-active` class to `<html>` unless `location.search`, `location.hash`,
+or a prior `localStorage.gateVerified` flag says to skip it. Submitting the gate's email field
+(validated with a basic `@`/`.` pattern) reuses the same Google Form `no-cors` POST as the
+contact form (`name: "Visitor"`, `subject: "Visitor at <date/time>"`) to log the lead, then
+removes `gate-active` and sets `localStorage.gateVerified` so the same browser isn't asked
+again. This is a client-side filter for casual visitors and lead capture, not an access-control
+mechanism — anyone can bypass it with any query string or hash, view source, or disabled JS.
 
 **Content Security Policy.** `index.html` and `contact.html` declare a restrictive CSP via
 `<meta http-equiv="Content-Security-Policy">` (self-hosted scripts/styles/fonts, plus an
