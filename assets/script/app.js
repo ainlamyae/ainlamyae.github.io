@@ -306,7 +306,9 @@ function openMediaModal(mediaList, index) {
     modalContent.innerHTML = ""; // clear previous
 
     const current = currentMediaList[currentMediaIndex];
-    const isPDF = current.src.toLowerCase().endsWith(".pdf");
+    const src = current.src.toLowerCase();
+    const isPDF = src.endsWith(".pdf");
+    const isVideo = /\.(mp4|webm|ogg)$/.test(src);
 
     if (isPDF) {
         const embed = document.createElement("embed");
@@ -316,6 +318,13 @@ function openMediaModal(mediaList, index) {
         embed.style.height = "100%";
         embed.style.display = "block";
         modalContent.appendChild(embed);
+    } else if (isVideo) {
+        const video = document.createElement("video");
+        video.src = current.src;
+        video.controls = true;
+        video.style.maxWidth = "100%";
+        video.style.maxHeight = "80vh";
+        modalContent.appendChild(video);
     } else {
         const img = document.createElement("img");
         img.src = current.src;

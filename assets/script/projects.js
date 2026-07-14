@@ -39,21 +39,29 @@ document.addEventListener('DOMContentLoaded', function () {
         titleEl.classList.add('dropdown-toggle');
         titleEl.appendChild(document.createTextNode(project.title));
 
-        if (project.file && project.file.trim() !== '') {
+        // "file" may be a single path, or a list of { src, caption } for
+        // projects with multiple related documents/recordings
+        const files = Array.isArray(project.file)
+          ? project.file
+          : (project.file && project.file.trim() !== '') ? [{ src: project.file, caption: project.title }] : [];
+
+        files.forEach((file, index) => {
+          if (!file.src) return;
+          const isVideo = /\.(mp4|webm|ogg)$/i.test(file.src);
           const fileLink = document.createElement('a');
           fileLink.href = '#';
-          fileLink.textContent = ' 📄';
-          fileLink.title = 'View Project File';
+          fileLink.textContent = isVideo ? ' 🎬' : ' 📄';
+          fileLink.title = file.caption || (isVideo ? 'View Project Recording' : 'View Project File');
           fileLink.className = 'media-icon';
           fileLink.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
             if (typeof openMediaModal === 'function') {
-              openMediaModal([{ src: project.file, caption: project.title }], 0);
+              openMediaModal(files, index);
             }
           });
           titleEl.appendChild(fileLink);
-        }
+        });
 
         section.appendChild(titleEl);
 
