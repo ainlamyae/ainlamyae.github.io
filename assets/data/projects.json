@@ -29,24 +29,58 @@
   },
   {
     "category": "Course",
-    "title": "Stable Path Planning and Body Angle Analysis of a Biped Robot",
+    "title": "Fuzzy Control of Truck-Trailer Auto Parking in the Presence of Obstacles",
     "description": [
-      "Analyzed the influence of torso/body angle parameters on the dynamic stability of a biped robot using Zero Moment Point (ZMP) stability criteria.",
-      "Developed kinematic and dynamic models of a multi-link biped robot, including body segments, joints, mass distribution, and inertia properties.",
-      "Designed stable walking trajectories for single-support gait phases through joint-space path planning and motion constraint formulation.",
-      "Generated polynomial-based trajectories for hip, knee, ankle, and foot joints to ensure smooth locomotion and continuous motion profiles.",
-      "Performed forward and inverse kinematics calculations to determine joint positions, orientations, and limb trajectories during walking cycles.",
-      "Modeled center-of-mass (COM) motion for individual robot segments and the overall system to evaluate balance and gait performance.",
-      "Computed segment mass moments of inertia and incorporated dynamic parameters into stability and motion analyses.",
-      "Implemented mathematical models, simulations, and trajectory optimization algorithms using Wolfram Mathematica.",
-      "Validated walking stability by calculating ZMP trajectories and verifying that support constraints were maintained throughout locomotion.",
-      "Conducted sensitivity analysis on torso inclination and posture variations to determine their effects on gait stability and robot balance."
+      "Developed a hierarchical fuzzy logic controller in MATLAB/Simulink for autonomous reverse parking of a truck-trailer system.",
+      "Modeled the nonlinear kinematics of a 4-DOF trailer-truck vehicle and implemented steering control algorithms for reverse maneuvering.",
+      "Designed Mamdani and Takagi-Sugeno fuzzy inference systems to generate adaptive steering commands based on vehicle orientation and parking position.",
+      "Implemented an 8-direction fuzzy decision-making framework for trajectory planning and parking path correction during autonomous parking operations.",
+      "Integrated obstacle avoidance functionality using distance- and angle-based fuzzy rules to enable collision-free parking in constrained environments.",
+      "Developed fuzzy compensation mechanisms to regulate the articulation angle between the truck and trailer, improving maneuverability and stability.",
+      "Simulated multiple parking scenarios with varying initial conditions and obstacle configurations to evaluate controller performance and robustness.",
+      "Validated autonomous parking accuracy through trajectory analysis, demonstrating stable path tracking and successful parking completion."
     ],
     "date": {
-      "start": "2012-03-01",
-      "end": "2012-06-01"
+      "start": "2013-10-01",
+      "end": "2013-12-01"
     },
-    "file": "assets/media/projects/sppb2012.pdf"
+    "file": [
+      {
+        "src": "assets/media/projects/fctt2013.pdf",
+        "caption": "Project report"
+      },
+      {
+        "src": "assets/media/projects/fctt2013-2.pdf",
+        "caption": "Simulation results"
+      },
+      {
+        "src": "assets/media/projects/fctt2013-3.pdf",
+        "caption": "Presentation slides"
+      },
+      {
+        "src": "assets/media/projects/fctt2013-4.mp4",
+        "caption": "Simulation demo recording"
+      }
+    ]
+  },
+  {
+    "category": "Course",
+    "title": "Design and Programming of a 3-DoF Robot Controller Circuit Board",
+    "description": [
+      "Designed and developed an embedded control system for a 3-DoF robotic manipulator using an ATmega32 AVR microcontroller.",
+      "Implemented simultaneous position and motion control of two servo motors and one DC motor to execute predefined robotic trajectories.",
+      "Programmed the controller in Embedded C to process user commands and generate real-time motor control signals.",
+      "Integrated keypad and LCD interfaces for user input, motion parameter configuration, and system status monitoring.",
+      "Designed motor driver circuitry using H-bridge drivers and supporting electronics for reliable actuator control.",
+      "Developed complete schematic diagrams and multi-layer PCB layouts, including power regulation, signal routing, and peripheral interfaces.",
+      "Performed circuit simulation and functional verification using Proteus prior to hardware implementation.",
+      "Fabricated, assembled, and tested the custom controller board, validating coordinated robotic motion and system functionality."
+    ],
+    "date": {
+      "start": "2013-04-01",
+      "end": "2013-07-01"
+    },
+    "file": "assets/media/projects/dprc2013.pdf"
   },
   {
     "category": "Course",
@@ -110,57 +144,23 @@
   },
   {
     "category": "Course",
-    "title": "Fuzzy Control of Truck-Trailer Auto Parking in the Presence of Obstacles",
+    "title": "Stable Path Planning and Body Angle Analysis of a Biped Robot",
     "description": [
-      "Developed a hierarchical fuzzy logic controller in MATLAB/Simulink for autonomous reverse parking of a truck-trailer system.",
-      "Modeled the nonlinear kinematics of a 4-DOF trailer-truck vehicle and implemented steering control algorithms for reverse maneuvering.",
-      "Designed Mamdani and Takagi-Sugeno fuzzy inference systems to generate adaptive steering commands based on vehicle orientation and parking position.",
-      "Implemented an 8-direction fuzzy decision-making framework for trajectory planning and parking path correction during autonomous parking operations.",
-      "Integrated obstacle avoidance functionality using distance- and angle-based fuzzy rules to enable collision-free parking in constrained environments.",
-      "Developed fuzzy compensation mechanisms to regulate the articulation angle between the truck and trailer, improving maneuverability and stability.",
-      "Simulated multiple parking scenarios with varying initial conditions and obstacle configurations to evaluate controller performance and robustness.",
-      "Validated autonomous parking accuracy through trajectory analysis, demonstrating stable path tracking and successful parking completion."
+      "Analyzed the influence of torso/body angle parameters on the dynamic stability of a biped robot using Zero Moment Point (ZMP) stability criteria.",
+      "Developed kinematic and dynamic models of a multi-link biped robot, including body segments, joints, mass distribution, and inertia properties.",
+      "Designed stable walking trajectories for single-support gait phases through joint-space path planning and motion constraint formulation.",
+      "Generated polynomial-based trajectories for hip, knee, ankle, and foot joints to ensure smooth locomotion and continuous motion profiles.",
+      "Performed forward and inverse kinematics calculations to determine joint positions, orientations, and limb trajectories during walking cycles.",
+      "Modeled center-of-mass (COM) motion for individual robot segments and the overall system to evaluate balance and gait performance.",
+      "Computed segment mass moments of inertia and incorporated dynamic parameters into stability and motion analyses.",
+      "Implemented mathematical models, simulations, and trajectory optimization algorithms using Wolfram Mathematica.",
+      "Validated walking stability by calculating ZMP trajectories and verifying that support constraints were maintained throughout locomotion.",
+      "Conducted sensitivity analysis on torso inclination and posture variations to determine their effects on gait stability and robot balance."
     ],
     "date": {
-      "start": "2013-10-01",
-      "end": "2013-12-01"
+      "start": "2012-03-01",
+      "end": "2012-06-01"
     },
-    "file": [
-      {
-        "src": "assets/media/projects/fctt2013.pdf",
-        "caption": "Project report"
-      },
-      {
-        "src": "assets/media/projects/fctt2013-2.pdf",
-        "caption": "Simulation results"
-      },
-      {
-        "src": "assets/media/projects/fctt2013-3.pdf",
-        "caption": "Presentation slides"
-      },
-      {
-        "src": "assets/media/projects/fctt2013-4.mp4",
-        "caption": "Simulation demo recording"
-      }
-    ]
-  },
-  {
-    "category": "Course",
-    "title": "Design and Programming of a 3-DoF Robot Controller Circuit Board",
-    "description": [
-      "Designed and developed an embedded control system for a 3-DoF robotic manipulator using an ATmega32 AVR microcontroller.",
-      "Implemented simultaneous position and motion control of two servo motors and one DC motor to execute predefined robotic trajectories.",
-      "Programmed the controller in Embedded C to process user commands and generate real-time motor control signals.",
-      "Integrated keypad and LCD interfaces for user input, motion parameter configuration, and system status monitoring.",
-      "Designed motor driver circuitry using H-bridge drivers and supporting electronics for reliable actuator control.",
-      "Developed complete schematic diagrams and multi-layer PCB layouts, including power regulation, signal routing, and peripheral interfaces.",
-      "Performed circuit simulation and functional verification using Proteus prior to hardware implementation.",
-      "Fabricated, assembled, and tested the custom controller board, validating coordinated robotic motion and system functionality."
-    ],
-    "date": {
-      "start": "2013-04-01",
-      "end": "2013-07-01"
-    },
-    "file": "assets/media/projects/dprc2013.pdf"
+    "file": "assets/media/projects/sppb2012.pdf"
   }
 ]
