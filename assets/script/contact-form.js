@@ -14,13 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
       message: 'entry.2016710258'
     };
 
+    // Best-effort IP lookup, kicked off early so it's usually ready by submit time.
+    let visitorIp = null;
+    fetch('https://api.ipify.org?format=json')
+      .then(res => res.json())
+      .then(data => { visitorIp = data.ip; })
+      .catch(() => {});
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function timestamp() {
+      const d = new Date();
+      return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + ' ' +
+        pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const data = new FormData();
       data.append(GOOGLE_FORM_FIELDS.name, form.name.value.trim());
       data.append(GOOGLE_FORM_FIELDS.email, form.email.value.trim());
-      data.append(GOOGLE_FORM_FIELDS.subject, form.subject.value.trim());
+      data.append(GOOGLE_FORM_FIELDS.subject, timestamp() + ' ' + (visitorIp || 'Unknown IP') + ' — ' + form.subject.value.trim());
       data.append(GOOGLE_FORM_FIELDS.message, form.message.value.trim());
 
       status.textContent = 'Sending…';
