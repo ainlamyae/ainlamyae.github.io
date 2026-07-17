@@ -180,7 +180,11 @@ letting visitors send messages without any backend, while `#contact-status` repo
 `.contact-status.error` in `main.css`). Because the response is opaque under `no-cors`,
 success here only confirms the request was sent, not that Google accepted it. The same partial
 (and the same handler) powers both the in-page `#contact` section on the homepage and the
-standalone `contact.html` page.
+standalone `contact.html` page. On submit, the script also kicks off a best-effort lookup of the
+visitor's public IP via `https://api.ipify.org` and prepends a `YYYY-MM-DD HH:MM:SS IP` stamp to
+the submitted subject (e.g. `2026-07-16 23:32:32 99.251.14.181 — Job inquiry`), so responses in
+the Google Sheet show who/when alongside the visitor's own subject line. If the lookup hasn't
+resolved by submit time, it falls back to `Unknown IP` rather than blocking the send.
 
 **Email-gated homepage.** Loading `index.html` with no `?query` and no `#hash` shows a plain
 interstitial (`#email-gate`) instead of the page content (`#site-content`), which stays
@@ -188,18 +192,20 @@ interstitial (`#email-gate`) instead of the page content (`#site-content`), whic
 `<script>` at the top of `<head>` — before any CSS paints — so there's no flash of hidden
 content: it adds a `gate-active` class to `<html>` unless `location.search`, `location.hash`,
 or a prior `localStorage.gateVerified` flag says to skip it. Submitting the gate's email field
-(validated with a basic `@`/`.` pattern) reuses the same Google Form `no-cors` POST as the
-contact form (`name: "Visitor"`, `subject: "Visitor at <date/time>"`) to log the lead, then
-removes `gate-active` and sets `localStorage.gateVerified` so the same browser isn't asked
-again. This is a client-side filter for casual visitors and lead capture, not an access-control
-mechanism — anyone can bypass it with any query string or hash, view source, or disabled JS.
+(validated with a basic `@`/`.` pattern — format only, not deliverability: nothing confirms the
+address is real) reuses the same Google Form `no-cors` POST as the contact form
+(`name: "Visitor"`, `subject: "YYYY-MM-DD HH:MM:SS IP"`, using the same ipify lookup and
+`Unknown IP` fallback described above) to log the lead, then removes `gate-active` and sets
+`localStorage.gateVerified` so the same browser isn't asked again. This is a client-side filter
+for casual visitors and lead capture, not an access-control mechanism — anyone can bypass it
+with any query string or hash, view source, or disabled JS.
 
 **Content Security Policy.** `index.html` and `contact.html` declare a restrictive CSP via
 `<meta http-equiv="Content-Security-Policy">` (self-hosted scripts/styles/fonts, plus an
-allowlist for Google Analytics, Google Ads-audience, Google Forms, and the embedded Google
-Map). Because CSP blocks inline `<script>` execution, any per-page bootstrap logic — e.g. the
-footer year — lives in an external file (`footer-year.js`) rather than an inline `<script>`
-block.
+allowlist for Google Analytics, Google Ads-audience, Google Forms, the embedded Google Map, and
+`api.ipify.org` for the contact-form/email-gate IP lookup). Because CSP blocks inline `<script>`
+execution, any per-page bootstrap logic — e.g. the footer year — lives in an external file
+(`footer-year.js`) rather than an inline `<script>` block.
 
 **Word cloud.** `assets/analysis/wordcloud.py` (stdlib only) scans every `assets/data/*.json`
 file plus the comma-separated skill phrases in `about.json`, tokenizes and normalizes terms
