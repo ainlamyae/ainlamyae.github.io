@@ -468,7 +468,15 @@ a:focus-visible,
   list-style: none;
 }
 
-.skill-tag {
+ul:has(> li > .tag) {
+  padding-left: 0;
+}
+
+li:has(> .tag) {
+  list-style: none;
+}
+
+.tag {
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -481,7 +489,7 @@ a:focus-visible,
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-tag::after {
+.tag::after {
   content: "";
   position: absolute;
   top: 0;
@@ -494,14 +502,14 @@ a:focus-visible,
   pointer-events: none;
 }
 
-.skill-tag:hover {
+.tag:hover {
   background: #fff;
   border-color: var(--color-primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(12, 55, 97, 0.18);
 }
 
-.skill-tag:hover::after {
+.tag:hover::after {
   left: 150%;
 }
 
@@ -660,8 +668,8 @@ a:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   h3,
   h3::after,
-  .skill-tag,
-  .skill-tag::after,
+  .tag,
+  .tag::after,
   .nav-brand,
   .brand-initial {
     transition: none;
