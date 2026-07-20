@@ -82,16 +82,28 @@ header h1 {
 }
 
 .header-contact img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border: 1px solid var(--color-border);
   border-radius: 10px;
   background: var(--color-surface);
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .header-contact .social-links {
   margin-top: 0;
+  gap: 12px;
+}
+
+.header-contact .social-links a {
+  width: 32px;
+  height: 32px;
+}
+
+.header-contact .social-links svg {
+  width: 16px;
+  height: 16px;
 }
 
 
@@ -504,6 +516,14 @@ a:focus-visible,
   #navbar a {
     padding: 10px 14px;
     font-size: 0.85em;
+  }
+}
+
+/* Phones: scanning a QR code on the same device that's displaying it is
+   pointless, so hide it and keep just the photo/name and the links. */
+@media (max-width: 480px) {
+  .header-contact img {
+    display: none;
   }
 }
 
