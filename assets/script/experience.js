@@ -100,17 +100,25 @@ fetch('assets/data/experience.json')
       // ==============================
       orgExperiences.forEach(exp => {
 
-        // Role / position title
+        // ===== Role dropdown section (position toggles its details) =====
+        const roleSection = document.createElement('div');
+        roleSection.classList.add('dropdown-section', 'keyword-expandable');
+
+        // Role / position title (dropdown toggle)
         const positionHeading = document.createElement('h4');
         positionHeading.textContent = exp.position;
-        textDiv.appendChild(positionHeading);
+        positionHeading.classList.add('dropdown-toggle');
+        roleSection.appendChild(positionHeading);
+
+        const roleContent = document.createElement('div');
+        roleContent.classList.add('dropdown-content');
 
         // Group / lab info (italic)
         if (exp.group) {
           const groupLine = document.createElement('p');
           groupLine.style.fontStyle = 'italic';
           groupLine.textContent = exp.group;
-          textDiv.appendChild(groupLine);
+          roleContent.appendChild(groupLine);
         }
 
         // Employment type + dates + duration
@@ -121,7 +129,7 @@ fetch('assets/data/experience.json')
 
           const metaLine = document.createElement('p');
           metaLine.textContent = `${exp.employmentType || ""} | ${startFormatted} - ${endFormatted} · ${duration}`;
-          textDiv.appendChild(metaLine);
+          roleContent.appendChild(metaLine);
         }
 
         // ==============================
@@ -270,8 +278,12 @@ fetch('assets/data/experience.json')
         // Assemble Section
         // ==============================
         section.appendChild(contentDiv);
-        textDiv.appendChild(section);
+        roleContent.appendChild(section);
       });
+
+      // Assemble role dropdown section
+      roleSection.appendChild(roleContent);
+      textDiv.appendChild(roleSection);
       });
 
       // Append organization block to main container
