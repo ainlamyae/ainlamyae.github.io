@@ -675,6 +675,28 @@ li:has(> .tag) {
   color: var(--color-accent);
 }
 
+.contact-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-qr img {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  padding: 10px;
+}
+
+.contact-qr p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--color-dark);
+}
+
 .social-links {
   display: flex;
   justify-content: center;
