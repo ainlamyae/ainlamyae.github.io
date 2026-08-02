@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==============================
     // Active nav link on scroll
     // ==============================
-    const navLinks = document.querySelectorAll('#navbar a[href^="#"]');
+    const navLinks = document.querySelectorAll('#navbar-menu a[href^="#"]');
     const sectionIds = Array.from(navLinks).map(a => a.getAttribute('href').slice(1));
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
