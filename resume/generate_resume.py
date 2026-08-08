@@ -256,6 +256,32 @@ def build_credentials() -> str:
     return "\n".join(out)
 
 
+def build_projects() -> str:
+    projects = load("projects")
+    out = [section_link("engagement", "Projects")]
+    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    for p in projects:
+        title = esc(p["title"])
+        desc  = p.get("description", [])
+        date_str = ""
+        if isinstance(p.get("date"), dict):
+            date_str = " \\hfill " + date_range(p["date"])
+        elif p.get("date"):
+            date_str = " \\hfill " + fmt_date(str(p["date"]))
+        out.append(rf"\item \textbf{{{title}}}{date_str}")
+        if isinstance(desc, list):
+            for d in desc[:2]:
+                out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+                out.append(rf"    \item {esc(d)}")
+                out.append(rf"  \end{{itemize}}")
+        elif desc:
+            out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+            out.append(rf"    \item {esc(str(desc))}")
+            out.append(rf"  \end{{itemize}}")
+    out.append(r"\end{itemize}")
+    return "\n".join(out)
+
+
 def build_engagement() -> str:
     projects = load("projects")
     vol      = sorted(load("volunteering"), key=lambda e: e["date"]["start"], reverse=True)
@@ -357,6 +383,7 @@ def build_tex() -> str:
         build_experience(),
         build_education(),
         build_publications(),
+        build_projects(),
     ]
 
     body = "\n\n".join(sections)
