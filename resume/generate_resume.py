@@ -67,7 +67,7 @@ def fmt_date(iso: str | None) -> str:
     if not iso:
         return "Present"
     try:
-        return datetime.fromisoformat(iso[:7]).strftime("%b %Y")
+        return datetime.fromisoformat(iso[:10]).strftime("%b %Y")
     except ValueError:
         return esc(iso)
 
@@ -168,22 +168,11 @@ def build_education() -> str:
         field = esc(e["degree"]["field"])
         dr    = date_range(e["date"])
         major = esc(e.get("major", ""))
-        gpa_v = e.get("gpa", {})
-        thesis = e.get("thesis", {})
 
         out.append(rf"\textbf{{{level} ({abbr}) in {field}}} \hfill {dr}\\")
         out.append(rf"\textit{{{inst}}} --- {addr}\\")
-        out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
         if major:
-            out.append(rf"  \item Major: {major}")
-        if gpa_v and gpa_v.get("value") is not None:
-            out.append(rf"  \item GPA: {gpa_v['value']}/{gpa_v['scale']}")
-        if thesis and thesis.get("title"):
-            t_text = esc(thesis["title"])
-            if thesis.get("url"):
-                t_text = href(thesis["url"], thesis["title"])
-            out.append(rf"  \item Thesis: {t_text}")
-        out.append(r"\end{itemize}")
+            out.append(rf"\textit{{Major:}} {major}\\")
         out.append(r"\vspace{6pt}")
 
     return "\n".join(out)
