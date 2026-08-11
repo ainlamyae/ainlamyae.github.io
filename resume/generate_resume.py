@@ -337,7 +337,7 @@ def build_projects() -> str:
         desc  = p.get("description", [])
         date_str = ""
         if isinstance(p.get("date"), dict):
-            date_str = " \\hfill " + date_range(p["date"])
+            date_str = " \\hfill " + fmt_date(p["date"].get("end") or p["date"].get("start"))
         elif p.get("date"):
             date_str = " \\hfill " + fmt_date(str(p["date"]))
         out.append(rf"\item \textbf{{{title}}}{date_str}")
