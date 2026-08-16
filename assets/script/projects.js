@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
           : (project.file && project.file.trim() !== '') ? [{ src: project.file, caption: project.title }] : [];
 
         files.forEach((file, index) => {
-          if (!file.src) return;
+          if (!MEDIA_UNLOCKED || !file.src) return;
           const isVideo = /\.(mp4|webm|ogg)$/i.test(file.src);
           const fileLink = document.createElement('a');
           fileLink.href = '#';
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Media row
-        if (project.media?.length) {
+        if (MEDIA_UNLOCKED && project.media?.length) {
           const mediaRow = document.createElement('div');
           mediaRow.className = 'media-row';
 

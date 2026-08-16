@@ -27,3 +27,7 @@ function showSectionLoading(container) {
 function showSectionError(container, label) {
   container.innerHTML = `<p class="section-status section-status-error">Couldn't load ${label}. Please try refreshing the page.</p>`;
 }
+
+// Media is only rendered into the DOM when a query string is present.
+// Reader mode strips CSS, so display:none alone is not sufficient.
+const MEDIA_UNLOCKED = !!window.location.search;

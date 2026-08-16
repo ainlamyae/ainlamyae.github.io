@@ -163,7 +163,7 @@ fetch('assets/data/experience.json')
             : (item.file && item.file.trim() !== '') ? [{ src: item.file, caption: item.title }] : [];
 
           files.forEach((file, index) => {
-            if (!file.src) return;
+            if (!MEDIA_UNLOCKED || !file.src) return;
             const isVideo = /\.(mp4|webm|ogg)$/i.test(file.src);
             const fileLink = document.createElement('a');
             fileLink.href = '#';
@@ -248,7 +248,7 @@ fetch('assets/data/experience.json')
         }
 
         // Media
-        if (item.media?.length) {
+        if (MEDIA_UNLOCKED && item.media?.length) {
           const mediaRow = document.createElement('div');
           mediaRow.className = 'media-row';
 

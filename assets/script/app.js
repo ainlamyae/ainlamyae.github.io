@@ -335,16 +335,11 @@ modalFocusables.forEach(el => {
 // Function to unhide media for special visitors
 // ==============================
 function unhideMedia() {
-    // If there is a query string, even just "?", unhide
-    if (!window.location.search) return; 
-
-    // Show all media rows
+    if (!MEDIA_UNLOCKED) return;
     document.querySelectorAll('.media-row').forEach(row => {
         row.style.display = 'flex';
         row.style.opacity = '1';
     });
-
-    // Show all media icons
     document.querySelectorAll('.media-icon').forEach(icon => {
         icon.style.display = 'inline-block';
         icon.style.opacity = '1';

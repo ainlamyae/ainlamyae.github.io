@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
           details.innerHTML = `, <em>${cert.organization}</em>, ${cert.date.split('-')[0]}`;
           li.appendChild(details);
 
-          if (cert.file && cert.file.trim() !== '') {
+          if (MEDIA_UNLOCKED && cert.file && cert.file.trim() !== '') {
             const fileLink = document.createElement('a');
             fileLink.href = '#';
             fileLink.textContent = ' 📜';
