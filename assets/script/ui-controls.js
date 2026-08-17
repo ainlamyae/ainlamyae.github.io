@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', dark ? 'dark' : 'light');
   }
 
-  const saved = localStorage.getItem('theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const saved = localStorage.getItem('theme') || 'light';
   applyTheme(saved === 'dark');
 
   togBtn.addEventListener('click', () => applyTheme(!isDark()));
