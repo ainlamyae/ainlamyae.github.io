@@ -34,10 +34,18 @@ them.
 ## Deep links
 
 Every Experience item, Project, and Education degree title in the PDF links to
-`https://ainlamyae.github.io/#<id>` — the same short in-page anchor the website assigns
-that entry. The id comes from the entry's own `"id"` field in its JSON (e.g. `"cmpf2026"`
-for the Cognitive Memory Pipeline experience item); entries without one fall back to a
-slugified title. Publication entries are left linking to their DOI/URL instead, unchanged.
+`https://ainlamyae.github.io/?id=<id>` — the id comes from the entry's own `"id"` field in
+its JSON (e.g. `"cmpf2026"` for the Cognitive Memory Pipeline experience item); entries
+without one fall back to a slugified title. Publication entries are left linking to their
+DOI/URL instead, unchanged.
+
+The PDF deliberately uses a `?id=` query param rather than a `#id` fragment: PDF readers are
+inconsistent about literal `#` in clickable links — several percent-encode it to `%23`
+before handing the URL to a browser, turning `/#cmpf2026` into a nonexistent `/%23cmpf2026`
+path (404 on GitHub Pages). A query string has no such ambiguity. The website's own in-page
+title self-links still use plain `#id` (browsers handle that correctly, and it doesn't
+reload the page); `revealHashTarget()` in `assets/script/utils.js` accepts either form and
+expands/scrolls to the matching entry.
 
 ## Data sources
 
