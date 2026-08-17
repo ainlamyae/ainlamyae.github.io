@@ -75,12 +75,23 @@ function makePermalink(sectionEl, toggleEl, id, titleText) {
   return finalId;
 }
 
-// Expands the dropdown-section matching the current URL hash (and every
-// ancestor dropdown-section) and scrolls it into view. Returns true if a
-// matching element was found and revealed.
+// Expands the dropdown-section matching the current URL hash — or, failing
+// that, a `?id=` query param — and scrolls it into view (plus every ancestor
+// dropdown-section). Returns true if a matching element was found and
+// revealed.
+//
+// The `?id=` fallback exists because PDF readers are inconsistent about
+// literal `#` fragments in clickable links: some percent-encode it to `%23`
+// before handing the URL to a browser, turning "/#cmpf2026" into the path
+// "/%23cmpf2026" and a 404. The generated resume (resume/generate_resume.py)
+// links with `?id=` for that reason; in-page self-links on the site itself
+// still use plain `#id`, which browsers handle correctly.
 function revealHashTarget() {
-  let id;
-  try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { id = window.location.hash.slice(1); }
+  let id = null;
+  if (window.location.hash.length > 1) {
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { id = window.location.hash.slice(1); }
+  }
+  if (!id) id = new URLSearchParams(window.location.search).get('id');
   if (!id) return false;
 
   const target = document.getElementById(id);
