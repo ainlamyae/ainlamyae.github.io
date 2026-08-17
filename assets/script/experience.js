@@ -170,6 +170,8 @@ fetch('assets/data/experience.json')
           titleEl.classList.add('dropdown-toggle');
           titleEl.style.cursor = 'pointer';
 
+          makePermalink(section, titleEl, item.id, item.title);
+
           // "file" may be a single path, or a list of { src, caption } for
           // items with multiple related documents/recordings
           const files = Array.isArray(item.file)

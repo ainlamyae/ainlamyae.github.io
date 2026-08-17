@@ -5,7 +5,13 @@ Usage:
     python resume/generate_resume.py
 
 Requires pdflatex (MiKTeX recommended on Windows).  On first run, MiKTeX will
-auto-install any missing packages — an internet connection is needed.
+auto-install any missing packages (sourcesanspro, titlesec, fancyhdr, etaremune,
+lastpage, ...) — an internet connection is needed.
+
+Visual style is defined in resume/resume.sty (ported from an earlier hand-built
+LaTeX resume): RoyalRed small-caps section rules, a light-blue highlight bar for
+organization/degree/group headers, RoyalBlue bold sub-headers, and a RoyalBlue
+"page x of y / last updated" footer.
 """
 
 import json
@@ -13,6 +19,7 @@ import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 
@@ -21,7 +28,9 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR  = REPO_ROOT / "assets" / "data"
-OUT_DIR   = Path(__file__).resolve().parent / "output"
+RESUME_DIR = Path(__file__).resolve().parent
+OUT_DIR   = RESUME_DIR / "output"
+STY_PATH  = RESUME_DIR / "resume.sty"
 SITE_URL  = "https://ainlamyae.github.io"
 MODE      = "full"   # "compact" mode: future — emit section-level hyperlinks only
 
@@ -55,10 +64,36 @@ def esc(text: str) -> str:
 def href(url: str, label: str) -> str:
     return rf"\href{{{url}}}{{{esc(label)}}}"
 
-def section_link(anchor: str, title: str) -> str:
+def section_link(_anchor: str, title: str) -> str:
     # Full mode: plain section heading (hyperref + # in moving args is fragile).
     # Compact mode (future): emit \href with section-level anchor instead.
     return rf"\section{{{esc(title)}}}"
+
+# ---------------------------------------------------------------------------
+# Deep links — mirrors assets/script/utils.js `slugify` / `makePermalink` so
+# each title in the PDF links to the exact same in-page anchor the website
+# assigns that entry (e.g. "exp-cognitive-memory-pipeline...").
+# ---------------------------------------------------------------------------
+_SLUG_NON_ALNUM = re.compile(r"[^a-z0-9]+")
+
+def slugify(text: str) -> str:
+    if not text:
+        return ""
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    text = _SLUG_NON_ALNUM.sub("-", text.lower()).strip("-")
+    return text[:60]
+
+def title_href(anchor_id: str, title: str) -> str:
+    return rf"\href{{{SITE_URL}/\#{anchor_id}}}{{{esc(title)}}}"
+
+def sub_header(text: str) -> str:
+    """Organization / institution / group-level header — highlight bar."""
+    return rf"\subsection{{{text}}}"
+
+def sub_entry(text: str) -> str:
+    """Position / degree / entry-level header — bold RoyalBlue."""
+    return rf"\subsubsection{{{text}}}"
 
 # ---------------------------------------------------------------------------
 # Date helpers
@@ -85,38 +120,40 @@ def load(name: str) -> list | dict:
 
 def build_header() -> str:
     c = CONTACT
+    contact_line = (
+        href(f"mailto:{c['email']}", c['email'])
+        + r"~|~"
+        + href(c["website"], "Website")
+        + r"~|~"
+        + href(c["github"], "GitHub")
+        + r"~|~"
+        + href(c["linkedin"], "LinkedIn")
+        + r"~|~"
+        + href(c["scholar"], "Google Scholar")
+    )
     lines = [
+        rf"\def\name{{{esc(c['name'])}}}",
+        r"\thispagestyle{empty}",
         r"\begin{center}",
-        rf"{{\Huge \textbf{{{esc(c['name'])}}}}}\\[4pt]",
-        rf"{{\large {esc(c['title'])}}}\\[6pt]",
-        (
-            href(f"mailto:{c['email']}", c['email'])
-            + r" \quad|\quad "
-            + href(c["website"], "Website")
-            + r" \quad|\quad "
-            + href(c["github"], "GitHub")
-            + r" \quad|\quad "
-            + href(c["linkedin"], "LinkedIn")
-            + r" \quad|\quad "
-            + href(c["scholar"], "Google Scholar")
-        ),
+        rf"\resheader{{{esc(c['name'])}}} \\[4pt]",
+        contact_line,
         r"\end{center}",
-        r"\vspace{-4pt}",
+        r"\vspace{2pt}",
     ]
     return "\n".join(lines)
 
 
 def build_about() -> str:
     data = load("about")
-    out = [r"\section{About}"]
+    out = [section_link("about", "Summary")]
     out.append(esc(data["summary"]))
     out.append("")
     for group in data["groups"]:
         out.append(rf"\textbf{{{esc(group['title'])}}}\\[2pt]")
-        out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+        out.append(r"\begin{itemize}")
         for item in group["items"]:
             if group["style"] == "tag":
-                out.append(rf"  \item \textbf{{{esc(item['label'])}:}} {esc(item['text'])}")
+                out.append(rf"  \item \reslabel{{{esc(item['label'])}}}: {esc(item['text'])}")
             else:
                 out.append(rf"  \item {esc(item)}")
         out.append(r"\end{itemize}")
@@ -135,24 +172,27 @@ def build_experience() -> str:
         emp   = esc(e.get("employmentType", ""))
         group = esc(e.get("group", ""))
 
-        out.append(rf"\textbf{{{pos}}} \hfill {dr}\\")
-        out.append(rf"\textit{{{org}}} --- {addr}")
-        if emp:
-            out.append(rf"\\ \textit{{{emp}}}")
+        header = f"{org} --- {addr}" if addr else org
+        out.append(sub_header(rf"{header} \hfill {dr}"))
+        out.append(sub_entry(f"{pos}{f' | {emp}' if emp else ''}"))
         if group:
-            out.append(rf"\\ {group}")
+            out.append(rf"\textit{{{group}}}\\[2pt]")
 
+        out.append(r"\begin{itemize}")
         for item in e.get("items", []):
-            title = esc(item.get("title", ""))
+            raw_title = item.get("title", "")
+            title = title_href(item.get("id") or slugify(raw_title), raw_title) if raw_title else ""
             descs = item.get("description", [])
-            out.append(rf"\vspace{{4pt}}\textit{{{title}}}")
+            idate = item.get("date")
+            idr   = rf" \hfill {date_range(idate)}" if idate else ""
+            out.append(rf"  \item \textbf{{{title}}}{idr}")
             if descs:
-                out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+                out.append(r"  \begin{itemize}")
                 for d in descs:
-                    out.append(rf"  \item {esc(d)}")
-                out.append(r"\end{itemize}")
-
-        out.append(r"\vspace{6pt}")
+                    out.append(rf"    \item {esc(d)}")
+                out.append(r"  \end{itemize}")
+        out.append(r"\end{itemize}")
+        out.append(r"\vspace{4pt}")
 
     return "\n".join(out)
 
@@ -163,17 +203,17 @@ def build_education() -> str:
     for e in entries:
         inst  = esc(e["institution"]["name"])
         addr  = esc(e["institution"].get("address", ""))
-        level = esc(e["degree"]["level"])
-        abbr  = esc(e["degree"]["abbreviation"])
-        field = esc(e["degree"]["field"])
         dr    = date_range(e["date"])
         major = esc(e.get("major", ""))
 
-        out.append(rf"\textbf{{{level} ({abbr}) in {field}}} \hfill {dr}\\")
-        out.append(rf"\textit{{{inst}}} --- {addr}\\")
+        degree_title = f"{e['degree']['level']} ({e['degree']['abbreviation']}) in {e['degree']['field']}"
+
+        header = f"{inst} --- {addr}" if addr else inst
+        out.append(sub_header(rf"{header} \hfill {dr}"))
+        out.append(sub_entry(title_href(e.get("id") or slugify(degree_title), degree_title)))
         if major:
             out.append(rf"\textit{{Major:}} {major}\\")
-        out.append(r"\vspace{6pt}")
+        out.append(r"\vspace{4pt}")
 
     return "\n".join(out)
 
@@ -247,7 +287,7 @@ def _pub_entry(pub: dict, label: str) -> str:
     extra = (", " + ", ".join(extras)) if extras else ""
 
     venue_part = f", {venue}" if venue else ""
-    return rf"\item[{{[{label}]}}] {authors}, ``{title_tex}''{venue_part}{extra}, {year}."
+    return rf"\item[{{\publabel{{[{label}]}}}}] {authors}, ``{title_tex}''{venue_part}{extra}, {year}."
 
 
 def build_publications() -> str:
@@ -268,9 +308,9 @@ def build_publications() -> str:
         if not items:
             continue
         total = len(items)
-        out.append(rf"\textbf{{{titles[type_key]} ({total})}}\\[2pt]")
+        out.append(sub_header(f"{titles[type_key]} ({total})"))
         out.append(r"{\footnotesize")
-        out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*,label={}]")
+        out.append(r"\begin{itemize}[label={}, leftmargin=2.6em, itemindent=0pt, labelsep=0.4em]")
         for idx, pub in enumerate(items):
             number = total - idx       # descending: newest gets highest number
             label  = f"{prefix[type_key]}{number}"
@@ -290,8 +330,8 @@ def build_credentials() -> str:
     out = [section_link("credentials", "Credentials")]
 
     # Certifications (grouped by type — top 20 most recent shown)
-    out.append(r"\textbf{Selected Certifications}\\[2pt]")
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(sub_header("Selected Certifications"))
+    out.append(r"\begin{itemize}")
     for c in certs[:20]:
         date  = fmt_date(c.get("date", ""))
         title = esc(c["title"])
@@ -305,8 +345,8 @@ def build_credentials() -> str:
     out.append("")
 
     # Awards
-    out.append(r"\textbf{Awards \& Honours}\\[2pt]")
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(sub_header("Awards \\& Honours"))
+    out.append(r"\begin{itemize}")
     for a in awards:
         date  = fmt_date(a.get("date", ""))
         title = esc(a["title"])
@@ -316,8 +356,8 @@ def build_credentials() -> str:
     out.append("")
 
     # Scores
-    out.append(r"\textbf{Standardised Scores}\\[2pt]")
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(sub_header("Standardised Scores"))
+    out.append(r"\begin{itemize}")
     for s in scores:
         name    = esc(s.get("fullName") or s.get("organization", ""))
         overall = s.get("score", {}).get("overall", "")
@@ -331,9 +371,9 @@ def build_credentials() -> str:
 def build_projects() -> str:
     projects = load("projects")
     out = [section_link("engagement", "Projects")]
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(r"\begin{itemize}")
     for p in projects:
-        title = esc(p["title"])
+        title = title_href(p.get("id") or slugify(p["title"]), p["title"])
         desc  = p.get("description", [])
         date_str = ""
         if isinstance(p.get("date"), dict):
@@ -341,15 +381,15 @@ def build_projects() -> str:
         elif p.get("date"):
             date_str = " \\hfill " + fmt_date(str(p["date"]))
         out.append(rf"\item \textbf{{{title}}}{date_str}")
-        if isinstance(desc, list):
-            for d in desc[:2]:
-                out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+        if isinstance(desc, list) and desc:
+            out.append(r"  \begin{itemize}")
+            for d in desc:
                 out.append(rf"    \item {esc(d)}")
-                out.append(rf"  \end{{itemize}}")
+            out.append(r"  \end{itemize}")
         elif desc:
-            out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+            out.append(r"  \begin{itemize}")
             out.append(rf"    \item {esc(str(desc))}")
-            out.append(rf"  \end{{itemize}}")
+            out.append(r"  \end{itemize}")
     out.append(r"\end{itemize}")
     return "\n".join(out)
 
@@ -362,10 +402,10 @@ def build_engagement() -> str:
     out = [section_link("engagement", "Engagement")]
 
     # Projects
-    out.append(r"\textbf{Projects}\\[2pt]")
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(sub_header("Projects"))
+    out.append(r"\begin{itemize}")
     for p in projects:
-        title = esc(p["title"])
+        title = title_href(p.get("id") or slugify(p["title"]), p["title"])
         desc  = p.get("description", [])
         date_str = ""
         if isinstance(p.get("date"), dict):
@@ -373,21 +413,21 @@ def build_engagement() -> str:
         elif p.get("date"):
             date_str = " \\hfill " + fmt_date(str(p["date"]))
         out.append(rf"\item \textbf{{{title}}}{date_str}")
-        if isinstance(desc, list):
-            for d in desc[:2]:
-                out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+        if isinstance(desc, list) and desc:
+            out.append(r"  \begin{itemize}")
+            for d in desc:
                 out.append(rf"    \item {esc(d)}")
-                out.append(rf"  \end{{itemize}}")
+            out.append(r"  \end{itemize}")
         elif desc:
-            out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+            out.append(r"  \begin{itemize}")
             out.append(rf"    \item {esc(str(desc))}")
-            out.append(rf"  \end{{itemize}}")
+            out.append(r"  \end{itemize}")
     out.append(r"\end{itemize}")
     out.append("")
 
     # Volunteering
-    out.append(r"\textbf{Volunteering}\\[2pt]")
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(sub_header("Volunteering"))
+    out.append(r"\begin{itemize}")
     for v in vol:
         org = esc(v["organization"])
         pos = esc(v["position"])
@@ -396,15 +436,15 @@ def build_engagement() -> str:
         for item in v.get("items", []):
             t = esc(item.get("title", ""))
             if t:
-                out.append(rf"  \begin{{itemize}}[noitemsep,topsep=0pt,leftmargin=*]")
+                out.append(r"  \begin{itemize}")
                 out.append(rf"    \item {t}")
-                out.append(rf"  \end{{itemize}}")
+                out.append(r"  \end{itemize}")
     out.append(r"\end{itemize}")
     out.append("")
 
     # Recommendations (abbreviated)
-    out.append(r"\textbf{Recommendations}\\[2pt]")
-    out.append(r"\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]")
+    out.append(sub_header("Recommendations"))
+    out.append(r"\begin{itemize}")
     for r in recs:
         name = esc(r["name"])
         rel  = esc(r.get("relationship", ""))
@@ -423,15 +463,8 @@ def build_engagement() -> str:
 
 def build_tex() -> str:
     preamble = r"""
-\documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[margin=2cm]{geometry}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
-\usepackage{microtype}
+\documentclass[letterpaper,11pt]{article}
+\usepackage{resume}
 
 \hypersetup{
   pdftitle={Ali Nasr -- Resume},
@@ -439,14 +472,6 @@ def build_tex() -> str:
   pdfsubject={AI Systems Architect and R\&D Engineer},
   pdfkeywords={AI, Systems Engineering, Robotics, Control, Machine Learning, Resume}
 }
-
-\setcounter{secnumdepth}{0}
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
-\pagestyle{empty}
 """.strip()
 
     sections = [
@@ -519,6 +544,7 @@ def compile_pdf(tex_path: Path, out_dir: Path) -> Path:
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    shutil.copy(STY_PATH, OUT_DIR / STY_PATH.name)
 
     print("Building LaTeX source ...")
     tex_content = build_tex()
