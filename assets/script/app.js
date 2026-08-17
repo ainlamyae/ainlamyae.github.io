@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
     // ==============================
+    // Deep-link: expand + scroll to the title matching the URL hash
+    // (titles are rendered async, so keep watching until one is found)
+    // ==============================
+    window.addEventListener("hashchange", revealHashTarget);
+    if (!revealHashTarget()) {
+        const hashObserver = new MutationObserver(() => {
+            if (revealHashTarget()) hashObserver.disconnect();
+        });
+        hashObserver.observe(document.body, { childList: true, subtree: true });
+        setTimeout(() => hashObserver.disconnect(), 5000);
+    }
+
+    // ==============================
     // Footer: Update year dynamically
     // ==============================
     const footerYear = document.getElementById('footer-year');

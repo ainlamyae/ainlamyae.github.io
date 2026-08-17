@@ -1,7 +1,25 @@
 [
     {
+        "id": "blea2026",
+        "date": "2026-07-28",
+        "type": "Generative AI, LLMs & AI Agents",
+        "title": "Build LLM Evaluation Applications with LangChain",
+        "organization": "LinkedIn",
+        "url": "https://www.linkedin.com/learning/certificates/4584276d8e8009fbf2c383235030493ccdf53cecd2da7123702e5c5dfac36a35",
+        "file": "/assets/media/certification/blea2026.jpg"
+    },
+    {
+        "id": "bwaa2026",
+        "date": "2026-07-28",
+        "type": "Generative AI, LLMs & AI Agents",
+        "title": "Build with AI: Autonomous Agents with LangChain and Hugging Face",
+        "organization": "LinkedIn",
+        "url": "https://www.linkedin.com/learning/certificates/ebfd36e48dfabc9d794d1daf422ecf3b069549e53e1674edbb739251482d4faa",
+        "file": "/assets/media/certification/bwaa2026.jpg"
+    },
+    {
         "id": "dysw2026",
-        "date": "2026-05.29",
+        "date": "2026-05-29",
         "type": "Generative AI, LLMs & AI Agents",
         "title": "Develop Your Skills with Large Language Models",
         "organization": "LinkedIn Learning",
@@ -10,7 +28,7 @@
     },
     {
         "id": "itpe2026",
-        "date": "2026-05.29",
+        "date": "2026-05-29",
         "type": "Generative AI, LLMs & AI Agents",
         "title": "Introduction to Prompt Engineering for Generative AI",
         "organization": "LinkedIn Learning",
@@ -19,7 +37,7 @@
     },
     {
         "id": "gfba2026",
-        "date": "2026-05.29",
+        "date": "2026-05-29",
         "type": "Generative AI, LLMs & AI Agents",
         "title": "GPT Foundations: Building AI-Powered Apps",
         "organization": "LinkedIn Learning",
@@ -28,7 +46,7 @@
     },
     {
         "id": "atsw2026",
-        "date": "2026-03.09",
+        "date": "2026-03-09",
         "type": "Generative AI, LLMs & AI Agents",
         "title": "AI Text Summarization with Hugging Face",
         "organization": "LinkedIn Learning",

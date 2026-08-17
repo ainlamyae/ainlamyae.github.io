@@ -8,12 +8,44 @@
 		"position": "Senior R&D Engineer (GenAI System, Assurance Architect, and Design)",
 		"employmentType": "Permanent Full-time",
 		"date": {
-			"start": "2023-11-01",			
+			"start": "2023-11-01",
 			"end": null
 		},
 		"items": [
 			{
 				"category": "Project",
+				"id": "cmpf2026",
+				"title": "Cognitive Memory Pipeline for LLM Coding Agents: Design, Evaluation & Prototype Extraction System",
+				"description": [
+					"Designed an end-to-end memory pipeline for AI coding agents across four data stores, using utility/surprise-based admission scoring, embedding deduplication, and provenance-based contradiction resolution",
+					"Designed behavioral-freshness testing that validates stored knowledge through downstream agent behavior rather than timestamps",
+					"Designed fleet-scale multi-agent calibration shared by model, version, and role, enabling thousands of workers to converge on a common behavioral profile",
+					"Conducted a literature review spanning software architecture knowledge management and recent agent-memory research, translating findings into concrete knowledge schemas",
+					"Reverse-engineered the memory architectures of Claude Code, OpenAI Codex, and MiniMax from source code, documenting their extraction and consolidation workflows",
+					"Experimentation & Evaluation",
+					"Designed a 3-arm ablation study (no memory / naive memory / full pipeline) across SWE-Bench-CL and SWE-EVO, with continual-learning metrics and evaluation thresholds",
+					"Built a 3-tier Python evaluation framework combining deterministic checks, human review with confidence intervals, and optional LLM judging",
+					"Pre-registered falsifiable predictions and evaluated them against experimental results",
+					"Built an end-to-end Python extraction pipeline processing Codex CLI logs and lots of agent turns with resumable, idempotent execution",
+					"Built embedding-based semantic deduplication with experimentally tuned similarity thresholds",
+					"Built an asynchronous Claude Code extraction worker with locking, circuit breakers, credential checks, and spend limits",
+					"Identified and fixed a concurrency race affecting parallel writers, validating correctness under N workers",
+					"Ported the pipeline across Claude Code and Codex log formats while keeping the core extraction logic byte-identical"
+				],
+				"date": {
+					"start": "2026-06-01",
+					"end": null
+				},
+				"media": [
+					{
+						"src": "assets/media/experience/cmpl2026.jpg",
+						"caption": "Persistent Memory Architecture for AI Coding Agents: A system for capturing, maintaining, and retrieving engineering knowledge to provide relevant context to coding agents. An overview of how MCP-based tool dispatch connects write, maintenance, and retrieval pipelines with persistent knowledge stores to capture engineering context, learn from task outcomes, and inject relevant knowledge back into the coding agent."
+					}
+				]
+			},
+			{
+				"category": "Project",
+				"id": "lwar2026",
 				"title": "LLMGuard Wrapper: A Runtime Assurance Framework for Reliable LLM Systems",
 				"description": [
 					"Designed and delivered a runtime monitoring and assurance architecture (GuardRailClient) for LLM-based multi-agent systems, enabling reliable and production-ready AI behavior through integrated monitoring, validation, and correction",
@@ -30,6 +62,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "uilt2026",
 				"title": "Uncertainty in LLMs: Theory, Methods, and Practical Reliability Frameworks",
 				"description": [
 					"Conducted a technical review and synthesis of uncertainty in LLMs, covering theory, state-of-the-art methods, and practical applications for improving reliability in real-world AI systems",
@@ -46,6 +79,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "ersa2025",
 				"title": "Explainable & Reliable System Architecture for LLM-based Script Generator",
 				"description": [
 					"Architected a multi-stage LLM reliability pipeline with confidence estimation, output gating, and policy-driven decision enforcement",
@@ -82,6 +116,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "mfma2023",
 				"title": "Multi-Agent Foundation Model-based AI for Autonomous Software Testing Platform",
 				"description": [
 					"Designed a multi-agent system architecture leveraging foundation model-based AI (RAG-based LLMs) for a fully autonomous software testing platform",
@@ -91,6 +126,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "dbvr2024",
 				"title": "2D Bird’s-Eye View Risk Monitoring for Autonomous Driving",
 				"description": [
 					"Developed a CNN-based risk assessment module that processes 2D bird’s-eye views of the vehicle’s surroundings to predict the future driving risk",
@@ -107,18 +143,20 @@
 			{
 				"category": "Leadership",
 				"contributor": "Investing Project at University of Waterloo",
+				"id": "gtoo2025",
 				"title": "Game Theory Orchestration of Multi-Agent LLM-based Reinforcement Learning",
 				"description": [
 					"Proposed and scoped a game-theoretic orchestration framework for multi-agent LLM-based reinforcement learning systems"
 				],
 				"date": {
 					"start": "2025-11-01",
-					"end": null
+					"end": "2026-08-31"
 				}
 			},
 			{
 				"category": "Leadership",
 				"contributor": "Zhenyang Xu (Research Intern)",
+				"id": "umsf2025",
 				"title": "Uncertainty Monitoring System for LLM-Based Generative Software",
 				"description": [
 					"Implemented the core uncertainty computation for the LLM outputs, forming the foundation for the monitoring system",
@@ -133,6 +171,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Hossein Yousefizadeh, Shenghui Gu, Lionel C. Briand (Investing Project at University of Ottawa)",
+				"id": "rbvo2024",
 				"title": "Run-time Behavioural Validation of Self-adaptive AI-enabled Systems",
 				"description": [
 					"Led and coordinated the uOttawa engineering team, aligning technical efforts and ensuring milestone delivery",
@@ -160,6 +199,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Brooke Yang (Co-op Engineer)",
+				"id": "lsr2025",
 				"title": "LLM-based System Reliability",
 				"description": [
 					"Guided implementation of probability extraction from LLMs within LangChain"
@@ -172,6 +212,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Xiaoliang (Spencer) Zhou (Junior Engineer)",
+				"id": "crpe2023",
 				"title": "C++ Real-Time Processing Engine for Monitoring Software",
 				"description": [
 					"Developed prototype of C++ modules for processing as part of the monitoring software project",
@@ -185,6 +226,7 @@
 			},
 			{
 				"category": "Service",
+				"id": "siai2023",
 				"title": "Strategic Insights and Innovations from Global Technology Conferences",
 				"description": [
 					"14th International Conference on Learning Representations (ICLR), Rio de Janeiro, Brazil, Apr 2026",
@@ -202,6 +244,7 @@
 			},
 			{
 				"category": "Service",
+				"id": "pmti2023",
 				"title": "Project Manager & Technical Interviewer Responsibilities",
 				"description": [
 					"Managed project workflows using Jira, tracked progress, led status updates, and prepared detailed project progress reports",
@@ -227,6 +270,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "raac2023",
 				"title": "Run-time Assurance (AI Consistency and Accuracy) System for Autonomous Driving Systems",
 				"description": [
 					"Researched failure measurement and monitoring of learning-enabled control systems across Perception, Prediction, and Planning modules",
@@ -239,6 +283,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "ravs2023",
 				"title": "Run-time Assurance (Vehicle Safety) System for Autonomous Driving Systems",
 				"description": [
 					"Designed, developed, and tested vehicle recovery software for safety violations in autonomous driving systems",
@@ -279,6 +324,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "recw2023",
 				"title": "Real-time Embedded Controller within Different Sensors and Intelligence Control",
 				"description": [
 					"Successfully designed and implemented platform real-time communication and control software on Raspberry Pi 4B (Linux environment) to support advanced application features, resulting in a 20% increase in user engagement and a 30% reduction in software crashes",
@@ -289,6 +335,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "eers2023",
 				"title": "Electrical Energy Regenerative Shoulder Exoskeletons",
 				"description": [
 					"Implementation of energy-regenerating actuators in robotic exoskeletons to enhance efficiency and extend battery life by converting a portion of energy typically lost during negative mechanical work into electrical energy.",
@@ -311,6 +358,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "hghm2023",
 				"title": "Human3.6M+: Generated Human Motion Data to Support 3D Pose, Motion, Kinetic, and Muscle Estimation",
 				"description": [
 					"Developed marker-less motion capture technology for 3D human pose estimation to overcome usability constraints of traditional marker-based systems.",
@@ -332,6 +380,7 @@
 			},
 			{
 				"category": "Service",
+				"id": "pr2023",
 				"title": "Postdoctoral Responsibilities",
 				"description": [
 					"Organized a remote international workshop with Prof. Daniel J. Rixen's group from Technical University of Munich (TUM)",
@@ -341,6 +390,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Vasylysa Korovkina (Master Student)",
+				"id": "mcdh2023",
 				"title": "Myography-based Controlled 1-DoF Hand Prosthesis",
 				"description": [
 					"Designed an electrically controlled single degree-of-freedom (1-DoF) forearm-hand prosthesis to aid pediatric amputees after Mine Blast Injuries in Ukraine.",
@@ -357,6 +407,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Tegan Asprey (Undergraduate Research Assistant)",
+				"id": "mrma2023",
 				"title": "MyoBuzz: Real-time Muscle Activation Monitoring in Dynamometry Experiments",
 				"description": [
 					"Developed MyoBuzz, a limb-worn EMG device providing real-time feedback on muscle activation for dynamometry experiments.",
@@ -372,6 +423,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Lavan Sumanan (Undergraduate Research Assistant)",
+				"id": "hmau2023",
 				"title": "Human Motion Animation Using 3Ds Max for 3D Pose Estimation Database",
 				"description": [
 					"Guided in setting up 3Ds Max environment and workflow for creating human motion animations for synthetic dataset generation",
@@ -399,6 +451,7 @@
 		"items": [
 			{
 				"category": "Service",
+				"id": "tr2019",
 				"title": "Teaching Responsibilities",
 				"description": [
 					"Delivered tutorials and undergraduate instructional support",
@@ -408,21 +461,113 @@
 			},
 			{
 				"category": "Teaching",
+				"id": "cl2019",
 				"title": "Course List",
 				"courses": [
-					{ "code": "SYDE 544", "name": "Biomedical Measurement and Signal Processing", "instructors": ["Steven Pretty"], "term": "Winter 2023" },
-					{ "code": "SYDE 252M", "name": "Linear Systems and Signals", "instructors": ["Charbel Azzi"], "term": "Fall 2022" },
-					{ "code": "SYDE 252", "name": "Linear Systems and Signals", "instructors": ["Gordon Savage"], "term": "Spring 2022" },
-					{ "code": "SYDE 352", "name": "Introduction to Control Systems", "instructors": ["Gordon Savage"], "term": "Winter 2022" },
-					{ "code": "SYDE 121", "name": "Digital Computation", "instructors": ["Jason Foster"], "term": "Fall 2021" },
-					{ "code": "SYDE 351", "name": "Systems Models 1", "instructors": ["Gordon Savage"], "term": "Spring 2021" },
-					{ "code": "SYDE 351", "name": "Systems Models 1", "instructors": ["Gordon Savage"], "term": "Winter 2021" },
-					{ "code": "SYDE 101", "name": "Communications in Systems Design Engineering", "instructors": ["Igor Ivkovic"], "term": "Fall 2020" },
-					{ "code": "SYDE 351", "name": "Systems Models 1", "instructors": ["Stephen Birkett"], "term": "Spring 2020" },
-					{ "code": "SYDE 351", "name": "Systems Models 1", "instructors": ["Gordon Savage"], "term": "Winter 2020" },
-					{ "code": "SYDE 252", "name": "Linear Systems and Signals", "instructors": ["Ning Jiang"], "term": "Fall 2019" },
-					{ "code": "SYDE 351", "name": "Systems Models 1", "instructors": ["Gordon Savage"], "term": "Spring 2019" },
-					{ "code": "SYDE 351", "name": "Systems Models 1", "instructors": ["Gordon Savage"], "term": "Winter 2019" }
+					{
+						"code": "SYDE 544",
+						"name": "Biomedical Measurement and Signal Processing",
+						"instructors": [
+							"Steven Pretty"
+						],
+						"term": "Winter 2023"
+					},
+					{
+						"code": "SYDE 252M",
+						"name": "Linear Systems and Signals",
+						"instructors": [
+							"Charbel Azzi"
+						],
+						"term": "Fall 2022"
+					},
+					{
+						"code": "SYDE 252",
+						"name": "Linear Systems and Signals",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Spring 2022"
+					},
+					{
+						"code": "SYDE 352",
+						"name": "Introduction to Control Systems",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Winter 2022"
+					},
+					{
+						"code": "SYDE 121",
+						"name": "Digital Computation",
+						"instructors": [
+							"Jason Foster"
+						],
+						"term": "Fall 2021"
+					},
+					{
+						"code": "SYDE 351",
+						"name": "Systems Models 1",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Spring 2021"
+					},
+					{
+						"code": "SYDE 351",
+						"name": "Systems Models 1",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Winter 2021"
+					},
+					{
+						"code": "SYDE 101",
+						"name": "Communications in Systems Design Engineering",
+						"instructors": [
+							"Igor Ivkovic"
+						],
+						"term": "Fall 2020"
+					},
+					{
+						"code": "SYDE 351",
+						"name": "Systems Models 1",
+						"instructors": [
+							"Stephen Birkett"
+						],
+						"term": "Spring 2020"
+					},
+					{
+						"code": "SYDE 351",
+						"name": "Systems Models 1",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Winter 2020"
+					},
+					{
+						"code": "SYDE 252",
+						"name": "Linear Systems and Signals",
+						"instructors": [
+							"Ning Jiang"
+						],
+						"term": "Fall 2019"
+					},
+					{
+						"code": "SYDE 351",
+						"name": "Systems Models 1",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Spring 2019"
+					},
+					{
+						"code": "SYDE 351",
+						"name": "Systems Models 1",
+						"instructors": [
+							"Gordon Savage"
+						],
+						"term": "Winter 2019"
+					}
 				]
 			}
 		]
@@ -442,6 +587,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "ddac2018",
 				"title": "Design, Dynamics, and Control of Active-Passive Exoskeletons Robotic",
 				"description": [
 					"Developed and verified adjustable biomechanical 20-DoF model using MATLAB and MapleSim",
@@ -464,6 +610,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "ase2018",
 				"title": "Active-passive Shoulder Exoskeleton",
 				"description": [
 					"Developed active-passive shoulder exoskeleton integrating passive mechanisms and powered actuators to optimize human movement assistance.",
@@ -492,6 +639,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "mbes2018",
 				"title": "MuscleNET: Biomechatronic Electromyography Signal Processing",
 				"description": [
 					"Introduced MuscleNET, a set of ML models (ANN, RNN, CNN, RCNN) mapping sEMG signals to joint angle, velocity, acceleration, torque, and activation torque.",
@@ -516,6 +664,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "shmm2018",
 				"title": "Scalable Human Musculoskeletal Model",
 				"description": [
 					"Developed a MapleSim biomechanics-based musculoskeletal (MSK) model covering upper and lower body movements for biomechanical analysis.",
@@ -536,6 +685,7 @@
 			},
 			{
 				"category": "Service",
+				"id": "caa2018",
 				"title": "Conferences & Academic Activities",
 				"description": [
 					"18th International Symposium on Computer Methods in Biomechanics and Biomedical Engineering, Paris, France, May 2023",
@@ -567,6 +717,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "sdcp2016",
 				"title": "Spatial 6 DoF 8 Cable-Driven Parallel Robot",
 				"description": [
 					"Conducted comprehensive inverse kinematic and dynamic modeling and analysis for the Spatial 6 DoF 8 Cable-Driven Parallel Robot.",
@@ -577,6 +728,7 @@
 			},
 			{
 				"category": "Project",
+				"id": "dwrr2016",
 				"title": "3 DoF Wrist Rehabilitation Robot",
 				"description": [
 					"Designed conceptual and mechanical parts for the 3 DoF Wrist Rehabilitation Robot and conducted kinematic and dynamic modeling.",
@@ -600,6 +752,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "dism2013",
 				"title": "6 DoF Industrial Serial Manipulator Modeling & Control",
 				"description": [
 					"Conducted comprehensive kinematic and dynamic modeling and analysis for the 6 DoF Industrial Serial Manipulator, assessing workspace, dexterity, and performance",
@@ -624,6 +777,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "pmdm2009",
 				"title": "Plant Mechatronic Design, Maintenance, and Project Management",
 				"description": [
 					"Developed and supervised the implementation of a comprehensive mechatronic scheme for the plant, utilizing ePlan software and programming Siemens PLC for optimal performance",
@@ -650,6 +804,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "mico2014",
 				"title": "Multiple Impedance Control of Hybrid Parallel-Serial Manipulator for Object Manipulation",
 				"description": [
 					"Designed and developed a MATLAB/Simulink model for an 8 cable-driven parallel robot prototype with a serial manipulator, and verified its performance",
@@ -661,6 +816,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Mohammad Reza Mousavi (Master Thesis)",
+				"id": "orrs2016",
 				"title": "Optimal Redundancy Resolution Scheme in a Cable-Driven Parallel Robot",
 				"description": [
 					"Developed an enhanced kinematic modeling of pulleys and cables for more accurate representation of cable-driven parallel robots",
@@ -675,6 +831,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Masoud Ghanbari (Master Thesis)",
+				"id": "sfae2016",
 				"title": "Sensory Feedback and Experimental Evaluation for Cable Robots with Uncertain Jacobian",
 				"description": [
 					"Led the mathematical modeling, algorithm coding, and manufacturing of the prototype of the cable-driven parallel robot",
@@ -689,6 +846,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Nima Arteghzadeh, Maryam Sadat Nabipour (Undergraduate Project)",
+				"id": "vsia2016",
 				"title": "Visual Servoing in a Cable Robot Using Microsoft Kinect V2 Sensor",
 				"description": [
 					"Developed the kinematic model and control code for the parallel cable robot",
@@ -703,6 +861,7 @@
 			{
 				"category": "Leadership",
 				"contributor": "Yasaman Parandian (Undergraduate Research Assistant)",
+				"id": "dipo2015",
 				"title": "Digital Image Processing of Ball-and-Plate System Using Artificial Neural Network",
 				"description": [
 					"Integrated camera with MATLAB for real-time ball position tracking using classical image processing techniques",
@@ -731,6 +890,7 @@
 		"items": [
 			{
 				"category": "Service",
+				"id": "tr2015",
 				"title": "Teaching Responsibilities",
 				"description": [
 					"Assessed student learning through evaluating assignments, projects, and exams"
@@ -738,9 +898,17 @@
 			},
 			{
 				"category": "Teaching",
+				"id": "cl2015",
 				"title": "Course List",
 				"courses": [
-					{ "code": null, "name": "Kinematics and Dynamics of Machines", "instructors": ["Sayed Ali Akbar Moosavian"], "term": "Fall 2015" }
+					{
+						"code": null,
+						"name": "Kinematics and Dynamics of Machines",
+						"instructors": [
+							"Sayed Ali Akbar Moosavian"
+						],
+						"term": "Fall 2015"
+					}
 				]
 			}
 		]
@@ -759,6 +927,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "aams2013",
 				"title": "Automation and Mechatronic System Development",
 				"description": [
 					"Developed the mechatronic scheme for a steel plant using ePLAN software, including designing the sensors, actuators, and wiring for the system",
@@ -783,6 +952,7 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "jseo2012",
 				"title": "Joint Space Energy Optimization of Tethered Space Robot for End-Effector Optimal Path",
 				"description": [
 					"Conducted research on tethered satellite systems and tether-connected space manipulators for applications such as satellite repair and space debris removal.",
@@ -810,6 +980,7 @@
 		"items": [
 			{
 				"category": "Service",
+				"id": "tr2013",
 				"title": "Teaching Responsibilities",
 				"description": [
 					"Assessed student learning by marking assignments"
@@ -817,9 +988,17 @@
 			},
 			{
 				"category": "Teaching",
+				"id": "cl2013",
 				"title": "Course List",
 				"courses": [
-					{ "code": null, "name": "Fundamentals of Mechatronic Systems", "instructors": ["Saeid Behbahani"], "term": "Winter 2013" }
+					{
+						"code": null,
+						"name": "Fundamentals of Mechatronic Systems",
+						"instructors": [
+							"Saeid Behbahani"
+						],
+						"term": "Winter 2013"
+					}
 				]
 			}
 		]
