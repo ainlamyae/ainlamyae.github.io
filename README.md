@@ -40,8 +40,11 @@ Two complementary patterns keep it maintainable:
 │   │   ├── utils.js              # Shared utilities: formatDate(), calculateDuration()
 │   │   ├── include.js            # Generic fetch-and-inject helper for HTML partials
 │   │   ├── navbar.js             # Loads navbar partial; wires scroll-spy + mobile hamburger menu
+│   │   ├── header.js             # Loads header partial; dispatches "header:loaded" when ready
 │   │   ├── footer-year.js        # CSP-safe external footer "© <year>" updater
 │   │   ├── analytics.js          # Google Analytics (gtag) bootstrap
+│   │   ├── about.js              # About renderer — summary + skill/expertise tag groups
+│   │   ├── wordcloud.js          # Word cloud renderer — freeform layout in the header
 │   │   ├── education.js          # Education renderer — degree/thesis/supervisor/course-list details
 │   │   ├── experience.js         # Experience renderer — org grouping, role/position dropdowns
 │   │   ├── publications.js       # Publications renderer
@@ -52,11 +55,17 @@ Two complementary patterns keep it maintainable:
 │   │   ├── volunteering.js       # Volunteering renderer
 │   │   ├── recommendations.js    # Recommendations renderer
 │   │   ├── contact-form.js       # Loads contact partial; Google Form submission + status messaging
+│   │   ├── ui-controls.js        # Floating action buttons: back-to-top, theme toggle, expand/collapse all
 │   │   └── app.js                # Core runtime: dropdowns (ARIA), keyword engine, lightbox modal
 │   ├── html
 │   │   ├── navbar.html           # Shared <nav> markup, injected into #navbar-placeholder
+│   │   ├── header.html           # Shared <header> markup (name, QR/social links, word cloud overlay)
 │   │   └── contact.html          # Shared <section id="contact"> markup (form, map, social links)
+│   ├── analysis
+│   │   └── wordcloud.py          # Stdlib-only script: scans assets/data/*.json for the most
+│   │                              # frequent terms and writes candidates to wordcloud.json
 │   ├── data
+│   │   ├── about.json            # About summary + skill/expertise tag groups
 │   │   ├── experience.json       # Work history — organizations, roles, items, media
 │   │   ├── education.json        # Academic history — degrees, theses, supervisors, courses
 │   │   ├── publications.json     # Publication records
@@ -67,7 +76,8 @@ Two complementary patterns keep it maintainable:
 │   │   ├── volunteering.json     # Volunteering records
 │   │   ├── recommendations.json  # Recommendation records
 │   │   ├── people.json           # Directory of people — instructors, collaborators, co-authors, students
-│   │   └── keywords.json         # Keyword groups mapped to URL query parameters
+│   │   ├── keywords.json         # Keyword groups mapped to URL query parameters
+│   │   └── wordcloud.json        # Curated {text, weight} entries rendered as the header word cloud
 │   └── media
 │       ├── award/                # Award certificates (JPG, PDF)
 │       ├── certification/        # Certification images (JPG)
@@ -109,12 +119,16 @@ To avoid duplicating markup across `index.html`, `404.html`, and `contact.html`:
 - `navbar.js` calls `includePartial('navbar-placeholder', '/assets/html/navbar.html')`, then
   wires up scroll-spy (`IntersectionObserver` highlighting the active link), the mobile
   hamburger toggle, and the cross-page anchor rewriting described above.
+- `header.js` calls `includePartial('header-placeholder', '/assets/html/header.html')`, then
+  dispatches a `header:loaded` event on `document` so other scripts (e.g. `wordcloud.js`) can
+  safely query elements that live inside the injected header.
 - `contact-form.js` calls `includePartial('contact-placeholder', '/assets/html/contact.html')`,
   then wires the `#contact-form` submit handler once the form actually exists in the DOM.
 
 Because injection is asynchronous, any script that depends on injected markup (e.g. the
-contact form) must do its DOM queries inside the `includePartial(...).then(...)` callback
-rather than on `DOMContentLoaded` directly.
+contact form, or the word cloud's header overlay) must do its DOM queries inside the
+`includePartial(...).then(...)` callback (or a corresponding custom event like
+`header:loaded`) rather than on `DOMContentLoaded` directly.
 
 ---
 
@@ -174,6 +188,17 @@ Map). Because CSP blocks inline `<script>` execution, any per-page bootstrap log
 footer year — lives in an external file (`footer-year.js`) rather than an inline `<script>`
 block.
 
+**Word cloud.** `assets/analysis/wordcloud.py` (stdlib only) scans every `assets/data/*.json`
+file plus the comma-separated skill phrases in `about.json`, tokenizes and normalizes terms
+(singular/plural, gerund, and past-tense forms collapse to one base word), and writes the top
+100 `{text, weight}` candidates to `assets/data/wordcloud.json` for manual curation. At runtime,
+`wordcloud.js` fetches that file, takes the top 75 by weight, and lays them out with an
+Archimedean-spiral collision-avoidance algorithm — sized by weight and color-graded from
+`--wc-color-high` (most frequent) to `--wc-color-low` (least frequent) via `color-mix()`. The
+result is rendered at low opacity as an absolutely-positioned, non-interactive
+`#wordcloud-container` overlay inside `<header>`, behind the name and QR code, so it reads as a
+subtle background texture without taking up any layout space.
+
 **Branding & crawler controls.** A monogram favicon (`favicon.ico` / PNG variants /
 `apple-touch-icon.png`) is generated from the site's `--color-primary` palette and linked from
 `<head>`. `404.html` and `contact.html` reuse the same shared navbar/footer chrome as the
@@ -224,6 +249,16 @@ python -m http.server 8000
 ```
 
 No build step. No package manager. Edit JSON, HTML partials, or CSS and reload.
+
+To regenerate word cloud candidates after content changes:
+
+```bash
+python assets/analysis/wordcloud.py
+# Writes the top 100 {text, weight} candidates to assets/data/wordcloud.json
+```
+
+Then manually curate `assets/data/wordcloud.json` (delete unwanted entries) — the file is
+written one entry per line specifically to make this easy.
 
 ---
 
