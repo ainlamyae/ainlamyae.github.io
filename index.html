@@ -11,7 +11,8 @@
         var bypass = window.location.search.length > 0 ||
                      window.location.hash.length > 0 ||
                      localStorage.getItem('gateVerified') === '1';
-        if (!bypass) document.documentElement.classList.add('gate-active');
+        // Temporarily disabled — uncomment the line below to re-enable the email gate.
+        // if (!bypass) document.documentElement.classList.add('gate-active');
       } catch (e) {}
     })();
   </script>
