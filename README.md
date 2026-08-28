@@ -133,6 +133,168 @@ contact form, or the word cloud's header overlay) must do its DOM queries inside
 
 ---
 
+## System Architecture Diagram
+
+Block-diagram convention follows ISO 5807 flow-chart symbology, adapted for a client-side web
+system. Every arrow is a numbered interface (`S1`…`S24`); its variable/field names, types, and
+values are pinned down in the Interface Control Table beneath the diagram, and shapes/units are
+defined in the Legend that follows it — so the diagram, the table, and the legend together are
+the complete specification (no detail lives only in prose).
+
+```mermaid
+flowchart TD
+    VISITOR(["Visitor — Browser UA"])
+    PAGEREADY(["Page Fully Interactive"])
+
+    subgraph ORIGIN["Static Origin — GitHub Pages CDN (HTTPS, TLS 1.3)"]
+        direction TB
+        HTML[("index.html — HTML5 document")]
+        CSS[("main.css — stylesheet")]
+        JSFILES[("JS Modules x21 — assets/script/*.js")]
+        PARTIALFILES[("HTML Partials x3 — assets/html/*.html")]
+        JSONFILES[("JSON Data Layer x13 — assets/data/*.json")]
+        MEDIAFILES[("Media Assets — assets/media/**")]
+    end
+
+    subgraph CLIENT["Client Runtime — Browser Execution Context"]
+        direction TB
+        BOOT["Inline Bootstrap Script<br/>(head, pre-paint, t0 ~ 0 s)"]
+        GATEDEC{"bypass = search.length&gt;0<br/>OR hash.length&gt;0<br/>OR gateVerified=='1' ?"}
+        GATEUI["#email-gate UI<br/>(gate-form / gate-email / gate-submit)"]
+        GATEJS["email-gate.js controller"]
+        SITECTRL["#site-content controller<br/>(display:none -&gt; block)"]
+        INCLUDE["include.js<br/>includePartial(placeholderId, url)"]
+        NAVBAR["navbar.js<br/>scroll-spy + hamburger menu"]
+        HEADER["header.js<br/>dispatch header:loaded"]
+        WORDCLOUD["wordcloud.js<br/>Archimedean spiral r(th)=a+b*th"]
+        CONTACTJS["contact-form.js controller"]
+        RENDERERS["Section Renderers x11<br/>about.js ... recommendations.js"]
+        APPJS["app.js core runtime<br/>dropdown ARIA + keyword engine + lightbox"]
+        DOM["Rendered DOM<br/>(11 section containers)"]
+    end
+
+    subgraph EXT["External Third-Party Services (HTTPS)"]
+        direction TB
+        IPIFY[/"api.ipify.org<br/>GET ?format=json"/]
+        GFORM[/"Google Forms<br/>POST formResponse (no-cors)"/]
+        GA[/"Google Analytics<br/>gtag.js (G-XXTHCRWJGT)"/]
+        GMAP[/"Google Maps<br/>iframe embed"/]
+    end
+
+    VISITOR -- "S1 GET /" --> HTML
+    HTML -- "S2 parse head" --> BOOT
+    BOOT -- "S3 bypass:boolean" --> GATEDEC
+    GATEDEC -- "false: html.classList.add('gate-active')" --> GATEUI
+    GATEDEC -- "true: skip gate" --> SITECTRL
+    HTML -- "S4 link rel=stylesheet" --> CSS
+    HTML -- "S5 script defer x21" --> JSFILES
+    JSFILES --> INCLUDE
+    JSFILES --> NAVBAR
+    JSFILES --> HEADER
+    JSFILES --> WORDCLOUD
+    JSFILES --> CONTACTJS
+    JSFILES --> RENDERERS
+    JSFILES --> APPJS
+    JSFILES --> GATEJS
+
+    INCLUDE -- "S6 GET url" --> PARTIALFILES
+    PARTIALFILES -- "S7 text():string" --> INCLUDE
+    INCLUDE -- "el:Element" --> NAVBAR
+    INCLUDE -- "el:Element" --> HEADER
+    INCLUDE -- "el:Element" --> CONTACTJS
+    HEADER -- "S8 CustomEvent('header:loaded')" --> WORDCLOUD
+
+    RENDERERS -- "S9 GET /assets/data/name.json" --> JSONFILES
+    JSONFILES -- "S10 json():array|object" --> RENDERERS
+    RENDERERS -- "S11 DOM nodes" --> DOM
+    RENDERERS -. "S12 media[].src:path" .-> MEDIAFILES
+
+    WORDCLOUD -- "S13 GET wordcloud.json" --> JSONFILES
+    JSONFILES -- "S14 text,weight x100" --> WORDCLOUD
+    WORDCLOUD -- "top 75 by weight" --> DOM
+
+    APPJS -- "S15 GET keywords.json" --> JSONFILES
+    JSONFILES -- "S16 group,keywords[]" --> APPJS
+    APPJS -- "active class + span.keyword-highlight" --> DOM
+
+    GATEUI -- "S17 submit email:string" --> GATEJS
+    GATEJS -- "S18 GET ?format=json" --> IPIFY
+    IPIFY -- "S19 ip:string" --> GATEJS
+    GATEJS -- "S20 POST FormData(no-cors)" --> GFORM
+    GATEJS -- "S21 setTimeout 1.8s, 0.6s -&gt; reveal()" --> SITECTRL
+    SITECTRL -- "gateVerified='1' (localStorage)" --> PAGEREADY
+
+    CONTACTJS -- "S22 submit name,email,subject,message" --> GFORM
+    CONTACTJS -- "S18 GET ?format=json" --> IPIFY
+
+    HTML -- "S23 script src" --> GA
+    PARTIALFILES -- "S24 iframe src" --> GMAP
+
+    DOM --> PAGEREADY
+```
+
+### Interface Control Table
+
+| ID | Source → Destination | Variable / field | Type | Value / expression |
+|----|----------------------|-------------------|------|---------------------|
+| S1 | Visitor → `index.html` | HTTP request line | — | `GET /` over HTTPS, TLS 1.3 |
+| S2 | `index.html` → Bootstrap Script | inline `<script>` | — | executes at `t0 ≈ 0 s`, before first paint |
+| S3 | Bootstrap Script → `GATEDEC` | `bypass` | `boolean` | `location.search.length>0 \|\| location.hash.length>0 \|\| localStorage.getItem('gateVerified')==='1'` |
+| S4 | `index.html` → `main.css` | `<link rel="stylesheet">` | — | render-blocking stylesheet fetch |
+| S5 | `index.html` → JS Modules | `<script defer>` ×21 | — | parsed in document order, executed after DOM parse |
+| S6 | `include.js` → HTML Partials | `fetch(url)` | request | `url ∈ {navbar.html, header.html, contact.html}` |
+| S7 | HTML Partials → `include.js` | `response.text()` | `string` | raw HTML, parsed via `wrapper.innerHTML` |
+| S8 | `header.js` → `wordcloud.js` | `CustomEvent` | event | `'header:loaded'`, dispatched on `document` |
+| S9 | Section Renderers → JSON Data Layer | `fetch('/assets/data/{name}.json')` | request | one endpoint per of 11 renderers |
+| S10 | JSON Data Layer → Section Renderers | `response.json()` | `array \| object` | schema is renderer-specific (see `experience.json` shape etc.) |
+| S11 | Section Renderers → DOM | `appendChild(...)` | `Element` | injected into e.g. `#experience-list`, `#about-content` |
+| S12 | Section Renderers → Media Assets | `media[].src` | `string` (path) | relative path, lazy-referenced only |
+| S13 | `wordcloud.js` → JSON Data Layer | `fetch('wordcloud.json')` | request | — |
+| S14 | JSON Data Layer → `wordcloud.js` | `{text, weight}` | `array<object>` | `text:string`, `weight:number`; top 100 curated, top 75 rendered |
+| S15 | `app.js` → JSON Data Layer | `fetch('keywords.json')` | request | fires only if `k` query param is present |
+| S16 | JSON Data Layer → `app.js` | `{group, keywords}` | `array<object>` | `group:string`, `keywords:string[]` |
+| S17 | `#gate-form` → `email-gate.js` | `email` | `string` | validated against `EMAIL_PATTERN = /^\S+@\S+\.\S+$/` (format only) |
+| S18 | `email-gate.js` / `contact-form.js` → `api.ipify.org` | `fetch('?format=json')` | request | best-effort, fired on load, not blocking submit |
+| S19 | `api.ipify.org` → caller | `ip` | `string` | IPv4/IPv6 literal; falls back to `'Unknown IP'` on failure |
+| S20 | `email-gate.js` → Google Forms | `FormData` | `POST`, `mode:'no-cors'` | `entry.948123892='Visitor'`; `entry.1594061230=email`; `entry.1141855673=timestamp()+' '+ip`; `entry.2016710258='Automatic submission from the homepage gate.'` |
+| S21 | `email-gate.js` → `#site-content` | `setTimeout` chain | `ms → s` | `VERIFY_DELAY_MS=1800 ms (1.8 s)` then `SUCCESS_DELAY_MS=600 ms (0.6 s)`, then `reveal()` |
+| S22 | `#contact-form` → Google Forms | `FormData` | `POST`, `mode:'no-cors'` | `entry.948123892=name`; `entry.1594061230=email`; `entry.1141855673=timestamp()+' '+ip+' — '+subject`; `entry.2016710258=message` |
+| S23 | `index.html` → Google Analytics | `<script src>` | — | `gtag.js`, measurement ID `G-XXTHCRWJGT` |
+| S24 | Contact Partial → Google Maps | `<iframe src>` | — | permitted by CSP `frame-src 'self' https://www.google.com` |
+
+**Additional timing constants** (source-verified, SI unit = second):
+
+| Constant | Location | Value (ms) | Value (s, SI) | Purpose |
+|----------|----------|-----------:|---------------:|---------|
+| `VERIFY_DELAY_MS` | `email-gate.js` | 1800 | 1.8 | hold on spinner before showing "Verified!" |
+| `SUCCESS_DELAY_MS` | `email-gate.js` | 600 | 0.6 | hold after "Verified!" before `reveal()` |
+| deep-link `MutationObserver` watchdog | `app.js` | 5000 | 5.0 | stop watching for the hash-target title after this timeout |
+| keyword-expand `MutationObserver` watchdog | `app.js` | 5000 | 5.0 | stop watching for async-rendered sections after this timeout |
+| keyword-match highlight flash | `app.js` | 1000 | 1.0 | background-color flash reset on a matched toggle |
+
+Favicon raster assets are specified in **pixels (px)** — the CSS reference pixel is not an SI
+unit, but it is the only unit the raster format itself supports: `favicon-16x16.png` (16×16 px),
+`favicon-32x32.png` (32×32 px), `apple-touch-icon.png` (180×180 px).
+
+### Legend
+
+| Symbol | ISO 5807 role | Meaning here |
+|--------|----------------|--------------|
+| `([ ])` stadium | Terminal | System boundary actor — the visitor, or the page reaching a stable end state |
+| `[ ]` rectangle | Process | Executing client-side logic (a JS module or controller) |
+| `[( )]` cylinder | Data store | A static file served as bytes from the origin (HTML/CSS/JS/JSON/media) |
+| `{ }` rhombus | Decision | A boolean branch evaluated at runtime |
+| `[/ /]` parallelogram | Input/Output | A network boundary crossing to a third-party origin |
+| solid arrow | — | Synchronous or directly-awaited control/data transfer |
+| dashed arrow | — | Best-effort or lazily-resolved reference (no delivery confirmation) |
+
+Time is expressed throughout in the SI base unit **second (s)**, converting the millisecond
+constants defined in source. Data volumes, where discussed, use SI-decimal **kilobytes (kB,
+1 kB = 10³ B)** rather than binary KiB. Pixel dimensions are called out explicitly as the one
+non-SI exception, since raster assets have no other applicable unit.
+
+---
+
 ## Design Decisions
 
 **Content–logic separation.** All section data lives in versioned JSON files under
@@ -233,65 +395,6 @@ homepage so navigation stays consistent everywhere — GitHub Pages serves `404.
 automatically for unmatched routes on a `<username>.github.io` repo, no extra config needed.
 `robots.txt` plus `<meta name="robots" content="noindex, nofollow, noarchive">` on every page
 keep the site out of search indexes.
-
----
-
-## Data Schema Reference
-
-### `experience.json`
-```json
-{
-  "organization": "string",
-  "logo": "path/to/logo",
-  "address": "string",
-  "position": "string",
-  "group": "string",
-  "employmentType": "string",
-  "date": { "start": "YYYY-MM", "end": "YYYY-MM" },
-  "items": [
-    {
-      "title": "string",
-      "category": "Project | Leadership | Service | Teaching",
-      "contributor": "string",
-      "date": { "start": "YYYY-MM", "end": "YYYY-MM" },
-      "description": ["string"],
-      "media": [{ "src": "path", "caption": "string" }]
-    }
-  ]
-}
-```
-
-### `keywords.json`
-```json
-{ "group": "ai", "keywords": ["LangChain", "RAG", "LLM"] }
-```
-
----
-
-## Local Development
-
-```bash
-python -m http.server 8000
-# Access at http://localhost:8000
-```
-
-No build step. No package manager. Edit JSON, HTML partials, or CSS and reload.
-
-To regenerate word cloud candidates after content changes:
-
-```bash
-python assets/analysis/wordcloud.py
-# Writes the top 100 {text, weight} candidates to assets/data/wordcloud.json
-```
-
-Then manually curate `assets/data/wordcloud.json` (delete unwanted entries) — the file is
-written one entry per line specifically to make this easy.
-
----
-
-## Deployment
-
-All pushes to `main` are published automatically via GitHub Pages. No CI pipeline is required.
 
 ---
 
