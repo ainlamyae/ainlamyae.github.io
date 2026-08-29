@@ -2,5 +2,9 @@
   {
     "group": "ML",
     "keywords": ["Machine Learning", "LLM", "RNN", "CNN", "RCNN"]
+  },
+  {
+    "group": "GoogleTest",
+    "keywords": ["Calibration", "Test", "Verification", "Validation", "Sensor", "Signal"]
   }
 ]
