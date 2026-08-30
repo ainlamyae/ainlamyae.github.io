@@ -46,6 +46,25 @@ header {
   margin-bottom: 40px;
 }
 
+.header-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-avatar {
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+}
+
 header h1 {
   position: relative;
   z-index: 1;
