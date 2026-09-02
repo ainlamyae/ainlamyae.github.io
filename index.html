@@ -74,7 +74,13 @@
           <label for="gate-email">Email</label>
           <input type="email" id="gate-email" name="email" autocomplete="email" autofocus required>
         </div>
-        <button type="submit" id="gate-submit">I'm not a robot</button>
+        <button type="submit" id="gate-submit" class="turnstile-widget">
+          <span class="turnstile-box" aria-hidden="true">
+            <span class="turnstile-spinner"></span>
+            <span class="turnstile-check">&#10003;</span>
+          </span>
+          <span class="turnstile-label" id="gate-submit-label" aria-live="polite">Verify you are human</span>
+        </button>
         <p id="gate-status" class="contact-status" aria-live="polite"></p>
       </form>
     </div>

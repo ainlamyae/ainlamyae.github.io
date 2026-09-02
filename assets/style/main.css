@@ -590,21 +590,87 @@ html.gate-active #site-content { display: none; }
   color: #c0392b;
 }
 
-#gate-submit {
-  font: inherit;
-  font-weight: normal;
+#gate-submit.turnstile-widget {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   width: 100%;
-  padding: 10px 22px;
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
-  background: #f4f7fb;
+  padding: 12px 16px;
+  font: inherit;
+  font-size: 0.95em;
+  text-align: left;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  background: #fafafa;
   color: #222;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-#gate-submit:hover {
-  background: #e6ebf2;
+#gate-submit.turnstile-widget:hover {
+  border-color: #b5b5b5;
+}
+
+#gate-submit.turnstile-widget:disabled {
+  cursor: default;
+}
+
+.turnstile-box {
+  position: relative;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #c8c8c8;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.turnstile-spinner {
+  display: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #dde3ec;
+  border-top-color: #3b6ea5;
+  border-radius: 50%;
+  animation: turnstile-spin 0.7s linear infinite;
+}
+
+.turnstile-check {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #1f8a4c;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@keyframes turnstile-spin {
+  to { transform: rotate(360deg); }
+}
+
+.is-verifying .turnstile-box {
+  border-color: #3b6ea5;
+}
+.is-verifying .turnstile-spinner {
+  display: block;
+}
+
+.is-success .turnstile-box {
+  border-color: #1f8a4c;
+  background: #f0faf3;
+}
+.is-success .turnstile-check {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .cert-close {
@@ -937,6 +1003,11 @@ li:has(> .tag) {
 
   .brand-initial {
     animation: none;
+  }
+
+  .turnstile-spinner {
+    animation: none;
+    border-top-color: #dde3ec;
   }
 }
 
