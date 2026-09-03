@@ -55,7 +55,7 @@ Two complementary patterns keep it maintainable:
 │   │   ├── volunteering.js       # Volunteering renderer
 │   │   ├── recommendations.js    # Recommendations renderer
 │   │   ├── contact-form.js       # Loads contact partial; Google Form submission + status messaging
-│   │   ├── email-gate.js         # Bare-URL interstitial: validates + submits visitor email, then reveals #site-content
+│   │   ├── email-gate.js         # Bare-URL interstitial: email input + verification widget, logs lead via Google Form, then reveals #site-content
 │   │   ├── ui-controls.js        # Floating action buttons: back-to-top, theme toggle, expand/collapse all
 │   │   └── app.js                # Core runtime: dropdowns (ARIA), keyword engine, lightbox modal
 │   ├── html
@@ -186,19 +186,27 @@ the submitted subject (e.g. `2026-07-16 23:32:32 99.251.14.181 — Job inquiry`)
 the Google Sheet show who/when alongside the visitor's own subject line. If the lookup hasn't
 resolved by submit time, it falls back to `Unknown IP` rather than blocking the send.
 
-**Email-gated homepage.** Loading `index.html` with no `?query` and no `#hash` shows a plain
-interstitial (`#email-gate`) instead of the page content (`#site-content`), which stays
-`display: none` until the gate clears. The gate/bypass decision is made by a small inline
-`<script>` at the top of `<head>` — before any CSS paints — so there's no flash of hidden
-content: it adds a `gate-active` class to `<html>` unless `location.search`, `location.hash`,
-or a prior `localStorage.gateVerified` flag says to skip it. Submitting the gate's email field
-(validated with a basic `@`/`.` pattern — format only, not deliverability: nothing confirms the
-address is real) reuses the same Google Form `no-cors` POST as the contact form
-(`name: "Visitor"`, `subject: "YYYY-MM-DD HH:MM:SS IP"`, using the same ipify lookup and
-`Unknown IP` fallback described above) to log the lead, then removes `gate-active` and sets
-`localStorage.gateVerified` so the same browser isn't asked again. This is a client-side filter
-for casual visitors and lead capture, not an access-control mechanism — anyone can bypass it
-with any query string or hash, view source, or disabled JS.
+**Email-gated homepage.** Loading `index.html` with no `?query` and no `#hash` shows a
+full-screen white interstitial (`#email-gate`) instead of the page content (`#site-content`),
+which stays `display: none` until the gate clears. The gate/bypass decision is made by a small
+inline `<script>` at the top of `<head>` — before any CSS paints — so there's no flash of
+hidden content: it adds a `gate-active` class to `<html>` unless `location.search`,
+`location.hash`, or a prior `localStorage.gateVerified` flag says to skip it.
+
+The gate UI shows a heading ("Verifying you are human. / This may take a few seconds."), an
+email input field, and a horizontal verification widget. The widget displays a small animated
+box on its left side — initially a plain square; after the visitor clicks it the box border
+disappears and is replaced by a dotted orange rotating arc spinner; on completion a green
+checkmark confirms success before the gate dismisses. A secondary note below the widget reads
+"We need to review the security of your connection before proceeding."
+
+Submitting the gate's email field (validated with a basic `@`/`.` pattern — format only, not
+deliverability: nothing confirms the address is real) reuses the same Google Form `no-cors`
+POST as the contact form (`name: "Visitor"`, `subject: "YYYY-MM-DD HH:MM:SS IP"`, using the
+same ipify lookup and `Unknown IP` fallback described above) to log the lead, then removes
+`gate-active` and sets `localStorage.gateVerified` so the same browser isn't asked again. This
+is a client-side filter for casual visitors and lead capture, not an access-control mechanism —
+anyone can bypass it with any query string or hash, view source, or disabled JS.
 
 **Content Security Policy.** `index.html` and `contact.html` declare a restrictive CSP via
 `<meta http-equiv="Content-Security-Policy">` (self-hosted scripts/styles/fonts, plus an

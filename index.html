@@ -69,6 +69,8 @@
 <body>
   <div id="email-gate">
     <div class="gate-card">
+      <p class="gate-verify-title">Verifying you are human.</p>
+      <p class="gate-verify-sub">This may take a few seconds.</p>
       <form id="gate-form" novalidate>
         <div class="form-row">
           <label for="gate-email">Email</label>
@@ -79,9 +81,10 @@
             <span class="turnstile-spinner"></span>
             <span class="turnstile-check">&#10003;</span>
           </span>
-          <span class="turnstile-label" id="gate-submit-label" aria-live="polite">Verify you are human</span>
+          <span id="gate-submit-label" aria-live="polite">Verify you are human</span>
         </button>
-        <p id="gate-status" class="contact-status" aria-live="polite"></p>
+        <p id="gate-status" aria-live="polite"></p>
+        <p class="gate-security-note">We need to review the security of your connection before proceeding.</p>
       </form>
     </div>
   </div>
