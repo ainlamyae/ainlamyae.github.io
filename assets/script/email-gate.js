@@ -21,6 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const VERIFY_DELAY_MS = 700;
   const SUCCESS_DELAY_MS = 500;
 
+  // Best-effort IP lookup, kicked off early so it's usually ready by submit time.
+  let visitorIp = null;
+  fetch('https://api.ipify.org?format=json')
+    .then(res => res.json())
+    .then(data => { visitorIp = data.ip; })
+    .catch(() => {});
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function timestamp() {
+    const d = new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + ' ' +
+      pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+  }
+
   function reveal() {
     document.documentElement.classList.remove('gate-active');
     try { localStorage.setItem('gateVerified', '1'); } catch (e) {}
@@ -48,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = new FormData();
     data.append(GOOGLE_FORM_FIELDS.name, 'Visitor');
     data.append(GOOGLE_FORM_FIELDS.email, email);
-    data.append(GOOGLE_FORM_FIELDS.subject, 'Visitor at ' + new Date().toLocaleString());
+    data.append(GOOGLE_FORM_FIELDS.subject, timestamp() + ' ' + (visitorIp || 'Unknown IP'));
     data.append(GOOGLE_FORM_FIELDS.message, 'Automatic submission from the homepage gate.');
 
     // Google Forms doesn't send CORS headers, so the response is opaque
