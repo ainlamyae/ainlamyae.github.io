@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
         titleEl.classList.add('dropdown-toggle');
         titleEl.appendChild(document.createTextNode(project.title));
 
+        makePermalink(section, titleEl, project.id, project.title);
+
         // "file" may be a single path, or a list of { src, caption } for
         // projects with multiple related documents/recordings
         const files = Array.isArray(project.file)

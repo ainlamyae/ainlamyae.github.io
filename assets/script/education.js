@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Degree line (clickable)
         const degreeHeading = document.createElement('h3');
         degreeHeading.classList.add('dropdown-toggle');
-        degreeHeading.textContent = `${edu.degree.level} (${edu.degree.abbreviation}) in ${edu.degree.field}`;
+        const degreeTitle = `${edu.degree.level} (${edu.degree.abbreviation}) in ${edu.degree.field}`;
+        degreeHeading.textContent = degreeTitle;
+        makePermalink(section, degreeHeading, edu.id, degreeTitle);
         section.appendChild(degreeHeading);
 
         // Hidden content container

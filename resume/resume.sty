@@ -1,0 +1,78 @@
+% resume.sty — visual style ported from Ali Nasr's earlier hand-built LaTeX resume.
+% Loaded by the .tex file that generate_resume.py writes to resume/output/.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[default,semibold]{sourcesanspro}
+\RequirePackage[10pt]{moresize}
+\RequirePackage{anyfontsize}
+\RequirePackage{enumitem}
+\RequirePackage{etaremune}
+
+\setlength{\parindent}{0pt}
+\setcounter{secnumdepth}{0}
+
+% MARGINS AND SPACING
+\RequirePackage[
+  top=10mm,
+  bottom=10mm,
+  left=9mm,
+  right=9mm,
+  headheight=9mm,
+  includefoot,
+  footskip=5mm,
+  headsep=5mm
+]{geometry}
+
+\raggedright
+\raggedbottom
+
+% COLOR
+\RequirePackage{xcolor}
+\definecolor{highlight}{RGB}{101, 102, 194}
+\definecolor{RoyalRed}{RGB}{204, 0, 0}
+\definecolor{RoyalBlue}{RGB}{0, 0, 151}
+
+% LINKS
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=highlight, linkcolor=highlight}
+
+% SECTION FORMATTING — small-caps, RoyalRed, ruled underline
+\RequirePackage[nostruts]{titlesec}
+\titlespacing*{\section}{0em}{0.5em}{2pt}
+\titleformat{\section}{\color{RoyalRed}\scshape\raggedright\large}{}{0em}{}[\vspace{-0.75em}\hrulefill]
+
+% SUBSECTION FORMATTING — bold, plain text (organization / institution / group headers).
+% No colored box/background: ATS parsers read plain single-column text far more
+% reliably than text sitting inside a colorbox/parbox construct.
+\titlespacing*{\subsection}{0em}{0.3em}{1pt}
+\titleformat{\subsection}{\bfseries\large}{}{0em}{}[]
+
+% SUBSUBSECTION FORMATTING — bold RoyalBlue (position / degree / entry titles)
+\titlespacing*{\subsubsection}{7pt}{0.2em}{2pt}
+\titleformat{\subsubsection}{\bfseries\color{RoyalBlue}}{}{0em}{}[]
+
+% BOLD LABEL — inline colored bold run-in label, e.g. \reslabel{Programming}: Python, C++
+\newcommand{\reslabel}[1]{{\bfseries\color{RoyalBlue} #1}}
+
+% PUBLICATION TAG — bracketed [J1]/[C2]/[P1]/[T1] label before each reference
+\newcommand{\publabel}[1]{{\bfseries\color{RoyalBlue} #1}}
+
+% NAME HEADER — big bold name (used once, in the header)
+\newcommand{\resheader}[1]{{\huge \textbf{#1}}}
+
+% BULLET POINTS — tight spacing throughout
+\setlist[itemize]{topsep=2pt, itemsep=0pt, parsep=1pt, labelsep=2pt, leftmargin=13pt, align=parleft, left=0pt..1em}
+
+% FOOTER — page x of y + last-updated stamp, no header/footer rules
+\RequirePackage{lastpage}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\color{RoyalBlue}\small (\thepage\ of\ \pageref*{LastPage})}
+\fancyfoot[L]{\color{RoyalBlue}\small \name\ Resume --- Last updated on \today}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}

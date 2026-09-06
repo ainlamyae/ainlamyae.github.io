@@ -1,32 +1,36 @@
 [
   {
-"category": "Personal",
-"title": "Ledger: Serverless Personal Finance Platform (Client-Side Cloud Architecture)",
-"description": [
-"Designed a serverless personal finance platform using GitHub Pages, Google OAuth 2.0, Google Sheets API, and browser-based JavaScript.",
-"Architected a zero-backend system where all application logic executes in the client, eliminating the need for dedicated servers and databases.",
-"Implemented secure OAuth-based authentication and authorization using Google Identity Services with direct browser-to-Google API communication.",
-"Designed a spreadsheet-as-database architecture using Google Sheets as the system of record for transactions, accounts, categories, and financial reports.",
-"Built a modular SPA architecture consisting of authentication, transaction management, account management, analytics, charting, and CSV import/export modules.",
-"Optimized performance through batch Google Sheets API operations and client-side caching using localStorage.",
-"Designed financial reporting workflows leveraging spreadsheet formulas for automated summaries, benchmarking, and trend analysis.",
-"Implemented end-to-end security architecture based on OAuth tokens, Google API authorization, and spreadsheet access controls.",
-"Reduced operational overhead and infrastructure costs through a fully serverless deployment model hosted on GitHub Pages.",
-"Produced system architecture, data flow, integration, and security design artifacts for platform documentation and technical reviews."
-],
-"date": {
-"start": "2026-06-01",
-"end": "2026-06-30"
-},
-"media": [
-{
-"src": "assets/media/projects/lspf2026.jpg",
-"caption": "High-level architecture of Ledger, a serverless personal finance application using GitHub Pages, Google OAuth, and Google Sheets."
-}
-]
-},
+    "category": "Personal",
+    "id": "safa2026",
+    "title": "Serverless Architecture For A Multi-Domain Personal Data System",
+    "description": [
+      "Architected a serverless personal life-management platform as a browser-only SPA with zero backend infrastructure, using GitHub Pages, Google OAuth, and Google Sheets as the system of record.",
+      "Designed a shared client-side data layer powering 10+ interactive modules across financial analytics, portfolio tracking, health/nutrition, workout planning, time tracking, travel, immigration applications, and contacts.",
+      "Built a multi-page architecture with dedicated, bookmarkable routes using a lightweight client-side loader from a shared HTML source, with no build step or server-side rendering.",
+      "Designed per-user data isolation through Google OAuth 2.0 and `drive.file` scoped access, with no shared backend or third-party data store.",
+      "Implemented full CRUD, search, filtering, sorting, bulk-edit, and undo workflows across application datasets using Google Sheets API v4.",
+      "Optimized data access with batched Sheets API operations, client-side caching (5-min TTL), and lazy-loaded assets to minimize API usage and improve responsiveness.",
+      "Integrated Groq LLM, USDA FoodData Central, and Open-Meteo APIs for opt-in AI-generated insights, automated nutrition lookups, and weather/location features.",
+      "Built a formula-driven health and finance calculation engine with selectable models, including Mifflin-St Jeor and Katch-McArdle BMR.",
+      "Developed a live formula explorer exposing editable equations, substituted values, and real-time computation traces instead of black-box calculations.",
+      "Developed a responsive, mobile-first vanilla JavaScript codebase optimized for free-tier, key-less infrastructure.",
+      "Applied accessibility practices including ARIA roles, focus management, keyboard shortcuts, and responsive breakpoints.",
+      "Implemented reusable client-side patterns for state management, data access, CRUD operations, and interactive UI components."
+    ],
+    "date": {
+      "start": "2026-06-01",
+      "end": "2026-06-30"
+    },
+    "media": [
+      {
+        "src": "assets/media/projects/smdps2026.png",
+        "caption": "System architecture of a serverless, multi-domain personal data platform using GitHub Pages, Google OAuth, and Google Sheets."
+      }
+    ]
+  },
   {
     "category": "Personal",
+    "id": "aepa2026",
     "title": "AI-Powered Exam Preparation & Assessment Platform (Full-Stack Distributed SaaS Architecture)",
     "description": [
       "Architected an AI-powered examination & assessment platform using Next.js 15, React 18, TypeScript, Node.js, Express.js, PostgreSQL, Firebase Auth, Stripe, and Docker.",
@@ -55,6 +59,7 @@
   },
   {
     "category": "Course",
+    "id": "fcot2013",
     "title": "Fuzzy Control of Truck-Trailer Auto Parking in the Presence of Obstacles",
     "description": [
       "Developed a hierarchical fuzzy logic controller in MATLAB/Simulink for autonomous reverse parking of a truck-trailer system.",
@@ -91,6 +96,7 @@
   },
   {
     "category": "Course",
+    "id": "dapo2013",
     "title": "Design and Programming of a 3-DoF Robot Controller Circuit Board",
     "description": [
       "Designed and developed an embedded control system for a 3-DoF robotic manipulator using an ATmega32 AVR microcontroller.",
@@ -110,6 +116,7 @@
   },
   {
     "category": "Course",
+    "id": "csdo2013",
     "title": "Control System Design of a Nonlinear Inverted Pendulum System",
     "description": [
       "Developed a mathematical model of a nonlinear inverted pendulum-on-cart system using Newtonian dynamics and derived governing equations of motion.",
@@ -130,6 +137,7 @@
   },
   {
     "category": "Course",
+    "id": "hcdf2013",
     "title": "Hydraulic Circuit Design for Ring Rolling Machine",
     "description": [
       "Designed hydraulic circuits for a ring rolling machine based on specified force, stroke, pressure, and speed requirements.",
@@ -150,6 +158,7 @@
   },
   {
     "category": "Course",
+    "id": "lsco2013",
     "title": "LabVIEW-Based Simultaneous Control of 3 CNC Stepper Motors",
     "description": [
       "Designed and developed a LabVIEW-based motion control system for simultaneous operation of 3 stepper motors used in CNC applications.",
@@ -170,6 +179,7 @@
   },
   {
     "category": "Course",
+    "id": "sppa2012",
     "title": "Stable Path Planning and Body Angle Analysis of a Biped Robot",
     "description": [
       "Analyzed the influence of torso/body angle parameters on the dynamic stability of a biped robot using Zero Moment Point (ZMP) stability criteria.",
