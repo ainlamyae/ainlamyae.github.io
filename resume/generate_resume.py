@@ -85,7 +85,12 @@ def slugify(text: str) -> str:
     return text[:60]
 
 def title_href(anchor_id: str, title: str) -> str:
-    return rf"\href{{{SITE_URL}/\#{anchor_id}}}{{{esc(title)}}}"
+    # Use a query param, not a "#" fragment: PDF readers are inconsistent about
+    # literal "#" in clickable links — some percent-encode it to "%23" before
+    # handing the URL to a browser, turning "/#id" into a nonexistent "/%23id"
+    # path (404). "?id=" is unambiguous and needs no LaTeX escaping either.
+    # assets/script/utils.js `revealHashTarget()` reads this param as a fallback.
+    return rf"\href{{{SITE_URL}/?id={anchor_id}}}{{{esc(title)}}}"
 
 def sub_header(text: str) -> str:
     """Organization / institution / group-level header — highlight bar."""
