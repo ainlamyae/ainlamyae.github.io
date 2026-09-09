@@ -1,6 +1,19 @@
 [
   {
   "id": "ygbn2026c",
+  "date": "2026-10-12",
+  "type": "inproceedings",
+  "title": "Constrained co-evolutionary differential metamorphic testing for autonomous systems with an interpretability approach",
+  "authors": ["Yousefizadeh, Hossein", "Gu, Shenghui", "Briand, Lionel C.", "Nasr, Ali"],
+  "booktitle": "Proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+  "publisher": null,
+  "address": "Munich, Germany",
+  "doi": "10.1145/3821438",
+  "url": "https://conf.researchr.org/details/ase-2026/ase-2026-journal-first/30/Constrained-Co-evolutionary-Differential-Metamorphic-Testing-for-Autonomous-Systems-w",
+  "abstract": "Autonomous systems, such as autonomous driving systems, evolve rapidly through frequent updates, risking unintended behavioral degradations. Effective system-level testing is challenging due to the vast scenario space, the absence of reliable test oracles, and the need for practically applicable and interpretable test cases. We present CoCoMagic, a novel automated test case generation method that combines metamorphic testing, differential testing, and advanced search-based techniques to identify behavioral divergences between versions of autonomous systems. CoCoMagic formulates test generation as a constrained cooperative co-evolutionary search, evolving both source scenarios and metamorphic perturbations to maximize differences in violations of predefined metamorphic relations across versions. Constraints and population initialization strategies guide the search toward realistic, relevant scenarios. An integrated interpretability approach aids in diagnosing the root causes of divergences. We evaluate CoCoMagic on an end-to-end autonomous driving system, InterFuser, within the Carla virtual simulator. Results show significant improvements over baseline search methods, identifying more distinct high-severity behavioral differences while maintaining scenario realism. The interpretability approach provides actionable insights for developers, supporting targeted debugging and safety assessment. CoCoMagic offers an efficient, effective, and interpretable way for the differential testing of evolving autonomous systems across versions."
+},
+  {
+  "id": "ygbn2026c",
   "date": "2026-05-15",
   "type": "article",
   "title": "Constrained co-evolutionary metamorphic differential testing for autonomous systems with an interpretability approach",
