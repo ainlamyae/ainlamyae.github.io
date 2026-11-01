@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Dark mode (disabled) ──────────────────────────────────
+  // Uncomment this block and the #fab-theme button in index.html to restore.
+  /*
   const MOON = '🌙'; // 🌙
   const SUN  = '☀️'; // ☀️
 
-  // ── Dark mode ─────────────────────────────────────────────
   const root   = document.documentElement;
   const togBtn = document.getElementById('fab-theme');
 
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme(saved === 'dark');
 
   togBtn.addEventListener('click', () => applyTheme(!isDark()));
+  */
 
   // ── Scroll to top ──────────────────────────────────────────
   const topBtn = document.getElementById('fab-top');
