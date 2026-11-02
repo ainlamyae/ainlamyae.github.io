@@ -1012,6 +1012,141 @@ li:has(> .tag) {
   color: #ff8a8a;
 }
 
+/* === Booking form === */
+#booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row select {
+  font: inherit;
+  font-size: 1.05em;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+}
+
+/* Browsers default <select> to border-box and <input> to content-box, so the
+   same padding gives different heights. Pin single-line controls to one size. */
+.form-row input,
+.form-row select {
+  box-sizing: border-box;
+  height: 2.75em;
+}
+
+/* A <select> is as wide as its longest option by default, which can push
+   the form box onto its own row. Let boxes and selects shrink instead. */
+.contact-form-box {
+  min-width: 0;
+}
+
+.form-row select {
+  width: 100%;
+  min-width: 0;
+}
+
+.form-row select:disabled {
+  background: #e6ebf2;
+  color: #666;
+}
+
+.form-row select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.form-row-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+}
+
+.form-row-group .form-row {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+.booking-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.booking-fee {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.booking-fee-detail {
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+.form-submit {
+  font: inherit;
+  font-weight: normal;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-nav-hover);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.form-submit:hover {
+  background: var(--color-nav);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.booking-rates {
+  color: #fff;
+  padding: 16px 20px;
+}
+
+.booking-rates h3 {
+  margin-top: 0;
+  background: #fff;
+  color: var(--color-primary);
+  border-left-color: var(--color-nav-hover);
+}
+
+.booking-rates p {
+  color: #fff;
+  line-height: 1.5;
+}
+
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 12px;
+}
+
+.rates-table th,
+.rates-table td {
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.rates-table td:last-child,
+.rates-table th:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
 .section-status {
   margin: 8px 0;
   font-style: italic;
