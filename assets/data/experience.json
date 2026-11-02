@@ -14,27 +14,48 @@
 		"items": [
 			{
 				"category": "Project",
+				"id": "dwoc2026",
+				"title": "Dynamic Workflow Orchestration for LLM-Based Coding Agents",
+				"description": [
+					"Diagnosed and documented root causes of failures in multi-agent LLM coding workflows by building a reusable step-level trace-extraction and interactive visualization pipeline in Python and JavaScript over raw benchmark logs",
+					"Ran large-scale skeptical multi-agent audits to separate genuine orchestration bugs from false-positive noise",
+					"Compiled verified findings and proposed fixes into a shareable, evidence-backed report",
+					"Debugged and fixed a permission-configuration conflict in a multi-agent AI framework that was triggering costly fallback behavior (150K+ tokens per instance), verifying the fix through live benchmark re-runs",
+					"Root-caused and fixed a recurring tool-naming error across multiple agent roles by analyzing session traces and correcting an incomplete prompt instruction"
+				],
+				"date": {
+					"start": "2026-10-26",
+					"end": null
+				}
+			},
+			{
+				"category": "Project",
 				"id": "cmpf2026",
 				"title": "Cognitive Memory Pipeline for LLM Coding Agents: Design, Evaluation & Prototype Extraction System",
 				"description": [
-					"Designed an end-to-end memory pipeline for AI coding agents across four data stores, using utility/surprise-based admission scoring, embedding deduplication, and provenance-based contradiction resolution",
-					"Designed behavioral-freshness testing that validates stored knowledge through downstream agent behavior rather than timestamps",
+					"Reviewed 100+ papers on LLM-agent memory, cognitive science, and software-architecture knowledge management, producing a 4-axis knowledge taxonomy and an 11-type content schema grounded in 10+ published systems",
+					"Reverse-engineered the memory architectures of Claude Code, OpenAI Codex, and MiniMax from source, documenting persistence formats, extraction and consolidation workflows, retrieval/ranking logic, and 7 undocumented hard limits",
+					"Designed a 12-component memory-pipeline architecture across Writing, Maintenance, Reading, and Storage layers, each with its own trigger conditions and failure-degradation behavior",
+					"Designed an admission-and-consolidation pipeline across four data stores, combining utility/surprise-based admission scoring, embedding deduplication, and provenance-based contradiction resolution",
+					"Designed behavioral freshness probing that validates stored knowledge through downstream agent behavior rather than timestamps",
 					"Designed fleet-scale multi-agent calibration shared by model, version, and role, enabling thousands of workers to converge on a common behavioral profile",
-					"Conducted a literature review spanning software architecture knowledge management and recent agent-memory research, translating findings into concrete knowledge schemas",
-					"Reverse-engineered the memory architectures of Claude Code, OpenAI Codex, and MiniMax from source code, documenting their extraction and consolidation workflows",
-					"Experimentation & Evaluation",
-					"Designed a 3-arm ablation study (no memory / naive memory / full pipeline) across SWE-Bench-CL and SWE-EVO, with continual-learning metrics and evaluation thresholds",
-					"Built a 3-tier Python evaluation framework combining deterministic checks, human review with confidence intervals, and optional LLM judging",
-					"Pre-registered falsifiable predictions and evaluated them against experimental results",
-					"Built an end-to-end Python extraction pipeline processing Codex CLI logs and lots of agent turns with resumable, idempotent execution",
-					"Built embedding-based semantic deduplication with experimentally tuned similarity thresholds",
+					"Replaced a polling-based integration with lifecycle hooks wired into Agent Coder's native before_run/after_run mechanism within its production multi-agent coding harness",
+					"Built a single-consumer, O_EXCL-locked extraction queue to prevent double-processing when drain invocations overlap, plus a crash-recoverable pool lock whose self-heal timeout was tuned from 300s to 45s to fit the hook's execution budget",
+					"Built an end-to-end Python extraction pipeline processing Codex CLI logs and large volumes of agent turns with resumable, idempotent execution",
 					"Built an asynchronous Claude Code extraction worker with locking, circuit breakers, credential checks, and spend limits",
-					"Identified and fixed a concurrency race affecting parallel writers, validating correctness under N workers",
-					"Ported the pipeline across Claude Code and Codex log formats while keeping the core extraction logic byte-identical"
+					"Built embedding-based semantic deduplication with experimentally tuned similarity thresholds",
+					"Identified and fixed a concurrency race affecting parallel writers, validating correctness under N concurrent workers",
+					"Ported the pipeline across Claude Code and Codex log formats while keeping the core extraction logic byte-identical",
+					"Designed a 3-arm ablation study (no memory / naive memory / full pipeline) across SWE-Bench-CL (273 tasks) and SWE-EVO (48 tasks), with continual-learning metrics and ship/iterate/abandon decision gates",
+					"Built a 3-tier Python evaluation framework combining deterministic checks, human review with confidence intervals, and optional LLM-as-a-judge scoring",
+					"Pre-registered falsifiable predictions and evaluated them against experimental results",
+					"Ran 11 with/without-memory comparisons; in one case, the pass rate rose from 17.4% to 79.3% while using 30% fewer tokens",
+					"Diagnosed an apparent 86.5% savings result as a harness artifact rather than a memory effect by diffing the generated code and finding it byte-identical to a pre-existing solution",
+					"Benchmarked the system against 3 production coding agents across 10 capabilities and the 11-type taxonomy, measuring a task-completion lift from 73.6% to 86.3%"
 				],
 				"date": {
 					"start": "2026-06-01",
-					"end": null
+					"end": "2026-10-23"
 				},
 				"media": [
 					{
