@@ -1,8 +1,8 @@
   <section id="booking">
     <h2>Book a Meeting</h2>
-    <div class="contact-layout">
-      <div class="contact-form-box">
-        <form id="booking-form">
+    <div class="contact-form-box booking-box">
+      <form id="booking-form">
+        <div class="form-row-group">
           <div class="form-row">
             <label for="booking-name">Name</label>
             <input type="text" id="booking-name" name="name" autocomplete="name" required>
@@ -11,6 +11,8 @@
             <label for="booking-email">Email</label>
             <input type="email" id="booking-email" name="email" autocomplete="email" required>
           </div>
+        </div>
+        <div class="form-row-group">
           <div class="form-row">
             <label for="booking-type">Meeting type</label>
             <select id="booking-type" name="type" required>
@@ -25,59 +27,46 @@
             <label for="booking-title">Meeting title</label>
             <input type="text" id="booking-title" name="title" maxlength="150" required>
           </div>
-          <div class="form-row-group">
-            <div class="form-row">
-              <label for="booking-date">Date</label>
-              <input type="date" id="booking-date" name="date" required>
-            </div>
-            <div class="form-row">
-              <label for="booking-duration">Duration</label>
-              <select id="booking-duration" name="duration" required>
-                <option value="30">30 minutes</option>
-                <option value="60" selected>1 hour</option>
-                <option value="90">1.5 hours</option>
-                <option value="120">2 hours</option>
-                <option value="180">3 hours</option>
-              </select>
-            </div>
+        </div>
+        <div class="form-row-group">
+          <div class="form-row">
+            <label for="booking-date">Date</label>
+            <input type="date" id="booking-date" name="date" required>
           </div>
           <div class="form-row">
-            <label for="booking-time">Start time (ET)</label>
+            <label for="booking-duration">Duration</label>
+            <select id="booking-duration" name="duration" required>
+              <option value="30">30 minutes</option>
+              <option value="60" selected>1 hour</option>
+              <option value="90">1.5 hours</option>
+              <option value="120">2 hours</option>
+              <option value="180">3 hours</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row-group">
+          <div class="form-row">
+            <label for="booking-time">Start time (Eastern Time)</label>
             <select id="booking-time" name="time" required disabled>
               <option value="">Pick a date first</option>
             </select>
           </div>
           <div class="form-row">
-            <label for="booking-notes">Notes (optional)</label>
-            <textarea id="booking-notes" name="notes" rows="4" maxlength="2000"></textarea>
+            <span class="form-label">Fee</span>
+            <div id="booking-summary" class="booking-summary" aria-live="polite">
+              <span class="booking-fee" id="booking-fee">—</span>
+              <span class="booking-fee-detail" id="booking-fee-detail">Select a date, start time and duration to see the fee.</span>
+            </div>
           </div>
+        </div>
+        <div class="form-row">
+          <label for="booking-notes">Notes (optional)</label>
+          <textarea id="booking-notes" name="notes" rows="4" maxlength="2000"></textarea>
+        </div>
 
-          <div id="booking-summary" class="booking-summary" aria-live="polite">
-            <span class="booking-fee" id="booking-fee">—</span>
-            <span class="booking-fee-detail" id="booking-fee-detail">Select a date, start time and duration to see the fee.</span>
-          </div>
-
-          <button type="submit" id="booking-submit" class="form-submit">Book &amp; Pay</button>
-          <p id="booking-status" class="contact-status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <div class="contact-form-box booking-rates">
-        <h3>Rates</h3>
-        <p>All times are Eastern Time (Toronto). Fees are per hour and prorated in 30-minute blocks.</p>
-        <table class="rates-table">
-          <thead>
-            <tr><th scope="col">When</th><th scope="col">Rate</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Mon–Fri, 08:00–12:00</td><td>$200 / h</td></tr>
-            <tr><td>Mon–Fri, 12:00–13:00 (lunch)</td><td>$150 / h</td></tr>
-            <tr><td>Mon–Fri, 13:00–17:00</td><td>$200 / h</td></tr>
-            <tr><td>Mon–Fri, after 17:00</td><td>$150 / h</td></tr>
-            <tr><td>Saturday &amp; Sunday, any time</td><td>$150 / h</td></tr>
-          </tbody>
-        </table>
-        <p>Your booking is confirmed once payment is received. You will get a confirmation email with the meeting link.</p>
-      </div>
+        <button type="submit" id="booking-submit" class="form-submit">Book &amp; Pay</button>
+        <p class="booking-note">Your booking is confirmed once payment is received. You will get a confirmation email later.</p>
+        <p id="booking-status" class="contact-status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
