@@ -19,7 +19,7 @@
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' https://www.googletagmanager.com;
-    connect-src 'self' https://*.google.com https://*.google.ca https://*.google.co.uk https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://*.g.doubleclick.net https://docs.google.com https://api.ipify.org;
+    connect-src 'self' https://api.github.com https://*.google.com https://*.google.ca https://*.google.co.uk https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://*.g.doubleclick.net https://docs.google.com https://api.ipify.org;
     img-src 'self' data: https://*.google.com https://*.google.ca https://*.google.co.uk https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net;
     frame-src 'self' https://www.google.com;
     object-src 'self';
@@ -64,6 +64,7 @@
   <script src="assets/script/recommendations.js" defer></script>
   <script src="assets/script/contact-form.js" defer></script>
   <script src="assets/script/app.js" defer></script>
+  <script src="assets/script/footer-year.js" defer></script>
   <script src="assets/script/email-gate.js" defer></script>
 </head>
 
@@ -138,8 +139,13 @@
     <span class="cert-next" role="button" tabindex="0" aria-label="Next">&#10095;</span>
   </div>
 
-  <footer id="site-footer">
-    <span id="footer-year"></span>Ali. All rights reserved.
+  <footer id="site-footer" class="site-footer">
+    <p>
+      &copy; <span id="footer-year"></span>
+      <a href="/">ALI</a>
+      <span class="footer-divider">—</span>
+      Latest update: <time id="footer-updated"></time>
+    </p>
   </footer>
 
   <div class="fab-group" role="group" aria-label="Page controls">

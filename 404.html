@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' https://www.googletagmanager.com;
-    connect-src 'self' https://*.google.com https://*.google.ca https://*.google.co.uk https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://*.g.doubleclick.net https://docs.google.com;
+    connect-src 'self' https://api.github.com https://*.google.com https://*.google.ca https://*.google.co.uk https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://*.g.doubleclick.net https://docs.google.com;
     img-src 'self' data: https://*.google.com https://*.google.ca https://*.google.co.uk https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net;
     frame-src 'self' https://www.google.com;
     object-src 'self';
@@ -50,8 +50,13 @@
     <p><a href="/" id="contact-submit" class="btn-link">Back to Home</a></p>
   </section>
 
-  <footer id="site-footer">
-    <span id="footer-year"></span>Ali. All rights reserved.
+  <footer id="site-footer" class="site-footer">
+    <p>
+      &copy; <span id="footer-year"></span>
+      <a href="/">ALI</a>
+      <span class="footer-divider">—</span>
+      Latest update: <time id="footer-updated"></time>
+    </p>
   </footer>
 </body>
 </html>

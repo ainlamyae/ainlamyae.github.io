@@ -13,14 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==============================
-    // Footer: Update year dynamically
-    // ==============================
-    const footerYear = document.getElementById('footer-year');
-    if (footerYear) {
-        footerYear.textContent = '© ' + new Date().getFullYear() + ' ';
-    }
-
-    // ==============================
     // Click/keyboard-to-toggle dropdown sections (with ARIA wiring)
     // ==============================
     let dropdownContentCounter = 0;

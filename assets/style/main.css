@@ -337,13 +337,53 @@ h5 {
 }
 
 /* === Footer === */
-#site-footer {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.875em;
-  color: #777;
-  letter-spacing: 0.5px;
+/* Footer: a slim strip fixed at the bottom of the screen (same look as the
+   Ledger app's footer): "© 2026 ALI — Latest update: <date>". */
+:root {
+  --footer-height: 1.3rem;
+}
+
+body {
+  padding-bottom: calc(20px + var(--footer-height));
+}
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  box-sizing: border-box;
+  height: calc(var(--footer-height) + env(safe-area-inset-bottom, 0px));
+  padding: 0 0.5rem env(safe-area-inset-bottom, 0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e8e93;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  /* Half see-through at the top, solid at the screen's edge. */
+  background: linear-gradient(rgba(255, 255, 255, 0.5), #fff);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* A spaced em dash between the footer's two parts. */
+.site-footer .footer-divider {
+  margin: 0 0.2rem;
+}
+
+.site-footer a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
 /* === Dropdown adjustments === */
@@ -1198,6 +1238,7 @@ li:has(> .tag) {
 /* === Print === */
 @media print {
   #navbar, #cert-modal, .media-row, .media-icon { display: none !important; }
+  .site-footer { position: static; background: none; }
   body { padding: 0; margin: 0; max-width: 100%; font-size: 11pt; color: #000; }
   h3 { background: none !important; color: #000; border-left: 3px solid #000; }
   a { color: #000; text-decoration: none; }
@@ -1249,7 +1290,7 @@ body, header, footer, section, nav { transition: background 0.25s, color 0.25s; 
 /* === Floating action buttons === */
 .fab-group {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: calc(var(--footer-height) + 1rem);
   right: 1.5rem;
   display: flex;
   flex-direction: column;
