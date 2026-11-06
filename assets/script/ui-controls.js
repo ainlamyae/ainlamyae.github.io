@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
   togBtn.addEventListener('click', () => applyTheme(!isDark()));
   */
 
-  // ── Scroll to top ──────────────────────────────────────────
+  // ── Scroll to top (disabled) ──────────────────────────────
+  // Uncomment this block and the #fab-top button in index.html to restore.
+  /*
   const topBtn = document.getElementById('fab-top');
 
   window.addEventListener('scroll', () => {
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   topBtn.addEventListener('click', () =>
     window.scrollTo({ top: 0, behavior: 'smooth' })
   );
+  */
 
   // ── Expand / collapse all dropdown sections ────────────────
   const expandBtn = document.getElementById('fab-expand');
