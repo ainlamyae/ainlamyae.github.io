@@ -2,6 +2,20 @@
   "summary": "R&D Engineer with extensive multidisciplinary expertise in systems design and AI software architecture, spanning generative AI, agentic decision-making, autonomous platforms, robotics, and real-time control.",
   "groups": [
     {
+      "title": "Core Engineering Expertise",
+      "style": "plain",
+      "items": [
+        "Requirements Engineering, System & Component Architecture Design",
+        "Prompt Engineering, Multi-Agent Orchestration, Agentic Decision-Making Architecture",
+        "Benchmark and Ablation Design, LLM-as-a-Judge, Human-in-the-Loop Validation, Uncertainty Quantification, Confidence Estimation, Runtime Guardrails",
+        "Agent Tracing, Token/Cost Monitoring, Session-Log Analysis, Debugging, and Root-Cause Analysis",
+        "Modeling, System Identification, Training, Validation, and Simulation",
+        "Software-in-the-Loop Testing, Real-Time Control Development, Signal Processing, Runtime Monitoring",
+        "Embedded Software, Communication Systems, Sensor & Actuator Integration",
+        "Calibration, Prototyping, and Optimization"
+      ]
+    },
+    {
       "title": "Skills",
       "style": "tag",
       "items": [
@@ -14,20 +28,6 @@
         { "label": "Control Methods", "text": "PID, LQR, LQG, CTM, MPC, NMPC, Feedback Linearization, Impedance, Adaptive, Sliding Mode, Fuzzy Logic, ANFIS" },
         { "label": "CAD & Mechanical Design", "text": "CATIA, SolidWorks" },
         { "label": "Hands-on Skills", "text": "Mechanical Fabrication, Soldering, 3D Printing" }
-      ]
-    },
-    {
-      "title": "Core Engineering Expertise",
-      "style": "plain",
-      "items": [
-        "Requirements Engineering, System & Component Architecture Design",
-        "Prompt Engineering, Multi-Agent Orchestration, Agentic Decision-Making Architecture",
-        "Benchmark and Ablation Design, LLM-as-a-Judge, Human-in-the-Loop Validation, Uncertainty Quantification, Confidence Estimation, Runtime Guardrails",
-        "Agent Tracing, Token/Cost Monitoring, Session-Log Analysis, Debugging, and Root-Cause Analysis",
-        "Modeling, System Identification, Training, Validation, and Simulation",
-        "Software-in-the-Loop Testing, Real-Time Control Development, Signal Processing, Runtime Monitoring",
-        "Embedded Software, Communication Systems, Sensor & Actuator Integration",
-        "Calibration, Prototyping, and Optimization"
       ]
     },
     {
