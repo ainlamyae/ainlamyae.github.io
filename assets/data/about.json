@@ -1,41 +1,44 @@
 {
-  "summary": "AI Systems Architect and R&D Engineer with extensive expertise in the design and MBSE of autonomous platforms, from agentic or intelligent decision-making to real-time robotic control.",
+  "summary": "R&D Engineer with extensive multidisciplinary expertise in systems design and AI software architecture, spanning generative AI, agentic decision-making, autonomous platforms, robotics, and real-time control.",
   "groups": [
+    {
+      "title": "Skills",
+      "style": "tag",
+      "items": [
+        { "label": "Agentic AI & LLM Engineering", "text": "Multi-Agent Orchestration, Tool Use via MCP, Agent Memory (Extraction, Consolidation, Retrieval), RAG & Embeddings, Harness Integration (OpenAI Codex CLI Lifecycle Hooks), LangChain, LangGraph, Ollama" },
+        { "label": "Software Deployment & Integration", "text": "Docker, Containerized Server Deployment, API Integration" },
+        { "label": "Programming", "text": "Python (NumPy, SciPy, Matplotlib, Pandas, scikit-learn), C++" },
+        { "label": "System Modeling & Simulation", "text": "MATLAB (Simulink, Simscape Multibody, Deep Learning Toolbox, Neural Networks, GA, PSO), MapleSim, LabVIEW" },
+        { "label": "Machine Learning", "text": "ANN, RNN, CNN, RCNN, LSTM, GRU, SVM" },
+        { "label": "Embedded Systems", "text": "Raspberry Pi, NVIDIA Jetson, Arduino, AVR Microcontrollers, PLCs (Siemens, Delta, Vigor)" },
+        { "label": "Control Methods", "text": "PID, LQR, LQG, CTM, MPC, NMPC, Feedback Linearization, Impedance, Adaptive, Sliding Mode, Fuzzy Logic, ANFIS" },
+        { "label": "CAD & Mechanical Design", "text": "CATIA, SolidWorks" },
+        { "label": "Hands-on Skills", "text": "Mechanical Fabrication, Soldering, 3D Printing" }
+      ]
+    },
     {
       "title": "Core Engineering Expertise",
       "style": "plain",
       "items": [
         "Requirements Engineering, System & Component Architecture Design",
-        "Prompt Engineering, Multi-Agent Orchestration, Reliability Pipelines, Human-in-the-Loop Validation",
-        "Modeling, Identification, Training, Validation, and Simulation",
-        "Software-in-the-loop Testing, Real-time Control Development, Signal Processing, Runtime Monitoring",
+        "Prompt Engineering, Multi-Agent Orchestration, Agentic Decision-Making Architecture",
+        "Benchmark and Ablation Design, LLM-as-a-Judge, Human-in-the-Loop Validation, Uncertainty Quantification, Confidence Estimation, Runtime Guardrails",
+        "Agent Tracing, Token/Cost Monitoring, Session-Log Analysis, Debugging, and Root-Cause Analysis",
+        "Modeling, System Identification, Training, Validation, and Simulation",
+        "Software-in-the-Loop Testing, Real-Time Control Development, Signal Processing, Runtime Monitoring",
         "Embedded Software, Communication Systems, Sensor & Actuator Integration",
         "Calibration, Prototyping, and Optimization"
       ]
     },
     {
-      "title": "Systems Experience",
+      "title": "Systems/Applications Experience",
       "style": "tag",
       "items": [
-        { "label": "Generative AI", "text": "Text Generation, Code Generation (5G Scripts & Test Cases), NL Interpretation, RAG, LLM-as-a-Judge" },
+        { "label": "Generative AI", "text": "Software Factory, Code Generation (Python, 5G Scripts & Test Cases), Text Generation, NL Interpretation, Information Retrieval" },
         { "label": "Intelligent Systems", "text": "Autonomous Driving (Apollo Auto, End-to-End Interfuser)" },
         { "label": "Robotics", "text": "Industrial, Serial & Parallel (Cable, Stewart), Humanoid, Biped, UGV, UAV (Quadcopter), Exoskeleton (Upper & Lower Limb)" },
-        { "label": "Biological Systems", "text": "Musculoskeletal Modeling, sEMG Analysis" },
-        { "label": "Physical Systems", "text": "Electrical, Hydraulic, Pneumatic, Mechanical" }
-      ]
-    },
-    {
-      "title": "Skills",
-      "style": "tag",
-      "items": [
-        { "label": "Generative AI", "text": "LangChain, Ollama" },
-        { "label": "Machine Learning", "text": "ANN, RNN, CNN, RCNN, LSTM, GRU, SVM" },
-        { "label": "Programming", "text": "Python (NumPy, SciPy, Matplotlib, Pandas, scikit-learn), MATLAB, C++" },
-        { "label": "System Modeling & Simulation", "text": "MATLAB (Simulink, Simscape Multibody, Deep Learning Toolbox, Neural Networks, GA, PSO), MapleSim, LabVIEW" },
-        { "label": "Embedded Systems", "text": "Raspberry Pi, NVIDIA Jetson, Arduino, AVR Microcontrollers, PLCs (Siemens, Delta, Vigor)" },
-        { "label": "Control Methods", "text": "PID, LQR, LQG, CTM, MPC, NMPC, Feedback Linearization, Impedance, Adaptive, Sliding Mode, Fuzzy Logic, ANFIS" },
-        { "label": "CAD & Mechanical Design", "text": "CATIA, SolidWorks" },
-        { "label": "Hands-on Skills", "text": "Mechanical Fabrication, Soldering, 3D Printing" }
+        { "label": "Biological Systems", "text": "Musculoskeletal Modeling, EMG Signal Analysis" },
+        { "label": "Physical Systems", "text": "Electrical Circuits, Hydraulics, Pneumatics, Mechanical Mechanisms" }
       ]
     }
   ]
